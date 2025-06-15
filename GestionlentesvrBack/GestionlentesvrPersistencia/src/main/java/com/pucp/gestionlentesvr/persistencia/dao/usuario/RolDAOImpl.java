@@ -32,7 +32,9 @@ public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
 
     @Override
     protected PreparedStatement getSelectAllPS(Connection conn) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "SELECT * FROM rol";
+        PreparedStatement ps = conn.prepareStatement(query);
+        return ps;
     }
 
     @Override

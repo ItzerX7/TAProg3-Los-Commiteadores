@@ -13,7 +13,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected PreparedStatement getInsertPS(Connection conn, Usuario usuario) throws SQLException {
-        String query = "INSERT INTO usuario (nombre, apellido, correo, contrasena, fechacreacion,  activo)"
+        String query = "INSERT INTO usuario (nombre, apellido, correo, contrasena, fechacreacion)"
                 + " VALUES (?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement ps = conn.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         ps.setString(1, usuario.getNombre());
@@ -22,7 +22,6 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
         ps.setString(4, usuario.getContrasena());
         ps.setTimestamp(5, usuario.getFechaCreacion());
         ps.setInt(6, usuario.getRol().getId());
-        ps.setString(7, String.valueOf(usuario.getActivo()));
         return ps;
     }
 

@@ -1,0 +1,13 @@
+com\pucp\gestionlentesvr\dominio\configuracion\Configuracion.class
+com\pucp\gestionlentesvr\dominio\configuracion\TipoConfiguracion.class
+com\pucp\gestionlentesvr\dominio\actividad\TipoActividad.class
+com\pucp\gestionlentesvr\dominio\aplicacion\Aplicacion.class
+com\pucp\gestionlentesvr\dominio\usuario\Usuario.class
+com\pucp\gestionlentesvr\dominio\dispositivo\Grupo.class
+com\pucp\gestionlentesvr\dominio\aplicacion\CategoriaAplicacion.class
+com\pucp\gestionlentesvr\dominio\usuario\MetricaUso.class
+com\pucp\gestionlentesvr\dominio\usuario\Rol.class
+com\pucp\gestionlentesvr\dominio\dispositivo\EstadoConexion.class
+com\pucp\gestionlentesvr\dominio\dispositivo\Dispositivo.class
+com\pucp\gestionlentesvr\dominio\actividad\Actividad.class
+com\pucp\gestionlentesvr\dominio\dispositivo\Firmware.class

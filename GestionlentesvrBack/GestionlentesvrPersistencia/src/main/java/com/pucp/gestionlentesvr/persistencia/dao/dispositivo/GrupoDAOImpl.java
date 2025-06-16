@@ -7,41 +7,70 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 
 public class GrupoDAOImpl extends BaseDAOImpl<Grupo> implements GrupoDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Grupo entity) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    protected CallableStatement getInsertPS(Connection conn, Grupo entity) throws SQLException {
+        String query = "{CALL insertar_grupo(?, ?, ?, ?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.registerOutParameter(1, Types.INTEGER);
+        cs.setString(2, entity.getNombre());
+        cs.setString(3, entity.getDescripcion());
+        cs.setString(4, entity.getUbicacion());
+    return cs;
     }
 
     @Override
-    protected PreparedStatement getUpdatePS(Connection conn, Grupo entity) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    protected CallableStatement getUpdatePS(Connection conn, Grupo entity) throws SQLException {
+        String query = "{CALL actualizar_grupo(?, ?, ?, ?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.setInt(1, entity.getId());
+        cs.setString(2, entity.getNombre());
+        cs.setString(3, entity.getDescripcion());
+        cs.setString(4, entity.getUbicacion());
+        return cs;
     }
 
     @Override
     protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "{CALL eliminar_grupo(?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.setInt(1, id);
+        return cs;
     }
 
     @Override
-    protected PreparedStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    protected CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
+        String query = "{CALL obtener_grupo(?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.setInt(1, id);
+        return cs;
     }
 
     @Override
-    protected PreparedStatement getSelectAllPS(Connection conn) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
+        String query = "{CALL listar_grupo(?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        return cs;
     }
 
     @Override
     protected Grupo createFromResultSet(ResultSet rs) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Grupo grupo = new Grupo();
+        grupo.setId(rs.getInt("grupo_id"));
+        grupo.setNombre(rs.getString("nombre"));
+        grupo.setDescripcion(rs.getString("descripcion"));
+        grupo.setFechaCreacion(rs.getTimestamp("fecha_creacion"));
+        grupo.setUbicacion(rs.getString("ubicacion"));
+        grupo.setActivo((rs.getString("activo")).toCharArray()[0]);
+        return grupo;
     }
 
     @Override
     protected void setId(Grupo entity, Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        entity.setId(id);
     }
+    
 }

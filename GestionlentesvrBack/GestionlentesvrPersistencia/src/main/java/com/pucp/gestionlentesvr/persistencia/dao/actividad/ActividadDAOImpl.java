@@ -2,6 +2,8 @@ package com.pucp.gestionlentesvr.persistencia.dao.actividad;
 
 import com.pucp.gestionlentesvr.dominio.actividad.Actividad;
 import com.pucp.gestionlentesvr.dominio.actividad.TipoActividad;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -13,7 +15,7 @@ public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements Activida
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, Actividad entity) throws SQLException {
-        String query = "{CALL insertar_actividad(?, ?, ?, ?)}";
+        String query = "{CALL insertar_actividad(?, ?, ?, ?, ?, ?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.registerOutParameter(1, Types.INTEGER);
         cs.setString(3, entity.getDescripcion());
@@ -55,7 +57,7 @@ public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements Activida
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
-        String query = "{CALL listar_actividad(?)}";
+        String query = "{CALL listar_actividad()}";
         CallableStatement cs = conn.prepareCall(query);
         return cs;
     }
@@ -63,6 +65,10 @@ public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements Activida
     @Override
     protected Actividad createFromResultSet(ResultSet rs) throws SQLException {
         Actividad actividad = new Actividad();
+        Usuario usuario = new Usuario();
+        actividad.setUsuario(usuario);
+        Dispositivo dispositivo = new Dispositivo();
+        actividad.setDispositivo(dispositivo);
         actividad.setId(rs.getInt("actividadid"));
         actividad.setFechaHora(rs.getTimestamp("fechahora"));
         actividad.setDetallesTecnicos(rs.getString("detallestecnicos"));

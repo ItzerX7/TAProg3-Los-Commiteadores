@@ -32,7 +32,7 @@ public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
-        String query = "{CALL listar_rol()}";
+        String query = "{CALL listar_rol(?)}";
         CallableStatement cs = conn.prepareCall(query);
         return cs;
     }

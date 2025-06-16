@@ -12,7 +12,7 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, MetricaUso entity) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     @Override

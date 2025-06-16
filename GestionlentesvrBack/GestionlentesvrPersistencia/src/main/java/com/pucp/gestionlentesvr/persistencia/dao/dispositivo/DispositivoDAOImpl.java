@@ -1,6 +1,8 @@
 package com.pucp.gestionlentesvr.persistencia.dao.dispositivo;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+import com.pucp.gestionlentesvr.dominio.dispositivo.EstadoConexion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import java.sql.CallableStatement;
 import java.sql.Connection;
@@ -29,9 +31,9 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
 
     @Override
     protected CallableStatement getUpdatePS(Connection conn, Dispositivo entity) throws SQLException {
-        String query = "{CALL actualizar_dispositivo(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String query = "{CALL actualizar_dispositivo(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cs = conn.prepareCall(query);
-        cs.registerOutParameter(1, Types.INTEGER);
+        cs.setInt(1, entity.getId());
         cs.setString(2, entity.getNombre());
         cs.setString(3, entity.getModelo());
         cs.setString(4, entity.getNumeroSerie());
@@ -69,15 +71,19 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     @Override
     protected Dispositivo createFromResultSet(ResultSet rs) throws SQLException {
         Dispositivo dev = new Dispositivo();
-        dev.setId(rs.getInt("p_dispositivoid"));
-        dev.setNombre(rs.getString("p_nombre"));
-        dev.setModelo(rs.getString("p_modelo"));
-        dev.setNumeroSerie(rs.getString("p_numeroserie"));
-        dev.setUbicacion(rs.getString("p_ubicacion"));
-        dev.setActivo(rs.getString("p_nivelbateria").toCharArray()[0]);
-        dev.setNivelBateria(rs.getInt("p_ultimaconexion"));
-        dev.setUltimaConexion(rs.getTimestamp("p_estado_conexion"));
-        dev.getGrupo().setId(rs.getInt("p_grupo_grupoid"));
+        Grupo grupo=new Grupo();
+        dev.setGrupo(grupo);
+        dev.setId(rs.getInt("dispositivoid"));
+        dev.setNombre(rs.getString("nombre"));
+        dev.setModelo(rs.getString("modelo"));
+        dev.setFechaRegistro(rs.getTimestamp("fecharegistro"));
+        dev.setNumeroSerie(rs.getString("numeroserie"));
+        dev.setUbicacion(rs.getString("ubicacion"));
+        dev.setActivo(rs.getString("activo").toCharArray()[0]);
+        dev.setNivelBateria(rs.getInt("nivelbateria"));
+        dev.setEstado(EstadoConexion.valueOf(rs.getString("estado_conexion")));
+        dev.setUltimaConexion(rs.getTimestamp("ultimaconexion"));
+        dev.getGrupo().setId(rs.getInt("grupo_grupoid"));
         return dev;
     }
 

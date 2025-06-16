@@ -24,25 +24,17 @@ import java.sql.Timestamp;
 @WebService(serviceName = "Prueba")
 public class Prueba {
 
-    public final DispositivoDAO pruebaDAO; 
+    public final GrupoDAO pruebaDAO; 
 
     public Prueba() {
-        pruebaDAO= new DispositivoDAOImpl();
+        pruebaDAO= new GrupoDAOImpl();
     }
     
     
     @WebMethod(operationName = "hello")
     public void hello() throws Exception {
-        Dispositivo dispositivo = new Dispositivo();
-        dispositivo.setEstado(EstadoConexion.CONECTADO);
-        dispositivo.setUltimaConexion(new Timestamp(2022023005));
-        dispositivo.setUbicacion("Sin ubicacion");
-        dispositivo.setModelo("Nuevo modelo");
-        dispositivo.setNivelBateria(100);
-        dispositivo.setNumeroSerie("1254441");
-        dispositivo.setNombre("Dispositivo prueba");
-        GrupoWS ws= new GrupoWS();
-        dispositivo.setGrupo(ws.obtenerGrupo(1));
-        pruebaDAO.agregar(dispositivo);
+        Grupo group = pruebaDAO.obtener(1);
+        group.setNombre("nombre actualizado");
+        pruebaDAO.actualizar(group);
     }
 }

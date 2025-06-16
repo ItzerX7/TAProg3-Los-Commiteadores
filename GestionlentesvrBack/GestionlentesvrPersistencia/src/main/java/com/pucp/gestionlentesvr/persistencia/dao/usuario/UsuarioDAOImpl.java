@@ -4,46 +4,83 @@ import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.Types;
 
 public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, Usuario entity) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "{CALL insertar_usuario(?, ?, ?, ?,?, ?, ?, ?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.registerOutParameter(1, Types.INTEGER);
+        cs.setString(2, entity.getNombre());
+        cs.setString(3, entity.getApellido());
+        cs.setString(4, entity.getCorreo());
+        cs.setString(5, entity.getContrasena());
+        cs.setTimestamp(6, new java.sql.Timestamp(entity.getFechaCreacion().getTime()));
+        cs.setString(7, "s");
+        cs.setInt(8, entity.getRol().getId());
+        return cs;
     }
 
     @Override
     protected CallableStatement getUpdatePS(Connection conn, Usuario entity) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "{CALL actualizar_usuario(?, ?, ?, ?, ?, ?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.setInt(1, entity.getId());
+        cs.setString(2, entity.getNombre());
+        cs.setString(3, entity.getApellido());
+        cs.setString(4, entity.getCorreo());
+        cs.setString(5, entity.getContrasena());
+        cs.setInt(6, entity.getRol().getId());
+        return cs;
     }
 
     @Override
     protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "{CALL eliminar_usuario(?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.setInt(1, id);
+        return cs;
     }
 
     @Override
     protected CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "{CALL obtener_usuario(?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        cs.setInt(1, id);
+        return cs;
     }
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String query = "{CALL listar_usuario(?)}";
+        CallableStatement cs = conn.prepareCall(query);
+        return cs;
     }
 
     @Override
     protected Usuario createFromResultSet(ResultSet rs) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Usuario usuario = new Usuario();
+        usuario.setId(rs.getInt("usuarioid"));
+        usuario.setNombre(rs.getString("nombre"));
+        usuario.setApellido(rs.getString("apellido"));
+        usuario.setCorreo(rs.getString("correo"));
+        usuario.setContrasena(rs.getString("contrasena"));
+        usuario.setFechaCreacion(rs.getTimestamp("fechacreacion"));
+        usuario.getRol().setId(rs.getInt("rol_rolid"));
+        if(rs.getString("activo").compareTo("s")==0){
+            usuario.setActivo('s');
+        }else{
+            usuario.setActivo('n');
+        }
+        return usuario;
     }
 
     @Override
     protected void setId(Usuario entity, Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        entity.setId(id);
     }
-
 }

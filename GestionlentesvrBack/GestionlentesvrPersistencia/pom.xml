@@ -9,7 +9,7 @@
     <artifactId>GestionlentesvrPersistencia</artifactId>
     <packaging>jar</packaging>
     <properties>
-        <maven.compiler.release>24</maven.compiler.release>
+        <maven.compiler.release>21</maven.compiler.release>
         <exec.mainClass>com.pucp.gestionlentesvr.persistencia.GestionlentesvrPersistencia</exec.mainClass>
     </properties>
     <dependencies>
@@ -24,4 +24,5 @@
             <version>${project.version}</version>
         </dependency>
     </dependencies>
+    <version>1.0-SNAPSHOT</version>
 </project>

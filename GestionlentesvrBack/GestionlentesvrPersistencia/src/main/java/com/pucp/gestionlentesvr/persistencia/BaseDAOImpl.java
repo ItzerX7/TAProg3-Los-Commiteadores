@@ -10,15 +10,15 @@ import java.util.List;
 
 public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
-    protected abstract PreparedStatement getInsertPS(Connection conn, T entity) throws SQLException;
+    protected abstract CallableStatement getInsertPS(Connection conn, T entity) throws SQLException;
 
-    protected abstract PreparedStatement getUpdatePS(Connection conn, T entity) throws SQLException;
+    protected abstract CallableStatement getUpdatePS(Connection conn, T entity) throws SQLException;
 
     protected abstract CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException;
 
-    protected abstract PreparedStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException;
+    protected abstract CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException;
 
-    protected abstract PreparedStatement getSelectAllPS(Connection conn) throws SQLException;
+    protected abstract CallableStatement getSelectAllPS(Connection conn) throws SQLException;
 
     protected abstract T createFromResultSet(ResultSet rs) throws SQLException;
 
@@ -26,7 +26,7 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
     @Override
     public void agregar(T entity) {
-        try (Connection conn = DBManager.getInstance().obtenerConexion(); PreparedStatement ps = getInsertPS(conn, entity)) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion(); CallableStatement ps = getInsertPS(conn, entity)) {
 
             ps.executeUpdate();
 

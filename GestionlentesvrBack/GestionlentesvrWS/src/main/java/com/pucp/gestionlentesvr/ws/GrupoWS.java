@@ -25,6 +25,47 @@ public class GrupoWS {
     public GrupoWS() {
         this.service = new GrupoServiceImpl();
     }
+
+    @WebMethod(operationName = "registrarGrupo")
+    public void registrarGrupo(@WebParam(name = "elemento") Grupo elemento) throws Exception {
+
+        try {
+            service.registrarGrupo(elemento);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al registrar" + ex.getMessage());
+        }
+    }
+
+    @WebMethod(operationName = "actualizarGrupo")
+    public void actualizarGrupo(@WebParam(name = "elemento") Grupo elemento) throws Exception {
+
+        try {
+            service.actualizarGrupo(elemento);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al actualizar" + ex.getMessage());
+        }
+    }
+
+    @WebMethod(operationName = "eliminarGrupo")
+    public void eliminarGrupo(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            service.eliminarGrupo(id);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al eliminar" + ex.getMessage());
+        }
+    }
+
+    @WebMethod(operationName = "obtenerGrupo")
+    public Grupo obtenerGrupo(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            return service.obtenerGrupo(id);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al obtener" + ex.getMessage());
+        }
+    }
+
     @WebMethod(operationName = "listarRol")
     public List<Grupo> listarGrupo() {
         try {

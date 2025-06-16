@@ -40,6 +40,11 @@
             <version>2.3</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>GestionlentesvrDominio</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     
     <build>

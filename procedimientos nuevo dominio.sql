@@ -1,3 +1,63 @@
+USE taprog3;
+
+DELIMITER //
+
+-- Drops para las tablas 
+DROP PROCEDURE IF EXISTS insertar_usuario;
+DROP PROCEDURE IF EXISTS actualizar_usuario;
+DROP PROCEDURE IF EXISTS eliminar_usuario;
+DROP PROCEDURE IF EXISTS listar_usuarios;
+DROP PROCEDURE IF EXISTS obtener_usuario;
+
+DROP PROCEDURE IF EXISTS insertar_grupo;
+DROP PROCEDURE IF EXISTS actualizar_grupo;
+DROP PROCEDURE IF EXISTS eliminar_grupo;
+DROP PROCEDURE IF EXISTS listar_grupo;
+DROP PROCEDURE IF EXISTS obtener_grupo;
+
+DROP PROCEDURE IF EXISTS insertar_dispositivo;
+DROP PROCEDURE IF EXISTS actualizar_dispositivo;
+DROP PROCEDURE IF EXISTS eliminar_dispositivo;
+DROP PROCEDURE IF EXISTS listar_dispositivo;
+DROP PROCEDURE IF EXISTS obtener_dispositivo;
+
+DROP PROCEDURE IF EXISTS insertar_actividad;
+DROP PROCEDURE IF EXISTS actualizar_actividad;
+DROP PROCEDURE IF EXISTS eliminar_actividad;
+DROP PROCEDURE IF EXISTS listar_actividad;
+DROP PROCEDURE IF EXISTS obtener_actividad;
+
+DROP PROCEDURE IF EXISTS insertar_aplicacion;
+DROP PROCEDURE IF EXISTS actualizar_aplicacion;
+DROP PROCEDURE IF EXISTS eliminar_aplicacion;
+DROP PROCEDURE IF EXISTS listar_aplicacion;
+DROP PROCEDURE IF EXISTS obtener_aplicacion;
+
+DROP PROCEDURE IF EXISTS insertar_configuracion;
+DROP PROCEDURE IF EXISTS actualizar_configuracion;
+DROP PROCEDURE IF EXISTS eliminar_configuracion;
+DROP PROCEDURE IF EXISTS listar_configuracion;
+DROP PROCEDURE IF EXISTS obtener_configuracion;
+
+DROP PROCEDURE IF EXISTS insertar_firmware;
+DROP PROCEDURE IF EXISTS actualizar_firmware;
+DROP PROCEDURE IF EXISTS eliminar_firmware;
+DROP PROCEDURE IF EXISTS listar_firmware;
+DROP PROCEDURE IF EXISTS obtener_firmware;
+
+DROP PROCEDURE IF EXISTS insertar_metricauso;
+DROP PROCEDURE IF EXISTS actualizar_metricauso;
+DROP PROCEDURE IF EXISTS eliminar_metricauso;
+DROP PROCEDURE IF EXISTS listar_metricauso;
+DROP PROCEDURE IF EXISTS obtener_metricauso;
+
+DROP PROCEDURE IF EXISTS insertar_rol;
+DROP PROCEDURE IF EXISTS actualizar_rol;
+DROP PROCEDURE IF EXISTS eliminar_rol;
+DROP PROCEDURE IF EXISTS listar_rol;
+DROP PROCEDURE IF EXISTS obtener_rol;
+
+DELIMITER ;
 -- Procedimientos para la tabla "usuario"
 
 DELIMITER //
@@ -9,13 +69,12 @@ CREATE PROCEDURE insertar_usuario(
     IN p_apellido VARCHAR(50),
     IN p_correo VARCHAR(254),
     IN p_contrasena VARCHAR(254),
-    IN p_fechacreacion TIMESTAMP,
     IN p_activo CHAR(1),
     IN p_rol_rolid INT
 )
 BEGIN
-    INSERT INTO usuario(nombre, apellido, correo, contrasena, fechacreacion, rol_rolid, activo)
-    VALUES (p_nombre, p_apellido, p_correo, p_contrasena, p_fechacreacion, p_rol_rolid, p_activo);
+    INSERT INTO usuario(nombre, apellido, correo, contrasena, rol_rolid, activo)
+    VALUES (p_nombre, p_apellido, p_correo, p_contrasena, p_rol_rolid, p_activo);
 
     SET p_usuarioid = LAST_INSERT_ID();
 END;
@@ -88,12 +147,11 @@ CREATE PROCEDURE insertar_grupo(
     IN p_nombre VARCHAR(80),
     IN p_descripcion VARCHAR(254),
     IN p_ubicacion VARCHAR(254),
-    IN p_fechacreacion TIMESTAMP,
     IN p_activo CHAR(1)
 )
 BEGIN
-    INSERT INTO grupo(nombre, descripcion, ubicacion, fechacreacion, activo)
-    VALUES (p_nombre, p_descripcion, p_ubicacion, p_fechacreacion, p_activo);
+    INSERT INTO grupo(nombre, descripcion, ubicacion, activo)
+    VALUES (p_nombre, p_descripcion, p_ubicacion, p_activo);
 
     SET p_grupoid = LAST_INSERT_ID();
 END;
@@ -161,22 +219,20 @@ CREATE PROCEDURE insertar_dispositivo(
     IN p_nombre VARCHAR(90),
     IN p_modelo VARCHAR(254),
     IN p_numeroserie VARCHAR(254),
-    IN p_fecharegistro TIMESTAMP,
     IN p_ubicacion VARCHAR(254),
     IN p_nivelbateria INT,
-    IN p_ultimaconexion TIMESTAMP,
     IN p_estado_conexion ENUM('CONECTADO', 'DESCONECTADO', 'EN_USO', 'EN_MANTENIMIENTO'),
     IN p_grupo_grupoid INT,
     IN p_activo CHAR(1)
 )
 BEGIN
     INSERT INTO dispositivo(
-        nombre, modelo, numeroserie, fecharegistro, ubicacion, nivelbateria,
-        ultimaconexion, estado_conexion, grupo_grupoid, activo
+        nombre, modelo, numeroserie, ubicacion, nivelbateria
+        , estado_conexion, grupo_grupoid, activo
     )
     VALUES (
-        p_nombre, p_modelo, p_numeroserie, p_fecharegistro, p_ubicacion,
-        p_nivelbateria, p_ultimaconexion, p_estado_conexion, p_grupo_grupoid, p_activo
+        p_nombre, p_modelo, p_numeroserie, p_ubicacion,
+        p_nivelbateria, p_estado_conexion, p_grupo_grupoid, p_activo
     );
 
     SET p_dispositivoid = LAST_INSERT_ID();
@@ -251,7 +307,6 @@ DELIMITER //
 -- Insertar nueva actividad
 CREATE PROCEDURE insertar_actividad(
     OUT p_actividadid INT,
-    IN p_fechahora TIMESTAMP,
     IN p_descripcion VARCHAR(254),
     IN p_detallestecnicos VARCHAR(254),
     IN p_tipo ENUM(
@@ -275,11 +330,11 @@ CREATE PROCEDURE insertar_actividad(
 )
 BEGIN
     INSERT INTO actividad(
-        fechahora, descripcion, detallestecnicos, tipo,
+        descripcion, detallestecnicos, tipo,
         usuario_usuarioid, dispositivo_dispositivoid, activo
     )
     VALUES (
-        p_fechahora, p_descripcion, p_detallestecnicos, p_tipo,
+        p_descripcion, p_detallestecnicos, p_tipo,
         p_usuario_usuarioid, p_dispositivo_dispositivoid, p_activo
     );
 
@@ -464,7 +519,6 @@ CREATE PROCEDURE insertar_configuracion(
     OUT p_configuracionid INT,
     IN p_nombre VARCHAR(254),
     IN p_descripcion VARCHAR(254),
-    IN p_fechacreacion TIMESTAMP,
     IN p_valor VARCHAR(254),
     IN p_tipo ENUM(
         'AUDIO',
@@ -478,10 +532,10 @@ CREATE PROCEDURE insertar_configuracion(
 )
 BEGIN
     INSERT INTO configuracion(
-        nombre, descripcion, fechacreacion, valor, tipo, activo
+        nombre, descripcion, valor, tipo, activo
     )
     VALUES (
-        p_nombre, p_descripcion, p_fechacreacion, p_valor, p_tipo, p_activo
+        p_nombre, p_descripcion, p_valor, p_tipo, p_activo
     );
 
     SET p_configuracionid = LAST_INSERT_ID();
@@ -626,7 +680,6 @@ DELIMITER //
 -- Insertar nueva métrica de uso
 CREATE PROCEDURE insertar_metricauso(
     OUT p_metricaid INT,
-    IN p_fecharegistro TIMESTAMP,
     IN p_tiempousominutos INT,
     IN p_nivelbateriainicial INT,
     IN p_nivelbateriafinal INT,
@@ -636,11 +689,11 @@ CREATE PROCEDURE insertar_metricauso(
 )
 BEGIN
     INSERT INTO metricauso(
-        fecharegistro, tiempousominutos, nivelbateriainicial,
+        tiempousominutos, nivelbateriainicial,
         nivelbateriafinal, usuario_usuarioid, dispositivo_dispositivoid, activo
     )
     VALUES (
-        p_fecharegistro, p_tiempousominutos, p_nivelbateriainicial,
+        p_tiempousominutos, p_nivelbateriainicial,
         p_nivelbateriafinal, p_usuario_usuarioid, p_dispositivo_dispositivoid, p_activo
     );
 

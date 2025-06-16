@@ -60,15 +60,12 @@ public class UsuarioServiceImpl implements UsuarioService {
     }
 
     @Override
-    public void activarUsuario(Usuario usuario) throws Exception {
-        if(usuarioDAO.obtener(usuario.getId()) == null) {
+    public void eliminarUsuario(Integer idUsuario) throws Exception {
+        if (idUsuario < 1 || idUsuario == null) {
             throw new Exception("El usuario no existe");
         }
-        if (String.valueOf(usuario.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
         
-        usuarioDAO.actualizar(usuario);
+        usuarioDAO.eliminar(idUsuario);
     }
 
     @Override

@@ -9,7 +9,7 @@ public interface DispositivoService {
 
     void actualizarDispositivo(Dispositivo dispositivo) throws Exception;
 
-    void activarDispositivo(Dispositivo dispositivo) throws Exception;
+    void eliminarDispositivo(Integer idDispositivo) throws Exception;
 
     Dispositivo obtenerDispositivo(int idDispositivo) throws Exception;
 

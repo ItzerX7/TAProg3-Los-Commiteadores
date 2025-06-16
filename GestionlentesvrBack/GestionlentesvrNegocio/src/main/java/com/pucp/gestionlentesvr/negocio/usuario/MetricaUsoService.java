@@ -9,7 +9,7 @@ public interface MetricaUsoService {
 
     void actualizarMetricaUso(MetricaUso metricaUso) throws Exception;
 
-    void activarMetricaUso(MetricaUso metricaUso) throws Exception;
+    void eliminarMetricaUso(Integer idMetricaUso) throws Exception;
 
     MetricaUso obtenerMetricaUso(int idMetricaUso) throws Exception;
 

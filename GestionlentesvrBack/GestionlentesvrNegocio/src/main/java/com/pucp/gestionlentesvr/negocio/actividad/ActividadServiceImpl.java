@@ -59,15 +59,12 @@ public class ActividadServiceImpl implements ActividadService {
     }
 
     @Override
-    public void activarActividad(Actividad actividad) throws Exception {
-        if (actividadDAO.obtener(actividad.getId()) == null) {
+    public void eliminarActividad(Integer idActividad) throws Exception {
+        if (idActividad < 1 || idActividad == null) {
             throw new Exception("La actividad no existe");
         }
-        if (String.valueOf(actividad.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
         
-        actividadDAO.actualizar(actividad);
+        actividadDAO.eliminar(idActividad);
     }
 
     @Override

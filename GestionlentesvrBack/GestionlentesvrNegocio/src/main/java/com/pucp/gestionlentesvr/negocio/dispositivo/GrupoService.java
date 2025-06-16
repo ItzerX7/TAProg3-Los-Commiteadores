@@ -9,7 +9,7 @@ public interface GrupoService {
 
     void actualizarGrupo(Grupo grupo) throws Exception;
 
-    void activarGrupo(Grupo grupo) throws Exception;
+    void eliminarGrupo(Integer idGrupo) throws Exception;
 
     Grupo obtenerGrupo(int idGrupo) throws Exception;
 

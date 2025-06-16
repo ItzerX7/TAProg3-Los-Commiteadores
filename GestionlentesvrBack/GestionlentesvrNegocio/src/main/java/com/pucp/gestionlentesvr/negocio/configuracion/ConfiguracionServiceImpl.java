@@ -53,15 +53,12 @@ public class ConfiguracionServiceImpl implements ConfiguracionService {
     }
 
     @Override
-    public void activarConfiguracion(Configuracion configuracion) throws Exception {
-        if (configuracionDAO.obtener(configuracion.getId()) == null) {
+    public void eliminarConfiguracion(Integer idConfiguracion) throws Exception {
+        if (idConfiguracion < 1 || idConfiguracion == null) {
             throw new Exception("La configuracion no existe");
         }
-        if (String.valueOf(configuracion.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
         
-        configuracionDAO.actualizar(configuracion);
+        configuracionDAO.eliminar(idConfiguracion);
     }
 
     @Override

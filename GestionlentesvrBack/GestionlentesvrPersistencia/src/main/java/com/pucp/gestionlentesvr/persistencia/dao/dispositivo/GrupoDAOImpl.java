@@ -59,7 +59,7 @@ public class GrupoDAOImpl extends BaseDAOImpl<Grupo> implements GrupoDAO {
     @Override
     protected Grupo createFromResultSet(ResultSet rs) throws SQLException {
         Grupo grupo = new Grupo();
-        grupo.setId(rs.getInt("grupo_id"));
+        grupo.setId(rs.getInt("grupoid"));
         grupo.setNombre(rs.getString("nombre"));
         grupo.setDescripcion(rs.getString("descripcion"));
         grupo.setFechaCreacion(rs.getTimestamp("fecha_creacion"));

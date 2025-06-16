@@ -1,5 +1,6 @@
 package com.pucp.gestionlentesvr.persistencia.dao.usuario;
 
+import com.pucp.gestionlentesvr.dominio.usuario.Rol;
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import java.sql.CallableStatement;
@@ -12,16 +13,14 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, Usuario entity) throws SQLException {
-        String query = "{CALL insertar_usuario(?, ?, ?, ?,?, ?, ?, ?)}";
+        String query = "{CALL insertar_usuario(?, ?, ?, ?,?, ?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.registerOutParameter(1, Types.INTEGER);
         cs.setString(2, entity.getNombre());
         cs.setString(3, entity.getApellido());
         cs.setString(4, entity.getCorreo());
         cs.setString(5, entity.getContrasena());
-        cs.setTimestamp(6, new java.sql.Timestamp(entity.getFechaCreacion().getTime()));
-        cs.setString(7, "s");
-        cs.setInt(8, entity.getRol().getId());
+        cs.setInt(6, entity.getRol().getId());
         return cs;
     }
 
@@ -64,6 +63,8 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
     @Override
     protected Usuario createFromResultSet(ResultSet rs) throws SQLException {
         Usuario usuario = new Usuario();
+        Rol rol = new Rol();
+        usuario.setRol(rol);
         usuario.setId(rs.getInt("usuarioid"));
         usuario.setNombre(rs.getString("nombre"));
         usuario.setApellido(rs.getString("apellido"));
@@ -71,11 +72,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
         usuario.setContrasena(rs.getString("contrasena"));
         usuario.setFechaCreacion(rs.getTimestamp("fechacreacion"));
         usuario.getRol().setId(rs.getInt("rol_rolid"));
-        if(rs.getString("activo").compareTo("s")==0){
-            usuario.setActivo('s');
-        }else{
-            usuario.setActivo('n');
-        }
+        usuario.setActivo((rs.getString("activo")).toCharArray()[0]);
         return usuario;
     }
 

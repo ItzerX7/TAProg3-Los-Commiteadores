@@ -10,6 +10,8 @@ import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.EstadoConexion;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Firmware;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
+import com.pucp.gestionlentesvr.dominio.usuario.Rol;
+import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.dao.configuracion.ConfiguracionDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.configuracion.ConfiguracionDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAO;
@@ -18,6 +20,8 @@ import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.FirmwareDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.FirmwareDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.dao.usuario.UsuarioDAO;
+import com.pucp.gestionlentesvr.persistencia.dao.usuario.UsuarioDAOImpl;
 import com.pucp.gestionlentesvr.ws.GrupoWS;
 import jakarta.jws.WebService;
 import jakarta.jws.WebMethod;
@@ -31,17 +35,15 @@ import java.sql.Timestamp;
 @WebService(serviceName = "Prueba")
 public class Prueba {
 
-    public final FirmwareDAO pruebaDAO; 
+    public final UsuarioDAO pruebaDAO; 
 
     public Prueba() {
-        pruebaDAO= new FirmwareDAOImpl();
+        pruebaDAO= new UsuarioDAOImpl();
     }
     
     
     @WebMethod(operationName = "hello")
     public void hello() throws Exception {
-        Firmware firm = pruebaDAO.obtener(1);
-        firm.setDescripcion("SISOP actualizado");
-        pruebaDAO.actualizar(firm);
+        pruebaDAO.eliminar(3);
     }
 }

@@ -36,7 +36,6 @@ public class DispositivoServiceImpl implements DispositivoService {
         if (dispositivoDAO.obtener(dispositivo.getGrupo().getId()) == null) {
             throw new Exception("El grupo no existe");
         }
-
         dispositivoDAO.agregar(dispositivo);
     }
 

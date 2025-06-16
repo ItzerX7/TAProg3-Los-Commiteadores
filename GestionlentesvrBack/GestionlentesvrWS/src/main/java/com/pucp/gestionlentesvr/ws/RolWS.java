@@ -22,16 +22,47 @@ public class RolWS {
 
     @WebMethod(operationName = "registrarRol")
     public void registrarRol(@WebParam(name = "elemento") Rol elemento) throws Exception {
-        service.registrarRol(elemento);
+
+        try {
+            service.registrarRol(elemento);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al registrar" + ex.getMessage());
+        }
     }
 
     @WebMethod(operationName = "actualizarRol")
     public void actualizarRol(@WebParam(name = "elemento") Rol elemento) throws Exception {
-        service.actualizarRol(elemento);
+
+        try {
+            service.actualizarRol(elemento);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al actualizar" + ex.getMessage());
+        }
     }
-    
+
+    @WebMethod(operationName = "eliminarRol")
+    public void eliminarRol(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            service.eliminarRol(id);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al eliminar" + ex.getMessage());
+        }
+    }
+
+    @WebMethod(operationName = "obtenerRol")
+    public Rol obtenerRol(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            return service.obtenerRol(id);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al obtener" + ex.getMessage());
+        }
+    }
+
     @WebMethod(operationName = "listarRol")
-    public List<Rol> listarRol() {
+    public List<Rol> listarRol() throws Exception {
+
         try {
             return service.listarRol();
         } catch (Exception ex) {

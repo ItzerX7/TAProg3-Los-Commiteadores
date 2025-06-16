@@ -17,6 +17,7 @@ public class Dispositivo {
     private char activo;
 
     public Dispositivo() {
+        
     }
 
     public Dispositivo(String nombre, String modelo, String numeroSerie, Timestamp fechaRegistro,

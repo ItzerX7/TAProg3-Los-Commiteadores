@@ -16,7 +16,7 @@ public class ConfiguracionDAOImpl extends BaseDAOImpl<Configuracion> implements 
     }
 
     @Override
-    protected PreparedStatement getUpdatePS(Connection conn, Configuracion entity) throws SQLException {
+    protected CallableStatement getUpdatePS(Connection conn, Configuracion entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -26,12 +26,12 @@ public class ConfiguracionDAOImpl extends BaseDAOImpl<Configuracion> implements 
     }
 
     @Override
-    protected PreparedStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
+    protected CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    protected PreparedStatement getSelectAllPS(Connection conn) throws SQLException {
+    protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

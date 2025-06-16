@@ -16,7 +16,7 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     }
 
     @Override
-    protected PreparedStatement getUpdatePS(Connection conn, Dispositivo entity) throws SQLException {
+    protected CallableStatement getUpdatePS(Connection conn, Dispositivo entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -26,12 +26,12 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     }
 
     @Override
-    protected PreparedStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
+    protected CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    protected PreparedStatement getSelectAllPS(Connection conn) throws SQLException {
+    protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

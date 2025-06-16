@@ -65,15 +65,12 @@ public class AplicacionServiceImpl implements AplicacionService {
     }
 
     @Override
-    public void activarAplicacion(Aplicacion aplicacion) throws Exception {
-        if (aplicacionDAO.obtener(aplicacion.getId()) == null) {
+    public void eliminarAplicacion(Integer idAplicacion) throws Exception {
+        if (idAplicacion < 1 || idAplicacion == null) {
             throw new Exception("La aplicacion no existe");
         }
-        if (String.valueOf(aplicacion.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
         
-        aplicacionDAO.actualizar(aplicacion);
+        aplicacionDAO.setActivo(idAplicacion);
     }
 
     @Override

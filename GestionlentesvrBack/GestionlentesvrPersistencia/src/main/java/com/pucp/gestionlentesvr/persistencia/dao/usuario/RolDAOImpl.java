@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Rol entity) throws SQLException {      
+    protected PreparedStatement getInsertPS(Connection conn, Rol entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -21,7 +21,7 @@ public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
     }
 
     @Override
-    protected PreparedStatement getSetActivePS(Connection conn, Integer id) throws SQLException {
+    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -32,9 +32,7 @@ public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
 
     @Override
     protected PreparedStatement getSelectAllPS(Connection conn) throws SQLException {
-        String query = "SELECT * FROM rol";
-        PreparedStatement ps = conn.prepareStatement(query);
-        return ps;
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
@@ -44,11 +42,6 @@ public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
 
     @Override
     protected void setId(Rol entity, Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

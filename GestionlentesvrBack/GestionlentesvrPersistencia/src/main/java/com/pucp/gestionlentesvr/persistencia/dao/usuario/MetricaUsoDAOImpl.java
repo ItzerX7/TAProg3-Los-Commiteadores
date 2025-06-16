@@ -21,7 +21,7 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
     }
 
     @Override
-    protected PreparedStatement getSetActivePS(Connection conn, Integer id) throws SQLException {
+    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -44,10 +44,4 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
     protected void setId(MetricaUso entity, Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
-    @Override
-    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
 }

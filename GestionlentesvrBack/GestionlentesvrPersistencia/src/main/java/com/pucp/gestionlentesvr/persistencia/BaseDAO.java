@@ -8,11 +8,9 @@ public interface BaseDAO<T> {
 
     T obtener(Integer id);
 
-    List<T> listarTodos();
-
     void actualizar(T entidad);
 
-    void setActivo(Integer id);
-    
     void eliminar(Integer id);
+
+    List<T> listarTodos();
 }

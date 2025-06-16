@@ -21,7 +21,7 @@ public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements Activida
     }
 
     @Override
-    protected PreparedStatement getSetActivePS(Connection conn, Integer id) throws SQLException {
+    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -42,11 +42,6 @@ public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements Activida
 
     @Override
     protected void setId(Actividad entity, Integer id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

@@ -9,7 +9,7 @@ public interface AplicacionService {
 
     void actualizarAplicacion(Aplicacion aplicacion) throws Exception;
 
-    void activarAplicacion(Aplicacion aplicacion) throws Exception;
+    void eliminarAplicacion(Aplicacion aplicacion) throws Exception;
 
     Aplicacion obtenerAplicacion(int idAplicacion) throws Exception;
 

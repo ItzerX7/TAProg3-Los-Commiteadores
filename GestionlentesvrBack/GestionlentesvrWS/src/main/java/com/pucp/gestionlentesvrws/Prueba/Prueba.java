@@ -4,11 +4,18 @@
  */
 package com.pucp.gestionlentesvrws.Prueba;
 
+import com.pucp.gestionlentesvr.dominio.configuracion.Configuracion;
+import com.pucp.gestionlentesvr.dominio.configuracion.TipoConfiguracion;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.EstadoConexion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Firmware;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
+import com.pucp.gestionlentesvr.persistencia.dao.configuracion.ConfiguracionDAO;
+import com.pucp.gestionlentesvr.persistencia.dao.configuracion.ConfiguracionDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.FirmwareDAO;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.FirmwareDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAOImpl;
 import com.pucp.gestionlentesvr.ws.GrupoWS;
@@ -24,17 +31,17 @@ import java.sql.Timestamp;
 @WebService(serviceName = "Prueba")
 public class Prueba {
 
-    public final GrupoDAO pruebaDAO; 
+    public final FirmwareDAO pruebaDAO; 
 
     public Prueba() {
-        pruebaDAO= new GrupoDAOImpl();
+        pruebaDAO= new FirmwareDAOImpl();
     }
     
     
     @WebMethod(operationName = "hello")
     public void hello() throws Exception {
-        Grupo group = pruebaDAO.obtener(1);
-        group.setNombre("nombre actualizado");
-        pruebaDAO.actualizar(group);
+        Firmware firm = pruebaDAO.obtener(1);
+        firm.setDescripcion("SISOP actualizado");
+        pruebaDAO.actualizar(firm);
     }
 }

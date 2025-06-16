@@ -71,15 +71,12 @@ public class DispositivoServiceImpl implements DispositivoService {
     }
 
     @Override
-    public void activarDispositivo(Dispositivo dispositivo) throws Exception {
-        if (dispositivoDAO.obtener(dispositivo.getId()) == null) {
+    public void eliminarDispositivo(Integer idDispositivo) throws Exception {
+        if (idDispositivo < 1 || idDispositivo == null) {
             throw new Exception("El dispositivo no existe");
         }
-        if (String.valueOf(dispositivo.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
-
-        dispositivoDAO.actualizar(dispositivo);
+        
+        dispositivoDAO.eliminar(idDispositivo);
     }
 
     @Override

@@ -9,7 +9,7 @@ public interface ConfiguracionService {
 
     void actualizarConfiguracion(Configuracion configuracion) throws Exception;
 
-    void activarConfiguracion(Configuracion configuracion) throws Exception;
+    void eliminarConfiguracion(Integer idConfiguracion) throws Exception;
 
     Configuracion obtenerConfiguracion(int idConfiguracion) throws Exception;
 

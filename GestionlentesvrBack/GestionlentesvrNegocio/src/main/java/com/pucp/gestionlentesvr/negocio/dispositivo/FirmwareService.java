@@ -9,7 +9,7 @@ public interface FirmwareService {
 
     void actualizarFirmware(Firmware firmware) throws Exception;
 
-    void activarFirmware(Firmware firmware) throws Exception;
+    void eliminarFirmware(Integer idFirmware) throws Exception;
 
     Firmware obtenerFirmware(int idFirmware) throws Exception;
 

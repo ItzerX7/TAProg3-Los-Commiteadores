@@ -1,5 +1,6 @@
 com\pucp\gestionlentesvr\negocio\dispositivo\FirmwareService.class
 com\pucp\gestionlentesvr\negocio\usuario\MetricaUsoService.class
+com\pucp\gestionlentesvr\negocio\usuario\MetricaUsoServiceImpl.class
 com\pucp\gestionlentesvr\negocio\configuracion\ConfiguracionServiceImpl.class
 com\pucp\gestionlentesvr\negocio\usuario\RolServiceImpl.class
 com\pucp\gestionlentesvr\negocio\aplicacion\AplicacionServiceImpl.class
@@ -13,6 +14,5 @@ com\pucp\gestionlentesvr\negocio\actividad\ActividadService.class
 com\pucp\gestionlentesvr\negocio\usuario\RolService.class
 com\pucp\gestionlentesvr\negocio\dispositivo\DispositivoServiceImpl.class
 com\pucp\gestionlentesvr\negocio\dispositivo\GrupoService.class
-com\pucp\gestionlentesvr\negocio\usuario\MetricaUsoImpl.class
 com\pucp\gestionlentesvr\negocio\usuario\UsuarioService.class
 com\pucp\gestionlentesvr\negocio\actividad\ActividadServiceImpl.class

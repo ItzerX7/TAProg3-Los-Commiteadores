@@ -47,15 +47,12 @@ public class GrupoServiceImpl implements GrupoService {
     }
 
     @Override
-    public void activarGrupo(Grupo grupo) throws Exception {
-        if (grupoDAO.obtener(grupo.getId()) == null) {
+    public void eliminarGrupo(Integer idGrupo) throws Exception {
+        if (idGrupo < 1 || idGrupo == null) {
             throw new Exception("El grupo no existe");
         }
-        if (String.valueOf(grupo.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
         
-        grupoDAO.actualizar(grupo);
+        grupoDAO.eliminar(idGrupo);
     }
 
     @Override

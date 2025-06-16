@@ -9,7 +9,7 @@ public interface RolService {
 
     void actualizarRol(Rol rol) throws Exception;
 
-    void activarRol(Rol rol) throws Exception;
+    void eliminarRol(Integer idRol) throws Exception;
 
     Rol obtenerRol(int idRol) throws Exception;
 

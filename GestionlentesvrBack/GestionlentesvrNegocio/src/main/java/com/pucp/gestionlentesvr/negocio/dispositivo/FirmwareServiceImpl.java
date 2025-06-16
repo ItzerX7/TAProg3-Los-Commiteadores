@@ -47,15 +47,12 @@ public class FirmwareServiceImpl implements FirmwareService {
     }
 
     @Override
-    public void activarFirmware(Firmware firmware) throws Exception {
-        if (firmwareDAO.obtener(firmware.getId()) == null) {
+    public void eliminarFirmware(Integer idFirmware) throws Exception {
+        if (idFirmware < 1 || idFirmware == null) {
             throw new Exception("El firmware no existe");
         }
-        if (String.valueOf(firmware.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
-
-        firmwareDAO.actualizar(firmware);
+        
+        firmwareDAO.eliminar(idFirmware);
     }
 
     @Override

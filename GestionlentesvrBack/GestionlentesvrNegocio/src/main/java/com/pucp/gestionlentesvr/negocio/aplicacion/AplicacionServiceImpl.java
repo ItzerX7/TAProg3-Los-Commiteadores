@@ -70,7 +70,7 @@ public class AplicacionServiceImpl implements AplicacionService {
             throw new Exception("La aplicacion no existe");
         }
         
-        aplicacionDAO.setActivo(idAplicacion);
+        aplicacionDAO.eliminar(idAplicacion);
     }
 
     @Override

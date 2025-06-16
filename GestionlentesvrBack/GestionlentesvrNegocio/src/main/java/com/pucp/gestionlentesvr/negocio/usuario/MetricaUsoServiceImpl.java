@@ -59,15 +59,12 @@ public class MetricaUsoServiceImpl implements MetricaUsoService {
     }
 
     @Override
-    public void activarMetricaUso(MetricaUso metricaUso) throws Exception {
-        if (metricaUsoDAO.obtener(metricaUso.getId()) == null) {
+    public void eliminarMetricaUso(Integer idMetricaUso) throws Exception {
+        if (idMetricaUso < 1 || idMetricaUso == null) {
             throw new Exception("La metrica no existe");
         }
-        if (String.valueOf(metricaUso.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
         
-        metricaUsoDAO.actualizar(metricaUso);
+        metricaUsoDAO.eliminar(idMetricaUso);
     }
 
     @Override

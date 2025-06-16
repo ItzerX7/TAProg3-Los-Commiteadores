@@ -41,15 +41,12 @@ public class RolServiceImpl implements RolService {
     }
 
     @Override
-    public void activarRol(Rol rol) throws Exception {
-        if (rolDAO.obtener(rol.getId()) == null) {
+    public void eliminarRol(Integer idRol) throws Exception {
+        if (idRol < 1 || idRol == null) {
             throw new Exception("El rol no existe");
         }
-        if (String.valueOf(rol.getActivo()) == null) {
-            throw new Exception("Debe colocar 's' o 'n' para si o no");
-        }
         
-        rolDAO.actualizar(rol);
+        rolDAO.eliminar(idRol);
     }
 
     @Override

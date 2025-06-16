@@ -51,7 +51,7 @@ public class GrupoDAOImpl extends BaseDAOImpl<Grupo> implements GrupoDAO {
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
-        String query = "{CALL listar_grupo(?)}";
+        String query = "{CALL listar_grupo()}";
         CallableStatement cs = conn.prepareCall(query);
         return cs;
     }
@@ -59,10 +59,10 @@ public class GrupoDAOImpl extends BaseDAOImpl<Grupo> implements GrupoDAO {
     @Override
     protected Grupo createFromResultSet(ResultSet rs) throws SQLException {
         Grupo grupo = new Grupo();
-        grupo.setId(rs.getInt("grupo_id"));
+        grupo.setId(rs.getInt("grupoid"));
         grupo.setNombre(rs.getString("nombre"));
         grupo.setDescripcion(rs.getString("descripcion"));
-        grupo.setFechaCreacion(rs.getTimestamp("fecha_creacion"));
+        grupo.setFechaCreacion(rs.getTimestamp("fechacreacion"));
         grupo.setUbicacion(rs.getString("ubicacion"));
         grupo.setActivo((rs.getString("activo")).toCharArray()[0]);
         return grupo;

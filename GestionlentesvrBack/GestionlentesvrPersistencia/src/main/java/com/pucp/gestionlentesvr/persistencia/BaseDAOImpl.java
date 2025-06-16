@@ -11,6 +11,7 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
     protected abstract PreparedStatement getInsertPS(Connection conn, T entity) throws SQLException;
     protected abstract PreparedStatement getUpdatePS(Connection conn, T entity) throws SQLException;
+    protected abstract CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException;
     protected abstract PreparedStatement getSetActivePS(Connection conn, Integer id) throws SQLException;
     protected abstract PreparedStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException;
     protected abstract PreparedStatement getSelectAllPS(Connection conn) throws SQLException;
@@ -85,6 +86,17 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
             ps.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error al actualizar entidad", e);
+        }
+    }
+    
+    @Override
+    public void eliminar(Integer id) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion();
+             CallableStatement cs = getDeletePS(conn, id)) {
+
+            cs.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al eliminar entidad", e);
         }
     }
 }

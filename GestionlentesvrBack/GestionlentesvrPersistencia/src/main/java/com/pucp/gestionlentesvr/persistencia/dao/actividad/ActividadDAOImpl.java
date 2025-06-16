@@ -2,7 +2,6 @@ package com.pucp.gestionlentesvr.persistencia.dao.actividad;
 
 import com.pucp.gestionlentesvr.dominio.actividad.Actividad;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
-import com.pucp.gestionlentesvr.persistencia.dao.actividad.ActividadDAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

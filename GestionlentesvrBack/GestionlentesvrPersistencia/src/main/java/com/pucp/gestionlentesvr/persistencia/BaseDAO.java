@@ -13,4 +13,6 @@ public interface BaseDAO<T> {
     void actualizar(T entidad);
 
     void setActivo(Integer id);
+    
+    void eliminar(Integer id);
 }

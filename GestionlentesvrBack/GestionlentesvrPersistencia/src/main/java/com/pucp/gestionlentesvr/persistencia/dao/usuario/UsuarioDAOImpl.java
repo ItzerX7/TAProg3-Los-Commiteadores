@@ -2,7 +2,7 @@ package com.pucp.gestionlentesvr.persistencia.dao.usuario;
 
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
-import com.pucp.gestionlentesvr.persistencia.dao.usuario.UsuarioDAO;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -53,6 +53,11 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
     @Override
     protected void setId(Usuario usuario, Integer id) {
         usuario.setId(id);
+    }
+
+    @Override
+    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

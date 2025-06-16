@@ -2,7 +2,7 @@ package com.pucp.gestionlentesvr.persistencia.dao.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
-import com.pucp.gestionlentesvr.persistencia.dao.aplicacion.AplicacionDAO;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -42,6 +42,11 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
 
     @Override
     protected PreparedStatement getSetActivePS(Connection conn, Integer id) throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     

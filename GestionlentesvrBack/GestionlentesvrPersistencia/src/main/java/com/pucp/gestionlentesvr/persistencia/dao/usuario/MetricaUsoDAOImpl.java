@@ -2,7 +2,7 @@ package com.pucp.gestionlentesvr.persistencia.dao.usuario;
 
 import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
-import com.pucp.gestionlentesvr.persistencia.dao.usuario.MetricaUsoDAO;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -42,6 +42,11 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
 
     @Override
     protected void setId(MetricaUso entity, Integer id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    protected CallableStatement getDeletePS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

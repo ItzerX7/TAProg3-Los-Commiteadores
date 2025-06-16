@@ -18,24 +18,24 @@ public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements Activida
         String query = "{CALL insertar_actividad(?, ?, ?, ?, ?, ?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.registerOutParameter(1, Types.INTEGER);
-        cs.setString(3, entity.getDescripcion());
-        cs.setString(4, entity.getDetallesTecnicos());
-        cs.setString(5, entity.getTipo().name());
-        cs.setInt(6, entity.getUsuario().getId());
-        cs.setInt(7, entity.getDispositivo().getId());
+        cs.setString(2, entity.getDescripcion());
+        cs.setString(3, entity.getDetallesTecnicos());
+        cs.setString(4, entity.getTipo().name());
+        cs.setInt(5, entity.getUsuario().getId());
+        cs.setInt(6, entity.getDispositivo().getId());
         return cs;
     }
 
     @Override
     protected CallableStatement getUpdatePS(Connection conn, Actividad entity) throws SQLException {
-        String query = "{CALL actualizar_actvidad(?, ?, ?, ?)}";
+        String query = "{CALL actualizar_actvidad(?, ?, ?, ?, ?, ?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.setInt(1, entity.getId());
-        cs.setString(3, entity.getDescripcion());
-        cs.setString(4, entity.getDetallesTecnicos());
-        cs.setString(5, entity.getTipo().name());
-        cs.setInt(6, entity.getUsuario().getId());
-        cs.setInt(7, entity.getDispositivo().getId());
+        cs.setString(2, entity.getDescripcion());
+        cs.setString(3, entity.getDetallesTecnicos());
+        cs.setString(4, entity.getTipo().name());
+        cs.setInt(5, entity.getUsuario().getId());
+        cs.setInt(6, entity.getDispositivo().getId());
         return cs;
     }
 

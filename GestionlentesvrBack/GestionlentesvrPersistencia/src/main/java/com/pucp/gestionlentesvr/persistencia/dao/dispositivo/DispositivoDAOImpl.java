@@ -13,7 +13,6 @@ import java.sql.Types;
 
 public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements DispositivoDAO {
 
-  
     @Override
     protected CallableStatement getInsertPS(Connection conn, Dispositivo entity) throws SQLException {
         String query = "{CALL insertar_dispositivo(?, ?, ?, ?, ?, ?, ?, ?)}";
@@ -58,7 +57,7 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
         String query = "{CALL obtener_dispositivo(?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.setInt(1, id);
-        return cs; 
+        return cs;
     }
 
     @Override
@@ -71,7 +70,7 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     @Override
     protected Dispositivo createFromResultSet(ResultSet rs) throws SQLException {
         Dispositivo dev = new Dispositivo();
-        Grupo grupo=new Grupo();
+        Grupo grupo = new Grupo();
         dev.setGrupo(grupo);
         dev.setId(rs.getInt("dispositivoid"));
         dev.setNombre(rs.getString("nombre"));
@@ -91,5 +90,5 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     protected void setId(Dispositivo entity, Integer id) {
         entity.setId(id);
     }
-    
+
 }

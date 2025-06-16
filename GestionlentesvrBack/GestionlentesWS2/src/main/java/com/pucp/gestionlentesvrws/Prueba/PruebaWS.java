@@ -1,4 +1,3 @@
-
 package com.pucp.gestionlentesvrws.Prueba;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
@@ -20,11 +19,17 @@ public class PruebaWS {
     }
     
     @WebMethod(operationName = "insertar")
-    public void hello() {
-        Grupo entidad = new Grupo();
-        entidad.setNombre("Grupo Generico");
-        entidad.setDescripcion("Grupo para los dispositivos aun sin grupo asignado");
-        entidad.setUbicacion("Indefinido");
-        pruebaDAO.agregar(entidad);
+    public boolean hello() {
+        try{
+            Grupo entidad = new Grupo();
+            entidad.setNombre("Grupo Generico");
+            entidad.setDescripcion("Grupo para los dispositivos aun sin grupo asignado");
+            entidad.setUbicacion("Indefinido");
+            pruebaDAO.agregar(entidad);
+            return true;
+        }catch(Exception e){
+            System.out.println(e);
+            return false;
+        }
     }
 }

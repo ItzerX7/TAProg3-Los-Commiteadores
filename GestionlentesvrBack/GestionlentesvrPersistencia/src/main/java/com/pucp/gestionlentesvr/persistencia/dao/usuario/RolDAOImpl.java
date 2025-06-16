@@ -11,12 +11,12 @@ import java.sql.SQLException;
 public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Rol entity) throws SQLException {
+    protected CallableStatement getInsertPS(Connection conn, Rol entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    protected PreparedStatement getUpdatePS(Connection conn, Rol entity) throws SQLException {
+    protected CallableStatement getUpdatePS(Connection conn, Rol entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -26,18 +26,22 @@ public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
     }
 
     @Override
-    protected PreparedStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
+    protected CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    protected PreparedStatement getSelectAllPS(Connection conn) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
+        String query = "{CALL listar_rol()}";
+        CallableStatement cs = conn.prepareCall(query);
+        return cs;
     }
 
     @Override
     protected Rol createFromResultSet(ResultSet rs) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+        return null;
+
     }
 
     @Override

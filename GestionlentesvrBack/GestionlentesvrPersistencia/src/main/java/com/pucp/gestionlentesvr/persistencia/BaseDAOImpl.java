@@ -26,11 +26,11 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
     @Override
     public void agregar(T entity) {
-        try (Connection conn = DBManager.getInstance().obtenerConexion(); CallableStatement ps = getInsertPS(conn, entity)) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion(); CallableStatement cs = getInsertPS(conn, entity)) {
 
-            ps.executeUpdate();
+            cs.executeUpdate();
 
-            try (ResultSet rs = ps.getGeneratedKeys()) {
+            try (ResultSet rs = cs.getGeneratedKeys()) {
                 if (rs.next()) {
                     setId(entity, rs.getInt(1));
                 }
@@ -42,7 +42,7 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
     @Override
     public T obtener(Integer id) {
-        try (Connection conn = DBManager.getInstance().obtenerConexion(); PreparedStatement ps = getSelectByIdPS(conn, id); ResultSet rs = ps.executeQuery()) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion(); CallableStatement cs = getSelectByIdPS(conn, id); ResultSet rs = cs.executeQuery()) {
 
             if (rs.next()) {
                 return createFromResultSet(rs);
@@ -56,7 +56,7 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
     @Override
     public List<T> listarTodos() {
         List<T> entities = new ArrayList<>();
-        try (Connection conn = DBManager.getInstance().obtenerConexion(); PreparedStatement ps = getSelectAllPS(conn); ResultSet rs = ps.executeQuery()) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion(); CallableStatement cs = getSelectAllPS(conn); ResultSet rs = cs.executeQuery()) {
 
             while (rs.next()) {
                 entities.add(createFromResultSet(rs));
@@ -69,9 +69,9 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
     @Override
     public void actualizar(T entity) {
-        try (Connection conn = DBManager.getInstance().obtenerConexion(); PreparedStatement ps = getUpdatePS(conn, entity)) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion(); CallableStatement cs = getUpdatePS(conn, entity)) {
 
-            ps.executeUpdate();
+            cs.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error al actualizar entidad", e);
         }

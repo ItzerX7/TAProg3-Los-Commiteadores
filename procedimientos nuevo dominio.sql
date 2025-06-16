@@ -69,12 +69,11 @@ CREATE PROCEDURE insertar_usuario(
     IN p_apellido VARCHAR(50),
     IN p_correo VARCHAR(254),
     IN p_contrasena VARCHAR(254),
-    IN p_activo CHAR(1),
     IN p_rol_rolid INT
 )
 BEGIN
-    INSERT INTO usuario(nombre, apellido, correo, contrasena, rol_rolid, activo)
-    VALUES (p_nombre, p_apellido, p_correo, p_contrasena, p_rol_rolid, p_activo);
+    INSERT INTO usuario(nombre, apellido, correo, contrasena, rol_rolid)
+    VALUES (p_nombre, p_apellido, p_correo, p_contrasena, p_rol_rolid);
 
     SET p_usuarioid = LAST_INSERT_ID();
 END;
@@ -87,7 +86,6 @@ CREATE PROCEDURE actualizar_usuario(
     IN p_apellido VARCHAR(50),
     IN p_correo VARCHAR(254),
     IN p_contrasena VARCHAR(254),
-    IN p_activo CHAR(1),
     IN p_rol_rolid INT
 )
 BEGIN
@@ -96,7 +94,6 @@ BEGIN
         apellido = p_apellido,
         correo = p_correo,
         contrasena = p_contrasena,
-        activo = p_activo,
         rol_rolid = p_rol_rolid
     WHERE usuarioid = p_usuarioid;
 END;
@@ -146,12 +143,11 @@ CREATE PROCEDURE insertar_grupo(
     OUT p_grupoid INT,
     IN p_nombre VARCHAR(80),
     IN p_descripcion VARCHAR(254),
-    IN p_ubicacion VARCHAR(254),
-    IN p_activo CHAR(1)
+    IN p_ubicacion VARCHAR(254)
 )
 BEGIN
-    INSERT INTO grupo(nombre, descripcion, ubicacion, activo)
-    VALUES (p_nombre, p_descripcion, p_ubicacion, p_activo);
+    INSERT INTO grupo(nombre, descripcion, ubicacion)
+    VALUES (p_nombre, p_descripcion, p_ubicacion);
 
     SET p_grupoid = LAST_INSERT_ID();
 END;
@@ -162,15 +158,13 @@ CREATE PROCEDURE actualizar_grupo(
     IN p_grupoid INT,
     IN p_nombre VARCHAR(80),
     IN p_descripcion VARCHAR(254),
-    IN p_ubicacion VARCHAR(254),
-    IN p_activo CHAR(1)
+    IN p_ubicacion VARCHAR(254)
 )
 BEGIN
     UPDATE grupo
     SET nombre = p_nombre,
         descripcion = p_descripcion,
-        ubicacion = p_ubicacion,
-        activo = p_activo
+        ubicacion = p_ubicacion
     WHERE grupoid = p_grupoid;
 END;
 //
@@ -222,17 +216,16 @@ CREATE PROCEDURE insertar_dispositivo(
     IN p_ubicacion VARCHAR(254),
     IN p_nivelbateria INT,
     IN p_estado_conexion ENUM('CONECTADO', 'DESCONECTADO', 'EN_USO', 'EN_MANTENIMIENTO'),
-    IN p_grupo_grupoid INT,
-    IN p_activo CHAR(1)
+    IN p_grupo_grupoid INT
 )
 BEGIN
     INSERT INTO dispositivo(
         nombre, modelo, numeroserie, ubicacion, nivelbateria
-        , estado_conexion, grupo_grupoid, activo
+        , estado_conexion, grupo_grupoid
     )
     VALUES (
         p_nombre, p_modelo, p_numeroserie, p_ubicacion,
-        p_nivelbateria, p_estado_conexion, p_grupo_grupoid, p_activo
+        p_nivelbateria, p_estado_conexion, p_grupo_grupoid
     );
 
     SET p_dispositivoid = LAST_INSERT_ID();
@@ -249,8 +242,7 @@ CREATE PROCEDURE actualizar_dispositivo(
     IN p_nivelbateria INT,
     IN p_ultimaconexion TIMESTAMP,
     IN p_estado_conexion ENUM('CONECTADO', 'DESCONECTADO', 'EN_USO', 'EN_MANTENIMIENTO'),
-    IN p_grupo_grupoid INT,
-    IN p_activo CHAR(1)
+    IN p_grupo_grupoid INT
 )
 BEGIN
     UPDATE dispositivo
@@ -261,8 +253,7 @@ BEGIN
         nivelbateria = p_nivelbateria,
         ultimaconexion = p_ultimaconexion,
         estado_conexion = p_estado_conexion,
-        grupo_grupoid = p_grupo_grupoid,
-        activo = p_activo
+        grupo_grupoid = p_grupo_grupoid
     WHERE dispositivoid = p_dispositivoid;
 END;
 //
@@ -325,17 +316,16 @@ CREATE PROCEDURE insertar_actividad(
         'MODIFICACION_GRUPO'
     ),
     IN p_usuario_usuarioid INT,
-    IN p_dispositivo_dispositivoid INT,
-    IN p_activo CHAR(1)
+    IN p_dispositivo_dispositivoid INT
 )
 BEGIN
     INSERT INTO actividad(
         descripcion, detallestecnicos, tipo,
-        usuario_usuarioid, dispositivo_dispositivoid, activo
+        usuario_usuarioid, dispositivo_dispositivoid
     )
     VALUES (
         p_descripcion, p_detallestecnicos, p_tipo,
-        p_usuario_usuarioid, p_dispositivo_dispositivoid, p_activo
+        p_usuario_usuarioid, p_dispositivo_dispositivoid
     );
 
     SET p_actividadid = LAST_INSERT_ID();
@@ -363,8 +353,7 @@ CREATE PROCEDURE actualizar_actividad(
         'MODIFICACION_GRUPO'
     ),
     IN p_usuario_usuarioid INT,
-    IN p_dispositivo_dispositivoid INT,
-    IN p_activo CHAR(1)
+    IN p_dispositivo_dispositivoid INT
 )
 BEGIN
     UPDATE actividad
@@ -372,8 +361,7 @@ BEGIN
         detallestecnicos = p_detallestecnicos,
         tipo = p_tipo,
         usuario_usuarioid = p_usuario_usuarioid,
-        dispositivo_dispositivoid = p_dispositivo_dispositivoid,
-        activo = p_activo
+        dispositivo_dispositivoid = p_dispositivo_dispositivoid
     WHERE actividadid = p_actividadid;
 END;
 //
@@ -431,15 +419,14 @@ CREATE PROCEDURE insertar_aplicacion(
         'PRODUCTIVIDAD',
         'SIMULACION',
         'MULTIMEDIA'
-    ),
-    IN p_activo CHAR(1)
+    )
 )
 BEGIN
     INSERT INTO aplicacion(
-        nombre, version, desarrollador, descripcion, tamanio, categoria, activo
+        nombre, version, desarrollador, descripcion, tamanio, categoria
     )
     VALUES (
-        p_nombre, p_version, p_desarrollador, p_descripcion, p_tamanio, p_categoria, p_activo
+        p_nombre, p_version, p_desarrollador, p_descripcion, p_tamanio, p_categoria
     );
 
     SET p_aplicacionid = LAST_INSERT_ID();
@@ -462,8 +449,7 @@ CREATE PROCEDURE actualizar_aplicacion(
         'PRODUCTIVIDAD',
         'SIMULACION',
         'MULTIMEDIA'
-    ),
-    IN p_activo CHAR(1)
+    )
 )
 BEGIN
     UPDATE aplicacion
@@ -472,8 +458,7 @@ BEGIN
         desarrollador = p_desarrollador,
         descripcion = p_descripcion,
         tamanio = p_tamanio,
-        categoria = p_categoria,
-        activo = p_activo
+        categoria = p_categoria
     WHERE aplicacionid = p_aplicacionid;
 END;
 //
@@ -527,15 +512,14 @@ CREATE PROCEDURE insertar_configuracion(
         'RED',
         'SEGURIDAD',
         'SISTEMA'
-    ),
-    IN p_activo CHAR(1)
+    )
 )
 BEGIN
     INSERT INTO configuracion(
-        nombre, descripcion, valor, tipo, activo
+        nombre, descripcion, valor, tipo
     )
     VALUES (
-        p_nombre, p_descripcion, p_valor, p_tipo, p_activo
+        p_nombre, p_descripcion, p_valor, p_tipo
     );
 
     SET p_configuracionid = LAST_INSERT_ID();
@@ -555,16 +539,14 @@ CREATE PROCEDURE actualizar_configuracion(
         'RED',
         'SEGURIDAD',
         'SISTEMA'
-    ),
-    IN p_activo CHAR(1)
+    )
 )
 BEGIN
     UPDATE configuracion
     SET nombre = p_nombre,
         descripcion = p_descripcion,
         valor = p_valor,
-        tipo = p_tipo,
-        activo = p_activo
+        tipo = p_tipo
     WHERE configuracionid = p_configuracionid;
 END;
 //
@@ -611,12 +593,11 @@ CREATE PROCEDURE insertar_firmware(
     OUT p_firmwareid INT,
     IN p_nombre VARCHAR(254),
     IN p_version VARCHAR(254),
-    IN p_descripcion VARCHAR(254),
-    IN p_activo CHAR(1)
+    IN p_descripcion VARCHAR(254)
 )
 BEGIN
-    INSERT INTO firmware(nombre, version, descripcion, activo)
-    VALUES (p_nombre, p_version, p_descripcion, p_activo);
+    INSERT INTO firmware(nombre, version, descripcion)
+    VALUES (p_nombre, p_version, p_descripcion);
 
     SET p_firmwareid = LAST_INSERT_ID();
 END;
@@ -627,15 +608,13 @@ CREATE PROCEDURE actualizar_firmware(
     IN p_firmwareid INT,
     IN p_nombre VARCHAR(254),
     IN p_version VARCHAR(254),
-    IN p_descripcion VARCHAR(254),
-    IN p_activo CHAR(1)
+    IN p_descripcion VARCHAR(254)
 )
 BEGIN
     UPDATE firmware
     SET nombre = p_nombre,
         version = p_version,
-        descripcion = p_descripcion,
-        activo = p_activo
+        descripcion = p_descripcion
     WHERE firmwareid = p_firmwareid;
 END;
 //
@@ -684,17 +663,16 @@ CREATE PROCEDURE insertar_metricauso(
     IN p_nivelbateriainicial INT,
     IN p_nivelbateriafinal INT,
     IN p_usuario_usuarioid INT,
-    IN p_dispositivo_dispositivoid INT,
-    IN p_activo CHAR(1)
+    IN p_dispositivo_dispositivoid INT
 )
 BEGIN
     INSERT INTO metricauso(
         tiempousominutos, nivelbateriainicial,
-        nivelbateriafinal, usuario_usuarioid, dispositivo_dispositivoid, activo
+        nivelbateriafinal, usuario_usuarioid, dispositivo_dispositivoid
     )
     VALUES (
         p_tiempousominutos, p_nivelbateriainicial,
-        p_nivelbateriafinal, p_usuario_usuarioid, p_dispositivo_dispositivoid, p_activo
+        p_nivelbateriafinal, p_usuario_usuarioid, p_dispositivo_dispositivoid
     );
 
     SET p_metricaid = LAST_INSERT_ID();
@@ -708,8 +686,7 @@ CREATE PROCEDURE actualizar_metricauso(
     IN p_nivelbateriainicial INT,
     IN p_nivelbateriafinal INT,
     IN p_usuario_usuarioid INT,
-    IN p_dispositivo_dispositivoid INT,
-    IN p_activo CHAR(1)
+    IN p_dispositivo_dispositivoid INT
 )
 BEGIN
     UPDATE metricauso
@@ -717,8 +694,7 @@ BEGIN
         nivelbateriainicial = p_nivelbateriainicial,
         nivelbateriafinal = p_nivelbateriafinal,
         usuario_usuarioid = p_usuario_usuarioid,
-        dispositivo_dispositivoid = p_dispositivo_dispositivoid,
-        activo = p_activo
+        dispositivo_dispositivoid = p_dispositivo_dispositivoid
     WHERE metricaid = p_metricaid;
 END;
 //
@@ -764,12 +740,11 @@ DELIMITER //
 CREATE PROCEDURE insertar_rol(
     OUT p_rolid INT,
     IN p_nombre VARCHAR(50),
-    IN p_descripcion VARCHAR(254),
-    IN p_activo CHAR(1)
+    IN p_descripcion VARCHAR(254)
 )
 BEGIN
-    INSERT INTO rol(nombre, descripcion, activo)
-    VALUES (p_nombre, p_descripcion, p_activo);
+    INSERT INTO rol(nombre, descripcion)
+    VALUES (p_nombre, p_descripcion);
 
     SET p_rolid = LAST_INSERT_ID();
 END;
@@ -779,14 +754,12 @@ END;
 CREATE PROCEDURE actualizar_rol(
     IN p_rolid INT,
     IN p_nombre VARCHAR(50),
-    IN p_descripcion VARCHAR(254),
-    IN p_activo CHAR(1)
+    IN p_descripcion VARCHAR(254)
 )
 BEGIN
     UPDATE rol
     SET nombre = p_nombre,
-        descripcion = p_descripcion,
-        activo = p_activo
+        descripcion = p_descripcion
     WHERE rolid = p_rolid;
 END;
 //

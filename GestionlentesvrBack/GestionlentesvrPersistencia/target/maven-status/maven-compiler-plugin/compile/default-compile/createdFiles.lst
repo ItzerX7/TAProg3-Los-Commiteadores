@@ -1,7 +1,6 @@
 com\pucp\gestionlentesvr\persistencia\dao\configuracion\ConfiguracionDAOImpl.class
 com\pucp\gestionlentesvr\persistencia\DBManager.class
 com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAOImpl.class
-Prueba\Prueba.class
 com\pucp\gestionlentesvr\persistencia\dao\usuario\MetricaUsoDAO.class
 com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAO.class
 com\pucp\gestionlentesvr\persistencia\dao\aplicacion\AplicacionDAOImpl.class

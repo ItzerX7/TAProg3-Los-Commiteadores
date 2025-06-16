@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class RolDAOImpl extends BaseDAOImpl<Rol> implements RolDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Rol entity) throws SQLException {
+    protected CallableStatement getInsertPS(Connection conn, Rol entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

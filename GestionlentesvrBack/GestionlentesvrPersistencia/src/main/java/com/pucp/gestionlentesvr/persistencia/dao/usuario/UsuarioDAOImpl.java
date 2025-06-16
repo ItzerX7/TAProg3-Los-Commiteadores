@@ -12,7 +12,7 @@ import java.sql.Statement;
 public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Usuario entity) throws SQLException {
+    protected CallableStatement getInsertPS(Connection conn, Usuario entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

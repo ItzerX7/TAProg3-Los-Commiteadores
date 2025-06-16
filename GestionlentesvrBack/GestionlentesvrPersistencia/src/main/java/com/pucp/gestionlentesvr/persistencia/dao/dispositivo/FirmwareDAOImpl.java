@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class FirmwareDAOImpl extends BaseDAOImpl<Firmware> implements FirmwareDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Firmware entity) throws SQLException {
+    protected CallableStatement getInsertPS(Connection conn, Firmware entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

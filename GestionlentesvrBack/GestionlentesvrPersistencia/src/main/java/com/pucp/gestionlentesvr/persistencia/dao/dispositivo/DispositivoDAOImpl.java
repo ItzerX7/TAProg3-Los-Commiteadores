@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements DispositivoDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Dispositivo entity) throws SQLException {
+    protected CallableStatement getInsertPS(Connection conn, Dispositivo entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements ActividadDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, Actividad entity) throws SQLException {
+    protected CallableStatement getInsertPS(Connection conn, Actividad entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

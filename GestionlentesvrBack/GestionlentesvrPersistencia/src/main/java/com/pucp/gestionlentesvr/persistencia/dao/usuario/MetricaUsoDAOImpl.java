@@ -11,7 +11,7 @@ import java.sql.SQLException;
 public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements MetricaUsoDAO {
 
     @Override
-    protected PreparedStatement getInsertPS(Connection conn, MetricaUso entity) throws SQLException {
+    protected CallableStatement getInsertPS(Connection conn, MetricaUso entity) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 

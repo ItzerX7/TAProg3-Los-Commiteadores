@@ -10,7 +10,7 @@ import java.util.List;
 
 public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
-    protected abstract PreparedStatement getInsertPS(Connection conn, T entity) throws SQLException;
+    protected abstract CallableStatement getInsertPS(Connection conn, T entity) throws SQLException;
 
     protected abstract PreparedStatement getUpdatePS(Connection conn, T entity) throws SQLException;
 
@@ -26,11 +26,11 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
 
     @Override
     public void agregar(T entity) {
-        try (Connection conn = DBManager.getInstance().obtenerConexion(); PreparedStatement ps = getInsertPS(conn, entity)) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion(); CallableStatement cs = getInsertPS(conn, entity)) {
 
-            ps.executeUpdate();
+            cs.executeUpdate();
 
-            try (ResultSet rs = ps.getGeneratedKeys()) {
+            try (ResultSet rs = cs.getGeneratedKeys()) {
                 if (rs.next()) {
                     setId(entity, rs.getInt(1));
                 }

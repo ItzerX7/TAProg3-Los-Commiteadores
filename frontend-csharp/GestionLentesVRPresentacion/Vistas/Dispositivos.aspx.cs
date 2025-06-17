@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.GestionLentesVRWS;
 using FrontVR.ServiceReference1;
 using Google.Protobuf.WellKnownTypes;
 
@@ -38,16 +37,15 @@ namespace FrontVR.Vistas
                     nombre = txtNombre.Text,
                     modelo = txtModelo.Text,
                     numeroSerie = txtSerie.Text,
-                    fechaRegistro = DateTimeOffset(txtFecha.Text),
+                    fechaRegistro = DateTime.Parse(txtFecha.Text),
                     ubicacion = txtUbicacion.Text,
                     ultimaConexion = DateTime.Now,
-                    activo = true,
+                    activo = 'S',
                     ultimaConexionSpecified = true,
-                    grupo = grupo,
-                    firmwareActual = new firmware { firmwareId = 1 }
+                    grupo = grupo
                 };
 
-                if (d.dispositivoId == 0)
+                if (d.id == 0)
                     servicio.registrarDispositivo(d);
                 else
                     servicio.actualizarDispositivo(d);
@@ -70,7 +68,7 @@ namespace FrontVR.Vistas
             if (e.CommandName == "EditarDispositivo")
             {
                 var d = servicio.obtenerDispositivo(id);
-                hfIdDispositivo.Value = d.dispositivoId.ToString();
+                hfIdDispositivo.Value = d.id.ToString();
                 txtNombre.Text = d.nombre;
                 txtModelo.Text = d.modelo;
                 txtSerie.Text = d.numeroSerie;

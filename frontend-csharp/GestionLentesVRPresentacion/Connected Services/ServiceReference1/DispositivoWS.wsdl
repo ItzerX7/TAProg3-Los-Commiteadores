@@ -5,26 +5,14 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/DispositivoWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="listarDispositivo">
-    <part name="parameters" element="tns:listarDispositivo" />
+  <message name="eliminarDispositivo">
+    <part name="parameters" element="tns:eliminarDispositivo" />
   </message>
-  <message name="listarDispositivoResponse">
-    <part name="parameters" element="tns:listarDispositivoResponse" />
+  <message name="eliminarDispositivoResponse">
+    <part name="parameters" element="tns:eliminarDispositivoResponse" />
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
-  </message>
-  <message name="obtenerDispositivo">
-    <part name="parameters" element="tns:obtenerDispositivo" />
-  </message>
-  <message name="obtenerDispositivoResponse">
-    <part name="parameters" element="tns:obtenerDispositivoResponse" />
-  </message>
-  <message name="registrarDispositivo">
-    <part name="parameters" element="tns:registrarDispositivo" />
-  </message>
-  <message name="registrarDispositivoResponse">
-    <part name="parameters" element="tns:registrarDispositivoResponse" />
   </message>
   <message name="actualizarDispositivo">
     <part name="parameters" element="tns:actualizarDispositivo" />
@@ -32,66 +20,54 @@
   <message name="actualizarDispositivoResponse">
     <part name="parameters" element="tns:actualizarDispositivoResponse" />
   </message>
-  <message name="eliminarDispositivo">
-    <part name="parameters" element="tns:eliminarDispositivo" />
+  <message name="registrarDispositivo">
+    <part name="parameters" element="tns:registrarDispositivo" />
   </message>
-  <message name="eliminarDispositivoResponse">
-    <part name="parameters" element="tns:eliminarDispositivoResponse" />
+  <message name="registrarDispositivoResponse">
+    <part name="parameters" element="tns:registrarDispositivoResponse" />
+  </message>
+  <message name="obtenerDispositivo">
+    <part name="parameters" element="tns:obtenerDispositivo" />
+  </message>
+  <message name="obtenerDispositivoResponse">
+    <part name="parameters" element="tns:obtenerDispositivoResponse" />
+  </message>
+  <message name="listarDispositivo">
+    <part name="parameters" element="tns:listarDispositivo" />
+  </message>
+  <message name="listarDispositivoResponse">
+    <part name="parameters" element="tns:listarDispositivoResponse" />
   </message>
   <portType name="DispositivoWS">
-    <operation name="listarDispositivo">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest" message="tns:listarDispositivo" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse" message="tns:listarDispositivoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="obtenerDispositivo">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest" message="tns:obtenerDispositivo" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse" message="tns:obtenerDispositivoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="registrarDispositivo">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoRequest" message="tns:registrarDispositivo" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoResponse" message="tns:registrarDispositivoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="eliminarDispositivo">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoRequest" message="tns:eliminarDispositivo" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoResponse" message="tns:eliminarDispositivoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="actualizarDispositivo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoRequest" message="tns:actualizarDispositivo" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoResponse" message="tns:actualizarDispositivoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="eliminarDispositivo">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoRequest" message="tns:eliminarDispositivo" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoResponse" message="tns:eliminarDispositivoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="registrarDispositivo">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoRequest" message="tns:registrarDispositivo" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoResponse" message="tns:registrarDispositivoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerDispositivo">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest" message="tns:obtenerDispositivo" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse" message="tns:obtenerDispositivoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarDispositivo">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest" message="tns:listarDispositivo" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse" message="tns:listarDispositivoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
   </portType>
   <binding name="DispositivoWSPortBinding" type="tns:DispositivoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarDispositivo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="obtenerDispositivo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="registrarDispositivo">
+    <operation name="eliminarDispositivo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,7 +91,31 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="eliminarDispositivo">
+    <operation name="registrarDispositivo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerDispositivo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarDispositivo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

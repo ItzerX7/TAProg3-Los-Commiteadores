@@ -207,7 +207,7 @@
     <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.configuracion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.dispositivo1.datasource">
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.dispositivo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.eliminarActividadResponse.datasource">
@@ -327,7 +327,7 @@
     <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.registrarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.rol1.datasource">
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.rol.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.usuario.datasource">
@@ -339,9 +339,6 @@
     <None Include="Connected Services\ServiceReference1\MetricaUsoWS.wsdl" />
     <None Include="Connected Services\ServiceReference1\RolWS.wsdl" />
     <None Include="Connected Services\ServiceReference1\RolWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceReference1\RolWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\servicios.disco" />
@@ -419,9 +416,6 @@
     <None Include="Connected Services\ServiceReference1\FirmwareWS.wsdl" />
     <None Include="Connected Services\ServiceReference1\GrupoWS.wsdl" />
     <None Include="Connected Services\ServiceReference1\MetricaUsoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceReference1\MetricaUsoWS1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference1\UsuarioWS.wsdl" />

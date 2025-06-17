@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontVR", "GestionLentesVRPresentacion\FrontVR.csproj", "{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6A5377F-99C8-43EA-A3EC-DA429E922509}
+	EndGlobalSection
+EndGlobal

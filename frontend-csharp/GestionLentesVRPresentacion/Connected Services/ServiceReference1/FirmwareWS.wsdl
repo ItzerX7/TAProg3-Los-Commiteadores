@@ -5,32 +5,32 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/FirmwareWS?xsd=1" namespace="com.pucp.gestionlentesvr" />
     </xsd:schema>
   </types>
-  <message name="registrarFirmware">
-    <part name="parameters" element="tns:registrarFirmware" />
-  </message>
-  <message name="registrarFirmwareResponse">
-    <part name="parameters" element="tns:registrarFirmwareResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
   <message name="eliminarFirmware">
     <part name="parameters" element="tns:eliminarFirmware" />
   </message>
   <message name="eliminarFirmwareResponse">
     <part name="parameters" element="tns:eliminarFirmwareResponse" />
   </message>
-  <message name="listarFirmware">
-    <part name="parameters" element="tns:listarFirmware" />
-  </message>
-  <message name="listarFirmwareResponse">
-    <part name="parameters" element="tns:listarFirmwareResponse" />
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
   </message>
   <message name="obtenerFirmware">
     <part name="parameters" element="tns:obtenerFirmware" />
   </message>
   <message name="obtenerFirmwareResponse">
     <part name="parameters" element="tns:obtenerFirmwareResponse" />
+  </message>
+  <message name="registrarFirmware">
+    <part name="parameters" element="tns:registrarFirmware" />
+  </message>
+  <message name="registrarFirmwareResponse">
+    <part name="parameters" element="tns:registrarFirmwareResponse" />
+  </message>
+  <message name="listarFirmware">
+    <part name="parameters" element="tns:listarFirmware" />
+  </message>
+  <message name="listarFirmwareResponse">
+    <part name="parameters" element="tns:listarFirmwareResponse" />
   </message>
   <message name="actualizarFirmware">
     <part name="parameters" element="tns:actualizarFirmware" />
@@ -39,25 +39,25 @@
     <part name="parameters" element="tns:actualizarFirmwareResponse" />
   </message>
   <portType name="FirmwareWS">
-    <operation name="registrarFirmware">
-      <input wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/registrarFirmwareRequest" message="tns:registrarFirmware" />
-      <output wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/registrarFirmwareResponse" message="tns:registrarFirmwareResponse" />
-      <fault wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/registrarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="eliminarFirmware">
       <input wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/eliminarFirmwareRequest" message="tns:eliminarFirmware" />
       <output wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/eliminarFirmwareResponse" message="tns:eliminarFirmwareResponse" />
       <fault wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/eliminarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="listarFirmware">
-      <input wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/listarFirmwareRequest" message="tns:listarFirmware" />
-      <output wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/listarFirmwareResponse" message="tns:listarFirmwareResponse" />
-      <fault wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/listarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="obtenerFirmware">
       <input wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/obtenerFirmwareRequest" message="tns:obtenerFirmware" />
       <output wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/obtenerFirmwareResponse" message="tns:obtenerFirmwareResponse" />
       <fault wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/obtenerFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="registrarFirmware">
+      <input wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/registrarFirmwareRequest" message="tns:registrarFirmware" />
+      <output wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/registrarFirmwareResponse" message="tns:registrarFirmwareResponse" />
+      <fault wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/registrarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarFirmware">
+      <input wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/listarFirmwareRequest" message="tns:listarFirmware" />
+      <output wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/listarFirmwareResponse" message="tns:listarFirmwareResponse" />
+      <fault wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/listarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="actualizarFirmware">
       <input wsam:Action="com.pucp.gestionlentesvr/FirmwareWS/actualizarFirmwareRequest" message="tns:actualizarFirmware" />
@@ -67,18 +67,6 @@
   </portType>
   <binding name="FirmwareWSPortBinding" type="tns:FirmwareWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="registrarFirmware">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
     <operation name="eliminarFirmware">
       <soap:operation soapAction="" />
       <input>
@@ -91,7 +79,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="listarFirmware">
+    <operation name="obtenerFirmware">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -103,7 +91,19 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerFirmware">
+    <operation name="registrarFirmware">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarFirmware">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

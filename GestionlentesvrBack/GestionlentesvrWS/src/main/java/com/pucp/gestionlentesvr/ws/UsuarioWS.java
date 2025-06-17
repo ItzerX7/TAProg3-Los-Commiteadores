@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/WebServices/WebService.java to edit this template
- */
 package com.pucp.gestionlentesvr.ws;
 
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
@@ -13,10 +9,6 @@ import jakarta.jws.WebParam;
 import jakarta.xml.ws.WebServiceException;
 import java.util.List;
 
-/**
- *
- * @author oscar
- */
 @WebService(serviceName = "UsuarioWS", targetNamespace = "com.pucp.gestionlentesvr")
 public class UsuarioWS {
 

@@ -34,7 +34,7 @@ CREATE TABLE usuario (
   apellido VARCHAR(50),
   correo VARCHAR(254),
   contrasena VARCHAR(254),
-  fechacreacion TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  fechacreacion DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   rol_rolid INT NOT NULL,
   activo CHAR(1) DEFAULT 's',
   CONSTRAINT usuario_rol_fk FOREIGN KEY (rol_rolid) REFERENCES rol(rolid)
@@ -45,7 +45,7 @@ CREATE TABLE grupo (
   grupoid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(80),
   descripcion VARCHAR(254),
-  fechacreacion TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  fechacreacion DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   ubicacion VARCHAR(254),
   activo CHAR(1) DEFAULT 's'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -56,10 +56,10 @@ CREATE TABLE dispositivo (
   nombre VARCHAR(90),
   modelo VARCHAR(254),
   numeroserie VARCHAR(254),
-  fecharegistro TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  fecharegistro DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   ubicacion VARCHAR(254),
   nivelbateria INT,
-  ultimaconexion TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  ultimaconexion DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   estado_conexion ENUM(
     'CONECTADO',
     'DESCONECTADO',
@@ -76,7 +76,7 @@ CREATE TABLE configuracion (
   configuracionid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(254),
   descripcion VARCHAR(254),
-  fechacreacion TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  fechacreacion DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   valor VARCHAR(254),
   tipo ENUM(
     'AUDIO',
@@ -151,7 +151,7 @@ CREATE TABLE disp_conf (
 -- Tabla metricauso
 CREATE TABLE metricauso (
   metricaid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  fecharegistro TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  fecharegistro DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   tiempousominutos INT,
   nivelbateriainicial INT,
   nivelbateriafinal INT,
@@ -165,7 +165,7 @@ CREATE TABLE metricauso (
 -- Tabla actividad
 CREATE TABLE actividad (
   actividadid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  fechahora TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  fechahora DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   descripcion VARCHAR(254),
   detallestecnicos VARCHAR(254),
   tipo ENUM(

@@ -1,11 +1,11 @@
 <discovery xmlns="http://schemas.xmlsoap.org/disco/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/ActividadWS?wsdl" />
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/AplicacionWS?wsdl" />   
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/ConfiguracionWS?wsdl" />
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/DispositivoWS?wsdl" />
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/FirmwareWS?wsdl" />
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/GrupoWS?wsdl" />
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/MetricaUsoWS?wsdl" />
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/RolWS?wsdl" />
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/TiendaSoftWS/UsuarioWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/ActividadWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/AplicacionWS?wsdl" />   
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/DispositivoWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/FirmwareWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/GrupoWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/RolWS?wsdl" />
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/GestionlentesvrWS/UsuarioWS?wsdl" />
 </discovery>

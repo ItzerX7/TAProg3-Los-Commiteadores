@@ -1,0 +1,48 @@
+/GestionlentesvrBack/GestionlentesvrWS/target/
+
+
+# ---- PROYECTO DE CSAHRP ---------
+# ---- Archivos de compilación ----
+bin/
+obj/
+
+# ---- Archivos de usuario de Visual Studio / Rider ----
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# ---- Archivos de paquetes NuGet descargados ----
+packages/
+*.nupkg
+
+# ---- Archivos de publicación ----
+*.Publish.xml
+
+# ---- Archivos de configuración local y bases de datos locales ----
+*.vs/
+.vscode/
+*.dbmdl
+
+# ---- Archivos temporales ----
+*.log
+*.tmp
+
+# ---- Carpetas de test y cobertura ----
+TestResults/
+*.coverage
+*.coveragexml
+*.codecoverage
+
+# ---- Archivos de configuración de Rider ----
+.idea/
+
+# ---- Node_modules (en caso de usar frontend SPA dentro del proyecto) ----
+node_modules/
+
+# ---- Configuración de Secretos de Usuario ----
+secrets.json
+
+# ---- Sistema operativo (Windows / macOS) ----
+Thumbs.db
+.DS_Store

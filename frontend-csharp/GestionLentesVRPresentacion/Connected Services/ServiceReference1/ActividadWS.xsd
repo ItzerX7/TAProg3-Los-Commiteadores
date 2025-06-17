@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="com.pucp.gestionlentesvr" targetNamespace="com.pucp.gestionlentesvr" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="actualizarActividad" type="tns:actualizarActividad" />
+  <xs:element name="actualizarActividadResponse" type="tns:actualizarActividadResponse" />
+  <xs:element name="eliminarActividad" type="tns:eliminarActividad" />
+  <xs:element name="eliminarActividadResponse" type="tns:eliminarActividadResponse" />
+  <xs:element name="listarActividad" type="tns:listarActividad" />
+  <xs:element name="listarActividadResponse" type="tns:listarActividadResponse" />
+  <xs:element name="obtenerActividad" type="tns:obtenerActividad" />
+  <xs:element name="obtenerActividadResponse" type="tns:obtenerActividadResponse" />
+  <xs:element name="registrarActividad" type="tns:registrarActividad" />
+  <xs:element name="registrarActividadResponse" type="tns:registrarActividadResponse" />
+  <xs:complexType name="registrarActividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actividad" type="tns:actividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actividad">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="detallesTecnicos" type="xs:string" />
+      <xs:element minOccurs="0" name="dispositivo" type="tns:dispositivo" />
+      <xs:element minOccurs="0" name="fechaHora" type="tns:date" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoActividad" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dispositivo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoConexion" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="tns:date" />
+      <xs:element minOccurs="0" name="grupo" type="tns:grupo" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="modelo" type="xs:string" />
+      <xs:element name="nivelBateria" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroSerie" type="xs:string" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+      <xs:element minOccurs="0" name="ultimaConexion" type="tns:date" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="date">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="grupo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="tns:date" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="apellido" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasena" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="tns:timestamp" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="tns:rol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="timestamp">
+    <xs:sequence>
+      <xs:element name="nanos" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="rol">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarActividadResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerActividad">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerActividadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:actividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarActividad">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarActividadResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarActividad">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarActividadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:actividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarActividad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="actividad" type="tns:actividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarActividadResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:simpleType name="estadoConexion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CONECTADO" />
+      <xs:enumeration value="DESCONECTADO" />
+      <xs:enumeration value="EN_USO" />
+      <xs:enumeration value="EN_MANTENIMIENTO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoActividad">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INICIO_SESION" />
+      <xs:enumeration value="CIERRE_SESION" />
+      <xs:enumeration value="REGISTRO_DISPOSITIVO" />
+      <xs:enumeration value="ACTUALIZACION_FIRMWARE" />
+      <xs:enumeration value="INSTALACION_APLICACION" />
+      <xs:enumeration value="DESINSTALACION_APLICACION" />
+      <xs:enumeration value="CONFIGURACION_DISPOSITIVO" />
+      <xs:enumeration value="CAMBIO_ESTADO_DISPOSITIVO" />
+      <xs:enumeration value="ASIGNACION_GRUPO" />
+      <xs:enumeration value="CREACION_USUARIO" />
+      <xs:enumeration value="MODIFICACION_USUARIO" />
+      <xs:enumeration value="CREACION_GRUPO" />
+      <xs:enumeration value="MODIFICACION_GRUPO" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

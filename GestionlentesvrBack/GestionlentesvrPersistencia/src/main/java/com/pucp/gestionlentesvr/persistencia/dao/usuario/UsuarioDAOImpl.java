@@ -67,7 +67,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
         usuario.setApellido(rs.getString("apellido"));
         usuario.setCorreo(rs.getString("correo"));
         usuario.setContrasena(rs.getString("contrasena"));
-        usuario.setFechaCreacion(rs.getTimestamp("fechacreacion"));
+        usuario.setFechaCreacion(rs.getDate("fechacreacion"));
         usuario.getRol().setId(rs.getInt("rol_rolid"));
         if (rs.getString("activo").compareTo("s") == 0) {
             usuario.setActivo('s');

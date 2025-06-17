@@ -9,7 +9,7 @@ import jakarta.jws.WebParam;
 import jakarta.xml.ws.WebServiceException;
 import java.util.List;
 
-@WebService(serviceName = "AplicacionWS", targetNamespace = "com.pucp.gestionlentesvr")
+@WebService(serviceName = "AplicacionWS")
 public class AplicacionWS {
 
     private final AplicacionService service;

@@ -1,6 +1,6 @@
 package com.pucp.gestionlentesvr.dominio.dispositivo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Dispositivo {
 

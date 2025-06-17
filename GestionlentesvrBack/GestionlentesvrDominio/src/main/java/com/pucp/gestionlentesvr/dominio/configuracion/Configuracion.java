@@ -1,8 +1,7 @@
 package com.pucp.gestionlentesvr.dominio.configuracion;
 
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class Configuracion {
 
@@ -17,7 +16,7 @@ public class Configuracion {
     public Configuracion() {
     }
 
-    public Configuracion(String nombre, String descripcion, Timestamp fechaCreacion,
+    public Configuracion(String nombre, String descripcion, Date fechaCreacion,
             String valor, TipoConfiguracion tipo, char activo) {
         this.nombre = nombre;
         this.descripcion = descripcion;

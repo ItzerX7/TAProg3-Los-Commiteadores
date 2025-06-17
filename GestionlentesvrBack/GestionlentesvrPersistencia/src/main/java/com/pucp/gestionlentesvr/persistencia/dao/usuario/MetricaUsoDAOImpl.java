@@ -4,6 +4,8 @@ import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.DBManager;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,6 +15,7 @@ import java.sql.Types;
 
 public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements MetricaUsoDAO {
 
+    private DispositivoDAOImpl disDAO = new DispositivoDAOImpl();
     @Override
     protected CallableStatement getInsertPS(Connection conn, MetricaUso entity) throws SQLException {
         String query = "{CALL insertar_metricauso(?, ?, ?, ?, ?, ?)}";
@@ -84,4 +87,22 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
     protected void setId(MetricaUso entity, Integer id) {
         entity.setId(id);
     }
+
+    @Override
+    public Dispositivo obtenerDispositivoMasUsado() {
+        String query = "{CALL obtener_dispositivo_mas_usado()}";
+        try (Connection conn = DBManager.getInstance().obtenerConexion();
+                CallableStatement cs = conn.prepareCall(query); ResultSet rs = cs.executeQuery()) {
+            
+            if (rs.next()) {
+                return disDAO.createFromResultSet(rs);
+            }else{
+                 throw new RuntimeException("Error al listar entidades");
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar entidades", e);
+        }
+    }
+
+
 }

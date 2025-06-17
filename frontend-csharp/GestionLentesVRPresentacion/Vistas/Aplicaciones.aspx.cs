@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.GestionLentesWS;
+using FrontVR.GestionLentesVRWS;
 
 namespace FrontVR.Vistas
 {
@@ -14,7 +14,7 @@ namespace FrontVR.Vistas
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            aplicacionWSClient = new GestionLentesWS.AplicacionWSClient();
+            aplicacionWSClient = new GestionLentesVRWS.AplicacionWSClient();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -57,21 +57,17 @@ namespace FrontVR.Vistas
                 return;
             }
 
-            //System.DateTime fechaLanzamiento = DateTime.Now;
 
             var nuevaApp = new aplicacion
             {
                 nombre = txtNombre.Text.Trim(),
                 version = txtVersion.Text.Trim(),
-                tamanoMB = tamMb,
+                tamanomb = tamMb,
                 descripcion = txtDescripcion.Text.Trim(),
                 desarrollador = txtDesarrollador.Text.Trim(),
-                rutaInstalador = txtRutaInstalador.Text.Trim(),
-                fechaLanzamiento = fechaLanzamiento.Date,
-                fechaLanzamientoSpecified = true,
                 categoria = (categoriaAplicacion)Enum.Parse(typeof(categoriaAplicacion), ddlCategoria.SelectedValue),
-                categoriaSpecified = true,
-                activo = chkActivo.Checked
+                categoriaSpecified = true
+                
             };
 
             try

@@ -2,12 +2,12 @@ package com.pucp.gestionlentesvr.dominio.actividad;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class Actividad {
 
     private int id;
-    private Timestamp fechaHora;
+    private Date fechaHora;
     private String descripcion;
     private String detallesTecnicos;
     private TipoActividad tipo;
@@ -18,9 +18,9 @@ public class Actividad {
     public Actividad() {
     }
 
-    public Actividad(Timestamp fechaHora, String descripcion, String detallesTecnicos,
+    public Actividad(Date fechaHora, String descripcion, String detallesTecnicos,
             TipoActividad tipo, Usuario usuario, Dispositivo dispositivo, char activo) {
-        this.fechaHora = new Timestamp(System.currentTimeMillis());
+        this.fechaHora = new Date(System.currentTimeMillis());
         this.descripcion = descripcion;
         this.detallesTecnicos = detallesTecnicos;
         this.tipo = tipo;
@@ -37,11 +37,11 @@ public class Actividad {
         this.id = id;
     }
 
-    public Timestamp getFechaHora() {
+    public Date getFechaHora() {
         return fechaHora;
     }
 
-    public void setFechaHora(Timestamp fechaHora) {
+    public void setFechaHora(Date fechaHora) {
         this.fechaHora = fechaHora;
     }
 

@@ -1,0 +1,2 @@
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.csproj.CoreCompileInputs.cache

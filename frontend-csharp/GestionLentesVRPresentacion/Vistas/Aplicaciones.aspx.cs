@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.GestionLentesVRWS;
+using FrontVR.ServiceReference1;
 
 namespace FrontVR.Vistas
 {
@@ -14,7 +14,7 @@ namespace FrontVR.Vistas
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            aplicacionWSClient = new GestionLentesVRWS.AplicacionWSClient();
+            aplicacionWSClient = new AplicacionWSClient();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -67,7 +67,6 @@ namespace FrontVR.Vistas
                 desarrollador = txtDesarrollador.Text.Trim(),
                 categoria = (categoriaAplicacion)Enum.Parse(typeof(categoriaAplicacion), ddlCategoria.SelectedValue),
                 categoriaSpecified = true
-                
             };
 
             try

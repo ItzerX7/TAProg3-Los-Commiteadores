@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Web.UI;
 
-// using FrontVR.MetricasWS; // Descomentar cuando se agregue el servicio web
+using FrontVR.ServiceReference1; // Descomentar cuando se agregue el servicio web
 
 namespace FrontVR.Vistas
 {
     public partial class Metricas : Page
     {
-        // MetricasWSClient servicio = new MetricasWSClient(); // Descomentar cuando esté listo el WS
+        MetricaUsoWSClient servicio = new MetricaUsoWSClient(); // Descomentar cuando esté listo el WS
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,9 +23,9 @@ namespace FrontVR.Vistas
         private void CargarKPI()
         {
             // Ejemplo cuando el WS esté disponible:
-            // lblMasUsado.Text = servicio.obtenerDispositivoMasUsado().nombre;
-            // lblMenosUsado.Text = servicio.obtenerDispositivoMenosUsado().nombre;
-            // lblAppPopular.Text = servicio.obtenerAppMasEjecutada().nombre;
+            //lblMasUsado.Text = servicio.obtenerDispositivoMasUsado().nombre;
+            //lblMenosUsado.Text = servicio.obtenerDispositivoMenosUsado().nombre;
+            //lblAppPopular.Text = servicio.obtenerAppMasEjecutada().nombre;
         }
 
         private void CargarDatosGraficoUso()

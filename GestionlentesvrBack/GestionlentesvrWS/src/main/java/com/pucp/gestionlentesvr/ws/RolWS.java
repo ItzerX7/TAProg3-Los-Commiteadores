@@ -8,8 +8,6 @@ import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.xml.ws.WebServiceException;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 @WebService(serviceName = "RolWS")
 public class RolWS {

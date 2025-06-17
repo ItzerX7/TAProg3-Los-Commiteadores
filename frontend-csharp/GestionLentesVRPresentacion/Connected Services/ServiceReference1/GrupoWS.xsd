@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="actualizarGrupo" type="tns:actualizarGrupo" />
+  <xs:element name="actualizarGrupoResponse" type="tns:actualizarGrupoResponse" />
+  <xs:element name="eliminarGrupo" type="tns:eliminarGrupo" />
+  <xs:element name="eliminarGrupoResponse" type="tns:eliminarGrupoResponse" />
+  <xs:element name="listarGrupo" type="tns:listarGrupo" />
+  <xs:element name="listarGrupoResponse" type="tns:listarGrupoResponse" />
+  <xs:element name="obtenerGrupo" type="tns:obtenerGrupo" />
+  <xs:element name="obtenerGrupoResponse" type="tns:obtenerGrupoResponse" />
+  <xs:element name="registrarGrupo" type="tns:registrarGrupo" />
+  <xs:element name="registrarGrupoResponse" type="tns:registrarGrupoResponse" />
+  <xs:complexType name="eliminarGrupo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarGrupoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="elemento" type="tns:grupo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="grupo">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarGrupoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerGrupo">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerGrupoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:grupo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarGrupo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="elemento" type="tns:grupo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarGrupoResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarGrupo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarGrupoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:grupo" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

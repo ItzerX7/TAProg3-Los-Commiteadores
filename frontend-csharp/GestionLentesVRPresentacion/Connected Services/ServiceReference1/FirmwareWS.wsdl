@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.gestionlentesvr.pucp.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="FirmwareWS" targetNamespace="http://ws.gestionlentesvr.pucp.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/FirmwareWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarFirmware">
+    <part name="parameters" element="tns:actualizarFirmware" />
+  </message>
+  <message name="actualizarFirmwareResponse">
+    <part name="parameters" element="tns:actualizarFirmwareResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="listarFirmware">
+    <part name="parameters" element="tns:listarFirmware" />
+  </message>
+  <message name="listarFirmwareResponse">
+    <part name="parameters" element="tns:listarFirmwareResponse" />
+  </message>
+  <message name="eliminarFirmware">
+    <part name="parameters" element="tns:eliminarFirmware" />
+  </message>
+  <message name="eliminarFirmwareResponse">
+    <part name="parameters" element="tns:eliminarFirmwareResponse" />
+  </message>
+  <message name="registrarFirmware">
+    <part name="parameters" element="tns:registrarFirmware" />
+  </message>
+  <message name="registrarFirmwareResponse">
+    <part name="parameters" element="tns:registrarFirmwareResponse" />
+  </message>
+  <message name="obtenerFirmware">
+    <part name="parameters" element="tns:obtenerFirmware" />
+  </message>
+  <message name="obtenerFirmwareResponse">
+    <part name="parameters" element="tns:obtenerFirmwareResponse" />
+  </message>
+  <portType name="FirmwareWS">
+    <operation name="actualizarFirmware">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareRequest" message="tns:actualizarFirmware" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareResponse" message="tns:actualizarFirmwareResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarFirmware">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareRequest" message="tns:listarFirmware" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareResponse" message="tns:listarFirmwareResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarFirmware">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareRequest" message="tns:eliminarFirmware" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareResponse" message="tns:eliminarFirmwareResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="registrarFirmware">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmwareRequest" message="tns:registrarFirmware" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmwareResponse" message="tns:registrarFirmwareResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerFirmware">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareRequest" message="tns:obtenerFirmware" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareResponse" message="tns:obtenerFirmwareResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="FirmwareWSPortBinding" type="tns:FirmwareWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarFirmware">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarFirmware">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarFirmware">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="registrarFirmware">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerFirmware">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="FirmwareWS">
+    <port name="FirmwareWSPort" binding="tns:FirmwareWSPortBinding">
+      <soap:address location="http://localhost:8080/GestionlentesvrWS/FirmwareWS" />
+    </port>
+  </service>
+</definitions>

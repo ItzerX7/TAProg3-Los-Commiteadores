@@ -1,6 +1,6 @@
 package com.pucp.gestionlentesvr.dominio.dispositivo;
 
-import java.sql.Timestamp;
+import java.sql.Date;
 
 public class Dispositivo {
 
@@ -8,10 +8,10 @@ public class Dispositivo {
     private String nombre;
     private String modelo;
     private String numeroSerie;
-    private Timestamp fechaRegistro;
+    private Date fechaRegistro;
     private String ubicacion;
     private int nivelBateria;
-    private Timestamp ultimaConexion;
+    private Date ultimaConexion;
     private EstadoConexion estado;
     private Grupo grupo;
     private char activo;
@@ -20,13 +20,13 @@ public class Dispositivo {
         
     }
 
-    public Dispositivo(String nombre, String modelo, String numeroSerie, Timestamp fechaRegistro,
-            String ubicacion, int nivelBateria, Timestamp ultimaConexion, EstadoConexion estado,
+    public Dispositivo(String nombre, String modelo, String numeroSerie, Date fechaRegistro,
+            String ubicacion, int nivelBateria, Date ultimaConexion, EstadoConexion estado,
             Grupo grupo, char activo) {
         this.nombre = nombre;
         this.modelo = modelo;
         this.numeroSerie = numeroSerie;
-        this.fechaRegistro = new Timestamp(System.currentTimeMillis());
+        this.fechaRegistro = new Date(System.currentTimeMillis());
         this.ubicacion = ubicacion;
         this.nivelBateria = nivelBateria;
         this.ultimaConexion = ultimaConexion;
@@ -67,11 +67,11 @@ public class Dispositivo {
         this.numeroSerie = numeroSerie;
     }
 
-    public Timestamp getFechaRegistro() {
+    public Date getFechaRegistro() {
         return fechaRegistro;
     }
 
-    public void setFechaRegistro(Timestamp fechaRegistro) {
+    public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 
@@ -91,11 +91,11 @@ public class Dispositivo {
         this.nivelBateria = nivelBateria;
     }
 
-    public Timestamp getUltimaConexion() {
+    public Date getUltimaConexion() {
         return ultimaConexion;
     }
 
-    public void setUltimaConexion(Timestamp ultimaConexion) {
+    public void setUltimaConexion(Date ultimaConexion) {
         this.ultimaConexion = ultimaConexion;
     }
 

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="com.pucp.gestionlentesvr" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ConfiguracionWS" targetNamespace="com.pucp.gestionlentesvr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?xsd=1" namespace="com.pucp.gestionlentesvr" />
+    </xsd:schema>
+  </types>
+  <message name="registrarConfiguracion">
+    <part name="parameters" element="tns:registrarConfiguracion" />
+  </message>
+  <message name="registrarConfiguracionResponse">
+    <part name="parameters" element="tns:registrarConfiguracionResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="listarConfiguracion">
+    <part name="parameters" element="tns:listarConfiguracion" />
+  </message>
+  <message name="listarConfiguracionResponse">
+    <part name="parameters" element="tns:listarConfiguracionResponse" />
+  </message>
+  <message name="actualizarConfiguracion">
+    <part name="parameters" element="tns:actualizarConfiguracion" />
+  </message>
+  <message name="actualizarConfiguracionResponse">
+    <part name="parameters" element="tns:actualizarConfiguracionResponse" />
+  </message>
+  <message name="eliminarConfiguracion">
+    <part name="parameters" element="tns:eliminarConfiguracion" />
+  </message>
+  <message name="eliminarConfiguracionResponse">
+    <part name="parameters" element="tns:eliminarConfiguracionResponse" />
+  </message>
+  <message name="obtenerConfiguracion">
+    <part name="parameters" element="tns:obtenerConfiguracion" />
+  </message>
+  <message name="obtenerConfiguracionResponse">
+    <part name="parameters" element="tns:obtenerConfiguracionResponse" />
+  </message>
+  <portType name="ConfiguracionWS">
+    <operation name="registrarConfiguracion">
+      <input wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/registrarConfiguracionRequest" message="tns:registrarConfiguracion" />
+      <output wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/registrarConfiguracionResponse" message="tns:registrarConfiguracionResponse" />
+      <fault wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/registrarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarConfiguracion">
+      <input wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/listarConfiguracionRequest" message="tns:listarConfiguracion" />
+      <output wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/listarConfiguracionResponse" message="tns:listarConfiguracionResponse" />
+      <fault wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/listarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarConfiguracion">
+      <input wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/actualizarConfiguracionRequest" message="tns:actualizarConfiguracion" />
+      <output wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/actualizarConfiguracionResponse" message="tns:actualizarConfiguracionResponse" />
+      <fault wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/actualizarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarConfiguracion">
+      <input wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/eliminarConfiguracionRequest" message="tns:eliminarConfiguracion" />
+      <output wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/eliminarConfiguracionResponse" message="tns:eliminarConfiguracionResponse" />
+      <fault wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/eliminarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerConfiguracion">
+      <input wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/obtenerConfiguracionRequest" message="tns:obtenerConfiguracion" />
+      <output wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/obtenerConfiguracionResponse" message="tns:obtenerConfiguracionResponse" />
+      <fault wsam:Action="com.pucp.gestionlentesvr/ConfiguracionWS/obtenerConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="ConfiguracionWSPortBinding" type="tns:ConfiguracionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="registrarConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="actualizarConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ConfiguracionWS">
+    <port name="ConfiguracionWSPort" binding="tns:ConfiguracionWSPortBinding">
+      <soap:address location="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS" />
+    </port>
+  </service>
+</definitions>

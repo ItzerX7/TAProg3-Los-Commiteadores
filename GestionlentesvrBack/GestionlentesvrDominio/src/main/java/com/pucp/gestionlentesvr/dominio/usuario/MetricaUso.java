@@ -1,12 +1,13 @@
 package com.pucp.gestionlentesvr.dominio.usuario;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+import java.sql.Date;
 import java.sql.Timestamp;
 
 public class MetricaUso {
 
     private int id;
-    private Timestamp fechaRegistro;
+    private Date fechaRegistro;
     private int tiempoUsoMinutos;
     private int nivelBateriaInicial;
     private int nivelBateriaFinal;
@@ -17,7 +18,7 @@ public class MetricaUso {
     public MetricaUso() {
     }
 
-    public MetricaUso(Timestamp fechaRegistro, int tiempoUsoMinutos, int nivelBateriaInicial,
+    public MetricaUso(Date fechaRegistro, int tiempoUsoMinutos, int nivelBateriaInicial,
             int nivelBateriaFinal, Usuario usuario, Dispositivo dispositivo, char activo) {
         this.fechaRegistro = fechaRegistro;
         this.tiempoUsoMinutos = tiempoUsoMinutos;
@@ -36,11 +37,11 @@ public class MetricaUso {
         this.id = id;
     }
 
-    public Timestamp getFechaRegistro() {
+    public Date getFechaRegistro() {
         return fechaRegistro;
     }
 
-    public void setFechaRegistro(Timestamp fechaRegistro) {
+    public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
 

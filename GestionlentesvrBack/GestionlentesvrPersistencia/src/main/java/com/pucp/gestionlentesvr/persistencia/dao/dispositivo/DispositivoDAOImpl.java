@@ -74,13 +74,13 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
         dev.setId(rs.getInt("dispositivoid"));
         dev.setNombre(rs.getString("nombre"));
         dev.setModelo(rs.getString("modelo"));
-        dev.setFechaRegistro(rs.getTimestamp("fecharegistro"));
+        dev.setFechaRegistro(rs.getDate("fecharegistro"));
         dev.setNumeroSerie(rs.getString("numeroserie"));
         dev.setUbicacion(rs.getString("ubicacion"));
         dev.setActivo(rs.getString("activo").toCharArray()[0]);
         dev.setNivelBateria(rs.getInt("nivelbateria"));
         dev.setEstado(EstadoConexion.valueOf(rs.getString("estado_conexion")));
-        dev.setUltimaConexion(rs.getTimestamp("ultimaconexion"));
+        dev.setUltimaConexion(rs.getDate("ultimaconexion"));
         dev.getGrupo().setId(rs.getInt("grupo_grupoid"));
         return dev;
     }

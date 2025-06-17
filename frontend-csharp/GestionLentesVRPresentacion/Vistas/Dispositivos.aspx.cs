@@ -2,7 +2,9 @@
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.DispositivosWS;
+using FrontVR.GestionLentesVRWS;
+using FrontVR.ServiceReference1;
+using Google.Protobuf.WellKnownTypes;
 
 namespace FrontVR.Vistas
 {
@@ -29,14 +31,14 @@ namespace FrontVR.Vistas
         {
             try
             {
-                grupo grupo = new grupo { grupoId = 2 };
+                grupo grupo = new grupo { id = 1 };
                 dispositivo d = new dispositivo
                 {
-                    dispositivoId = string.IsNullOrWhiteSpace(hfIdDispositivo.Value) ? 0 : int.Parse(hfIdDispositivo.Value),
+                    id = string.IsNullOrWhiteSpace(hfIdDispositivo.Value) ? 0 : int.Parse(hfIdDispositivo.Value),
                     nombre = txtNombre.Text,
                     modelo = txtModelo.Text,
                     numeroSerie = txtSerie.Text,
-                    fechaRegistro = DateTime.Parse(txtFecha.Text),
+                    fechaRegistro = DateTimeOffset(txtFecha.Text),
                     ubicacion = txtUbicacion.Text,
                     ultimaConexion = DateTime.Now,
                     activo = true,

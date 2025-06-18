@@ -1,9 +1,13 @@
-﻿using System;
+﻿using FrontVR.GestionlentesvrWS;
+using System;
+using System.Linq;
 
 namespace FrontVR
 {
     public partial class Login : System.Web.UI.Page
     {
+        private UsuarioWSClient usuarioWSClient = new UsuarioWSClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["usuario"] != null)
@@ -12,17 +16,35 @@ namespace FrontVR
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string usuario = txtUsuario.Text.Trim();
-            string clave = txtPassword.Text;
+            string usuarioInput = txtUsuario.Text.Trim();
+            string claveInput = txtPassword.Text;
 
-            if (usuario == "admin" && clave == "123456")
+            try
             {
-                Session["usuario"] = usuario;
-                Response.Redirect("~/Vistas/Pantallainicio.aspx");
+                // Obtiene todos los usuarios
+                var usuarios = usuarioWSClient.listarUsuario();
+
+                // Busca coincidencia
+                var usuarioValido = usuarios.FirstOrDefault(u =>
+                    u.correo.Equals(usuarioInput, StringComparison.OrdinalIgnoreCase) &&
+                    u.contrasena == claveInput &&
+                    u.activo.ToString().ToLower() == "s"
+                );
+
+                if (usuarioValido != null)
+                {
+                    Session["usuario"] = usuarioValido;
+                    Response.Redirect("~/Vistas/Pantallainicio.aspx");
+                }
+                else
+                {
+                    lblError.Text = "Credenciales incorrectas o usuario inactivo.";
+                    lblError.Visible = true;
+                }
             }
-            else
+            catch (System.Exception ex)
             {
-                lblError.Text = "Credenciales incorrectas.";
+                lblError.Text = "Error de conexión: " + ex.Message;
                 lblError.Visible = true;
             }
         }

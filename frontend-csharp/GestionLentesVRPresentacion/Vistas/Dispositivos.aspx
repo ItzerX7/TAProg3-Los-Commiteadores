@@ -10,14 +10,23 @@
 
     <!-- Campos de búsqueda -->
     <div class="row mb-3">
-        <div class="col-md-4">
+        <div class="col-md-3">
             <input type="text" id="searchNombre" class="form-control" placeholder="Buscar por nombre" onkeyup="filtrarTabla()" />
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <input type="text" id="searchModelo" class="form-control" placeholder="Buscar por modelo" onkeyup="filtrarTabla()" />
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <input type="text" id="searchUbicacion" class="form-control" placeholder="Buscar por ubicación" onkeyup="filtrarTabla()" />
+        </div>
+        <div class="col-md-3">
+            <select id="searchEstado" class="form-select" onchange="filtrarTabla()">
+                <option value="">Todos los estados</option>
+                <option value="CONECTADO">CONECTADO</option>
+                <option value="DESCONECTADO">DESCONECTADO</option>
+                <option value="EN_USO">EN_USO</option>
+                <option value="EN_MANTENIMIENTO">EN_MANTENIMIENTO</option>
+            </select>
         </div>
     </div>
 
@@ -31,6 +40,7 @@
             <asp:BoundField DataField="numeroSerie" HeaderText="Serie" />
             <asp:BoundField DataField="fechaRegistro" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd}" />
             <asp:BoundField DataField="ubicacion" HeaderText="Ubicación" />
+            <asp:BoundField DataField="estado" HeaderText="Estado" />
             <asp:TemplateField HeaderText="Acción">
                 <ItemTemplate>
                     <div class="d-flex justify-content-center gap-2">
@@ -85,11 +95,7 @@
                                              CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="txtFecha" class="form-label">Fecha de Registro</label>
-                                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date"
-                                             CssClass="form-control bg-dark text-white border-secondary" />
-                            </div>
+                            
 
                             <div class="mb-3">
                                 <label for="txtUbicacion" class="form-label">Ubicación</label>
@@ -103,8 +109,8 @@
                                                   CssClass="form-select bg-dark text-white border-secondary">
                                     <asp:ListItem Text="CONECTADO" Value="CONECTADO" />
                                     <asp:ListItem Text="DESCONECTADO" Value="DESCONECTADO" />
-                                    <asp:ListItem Text="EN USO" Value="EN_USO" />
-                                    <asp:ListItem Text="EN MANTENIMIENTO" Value="EN_MANTENIMIENTO" />
+                                    <asp:ListItem Text="EN_USO" Value="EN_USO" />
+                                    <asp:ListItem Text="EN_MANTENIMIENTO" Value="EN_MANTENIMIENTO" />
                                 </asp:DropDownList>
                             </div>
 
@@ -130,6 +136,7 @@
             var inputNombre = document.getElementById("searchNombre").value.toLowerCase();
             var inputModelo = document.getElementById("searchModelo").value.toLowerCase();
             var inputUbicacion = document.getElementById("searchUbicacion").value.toLowerCase();
+            var inputEstado = document.getElementById("searchEstado").value.toLowerCase();
             var tabla = document.getElementById("<%= gvDispositivos.ClientID %>");
             var filas = tabla.getElementsByTagName("tr");
 
@@ -139,12 +146,14 @@
                     var nombre = celdas[0].textContent.toLowerCase();
                     var modelo = celdas[1].textContent.toLowerCase();
                     var ubicacion = celdas[4].textContent.toLowerCase();
+                    var estado = celdas[5].textContent.toLowerCase();
 
                     var coincideNombre = nombre.includes(inputNombre);
                     var coincideModelo = modelo.includes(inputModelo);
                     var coincideUbicacion = ubicacion.includes(inputUbicacion);
+                    var coincideEstado = inputEstado === "" || estado === inputEstado;
 
-                    if (coincideNombre && coincideModelo && coincideUbicacion) {
+                    if (coincideNombre && coincideModelo && coincideUbicacion && coincideEstado) {
                         filas[i].style.display = "";
                     } else {
                         filas[i].style.display = "none";

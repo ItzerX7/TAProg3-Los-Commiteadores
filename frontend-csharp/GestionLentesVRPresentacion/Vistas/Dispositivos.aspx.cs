@@ -12,10 +12,11 @@ namespace FrontVR.Vistas
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack || ddlEstado.Items.Count == 0)
+                CargarEstados();
+
             if (!IsPostBack)
-            {
                 CargarDispositivos();
-            }
         }
 
         private void CargarDispositivos()
@@ -25,21 +26,31 @@ namespace FrontVR.Vistas
             gvDispositivos.DataBind();
         }
 
+        private void CargarEstados()
+        {
+            ddlEstado.Items.Clear();
+            ddlEstado.Items.Add(new ListItem("Seleccione...", ""));
+            ddlEstado.Items.Add(new ListItem("CONECTADO", "CONECTADO"));
+            ddlEstado.Items.Add(new ListItem("DESCONECTADO", "DESCONECTADO"));
+            ddlEstado.Items.Add(new ListItem("EN_USO", "EN_USO"));
+            ddlEstado.Items.Add(new ListItem("EN_MANTENIMIENTO", "EN_MANTENIMIENTO"));
+        }
+
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                // Validar que se haya seleccionado un estado
-                if (string.IsNullOrWhiteSpace(ddlEstado.SelectedValue))
+                if (ddlEstado.SelectedValue == "")
                 {
-                    lblError.Text = "Debe seleccionar el estado de conexión del dispositivo.";
+                    lblError.Text = "Debe seleccionar el estado de conexión.";
                     lblError.Visible = true;
+
+                    ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal",
+                        "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalDispositivo')).show(); }, 300);", true);
                     return;
                 }
 
                 grupo grupo = new grupo { id = 1 };
-
-                estadoConexion estado = (estadoConexion)Enum.Parse(typeof(estadoConexion), ddlEstado.SelectedValue);
 
                 dispositivo d = new dispositivo
                 {
@@ -47,13 +58,14 @@ namespace FrontVR.Vistas
                     nombre = txtNombre.Text,
                     modelo = txtModelo.Text,
                     numeroSerie = txtSerie.Text,
-                    fechaRegistro = DateTime.Parse(txtFecha.Text),
+                    //fechaRegistro = DateTime.Parse(txtFecha.Text),
                     ubicacion = txtUbicacion.Text,
                     ultimaConexion = DateTime.Now,
                     ultimaConexionSpecified = true,
-                    estado = estado,
+                    estado = (estadoConexion)Enum.Parse(typeof(estadoConexion), ddlEstado.SelectedValue),
+                    estadoSpecified = true,
                     grupo = grupo,
-                    activo = 'S' // Suponiendo que todos los dispositivos están activos al guardar
+                    activo = 'S'
                 };
 
                 if (d.id == 0)
@@ -63,51 +75,19 @@ namespace FrontVR.Vistas
 
                 LimpiarFormulario();
 
-                ScriptManager.RegisterStartupScript(
-                    this, GetType(), "CerrarModal",
+                ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModal",
                     "$('#modalDispositivo').modal('hide');", true);
 
                 CargarDispositivos();
             }
             catch (System.Exception ex)
             {
-                lblError.Text = "Error al guardar: " + ex.Message;
+                string error = ex.Message;
+                if (ex.InnerException != null)
+                    error += " → " + ex.InnerException.Message;
+
+                lblError.Text = "Error al guardar: " + error;
                 lblError.Visible = true;
-            }
-        }
-
-        protected void gvDispositivos_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-            int id = Convert.ToInt32(e.CommandArgument);
-
-            if (e.CommandName == "Eliminar")
-            {
-                try
-                {
-                    servicio.eliminarDispositivo(id);
-                }
-                catch (System.Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"[Error al eliminar] {ex.Message}");
-                }
-                CargarDispositivos();
-            }
-            else if (e.CommandName == "EditarDispositivo")
-            {
-                var d = servicio.obtenerDispositivo(id);
-
-                hfIdDispositivo.Value = d.id.ToString();
-                txtNombre.Text = d.nombre;
-                txtModelo.Text = d.modelo;
-                txtSerie.Text = d.numeroSerie;
-                txtFecha.Text = d.fechaRegistro.ToString("yyyy-MM-dd");
-                txtUbicacion.Text = d.ubicacion;
-                ddlEstado.SelectedValue = d.estado.ToString();
-
-                ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal", @"
-                    document.getElementById('modalDispositivoLabel').textContent = 'Editar dispositivo';
-                    var modal = new bootstrap.Modal(document.getElementById('modalDispositivo'));
-                    modal.show();", true);
             }
         }
 
@@ -117,11 +97,52 @@ namespace FrontVR.Vistas
             txtNombre.Text = "";
             txtModelo.Text = "";
             txtSerie.Text = "";
-            txtFecha.Text = "";
+            //txtFecha.Text = "";
             txtUbicacion.Text = "";
             ddlEstado.SelectedIndex = 0;
-            lblError.Text = "";
             lblError.Visible = false;
+        }
+
+        protected void gvDispositivos_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            int id = Convert.ToInt32(e.CommandArgument);
+
+            if (e.CommandName == "EditarDispositivo")
+            {
+                try
+                {
+                    dispositivo d = servicio.obtenerDispositivo(id);
+
+                    hfIdDispositivo.Value = d.id.ToString();
+                    txtNombre.Text = d.nombre;
+                    txtModelo.Text = d.modelo;
+                    txtSerie.Text = d.numeroSerie;
+                    //txtFecha.Text = d.fechaRegistro.ToString("yyyy-MM-dd");
+                    txtUbicacion.Text = d.ubicacion;
+                    ddlEstado.SelectedValue = d.estado.ToString();
+
+                    ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal",
+                        "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalDispositivo')).show(); }, 300);", true);
+                }
+                catch (System.Exception ex)
+                {
+                    lblError.Text = "Error al cargar datos del dispositivo: " + ex.Message;
+                    lblError.Visible = true;
+                }
+            }
+            else if (e.CommandName == "Eliminar")
+            {
+                try
+                {
+                    servicio.eliminarDispositivo(id);
+                    CargarDispositivos();
+                }
+                catch (System.Exception ex)
+                {
+                    lblError.Text = "Error al eliminar: " + ex.Message;
+                    lblError.Visible = true;
+                }
+            }
         }
     }
 }

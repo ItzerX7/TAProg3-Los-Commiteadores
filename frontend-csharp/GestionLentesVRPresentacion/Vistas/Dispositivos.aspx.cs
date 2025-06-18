@@ -3,7 +3,6 @@ using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontVR.GestionlentesvrWS;
-//using Google.Protobuf.WellKnownTypes;
 
 namespace FrontVR.Vistas
 {
@@ -30,7 +29,18 @@ namespace FrontVR.Vistas
         {
             try
             {
+                // Validar que se haya seleccionado un estado
+                if (string.IsNullOrWhiteSpace(ddlEstado.SelectedValue))
+                {
+                    lblError.Text = "Debe seleccionar el estado de conexión del dispositivo.";
+                    lblError.Visible = true;
+                    return;
+                }
+
                 grupo grupo = new grupo { id = 1 };
+
+                estadoConexion estado = (estadoConexion)Enum.Parse(typeof(estadoConexion), ddlEstado.SelectedValue);
+
                 dispositivo d = new dispositivo
                 {
                     id = string.IsNullOrWhiteSpace(hfIdDispositivo.Value) ? 0 : int.Parse(hfIdDispositivo.Value),
@@ -40,9 +50,10 @@ namespace FrontVR.Vistas
                     fechaRegistro = DateTime.Parse(txtFecha.Text),
                     ubicacion = txtUbicacion.Text,
                     ultimaConexion = DateTime.Now,
-                    activo = 'S',
                     ultimaConexionSpecified = true,
-                    grupo = grupo
+                    estado = estado,
+                    grupo = grupo,
+                    activo = 'S' // Suponiendo que todos los dispositivos están activos al guardar
                 };
 
                 if (d.id == 0)
@@ -51,6 +62,11 @@ namespace FrontVR.Vistas
                     servicio.actualizarDispositivo(d);
 
                 LimpiarFormulario();
+
+                ScriptManager.RegisterStartupScript(
+                    this, GetType(), "CerrarModal",
+                    "$('#modalDispositivo').modal('hide');", true);
+
                 CargarDispositivos();
             }
             catch (System.Exception ex)
@@ -62,26 +78,36 @@ namespace FrontVR.Vistas
 
         protected void gvDispositivos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            int id = int.Parse(gvDispositivos.DataKeys[index].Value.ToString());
+            int id = Convert.ToInt32(e.CommandArgument);
 
-            if (e.CommandName == "EditarDispositivo")
+            if (e.CommandName == "Eliminar")
+            {
+                try
+                {
+                    servicio.eliminarDispositivo(id);
+                }
+                catch (System.Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"[Error al eliminar] {ex.Message}");
+                }
+                CargarDispositivos();
+            }
+            else if (e.CommandName == "EditarDispositivo")
             {
                 var d = servicio.obtenerDispositivo(id);
+
                 hfIdDispositivo.Value = d.id.ToString();
                 txtNombre.Text = d.nombre;
                 txtModelo.Text = d.modelo;
                 txtSerie.Text = d.numeroSerie;
                 txtFecha.Text = d.fechaRegistro.ToString("yyyy-MM-dd");
                 txtUbicacion.Text = d.ubicacion;
+                ddlEstado.SelectedValue = d.estado.ToString();
 
-                // Mostrar modal desde servidor
-                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalDispositivo').modal('show');", true);
-            }
-            else if (e.CommandName == "Eliminar")
-            {
-                servicio.eliminarDispositivo(id);
-                CargarDispositivos();
+                ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal", @"
+                    document.getElementById('modalDispositivoLabel').textContent = 'Editar dispositivo';
+                    var modal = new bootstrap.Modal(document.getElementById('modalDispositivo'));
+                    modal.show();", true);
             }
         }
 
@@ -93,6 +119,7 @@ namespace FrontVR.Vistas
             txtSerie.Text = "";
             txtFecha.Text = "";
             txtUbicacion.Text = "";
+            ddlEstado.SelectedIndex = 0;
             lblError.Text = "";
             lblError.Visible = false;
         }

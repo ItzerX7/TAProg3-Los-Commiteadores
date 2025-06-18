@@ -67,7 +67,7 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     }
 
     @Override
-    public Dispositivo createFromResultSet(ResultSet rs) throws SQLException {
+    protected Dispositivo createFromResultSet(ResultSet rs) throws SQLException {
         Dispositivo dev = new Dispositivo();
         Grupo grupo = new Grupo();
         dev.setGrupo(grupo);

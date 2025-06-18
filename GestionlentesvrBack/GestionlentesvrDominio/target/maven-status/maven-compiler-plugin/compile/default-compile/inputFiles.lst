@@ -1,13 +1,13 @@
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\actividad\Actividad.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\actividad\TipoActividad.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\aplicacion\Aplicacion.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\aplicacion\CategoriaAplicacion.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\configuracion\Configuracion.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\configuracion\TipoConfiguracion.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\Dispositivo.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\EstadoConexion.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\Firmware.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\Grupo.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\usuario\MetricaUso.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\usuario\Rol.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\usuario\Usuario.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\Firmware.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\aplicacion\Aplicacion.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\configuracion\Configuracion.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\EstadoConexion.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\usuario\Rol.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\Dispositivo.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\dispositivo\Grupo.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\aplicacion\CategoriaAplicacion.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\usuario\MetricaUso.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\usuario\Usuario.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\actividad\Actividad.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\actividad\TipoActividad.java
+C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrDominio\src\main\java\com\pucp\gestionlentesvr\dominio\configuracion\TipoConfiguracion.java

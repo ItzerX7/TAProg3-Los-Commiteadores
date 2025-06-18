@@ -8,28 +8,43 @@
         <i class="fa fa-plus"></i> Nuevo dispositivo
     </button>
 
+    <!-- Campos de búsqueda -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <input type="text" id="searchNombre" class="form-control" placeholder="Buscar por nombre" onkeyup="filtrarTabla()" />
+        </div>
+        <div class="col-md-4">
+            <input type="text" id="searchModelo" class="form-control" placeholder="Buscar por modelo" onkeyup="filtrarTabla()" />
+        </div>
+        <div class="col-md-4">
+            <input type="text" id="searchUbicacion" class="form-control" placeholder="Buscar por ubicación" onkeyup="filtrarTabla()" />
+        </div>
+    </div>
+
     <asp:GridView ID="gvDispositivos" runat="server"
-                  AutoGenerateColumns="False" CssClass="table table-striped"
-                  DataKeyNames="Id"
-                  OnRowCommand="gvDispositivos_RowCommand">
+                  AutoGenerateColumns="False" CssClass="table table-bordered table-hover align-middle text-center"
+                  DataKeyNames="id" OnRowCommand="gvDispositivos_RowCommand">
+        <HeaderStyle CssClass="table-dark" />
         <Columns>
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="modelo" HeaderText="Modelo" />
             <asp:BoundField DataField="numeroSerie" HeaderText="Serie" />
             <asp:BoundField DataField="fechaRegistro" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd}" />
             <asp:BoundField DataField="ubicacion" HeaderText="Ubicación" />
-            <asp:TemplateField HeaderText="Acción" ItemStyle-HorizontalAlign="Center">
+            <asp:TemplateField HeaderText="Acción">
                 <ItemTemplate>
-                    <asp:LinkButton ID="lnkAccion" runat="server"
-                                    CommandName="EditarDispositivo"
-                                    CommandArgument='<%# Eval("Id") %>'
-                                    Text="Editar"
-                                    CssClass="btn btn-sm btn-warning me-1" />
-                    <asp:LinkButton ID="lnkEliminar" runat="server"
-                                    CommandName="Eliminar"
-                                    CommandArgument='<%# Eval("Id") %>'
-                                    Text="Eliminar"
-                                    CssClass="btn btn-sm btn-danger" />
+                    <div class="d-flex justify-content-center gap-2">
+                        <asp:LinkButton ID="lnkEditar" runat="server"
+                                        CommandName="EditarDispositivo"
+                                        CommandArgument='<%# Eval("id") %>'
+                                        Text="Editar"
+                                        CssClass="btn btn-sm btn-warning" />
+                        <asp:LinkButton ID="lnkEliminar" runat="server"
+                                        CommandName="Eliminar"
+                                        CommandArgument='<%# Eval("id") %>'
+                                        Text="Eliminar"
+                                        CssClass="btn btn-sm btn-danger" />
+                    </div>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -72,8 +87,7 @@
 
                             <div class="mb-3">
                                 <label for="txtFecha" class="form-label">Fecha de Registro</label>
-                                <asp:TextBox ID="txtFecha" runat="server"
-                                             TextMode="Date"
+                                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date"
                                              CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
@@ -83,6 +97,17 @@
                                              CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
+                            <div class="mb-3">
+                                <label for="ddlEstado" class="form-label">Estado de conexión</label>
+                                <asp:DropDownList ID="ddlEstado" runat="server"
+                                                  CssClass="form-select bg-dark text-white border-secondary">
+                                    <asp:ListItem Text="CONECTADO" Value="CONECTADO" />
+                                    <asp:ListItem Text="DESCONECTADO" Value="DESCONECTADO" />
+                                    <asp:ListItem Text="EN USO" Value="EN_USO" />
+                                    <asp:ListItem Text="EN MANTENIMIENTO" Value="EN_MANTENIMIENTO" />
+                                </asp:DropDownList>
+                            </div>
+
                             <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false" />
                         </div>
 
@@ -90,11 +115,47 @@
                             <button type="button" class="btn btn-outline-light"
                                     data-bs-dismiss="modal">Cancelar</button>
                             <asp:Button ID="btnGuardar" runat="server" Text="Guardar"
-                                        CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
+                                        CssClass="btn btn-primary"
+                                        UseSubmitBehavior="false"
+                                        OnClick="btnGuardar_Click" />
                         </div>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
         </div>
     </div>
+
+    <script>
+        function filtrarTabla() {
+            var inputNombre = document.getElementById("searchNombre").value.toLowerCase();
+            var inputModelo = document.getElementById("searchModelo").value.toLowerCase();
+            var inputUbicacion = document.getElementById("searchUbicacion").value.toLowerCase();
+            var tabla = document.getElementById("<%= gvDispositivos.ClientID %>");
+            var filas = tabla.getElementsByTagName("tr");
+
+            for (var i = 1; i < filas.length; i++) {
+                var celdas = filas[i].getElementsByTagName("td");
+                if (celdas.length > 0) {
+                    var nombre = celdas[0].textContent.toLowerCase();
+                    var modelo = celdas[1].textContent.toLowerCase();
+                    var ubicacion = celdas[4].textContent.toLowerCase();
+
+                    var coincideNombre = nombre.includes(inputNombre);
+                    var coincideModelo = modelo.includes(inputModelo);
+                    var coincideUbicacion = ubicacion.includes(inputUbicacion);
+
+                    if (coincideNombre && coincideModelo && coincideUbicacion) {
+                        filas[i].style.display = "";
+                    } else {
+                        filas[i].style.display = "none";
+                    }
+                }
+            }
+        }
+
+        const modalDispositivo = document.getElementById('modalDispositivo');
+        modalDispositivo.addEventListener('hidden.bs.modal', function () {
+            document.getElementById('modalDispositivoLabel').textContent = 'Nuevo dispositivo';
+        });
+    </script>
 </asp:Content>

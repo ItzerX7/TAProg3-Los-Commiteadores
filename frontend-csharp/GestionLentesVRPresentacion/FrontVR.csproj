@@ -343,8 +343,11 @@
     <Content Include="Global.asax" />
     <Content Include="Images\VR_Welcome.png" />
     <Content Include="Vistas\Actividades.aspx" />
+    <Content Include="Vistas\Administracion.aspx" />
     <Content Include="Vistas\Aplicaciones.aspx" />
+    <Content Include="Vistas\Configuraciones.aspx" />
     <Content Include="Vistas\Dispositivos.aspx" />
+    <Content Include="Vistas\Grupos.aspx" />
     <Content Include="Vistas\Metricas.aspx" />
     <Content Include="Vistas\PantallaInicio.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -423,7 +426,6 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
-    <Content Include="Vistas\Configuracion.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -467,6 +469,13 @@
     <Compile Include="Vistas\Actividades.aspx.designer.cs">
       <DependentUpon>Actividades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Administracion.aspx.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Administracion.aspx.designer.cs">
+      <DependentUpon>Administracion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Aplicaciones.aspx.cs">
       <DependentUpon>Aplicaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -474,12 +483,26 @@
     <Compile Include="Vistas\Aplicaciones.aspx.designer.cs">
       <DependentUpon>Aplicaciones.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Configuraciones.aspx.cs">
+      <DependentUpon>Configuraciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Configuraciones.aspx.designer.cs">
+      <DependentUpon>Configuraciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Dispositivos.aspx.cs">
       <DependentUpon>Dispositivos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Vistas\Dispositivos.aspx.designer.cs">
       <DependentUpon>Dispositivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Grupos.aspx.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Grupos.aspx.designer.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Metricas.aspx.cs">
       <DependentUpon>Metricas.aspx</DependentUpon>
@@ -524,16 +547,10 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Vistas\Configuracion.aspx.cs">
-      <DependentUpon>Configuracion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Configuracion.aspx.designer.cs">
-      <DependentUpon>Configuracion.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Auth\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="com.pucp.gestionlentesvr" targetNamespace="com.pucp.gestionlentesvr" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="actualizarConfiguracion" type="tns:actualizarConfiguracion" />
   <xs:element name="actualizarConfiguracionResponse" type="tns:actualizarConfiguracionResponse" />
@@ -36,15 +36,12 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:unsignedShort" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaCreacion" type="tns:date" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
       <xs:element name="id" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="tipo" type="tns:tipoConfiguracion" />
       <xs:element minOccurs="0" name="valor" type="xs:string" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="date">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="registrarConfiguracion">
     <xs:sequence>

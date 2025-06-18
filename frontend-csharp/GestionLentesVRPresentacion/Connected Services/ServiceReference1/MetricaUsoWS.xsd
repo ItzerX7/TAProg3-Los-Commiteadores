@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" xmlns:ns1="com.pucp.gestionlentesvr" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?xsd=2" namespace="com.pucp.gestionlentesvr" />
-  <xs:element name="Exception" nillable="true" type="ns1:Exception" />
+<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="actualizarMetricaUso" type="tns:actualizarMetricaUso" />
   <xs:element name="actualizarMetricaUsoResponse" type="tns:actualizarMetricaUsoResponse" />
   <xs:element name="eliminarMetricaUso" type="tns:eliminarMetricaUso" />
@@ -21,7 +20,7 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:unsignedShort" />
       <xs:element minOccurs="0" name="dispositivo" type="tns:dispositivo" />
-      <xs:element minOccurs="0" name="fechaRegistro" type="tns:date" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
       <xs:element name="id" type="xs:int" />
       <xs:element name="nivelBateriaFinal" type="xs:int" />
       <xs:element name="nivelBateriaInicial" type="xs:int" />
@@ -33,7 +32,7 @@
     <xs:sequence>
       <xs:element name="activo" type="xs:unsignedShort" />
       <xs:element minOccurs="0" name="estado" type="tns:estadoConexion" />
-      <xs:element minOccurs="0" name="fechaRegistro" type="tns:date" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
       <xs:element minOccurs="0" name="grupo" type="tns:grupo" />
       <xs:element name="id" type="xs:int" />
       <xs:element minOccurs="0" name="modelo" type="xs:string" />
@@ -41,17 +40,14 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="numeroSerie" type="xs:string" />
       <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
-      <xs:element minOccurs="0" name="ultimaConexion" type="tns:date" />
+      <xs:element minOccurs="0" name="ultimaConexion" type="xs:dateTime" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="date">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="grupo">
     <xs:sequence>
       <xs:element name="activo" type="xs:unsignedShort" />
       <xs:element minOccurs="0" name="descripcion" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaCreacion" type="tns:date" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
       <xs:element name="id" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
@@ -63,15 +59,10 @@
       <xs:element minOccurs="0" name="apellido" type="xs:string" />
       <xs:element minOccurs="0" name="contrasena" type="xs:string" />
       <xs:element minOccurs="0" name="correo" type="xs:string" />
-      <xs:element minOccurs="0" name="fechaCreacion" type="tns:timestamp" />
+      <xs:element minOccurs="0" name="fechaCreacion" type="xs:dateTime" />
       <xs:element name="id" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="rol" type="tns:rol" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="timestamp">
-    <xs:sequence>
-      <xs:element name="nanos" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="rol">
@@ -84,6 +75,11 @@
   </xs:complexType>
   <xs:complexType name="registrarMetricaUsoResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarMetricaUso">
     <xs:sequence>

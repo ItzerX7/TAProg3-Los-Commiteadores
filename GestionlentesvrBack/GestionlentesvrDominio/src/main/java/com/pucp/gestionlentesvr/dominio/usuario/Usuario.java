@@ -1,6 +1,6 @@
 package com.pucp.gestionlentesvr.dominio.usuario;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class Usuario {
 
@@ -9,7 +9,7 @@ public class Usuario {
     private String apellido;
     private String correo;
     private String contrasena;
-    private Timestamp fechaCreacion;
+    private Date fechaCreacion;
     private Rol rol;
     private char activo;
 
@@ -17,12 +17,12 @@ public class Usuario {
     }
 
     public Usuario(String nombre, String apellido, String correo, String contrasena,
-            Timestamp fechaCreacion, Rol rol, char activo) {
+            Date fechaCreacion, Rol rol, char activo) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.contrasena = contrasena;
-        this.fechaCreacion = new Timestamp(System.currentTimeMillis());
+        this.fechaCreacion = new Date(System.currentTimeMillis());
         this.rol = rol;
         this.activo = 's';
     }
@@ -67,11 +67,11 @@ public class Usuario {
         this.contrasena = contrasena;
     }
 
-    public Timestamp getFechaCreacion() {
+    public Date getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(Timestamp fechaCreacion) {
+    public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 

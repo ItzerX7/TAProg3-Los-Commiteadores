@@ -2,7 +2,7 @@ package com.pucp.gestionlentesvr.dominio.actividad;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
-import java.sql.Date;
+import java.util.Date;
 
 public class Actividad {
 

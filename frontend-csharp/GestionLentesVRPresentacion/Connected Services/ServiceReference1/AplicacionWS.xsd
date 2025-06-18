@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="com.pucp.gestionlentesvr" targetNamespace="com.pucp.gestionlentesvr" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="actualizarAplicacion" type="tns:actualizarAplicacion" />
   <xs:element name="actualizarAplicacionResponse" type="tns:actualizarAplicacionResponse" />

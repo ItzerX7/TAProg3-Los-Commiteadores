@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" xmlns:ns1="com.pucp.gestionlentesvr" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:8080/GestionlentesvrWS/RolWS?xsd=2" namespace="com.pucp.gestionlentesvr" />
-  <xs:element name="Exception" nillable="true" type="ns1:Exception" />
+<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="actualizarRol" type="tns:actualizarRol" />
   <xs:element name="actualizarRolResponse" type="tns:actualizarRolResponse" />
   <xs:element name="eliminarRol" type="tns:eliminarRol" />
@@ -12,6 +11,19 @@
   <xs:element name="obtenerRolResponse" type="tns:obtenerRolResponse" />
   <xs:element name="registrarRol" type="tns:registrarRol" />
   <xs:element name="registrarRolResponse" type="tns:registrarRolResponse" />
+  <xs:complexType name="eliminarRol">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarRolResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="obtenerRol">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -29,14 +41,6 @@
       <xs:element name="id" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarRol">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarRolResponse">
-    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarRol">
     <xs:sequence>

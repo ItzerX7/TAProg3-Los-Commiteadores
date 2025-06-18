@@ -1,8 +1,7 @@
 package com.pucp.gestionlentesvr.dominio.usuario;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
-import java.sql.Date;
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class MetricaUso {
 

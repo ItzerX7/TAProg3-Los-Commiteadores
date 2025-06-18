@@ -5,55 +5,78 @@ using System.Web.UI.WebControls;
 
 namespace FrontVR.Vistas
 {
-    public partial class Configuracion : Page
+    public partial class Configuraciones : Page
     {
-        UsuarioWSClient servicio = new UsuarioWSClient();
-        RolWSClient rolServicio = new RolWSClient();
+        ConfiguracionWSClient servicio = new ConfiguracionWSClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CargarUsuarios();
-                CargarRoles();
+                CargarConfiguraciones();
+                CargarTipos();
             }
         }
 
-        private void CargarUsuarios()
+        private void CargarConfiguraciones()
         {
-            var lista = servicio.listarUsuario();
-            gvUsuarios.DataSource = lista;
-            gvUsuarios.DataKeyNames = new[] { "id" };
-            gvUsuarios.DataBind();
+            var lista = servicio.listarConfiguracion();
+            gvConfiguraciones.DataSource = lista;
+            gvConfiguraciones.DataKeyNames = new[] { "id" };
+            gvConfiguraciones.DataBind();
         }
 
-        private void CargarRoles()
+        private void CargarTipos()
         {
-            ddlRol.DataSource = rolServicio.listarRol();
-            ddlRol.DataTextField = "nombre";
-            ddlRol.DataValueField = "id";
-            ddlRol.DataBind();
+            ddlTipo.Items.Clear();
+            ddlTipo.Items.Add(new ListItem("Seleccione...", ""));
+
+            foreach (var tipo in Enum.GetNames(typeof(tipoConfiguracion)))
+            {
+                ddlTipo.Items.Add(new ListItem(tipo, tipo));
+            }
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+            ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalConfiguracion').modal('show');", true);
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
             try
             {
-                usuario u = new usuario
+                if (string.IsNullOrEmpty(ddlTipo.SelectedValue))
                 {
-                    id = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value),
-                    nombre = txtNombres.Text.Trim(),
-                    correo = txtCorreo.Text.Trim(),
-                    rol = new rol { id = int.Parse(ddlRol.SelectedValue) },
-                    activo = 's'
+                    lblError.Text = "Debe seleccionar un tipo de configuración.";
+                    lblError.Visible = true;
+                    return;
+                }
+
+                configuracion c = new configuracion
+                {
+                    id = string.IsNullOrEmpty(hfConfiguracionId.Value) ? 0 : int.Parse(hfConfiguracionId.Value),
+                    nombre = txtNombre.Text.Trim(),
+                    descripcion = txtDescripcion.Text.Trim(),
+                    tipo = (tipoConfiguracion)Enum.Parse(typeof(tipoConfiguracion), ddlTipo.SelectedValue),
+                    tipoSpecified = true,
+                    valor = txtValor.Text.Trim(),
+                    fechaCreacion = DateTime.Now,
+                    fechaCreacionSpecified = true,
+                    activo = 1
                 };
 
-                if (u.id == 0)
-                    servicio.registrarUsuario(u);
+                if (c.id == 0)
+                    servicio.registrarConfiguracion(c);
                 else
-                    servicio.actualizarUsuario(u);
+                    servicio.actualizarConfiguracion(c);
 
                 LimpiarFormulario();
-                CargarUsuarios();
+                CargarConfiguraciones();
+
+                // Cierra el modal después de guardar correctamente
+                ScriptManager.RegisterStartupScript(this, GetType(), "cerrarModal", "$('#modalConfiguracion').modal('hide');", true);
             }
             catch (System.Exception ex)
             {
@@ -62,34 +85,36 @@ namespace FrontVR.Vistas
             }
         }
 
-        protected void gvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void gvConfiguraciones_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int index = Convert.ToInt32(e.CommandArgument);
-            int id = int.Parse(gvUsuarios.DataKeys[index].Value.ToString());
+            int id = int.Parse(gvConfiguraciones.DataKeys[index].Value.ToString());
 
-            if (e.CommandName == "EditarUsuario")
+            if (e.CommandName == "EditarConfiguracion")
             {
-                var u = servicio.obtenerUsuario(id);
-                hfUsuarioId.Value = u.id.ToString();
-                txtNombres.Text = u.nombre;
-                txtCorreo.Text = u.correo;
-                ddlRol.SelectedValue = u.rol.id.ToString();
+                var c = servicio.obtenerConfiguracion(id);
+                hfConfiguracionId.Value = c.id.ToString();
+                txtNombre.Text = c.nombre;
+                txtDescripcion.Text = c.descripcion;
+                ddlTipo.SelectedValue = c.tipo.ToString();
+                txtValor.Text = c.valor;
 
-                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalUsuario').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalConfiguracion').modal('show');", true);
             }
             else if (e.CommandName == "Eliminar")
             {
-                servicio.eliminarUsuario(id);
-                CargarUsuarios();
+                servicio.eliminarConfiguracion(id);
+                CargarConfiguraciones();
             }
         }
 
         private void LimpiarFormulario()
         {
-            hfUsuarioId.Value = "";
-            txtNombres.Text = "";
-            txtCorreo.Text = "";
-            ddlRol.ClearSelection();
+            hfConfiguracionId.Value = "";
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            ddlTipo.SelectedIndex = 0;
+            txtValor.Text = "";
             lblError.Visible = false;
         }
     }

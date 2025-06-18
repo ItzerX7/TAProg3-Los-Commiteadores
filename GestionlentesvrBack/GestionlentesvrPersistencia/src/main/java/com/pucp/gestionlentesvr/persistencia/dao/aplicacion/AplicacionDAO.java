@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface AplicacionDAO extends BaseDAO<Aplicacion> {
     public void eliminarAplicacionesPorDispositivo();
-//    public List<Aplicacion> listarAplicacionesConDispositivos();
+    public List<Aplicacion> listarAplicacionesConDispositivos(Integer id);
 }

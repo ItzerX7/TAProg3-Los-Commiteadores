@@ -81,6 +81,11 @@ public class AplicacionServiceImpl implements AplicacionService {
         }
         return aplicacion;
     }
+    
+    @Override
+    public List<Aplicacion> listarAplicacionesConDispositivos(int idAplicacion) throws Exception {
+        return aplicacionDAO.listarAplicacionesConDispositivos(idAplicacion);
+    }
 
     @Override
     public List<Aplicacion> listarAplicacion() throws Exception {

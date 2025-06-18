@@ -56,6 +56,15 @@ public class AplicacionWS {
             throw new WebServiceException("Error al obtener" + ex.getMessage());
         }
     }
+    @WebMethod(operationName = "listarAplicacionesConDispositivos")
+    public List<Aplicacion> listarAplicacionesConDispositivos(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            return service.listarAplicacionesConDispositivos(id);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al obtener" + ex.getMessage());
+        }
+    }
 
     @WebMethod(operationName = "listarAplicacion")
     public List<Aplicacion> listarAplicacion() throws Exception {

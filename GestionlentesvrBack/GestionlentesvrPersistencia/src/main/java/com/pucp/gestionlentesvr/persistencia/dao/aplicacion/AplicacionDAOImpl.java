@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements AplicacionDAO {
@@ -94,19 +95,21 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
         }
     }
 
-//    @Override
-//    public List<Aplicacion> listarAplicacionesConDispositivos() {
-//        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
-//            String query = "{CALL listarAplicacionesConDispositivos()}";
-//            CallableStatement cs = (conn); 
-//            ResultSet rs = cs.executeQuery()
-//            while (rs.next()) {
-//                entities.add(createFromResultSet(rs));
-//            }
-//        } catch (SQLException e) {
-//            throw new RuntimeException("Error al listar entidades", e);
-//        }
-//        return entities;
-//    }
+    @Override
+    public List<Aplicacion> listarAplicacionesConDispositivos(Integer id) {
+            List<Aplicacion> apps= new ArrayList<>();
+        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL listarAplicacionesPorDispositivos(?)}";
+            CallableStatement cs = conn.prepareCall(query); 
+            cs.setInt(1, id);
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                apps.add(createFromResultSet(rs));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar entidades", e);
+        }
+        return apps;
+    }
 
 }

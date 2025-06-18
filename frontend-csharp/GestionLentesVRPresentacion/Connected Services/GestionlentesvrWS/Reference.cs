@@ -56,16 +56,6 @@ namespace FrontVR.GestionlentesvrWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarFirmwareResponse> eliminarFirmwareAsync(FrontVR.GestionlentesvrWS.eliminarFirmwareRequest request);
         
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmware/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.GestionlentesvrWS.listarFirmwareResponse listarFirmware(FrontVR.GestionlentesvrWS.listarFirmwareRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarFirmwareResponse> listarFirmwareAsync(FrontVR.GestionlentesvrWS.listarFirmwareRequest request);
-        
         // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmwareResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmware/Fault/Exception", Name="Exception")]
@@ -84,6 +74,16 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerFirmwareResponse> obtenerFirmwareAsync(FrontVR.GestionlentesvrWS.obtenerFirmwareRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmware/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.GestionlentesvrWS.listarFirmwareResponse listarFirmware(FrontVR.GestionlentesvrWS.listarFirmwareRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarFirmwareResponse> listarFirmwareAsync(FrontVR.GestionlentesvrWS.listarFirmwareRequest request);
         
         // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareResponse")]
@@ -214,34 +214,6 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFirmware", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarFirmwareRequest {
-        
-        public listarFirmwareRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFirmwareResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarFirmwareResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.firmware[] @return;
-        
-        public listarFirmwareResponse() {
-        }
-        
-        public listarFirmwareResponse(FrontVR.GestionlentesvrWS.firmware[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="registrarFirmware", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class registrarFirmwareRequest {
         
@@ -299,6 +271,34 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         public obtenerFirmwareResponse(FrontVR.GestionlentesvrWS.firmware @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFirmware", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarFirmwareRequest {
+        
+        public listarFirmwareRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarFirmwareResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarFirmwareResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.firmware[] @return;
+        
+        public listarFirmwareResponse() {
+        }
+        
+        public listarFirmwareResponse(FrontVR.GestionlentesvrWS.firmware[] @return) {
             this.@return = @return;
         }
     }
@@ -381,27 +381,6 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.listarFirmwareResponse FrontVR.GestionlentesvrWS.FirmwareWS.listarFirmware(FrontVR.GestionlentesvrWS.listarFirmwareRequest request) {
-            return base.Channel.listarFirmware(request);
-        }
-        
-        public FrontVR.GestionlentesvrWS.firmware[] listarFirmware() {
-            FrontVR.GestionlentesvrWS.listarFirmwareRequest inValue = new FrontVR.GestionlentesvrWS.listarFirmwareRequest();
-            FrontVR.GestionlentesvrWS.listarFirmwareResponse retVal = ((FrontVR.GestionlentesvrWS.FirmwareWS)(this)).listarFirmware(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarFirmwareResponse> FrontVR.GestionlentesvrWS.FirmwareWS.listarFirmwareAsync(FrontVR.GestionlentesvrWS.listarFirmwareRequest request) {
-            return base.Channel.listarFirmwareAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarFirmwareResponse> listarFirmwareAsync() {
-            FrontVR.GestionlentesvrWS.listarFirmwareRequest inValue = new FrontVR.GestionlentesvrWS.listarFirmwareRequest();
-            return ((FrontVR.GestionlentesvrWS.FirmwareWS)(this)).listarFirmwareAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.registrarFirmwareResponse FrontVR.GestionlentesvrWS.FirmwareWS.registrarFirmware(FrontVR.GestionlentesvrWS.registrarFirmwareRequest request) {
             return base.Channel.registrarFirmware(request);
         }
@@ -447,6 +426,27 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.listarFirmwareResponse FrontVR.GestionlentesvrWS.FirmwareWS.listarFirmware(FrontVR.GestionlentesvrWS.listarFirmwareRequest request) {
+            return base.Channel.listarFirmware(request);
+        }
+        
+        public FrontVR.GestionlentesvrWS.firmware[] listarFirmware() {
+            FrontVR.GestionlentesvrWS.listarFirmwareRequest inValue = new FrontVR.GestionlentesvrWS.listarFirmwareRequest();
+            FrontVR.GestionlentesvrWS.listarFirmwareResponse retVal = ((FrontVR.GestionlentesvrWS.FirmwareWS)(this)).listarFirmware(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarFirmwareResponse> FrontVR.GestionlentesvrWS.FirmwareWS.listarFirmwareAsync(FrontVR.GestionlentesvrWS.listarFirmwareRequest request) {
+            return base.Channel.listarFirmwareAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarFirmwareResponse> listarFirmwareAsync() {
+            FrontVR.GestionlentesvrWS.listarFirmwareRequest inValue = new FrontVR.GestionlentesvrWS.listarFirmwareRequest();
+            return ((FrontVR.GestionlentesvrWS.FirmwareWS)(this)).listarFirmwareAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.actualizarFirmwareResponse FrontVR.GestionlentesvrWS.FirmwareWS.actualizarFirmware(FrontVR.GestionlentesvrWS.actualizarFirmwareRequest request) {
             return base.Channel.actualizarFirmware(request);
         }
@@ -473,6 +473,16 @@ namespace FrontVR.GestionlentesvrWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", ConfigurationName="GestionlentesvrWS.ConfiguracionWS")]
     public interface ConfiguracionWS {
         
+        // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracion/Fault/Ex" +
+            "ception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse eliminarConfiguracion(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse> eliminarConfiguracionAsync(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request);
+        
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracion/Fault/Exce" +
@@ -483,6 +493,17 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarConfiguracionResponse> listarConfiguracionAsync(FrontVR.GestionlentesvrWS.listarConfiguracionRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracion/Fault/Exc" +
+            "eption", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.GestionlentesvrWS.obtenerConfiguracionResponse obtenerConfiguracion(FrontVR.GestionlentesvrWS.obtenerConfiguracionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerConfiguracionResponse> obtenerConfiguracionAsync(FrontVR.GestionlentesvrWS.obtenerConfiguracionRequest request);
         
         // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionResponse" +
@@ -495,17 +516,6 @@ namespace FrontVR.GestionlentesvrWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionResponse" +
             "")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarConfiguracionResponse> registrarConfiguracionAsync(FrontVR.GestionlentesvrWS.registrarConfiguracionRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracion/Fault/Exc" +
-            "eption", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.GestionlentesvrWS.obtenerConfiguracionResponse obtenerConfiguracion(FrontVR.GestionlentesvrWS.obtenerConfiguracionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerConfiguracionResponse> obtenerConfiguracionAsync(FrontVR.GestionlentesvrWS.obtenerConfiguracionRequest request);
         
         // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionRequest" +
@@ -520,16 +530,34 @@ namespace FrontVR.GestionlentesvrWS {
             "", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionRespons" +
             "e")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarConfiguracionResponse> actualizarConfiguracionAsync(FrontVR.GestionlentesvrWS.actualizarConfiguracionRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarConfiguracion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class eliminarConfiguracionRequest {
         
-        // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracion/Fault/Ex" +
-            "ception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse eliminarConfiguracion(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse> eliminarConfiguracionAsync(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request);
+        public eliminarConfiguracionRequest() {
+        }
+        
+        public eliminarConfiguracionRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarConfiguracionResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class eliminarConfiguracionResponse {
+        
+        public eliminarConfiguracionResponse() {
+        }
     }
     
     /// <remarks/>
@@ -732,34 +760,6 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarConfiguracion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarConfiguracionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.configuracion elemento;
-        
-        public registrarConfiguracionRequest() {
-        }
-        
-        public registrarConfiguracionRequest(FrontVR.GestionlentesvrWS.configuracion elemento) {
-            this.elemento = elemento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarConfiguracionResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarConfiguracionResponse {
-        
-        public registrarConfiguracionResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerConfiguracion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class obtenerConfiguracionRequest {
         
@@ -796,6 +796,34 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarConfiguracion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarConfiguracionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.configuracion elemento;
+        
+        public registrarConfiguracionRequest() {
+        }
+        
+        public registrarConfiguracionRequest(FrontVR.GestionlentesvrWS.configuracion elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarConfiguracionResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarConfiguracionResponse {
+        
+        public registrarConfiguracionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarConfiguracion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class actualizarConfiguracionRequest {
         
@@ -818,34 +846,6 @@ namespace FrontVR.GestionlentesvrWS {
     public partial class actualizarConfiguracionResponse {
         
         public actualizarConfiguracionResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarConfiguracion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class eliminarConfiguracionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarConfiguracionRequest() {
-        }
-        
-        public eliminarConfiguracionRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarConfiguracionResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class eliminarConfiguracionResponse {
-        
-        public eliminarConfiguracionResponse() {
         }
     }
     
@@ -877,6 +877,28 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse FrontVR.GestionlentesvrWS.ConfiguracionWS.eliminarConfiguracion(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request) {
+            return base.Channel.eliminarConfiguracion(request);
+        }
+        
+        public void eliminarConfiguracion(int id) {
+            FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest();
+            inValue.id = id;
+            FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse retVal = ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).eliminarConfiguracion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse> FrontVR.GestionlentesvrWS.ConfiguracionWS.eliminarConfiguracionAsync(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request) {
+            return base.Channel.eliminarConfiguracionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse> eliminarConfiguracionAsync(int id) {
+            FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest();
+            inValue.id = id;
+            return ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).eliminarConfiguracionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.listarConfiguracionResponse FrontVR.GestionlentesvrWS.ConfiguracionWS.listarConfiguracion(FrontVR.GestionlentesvrWS.listarConfiguracionRequest request) {
             return base.Channel.listarConfiguracion(request);
         }
@@ -895,28 +917,6 @@ namespace FrontVR.GestionlentesvrWS {
         public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarConfiguracionResponse> listarConfiguracionAsync() {
             FrontVR.GestionlentesvrWS.listarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.listarConfiguracionRequest();
             return ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).listarConfiguracionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.registrarConfiguracionResponse FrontVR.GestionlentesvrWS.ConfiguracionWS.registrarConfiguracion(FrontVR.GestionlentesvrWS.registrarConfiguracionRequest request) {
-            return base.Channel.registrarConfiguracion(request);
-        }
-        
-        public void registrarConfiguracion(FrontVR.GestionlentesvrWS.configuracion elemento) {
-            FrontVR.GestionlentesvrWS.registrarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.registrarConfiguracionRequest();
-            inValue.elemento = elemento;
-            FrontVR.GestionlentesvrWS.registrarConfiguracionResponse retVal = ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).registrarConfiguracion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarConfiguracionResponse> FrontVR.GestionlentesvrWS.ConfiguracionWS.registrarConfiguracionAsync(FrontVR.GestionlentesvrWS.registrarConfiguracionRequest request) {
-            return base.Channel.registrarConfiguracionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarConfiguracionResponse> registrarConfiguracionAsync(FrontVR.GestionlentesvrWS.configuracion elemento) {
-            FrontVR.GestionlentesvrWS.registrarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.registrarConfiguracionRequest();
-            inValue.elemento = elemento;
-            return ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).registrarConfiguracionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -943,6 +943,28 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.registrarConfiguracionResponse FrontVR.GestionlentesvrWS.ConfiguracionWS.registrarConfiguracion(FrontVR.GestionlentesvrWS.registrarConfiguracionRequest request) {
+            return base.Channel.registrarConfiguracion(request);
+        }
+        
+        public void registrarConfiguracion(FrontVR.GestionlentesvrWS.configuracion elemento) {
+            FrontVR.GestionlentesvrWS.registrarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.registrarConfiguracionRequest();
+            inValue.elemento = elemento;
+            FrontVR.GestionlentesvrWS.registrarConfiguracionResponse retVal = ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).registrarConfiguracion(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarConfiguracionResponse> FrontVR.GestionlentesvrWS.ConfiguracionWS.registrarConfiguracionAsync(FrontVR.GestionlentesvrWS.registrarConfiguracionRequest request) {
+            return base.Channel.registrarConfiguracionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarConfiguracionResponse> registrarConfiguracionAsync(FrontVR.GestionlentesvrWS.configuracion elemento) {
+            FrontVR.GestionlentesvrWS.registrarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.registrarConfiguracionRequest();
+            inValue.elemento = elemento;
+            return ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).registrarConfiguracionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.actualizarConfiguracionResponse FrontVR.GestionlentesvrWS.ConfiguracionWS.actualizarConfiguracion(FrontVR.GestionlentesvrWS.actualizarConfiguracionRequest request) {
             return base.Channel.actualizarConfiguracion(request);
         }
@@ -963,61 +985,11 @@ namespace FrontVR.GestionlentesvrWS {
             inValue.elemento = elemento;
             return ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).actualizarConfiguracionAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse FrontVR.GestionlentesvrWS.ConfiguracionWS.eliminarConfiguracion(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request) {
-            return base.Channel.eliminarConfiguracion(request);
-        }
-        
-        public void eliminarConfiguracion(int id) {
-            FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest();
-            inValue.id = id;
-            FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse retVal = ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).eliminarConfiguracion(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse> FrontVR.GestionlentesvrWS.ConfiguracionWS.eliminarConfiguracionAsync(FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest request) {
-            return base.Channel.eliminarConfiguracionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarConfiguracionResponse> eliminarConfiguracionAsync(int id) {
-            FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest inValue = new FrontVR.GestionlentesvrWS.eliminarConfiguracionRequest();
-            inValue.id = id;
-            return ((FrontVR.GestionlentesvrWS.ConfiguracionWS)(this)).eliminarConfiguracionAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", ConfigurationName="GestionlentesvrWS.UsuarioWS")]
     public interface UsuarioWS {
-        
-        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuario/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.registrarUsuarioResponse registrarUsuario(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarUsuarioResponse> registrarUsuarioAsync(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request);
-        
-        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuario/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.actualizarUsuarioResponse actualizarUsuario(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarUsuarioResponse> actualizarUsuarioAsync(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuario/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.GestionlentesvrWS.obtenerUsuarioResponse obtenerUsuario(FrontVR.GestionlentesvrWS.obtenerUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerUsuarioResponse> obtenerUsuarioAsync(FrontVR.GestionlentesvrWS.obtenerUsuarioRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioResponse")]
@@ -1029,6 +1001,16 @@ namespace FrontVR.GestionlentesvrWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarUsuarioResponse> listarUsuarioAsync(FrontVR.GestionlentesvrWS.listarUsuarioRequest request);
         
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuario/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.GestionlentesvrWS.obtenerUsuarioResponse obtenerUsuario(FrontVR.GestionlentesvrWS.obtenerUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerUsuarioResponse> obtenerUsuarioAsync(FrontVR.GestionlentesvrWS.obtenerUsuarioRequest request);
+        
         // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuario/Fault/Exception", Name="Exception")]
@@ -1037,6 +1019,24 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarUsuarioResponse> eliminarUsuarioAsync(FrontVR.GestionlentesvrWS.eliminarUsuarioRequest request);
+        
+        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuario/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.actualizarUsuarioResponse actualizarUsuario(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarUsuarioResponse> actualizarUsuarioAsync(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request);
+        
+        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuario/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.registrarUsuarioResponse registrarUsuario(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarUsuarioResponse> registrarUsuarioAsync(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request);
     }
     
     /// <remarks/>
@@ -1260,56 +1260,28 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuario", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarUsuarioRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuario", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarUsuarioRequest {
+        
+        public listarUsuarioRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarioResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarUsuarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.usuario elemento;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.usuario[] @return;
         
-        public registrarUsuarioRequest() {
+        public listarUsuarioResponse() {
         }
         
-        public registrarUsuarioRequest(FrontVR.GestionlentesvrWS.usuario elemento) {
-            this.elemento = elemento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuarioResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarUsuarioResponse {
-        
-        public registrarUsuarioResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuario", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.usuario elemento;
-        
-        public actualizarUsuarioRequest() {
-        }
-        
-        public actualizarUsuarioRequest(FrontVR.GestionlentesvrWS.usuario elemento) {
-            this.elemento = elemento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuarioResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarUsuarioResponse {
-        
-        public actualizarUsuarioResponse() {
+        public listarUsuarioResponse(FrontVR.GestionlentesvrWS.usuario[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -1352,34 +1324,6 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuario", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarUsuarioRequest {
-        
-        public listarUsuarioRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarUsuarioResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.usuario[] @return;
-        
-        public listarUsuarioResponse() {
-        }
-        
-        public listarUsuarioResponse(FrontVR.GestionlentesvrWS.usuario[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarUsuario", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class eliminarUsuarioRequest {
         
@@ -1402,6 +1346,62 @@ namespace FrontVR.GestionlentesvrWS {
     public partial class eliminarUsuarioResponse {
         
         public eliminarUsuarioResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuario", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.usuario elemento;
+        
+        public actualizarUsuarioRequest() {
+        }
+        
+        public actualizarUsuarioRequest(FrontVR.GestionlentesvrWS.usuario elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuarioResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarUsuarioResponse {
+        
+        public actualizarUsuarioResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuario", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.usuario elemento;
+        
+        public registrarUsuarioRequest() {
+        }
+        
+        public registrarUsuarioRequest(FrontVR.GestionlentesvrWS.usuario elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarUsuarioResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarUsuarioResponse {
+        
+        public registrarUsuarioResponse() {
         }
     }
     
@@ -1433,47 +1433,24 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.registrarUsuarioResponse FrontVR.GestionlentesvrWS.UsuarioWS.registrarUsuario(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request) {
-            return base.Channel.registrarUsuario(request);
+        FrontVR.GestionlentesvrWS.listarUsuarioResponse FrontVR.GestionlentesvrWS.UsuarioWS.listarUsuario(FrontVR.GestionlentesvrWS.listarUsuarioRequest request) {
+            return base.Channel.listarUsuario(request);
         }
         
-        public void registrarUsuario(FrontVR.GestionlentesvrWS.usuario elemento) {
-            FrontVR.GestionlentesvrWS.registrarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.registrarUsuarioRequest();
-            inValue.elemento = elemento;
-            FrontVR.GestionlentesvrWS.registrarUsuarioResponse retVal = ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).registrarUsuario(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarUsuarioResponse> FrontVR.GestionlentesvrWS.UsuarioWS.registrarUsuarioAsync(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request) {
-            return base.Channel.registrarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarUsuarioResponse> registrarUsuarioAsync(FrontVR.GestionlentesvrWS.usuario elemento) {
-            FrontVR.GestionlentesvrWS.registrarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.registrarUsuarioRequest();
-            inValue.elemento = elemento;
-            return ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).registrarUsuarioAsync(inValue);
+        public FrontVR.GestionlentesvrWS.usuario[] listarUsuario() {
+            FrontVR.GestionlentesvrWS.listarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.listarUsuarioRequest();
+            FrontVR.GestionlentesvrWS.listarUsuarioResponse retVal = ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).listarUsuario(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.actualizarUsuarioResponse FrontVR.GestionlentesvrWS.UsuarioWS.actualizarUsuario(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request) {
-            return base.Channel.actualizarUsuario(request);
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarUsuarioResponse> FrontVR.GestionlentesvrWS.UsuarioWS.listarUsuarioAsync(FrontVR.GestionlentesvrWS.listarUsuarioRequest request) {
+            return base.Channel.listarUsuarioAsync(request);
         }
         
-        public void actualizarUsuario(FrontVR.GestionlentesvrWS.usuario elemento) {
-            FrontVR.GestionlentesvrWS.actualizarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.actualizarUsuarioRequest();
-            inValue.elemento = elemento;
-            FrontVR.GestionlentesvrWS.actualizarUsuarioResponse retVal = ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).actualizarUsuario(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarUsuarioResponse> FrontVR.GestionlentesvrWS.UsuarioWS.actualizarUsuarioAsync(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request) {
-            return base.Channel.actualizarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarUsuarioResponse> actualizarUsuarioAsync(FrontVR.GestionlentesvrWS.usuario elemento) {
-            FrontVR.GestionlentesvrWS.actualizarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.actualizarUsuarioRequest();
-            inValue.elemento = elemento;
-            return ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).actualizarUsuarioAsync(inValue);
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarUsuarioResponse> listarUsuarioAsync() {
+            FrontVR.GestionlentesvrWS.listarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.listarUsuarioRequest();
+            return ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).listarUsuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1500,27 +1477,6 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.listarUsuarioResponse FrontVR.GestionlentesvrWS.UsuarioWS.listarUsuario(FrontVR.GestionlentesvrWS.listarUsuarioRequest request) {
-            return base.Channel.listarUsuario(request);
-        }
-        
-        public FrontVR.GestionlentesvrWS.usuario[] listarUsuario() {
-            FrontVR.GestionlentesvrWS.listarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.listarUsuarioRequest();
-            FrontVR.GestionlentesvrWS.listarUsuarioResponse retVal = ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).listarUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarUsuarioResponse> FrontVR.GestionlentesvrWS.UsuarioWS.listarUsuarioAsync(FrontVR.GestionlentesvrWS.listarUsuarioRequest request) {
-            return base.Channel.listarUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarUsuarioResponse> listarUsuarioAsync() {
-            FrontVR.GestionlentesvrWS.listarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.listarUsuarioRequest();
-            return ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).listarUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.eliminarUsuarioResponse FrontVR.GestionlentesvrWS.UsuarioWS.eliminarUsuario(FrontVR.GestionlentesvrWS.eliminarUsuarioRequest request) {
             return base.Channel.eliminarUsuario(request);
         }
@@ -1541,29 +1497,55 @@ namespace FrontVR.GestionlentesvrWS {
             inValue.id = id;
             return ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.actualizarUsuarioResponse FrontVR.GestionlentesvrWS.UsuarioWS.actualizarUsuario(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request) {
+            return base.Channel.actualizarUsuario(request);
+        }
+        
+        public void actualizarUsuario(FrontVR.GestionlentesvrWS.usuario elemento) {
+            FrontVR.GestionlentesvrWS.actualizarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.actualizarUsuarioRequest();
+            inValue.elemento = elemento;
+            FrontVR.GestionlentesvrWS.actualizarUsuarioResponse retVal = ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).actualizarUsuario(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarUsuarioResponse> FrontVR.GestionlentesvrWS.UsuarioWS.actualizarUsuarioAsync(FrontVR.GestionlentesvrWS.actualizarUsuarioRequest request) {
+            return base.Channel.actualizarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarUsuarioResponse> actualizarUsuarioAsync(FrontVR.GestionlentesvrWS.usuario elemento) {
+            FrontVR.GestionlentesvrWS.actualizarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.actualizarUsuarioRequest();
+            inValue.elemento = elemento;
+            return ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).actualizarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.registrarUsuarioResponse FrontVR.GestionlentesvrWS.UsuarioWS.registrarUsuario(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request) {
+            return base.Channel.registrarUsuario(request);
+        }
+        
+        public void registrarUsuario(FrontVR.GestionlentesvrWS.usuario elemento) {
+            FrontVR.GestionlentesvrWS.registrarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.registrarUsuarioRequest();
+            inValue.elemento = elemento;
+            FrontVR.GestionlentesvrWS.registrarUsuarioResponse retVal = ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).registrarUsuario(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarUsuarioResponse> FrontVR.GestionlentesvrWS.UsuarioWS.registrarUsuarioAsync(FrontVR.GestionlentesvrWS.registrarUsuarioRequest request) {
+            return base.Channel.registrarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarUsuarioResponse> registrarUsuarioAsync(FrontVR.GestionlentesvrWS.usuario elemento) {
+            FrontVR.GestionlentesvrWS.registrarUsuarioRequest inValue = new FrontVR.GestionlentesvrWS.registrarUsuarioRequest();
+            inValue.elemento = elemento;
+            return ((FrontVR.GestionlentesvrWS.UsuarioWS)(this)).registrarUsuarioAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", ConfigurationName="GestionlentesvrWS.GrupoWS")]
     public interface GrupoWS {
-        
-        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupo/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.actualizarGrupoResponse actualizarGrupo(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarGrupoResponse> actualizarGrupoAsync(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request);
-        
-        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupo/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.registrarGrupoResponse registrarGrupo(FrontVR.GestionlentesvrWS.registrarGrupoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarGrupoResponse> registrarGrupoAsync(FrontVR.GestionlentesvrWS.registrarGrupoRequest request);
         
         // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupoResponse")]
@@ -1593,6 +1575,52 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/listarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/listarGrupoResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarGrupoResponse> listarGrupoAsync(FrontVR.GestionlentesvrWS.listarGrupoRequest request);
+        
+        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupo/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.actualizarGrupoResponse actualizarGrupo(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarGrupoResponse> actualizarGrupoAsync(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request);
+        
+        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupo/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.registrarGrupoResponse registrarGrupo(FrontVR.GestionlentesvrWS.registrarGrupoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarGrupoResponse> registrarGrupoAsync(FrontVR.GestionlentesvrWS.registrarGrupoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGrupo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class eliminarGrupoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarGrupoRequest() {
+        }
+        
+        public eliminarGrupoRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGrupoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class eliminarGrupoResponse {
+        
+        public eliminarGrupoResponse() {
+        }
     }
     
     /// <remarks/>
@@ -1714,90 +1742,6 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarGrupo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarGrupoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.grupo elemento;
-        
-        public actualizarGrupoRequest() {
-        }
-        
-        public actualizarGrupoRequest(FrontVR.GestionlentesvrWS.grupo elemento) {
-            this.elemento = elemento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarGrupoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarGrupoResponse {
-        
-        public actualizarGrupoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarGrupo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarGrupoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.grupo elemento;
-        
-        public registrarGrupoRequest() {
-        }
-        
-        public registrarGrupoRequest(FrontVR.GestionlentesvrWS.grupo elemento) {
-            this.elemento = elemento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarGrupoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarGrupoResponse {
-        
-        public registrarGrupoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGrupo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class eliminarGrupoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarGrupoRequest() {
-        }
-        
-        public eliminarGrupoRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGrupoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class eliminarGrupoResponse {
-        
-        public eliminarGrupoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerGrupo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class obtenerGrupoRequest {
         
@@ -1859,6 +1803,62 @@ namespace FrontVR.GestionlentesvrWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarGrupo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarGrupoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.grupo elemento;
+        
+        public actualizarGrupoRequest() {
+        }
+        
+        public actualizarGrupoRequest(FrontVR.GestionlentesvrWS.grupo elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarGrupoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarGrupoResponse {
+        
+        public actualizarGrupoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarGrupo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarGrupoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.grupo elemento;
+        
+        public registrarGrupoRequest() {
+        }
+        
+        public registrarGrupoRequest(FrontVR.GestionlentesvrWS.grupo elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarGrupoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarGrupoResponse {
+        
+        public registrarGrupoResponse() {
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GrupoWSChannel : FrontVR.GestionlentesvrWS.GrupoWS, System.ServiceModel.IClientChannel {
     }
@@ -1884,50 +1884,6 @@ namespace FrontVR.GestionlentesvrWS {
         
         public GrupoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.actualizarGrupoResponse FrontVR.GestionlentesvrWS.GrupoWS.actualizarGrupo(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request) {
-            return base.Channel.actualizarGrupo(request);
-        }
-        
-        public void actualizarGrupo(FrontVR.GestionlentesvrWS.grupo elemento) {
-            FrontVR.GestionlentesvrWS.actualizarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.actualizarGrupoRequest();
-            inValue.elemento = elemento;
-            FrontVR.GestionlentesvrWS.actualizarGrupoResponse retVal = ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).actualizarGrupo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarGrupoResponse> FrontVR.GestionlentesvrWS.GrupoWS.actualizarGrupoAsync(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request) {
-            return base.Channel.actualizarGrupoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarGrupoResponse> actualizarGrupoAsync(FrontVR.GestionlentesvrWS.grupo elemento) {
-            FrontVR.GestionlentesvrWS.actualizarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.actualizarGrupoRequest();
-            inValue.elemento = elemento;
-            return ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).actualizarGrupoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.registrarGrupoResponse FrontVR.GestionlentesvrWS.GrupoWS.registrarGrupo(FrontVR.GestionlentesvrWS.registrarGrupoRequest request) {
-            return base.Channel.registrarGrupo(request);
-        }
-        
-        public void registrarGrupo(FrontVR.GestionlentesvrWS.grupo elemento) {
-            FrontVR.GestionlentesvrWS.registrarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.registrarGrupoRequest();
-            inValue.elemento = elemento;
-            FrontVR.GestionlentesvrWS.registrarGrupoResponse retVal = ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).registrarGrupo(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarGrupoResponse> FrontVR.GestionlentesvrWS.GrupoWS.registrarGrupoAsync(FrontVR.GestionlentesvrWS.registrarGrupoRequest request) {
-            return base.Channel.registrarGrupoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarGrupoResponse> registrarGrupoAsync(FrontVR.GestionlentesvrWS.grupo elemento) {
-            FrontVR.GestionlentesvrWS.registrarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.registrarGrupoRequest();
-            inValue.elemento = elemento;
-            return ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).registrarGrupoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1995,21 +1951,55 @@ namespace FrontVR.GestionlentesvrWS {
             FrontVR.GestionlentesvrWS.listarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.listarGrupoRequest();
             return ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).listarGrupoAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.actualizarGrupoResponse FrontVR.GestionlentesvrWS.GrupoWS.actualizarGrupo(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request) {
+            return base.Channel.actualizarGrupo(request);
+        }
+        
+        public void actualizarGrupo(FrontVR.GestionlentesvrWS.grupo elemento) {
+            FrontVR.GestionlentesvrWS.actualizarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.actualizarGrupoRequest();
+            inValue.elemento = elemento;
+            FrontVR.GestionlentesvrWS.actualizarGrupoResponse retVal = ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).actualizarGrupo(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarGrupoResponse> FrontVR.GestionlentesvrWS.GrupoWS.actualizarGrupoAsync(FrontVR.GestionlentesvrWS.actualizarGrupoRequest request) {
+            return base.Channel.actualizarGrupoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarGrupoResponse> actualizarGrupoAsync(FrontVR.GestionlentesvrWS.grupo elemento) {
+            FrontVR.GestionlentesvrWS.actualizarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.actualizarGrupoRequest();
+            inValue.elemento = elemento;
+            return ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).actualizarGrupoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.registrarGrupoResponse FrontVR.GestionlentesvrWS.GrupoWS.registrarGrupo(FrontVR.GestionlentesvrWS.registrarGrupoRequest request) {
+            return base.Channel.registrarGrupo(request);
+        }
+        
+        public void registrarGrupo(FrontVR.GestionlentesvrWS.grupo elemento) {
+            FrontVR.GestionlentesvrWS.registrarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.registrarGrupoRequest();
+            inValue.elemento = elemento;
+            FrontVR.GestionlentesvrWS.registrarGrupoResponse retVal = ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).registrarGrupo(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarGrupoResponse> FrontVR.GestionlentesvrWS.GrupoWS.registrarGrupoAsync(FrontVR.GestionlentesvrWS.registrarGrupoRequest request) {
+            return base.Channel.registrarGrupoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarGrupoResponse> registrarGrupoAsync(FrontVR.GestionlentesvrWS.grupo elemento) {
+            FrontVR.GestionlentesvrWS.registrarGrupoRequest inValue = new FrontVR.GestionlentesvrWS.registrarGrupoRequest();
+            inValue.elemento = elemento;
+            return ((FrontVR.GestionlentesvrWS.GrupoWS)(this)).registrarGrupoAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", ConfigurationName="GestionlentesvrWS.RolWS")]
     public interface RolWS {
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRol/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.GestionlentesvrWS.listarRolResponse listarRol(FrontVR.GestionlentesvrWS.listarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarRolResponse> listarRolAsync(FrontVR.GestionlentesvrWS.listarRolRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolResponse")]
@@ -2021,14 +2011,15 @@ namespace FrontVR.GestionlentesvrWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerRolResponse> obtenerRolAsync(FrontVR.GestionlentesvrWS.obtenerRolRequest request);
         
-        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRol/Fault/Exception", Name="Exception")]
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRol/Fault/Exception", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.actualizarRolResponse actualizarRol(FrontVR.GestionlentesvrWS.actualizarRolRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.GestionlentesvrWS.listarRolResponse listarRol(FrontVR.GestionlentesvrWS.listarRolRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarRolResponse> actualizarRolAsync(FrontVR.GestionlentesvrWS.actualizarRolRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarRolResponse> listarRolAsync(FrontVR.GestionlentesvrWS.listarRolRequest request);
         
         // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolResponse")]
@@ -2039,6 +2030,15 @@ namespace FrontVR.GestionlentesvrWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarRolResponse> registrarRolAsync(FrontVR.GestionlentesvrWS.registrarRolRequest request);
         
+        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRol/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.actualizarRolResponse actualizarRol(FrontVR.GestionlentesvrWS.actualizarRolRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarRolResponse> actualizarRolAsync(FrontVR.GestionlentesvrWS.actualizarRolRequest request);
+        
         // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRol/Fault/Exception", Name="Exception")]
@@ -2047,34 +2047,6 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarRolResponse> eliminarRolAsync(FrontVR.GestionlentesvrWS.eliminarRolRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRol", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarRolRequest {
-        
-        public listarRolRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRolResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarRolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.rol[] @return;
-        
-        public listarRolResponse() {
-        }
-        
-        public listarRolResponse(FrontVR.GestionlentesvrWS.rol[] @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2116,28 +2088,28 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRol", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarRolRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRol", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarRolRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.rol elemento;
-        
-        public actualizarRolRequest() {
-        }
-        
-        public actualizarRolRequest(FrontVR.GestionlentesvrWS.rol elemento) {
-            this.elemento = elemento;
+        public listarRolRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRolResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarRolResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarRolResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarRolResponse {
         
-        public actualizarRolResponse() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.rol[] @return;
+        
+        public listarRolResponse() {
+        }
+        
+        public listarRolResponse(FrontVR.GestionlentesvrWS.rol[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -2166,6 +2138,34 @@ namespace FrontVR.GestionlentesvrWS {
     public partial class registrarRolResponse {
         
         public registrarRolResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRol", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarRolRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.rol elemento;
+        
+        public actualizarRolRequest() {
+        }
+        
+        public actualizarRolRequest(FrontVR.GestionlentesvrWS.rol elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarRolResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarRolResponse {
+        
+        public actualizarRolResponse() {
         }
     }
     
@@ -2225,27 +2225,6 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.listarRolResponse FrontVR.GestionlentesvrWS.RolWS.listarRol(FrontVR.GestionlentesvrWS.listarRolRequest request) {
-            return base.Channel.listarRol(request);
-        }
-        
-        public FrontVR.GestionlentesvrWS.rol[] listarRol() {
-            FrontVR.GestionlentesvrWS.listarRolRequest inValue = new FrontVR.GestionlentesvrWS.listarRolRequest();
-            FrontVR.GestionlentesvrWS.listarRolResponse retVal = ((FrontVR.GestionlentesvrWS.RolWS)(this)).listarRol(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarRolResponse> FrontVR.GestionlentesvrWS.RolWS.listarRolAsync(FrontVR.GestionlentesvrWS.listarRolRequest request) {
-            return base.Channel.listarRolAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarRolResponse> listarRolAsync() {
-            FrontVR.GestionlentesvrWS.listarRolRequest inValue = new FrontVR.GestionlentesvrWS.listarRolRequest();
-            return ((FrontVR.GestionlentesvrWS.RolWS)(this)).listarRolAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.obtenerRolResponse FrontVR.GestionlentesvrWS.RolWS.obtenerRol(FrontVR.GestionlentesvrWS.obtenerRolRequest request) {
             return base.Channel.obtenerRol(request);
         }
@@ -2269,25 +2248,24 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.actualizarRolResponse FrontVR.GestionlentesvrWS.RolWS.actualizarRol(FrontVR.GestionlentesvrWS.actualizarRolRequest request) {
-            return base.Channel.actualizarRol(request);
+        FrontVR.GestionlentesvrWS.listarRolResponse FrontVR.GestionlentesvrWS.RolWS.listarRol(FrontVR.GestionlentesvrWS.listarRolRequest request) {
+            return base.Channel.listarRol(request);
         }
         
-        public void actualizarRol(FrontVR.GestionlentesvrWS.rol elemento) {
-            FrontVR.GestionlentesvrWS.actualizarRolRequest inValue = new FrontVR.GestionlentesvrWS.actualizarRolRequest();
-            inValue.elemento = elemento;
-            FrontVR.GestionlentesvrWS.actualizarRolResponse retVal = ((FrontVR.GestionlentesvrWS.RolWS)(this)).actualizarRol(inValue);
+        public FrontVR.GestionlentesvrWS.rol[] listarRol() {
+            FrontVR.GestionlentesvrWS.listarRolRequest inValue = new FrontVR.GestionlentesvrWS.listarRolRequest();
+            FrontVR.GestionlentesvrWS.listarRolResponse retVal = ((FrontVR.GestionlentesvrWS.RolWS)(this)).listarRol(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarRolResponse> FrontVR.GestionlentesvrWS.RolWS.actualizarRolAsync(FrontVR.GestionlentesvrWS.actualizarRolRequest request) {
-            return base.Channel.actualizarRolAsync(request);
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarRolResponse> FrontVR.GestionlentesvrWS.RolWS.listarRolAsync(FrontVR.GestionlentesvrWS.listarRolRequest request) {
+            return base.Channel.listarRolAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarRolResponse> actualizarRolAsync(FrontVR.GestionlentesvrWS.rol elemento) {
-            FrontVR.GestionlentesvrWS.actualizarRolRequest inValue = new FrontVR.GestionlentesvrWS.actualizarRolRequest();
-            inValue.elemento = elemento;
-            return ((FrontVR.GestionlentesvrWS.RolWS)(this)).actualizarRolAsync(inValue);
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarRolResponse> listarRolAsync() {
+            FrontVR.GestionlentesvrWS.listarRolRequest inValue = new FrontVR.GestionlentesvrWS.listarRolRequest();
+            return ((FrontVR.GestionlentesvrWS.RolWS)(this)).listarRolAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2310,6 +2288,28 @@ namespace FrontVR.GestionlentesvrWS {
             FrontVR.GestionlentesvrWS.registrarRolRequest inValue = new FrontVR.GestionlentesvrWS.registrarRolRequest();
             inValue.elemento = elemento;
             return ((FrontVR.GestionlentesvrWS.RolWS)(this)).registrarRolAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.actualizarRolResponse FrontVR.GestionlentesvrWS.RolWS.actualizarRol(FrontVR.GestionlentesvrWS.actualizarRolRequest request) {
+            return base.Channel.actualizarRol(request);
+        }
+        
+        public void actualizarRol(FrontVR.GestionlentesvrWS.rol elemento) {
+            FrontVR.GestionlentesvrWS.actualizarRolRequest inValue = new FrontVR.GestionlentesvrWS.actualizarRolRequest();
+            inValue.elemento = elemento;
+            FrontVR.GestionlentesvrWS.actualizarRolResponse retVal = ((FrontVR.GestionlentesvrWS.RolWS)(this)).actualizarRol(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarRolResponse> FrontVR.GestionlentesvrWS.RolWS.actualizarRolAsync(FrontVR.GestionlentesvrWS.actualizarRolRequest request) {
+            return base.Channel.actualizarRolAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarRolResponse> actualizarRolAsync(FrontVR.GestionlentesvrWS.rol elemento) {
+            FrontVR.GestionlentesvrWS.actualizarRolRequest inValue = new FrontVR.GestionlentesvrWS.actualizarRolRequest();
+            inValue.elemento = elemento;
+            return ((FrontVR.GestionlentesvrWS.RolWS)(this)).actualizarRolAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2340,16 +2340,6 @@ namespace FrontVR.GestionlentesvrWS {
     public interface MetricaUsoWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUso/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.GestionlentesvrWS.listarMetricaUsoResponse listarMetricaUso(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarMetricaUsoResponse> listarMetricaUsoAsync(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUsoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUsoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUso/Fault/Exception" +
             "", Name="Exception")]
@@ -2359,6 +2349,16 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUsoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUsoResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerMetricaUsoResponse> obtenerMetricaUsoAsync(FrontVR.GestionlentesvrWS.obtenerMetricaUsoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUso/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.GestionlentesvrWS.listarMetricaUsoResponse listarMetricaUso(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarMetricaUsoResponse> listarMetricaUsoAsync(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request);
         
         // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/eliminarMetricaUsoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/eliminarMetricaUsoResponse")]
@@ -2771,34 +2771,6 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMetricaUso", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarMetricaUsoRequest {
-        
-        public listarMetricaUsoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMetricaUsoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarMetricaUsoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.metricaUso[] @return;
-        
-        public listarMetricaUsoResponse() {
-        }
-        
-        public listarMetricaUsoResponse(FrontVR.GestionlentesvrWS.metricaUso[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerMetricaUso", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class obtenerMetricaUsoRequest {
         
@@ -2828,6 +2800,34 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         public obtenerMetricaUsoResponse(FrontVR.GestionlentesvrWS.metricaUso @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMetricaUso", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarMetricaUsoRequest {
+        
+        public listarMetricaUsoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarMetricaUsoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarMetricaUsoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.metricaUso[] @return;
+        
+        public listarMetricaUsoResponse() {
+        }
+        
+        public listarMetricaUsoResponse(FrontVR.GestionlentesvrWS.metricaUso[] @return) {
             this.@return = @return;
         }
     }
@@ -2944,27 +2944,6 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.listarMetricaUsoResponse FrontVR.GestionlentesvrWS.MetricaUsoWS.listarMetricaUso(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request) {
-            return base.Channel.listarMetricaUso(request);
-        }
-        
-        public FrontVR.GestionlentesvrWS.metricaUso[] listarMetricaUso() {
-            FrontVR.GestionlentesvrWS.listarMetricaUsoRequest inValue = new FrontVR.GestionlentesvrWS.listarMetricaUsoRequest();
-            FrontVR.GestionlentesvrWS.listarMetricaUsoResponse retVal = ((FrontVR.GestionlentesvrWS.MetricaUsoWS)(this)).listarMetricaUso(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarMetricaUsoResponse> FrontVR.GestionlentesvrWS.MetricaUsoWS.listarMetricaUsoAsync(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request) {
-            return base.Channel.listarMetricaUsoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarMetricaUsoResponse> listarMetricaUsoAsync() {
-            FrontVR.GestionlentesvrWS.listarMetricaUsoRequest inValue = new FrontVR.GestionlentesvrWS.listarMetricaUsoRequest();
-            return ((FrontVR.GestionlentesvrWS.MetricaUsoWS)(this)).listarMetricaUsoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.obtenerMetricaUsoResponse FrontVR.GestionlentesvrWS.MetricaUsoWS.obtenerMetricaUso(FrontVR.GestionlentesvrWS.obtenerMetricaUsoRequest request) {
             return base.Channel.obtenerMetricaUso(request);
         }
@@ -2985,6 +2964,27 @@ namespace FrontVR.GestionlentesvrWS {
             FrontVR.GestionlentesvrWS.obtenerMetricaUsoRequest inValue = new FrontVR.GestionlentesvrWS.obtenerMetricaUsoRequest();
             inValue.id = id;
             return ((FrontVR.GestionlentesvrWS.MetricaUsoWS)(this)).obtenerMetricaUsoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.listarMetricaUsoResponse FrontVR.GestionlentesvrWS.MetricaUsoWS.listarMetricaUso(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request) {
+            return base.Channel.listarMetricaUso(request);
+        }
+        
+        public FrontVR.GestionlentesvrWS.metricaUso[] listarMetricaUso() {
+            FrontVR.GestionlentesvrWS.listarMetricaUsoRequest inValue = new FrontVR.GestionlentesvrWS.listarMetricaUsoRequest();
+            FrontVR.GestionlentesvrWS.listarMetricaUsoResponse retVal = ((FrontVR.GestionlentesvrWS.MetricaUsoWS)(this)).listarMetricaUso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarMetricaUsoResponse> FrontVR.GestionlentesvrWS.MetricaUsoWS.listarMetricaUsoAsync(FrontVR.GestionlentesvrWS.listarMetricaUsoRequest request) {
+            return base.Channel.listarMetricaUsoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarMetricaUsoResponse> listarMetricaUsoAsync() {
+            FrontVR.GestionlentesvrWS.listarMetricaUsoRequest inValue = new FrontVR.GestionlentesvrWS.listarMetricaUsoRequest();
+            return ((FrontVR.GestionlentesvrWS.MetricaUsoWS)(this)).listarMetricaUsoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3058,16 +3058,35 @@ namespace FrontVR.GestionlentesvrWS {
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", ConfigurationName="GestionlentesvrWS.DispositivoWS")]
     public interface DispositivoWS {
         
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivo/Fault/Excepti" +
-            "on", Name="Exception")]
+        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivo/Fault/Exce" +
+            "ption", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.GestionlentesvrWS.obtenerDispositivoResponse obtenerDispositivo(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request);
+        FrontVR.GestionlentesvrWS.actualizarDispositivoResponse actualizarDispositivo(FrontVR.GestionlentesvrWS.actualizarDispositivoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerDispositivoResponse> obtenerDispositivoAsync(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarDispositivoResponse> actualizarDispositivoAsync(FrontVR.GestionlentesvrWS.actualizarDispositivoRequest request);
+        
+        // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivo/Fault/Except" +
+            "ion", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.eliminarDispositivoResponse eliminarDispositivo(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarDispositivoResponse> eliminarDispositivoAsync(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request);
+        
+        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivo/Fault/Excep" +
+            "tion", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.registrarDispositivoResponse registrarDispositivo(FrontVR.GestionlentesvrWS.registrarDispositivoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarDispositivoResponse> registrarDispositivoAsync(FrontVR.GestionlentesvrWS.registrarDispositivoRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse")]
@@ -3080,35 +3099,128 @@ namespace FrontVR.GestionlentesvrWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarDispositivoResponse> listarDispositivoAsync(FrontVR.GestionlentesvrWS.listarDispositivoRequest request);
         
-        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivo/Fault/Exce" +
-            "ption", Name="Exception")]
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivo/Fault/Excepti" +
+            "on", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.actualizarDispositivoResponse actualizarDispositivo(FrontVR.GestionlentesvrWS.actualizarDispositivoRequest request);
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.GestionlentesvrWS.obtenerDispositivoResponse obtenerDispositivo(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarDispositivoResponse> actualizarDispositivoAsync(FrontVR.GestionlentesvrWS.actualizarDispositivoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerDispositivoResponse> obtenerDispositivoAsync(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarDispositivoRequest {
         
-        // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivo/Fault/Excep" +
-            "tion", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.registrarDispositivoResponse registrarDispositivo(FrontVR.GestionlentesvrWS.registrarDispositivoRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.dispositivo elemento;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/registrarDispositivoResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarDispositivoResponse> registrarDispositivoAsync(FrontVR.GestionlentesvrWS.registrarDispositivoRequest request);
+        public actualizarDispositivoRequest() {
+        }
         
-        // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivo/Fault/Except" +
-            "ion", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.eliminarDispositivoResponse eliminarDispositivo(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request);
+        public actualizarDispositivoRequest(FrontVR.GestionlentesvrWS.dispositivo elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarDispositivoResponse {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/eliminarDispositivoResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarDispositivoResponse> eliminarDispositivoAsync(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request);
+        public actualizarDispositivoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class eliminarDispositivoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public eliminarDispositivoRequest() {
+        }
+        
+        public eliminarDispositivoRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class eliminarDispositivoResponse {
+        
+        public eliminarDispositivoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarDispositivoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.dispositivo elemento;
+        
+        public registrarDispositivoRequest() {
+        }
+        
+        public registrarDispositivoRequest(FrontVR.GestionlentesvrWS.dispositivo elemento) {
+            this.elemento = elemento;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarDispositivoResponse {
+        
+        public registrarDispositivoResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarDispositivoRequest {
+        
+        public listarDispositivoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarDispositivoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.dispositivo[] @return;
+        
+        public listarDispositivoResponse() {
+        }
+        
+        public listarDispositivoResponse(FrontVR.GestionlentesvrWS.dispositivo[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3147,118 +3259,6 @@ namespace FrontVR.GestionlentesvrWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarDispositivoRequest {
-        
-        public listarDispositivoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarDispositivoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.dispositivo[] @return;
-        
-        public listarDispositivoResponse() {
-        }
-        
-        public listarDispositivoResponse(FrontVR.GestionlentesvrWS.dispositivo[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarDispositivoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.dispositivo elemento;
-        
-        public actualizarDispositivoRequest() {
-        }
-        
-        public actualizarDispositivoRequest(FrontVR.GestionlentesvrWS.dispositivo elemento) {
-            this.elemento = elemento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarDispositivoResponse {
-        
-        public actualizarDispositivoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarDispositivoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.dispositivo elemento;
-        
-        public registrarDispositivoRequest() {
-        }
-        
-        public registrarDispositivoRequest(FrontVR.GestionlentesvrWS.dispositivo elemento) {
-            this.elemento = elemento;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarDispositivoResponse {
-        
-        public registrarDispositivoResponse() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class eliminarDispositivoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public eliminarDispositivoRequest() {
-        }
-        
-        public eliminarDispositivoRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class eliminarDispositivoResponse {
-        
-        public eliminarDispositivoResponse() {
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface DispositivoWSChannel : FrontVR.GestionlentesvrWS.DispositivoWS, System.ServiceModel.IClientChannel {
     }
@@ -3287,50 +3287,6 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.obtenerDispositivoResponse FrontVR.GestionlentesvrWS.DispositivoWS.obtenerDispositivo(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request) {
-            return base.Channel.obtenerDispositivo(request);
-        }
-        
-        public FrontVR.GestionlentesvrWS.dispositivo obtenerDispositivo(int id) {
-            FrontVR.GestionlentesvrWS.obtenerDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.obtenerDispositivoRequest();
-            inValue.id = id;
-            FrontVR.GestionlentesvrWS.obtenerDispositivoResponse retVal = ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).obtenerDispositivo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerDispositivoResponse> FrontVR.GestionlentesvrWS.DispositivoWS.obtenerDispositivoAsync(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request) {
-            return base.Channel.obtenerDispositivoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerDispositivoResponse> obtenerDispositivoAsync(int id) {
-            FrontVR.GestionlentesvrWS.obtenerDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.obtenerDispositivoRequest();
-            inValue.id = id;
-            return ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).obtenerDispositivoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.listarDispositivoResponse FrontVR.GestionlentesvrWS.DispositivoWS.listarDispositivo(FrontVR.GestionlentesvrWS.listarDispositivoRequest request) {
-            return base.Channel.listarDispositivo(request);
-        }
-        
-        public FrontVR.GestionlentesvrWS.dispositivo[] listarDispositivo() {
-            FrontVR.GestionlentesvrWS.listarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.listarDispositivoRequest();
-            FrontVR.GestionlentesvrWS.listarDispositivoResponse retVal = ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).listarDispositivo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarDispositivoResponse> FrontVR.GestionlentesvrWS.DispositivoWS.listarDispositivoAsync(FrontVR.GestionlentesvrWS.listarDispositivoRequest request) {
-            return base.Channel.listarDispositivoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarDispositivoResponse> listarDispositivoAsync() {
-            FrontVR.GestionlentesvrWS.listarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.listarDispositivoRequest();
-            return ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).listarDispositivoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.actualizarDispositivoResponse FrontVR.GestionlentesvrWS.DispositivoWS.actualizarDispositivo(FrontVR.GestionlentesvrWS.actualizarDispositivoRequest request) {
             return base.Channel.actualizarDispositivo(request);
         }
@@ -3350,6 +3306,28 @@ namespace FrontVR.GestionlentesvrWS {
             FrontVR.GestionlentesvrWS.actualizarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.actualizarDispositivoRequest();
             inValue.elemento = elemento;
             return ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).actualizarDispositivoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.eliminarDispositivoResponse FrontVR.GestionlentesvrWS.DispositivoWS.eliminarDispositivo(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request) {
+            return base.Channel.eliminarDispositivo(request);
+        }
+        
+        public void eliminarDispositivo(int id) {
+            FrontVR.GestionlentesvrWS.eliminarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.eliminarDispositivoRequest();
+            inValue.id = id;
+            FrontVR.GestionlentesvrWS.eliminarDispositivoResponse retVal = ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).eliminarDispositivo(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarDispositivoResponse> FrontVR.GestionlentesvrWS.DispositivoWS.eliminarDispositivoAsync(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request) {
+            return base.Channel.eliminarDispositivoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarDispositivoResponse> eliminarDispositivoAsync(int id) {
+            FrontVR.GestionlentesvrWS.eliminarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.eliminarDispositivoRequest();
+            inValue.id = id;
+            return ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).eliminarDispositivoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3375,41 +3353,53 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.eliminarDispositivoResponse FrontVR.GestionlentesvrWS.DispositivoWS.eliminarDispositivo(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request) {
-            return base.Channel.eliminarDispositivo(request);
+        FrontVR.GestionlentesvrWS.listarDispositivoResponse FrontVR.GestionlentesvrWS.DispositivoWS.listarDispositivo(FrontVR.GestionlentesvrWS.listarDispositivoRequest request) {
+            return base.Channel.listarDispositivo(request);
         }
         
-        public void eliminarDispositivo(int id) {
-            FrontVR.GestionlentesvrWS.eliminarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.eliminarDispositivoRequest();
-            inValue.id = id;
-            FrontVR.GestionlentesvrWS.eliminarDispositivoResponse retVal = ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).eliminarDispositivo(inValue);
+        public FrontVR.GestionlentesvrWS.dispositivo[] listarDispositivo() {
+            FrontVR.GestionlentesvrWS.listarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.listarDispositivoRequest();
+            FrontVR.GestionlentesvrWS.listarDispositivoResponse retVal = ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).listarDispositivo(inValue);
+            return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarDispositivoResponse> FrontVR.GestionlentesvrWS.DispositivoWS.eliminarDispositivoAsync(FrontVR.GestionlentesvrWS.eliminarDispositivoRequest request) {
-            return base.Channel.eliminarDispositivoAsync(request);
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarDispositivoResponse> FrontVR.GestionlentesvrWS.DispositivoWS.listarDispositivoAsync(FrontVR.GestionlentesvrWS.listarDispositivoRequest request) {
+            return base.Channel.listarDispositivoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarDispositivoResponse> eliminarDispositivoAsync(int id) {
-            FrontVR.GestionlentesvrWS.eliminarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.eliminarDispositivoRequest();
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarDispositivoResponse> listarDispositivoAsync() {
+            FrontVR.GestionlentesvrWS.listarDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.listarDispositivoRequest();
+            return ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).listarDispositivoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.obtenerDispositivoResponse FrontVR.GestionlentesvrWS.DispositivoWS.obtenerDispositivo(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request) {
+            return base.Channel.obtenerDispositivo(request);
+        }
+        
+        public FrontVR.GestionlentesvrWS.dispositivo obtenerDispositivo(int id) {
+            FrontVR.GestionlentesvrWS.obtenerDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.obtenerDispositivoRequest();
             inValue.id = id;
-            return ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).eliminarDispositivoAsync(inValue);
+            FrontVR.GestionlentesvrWS.obtenerDispositivoResponse retVal = ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).obtenerDispositivo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerDispositivoResponse> FrontVR.GestionlentesvrWS.DispositivoWS.obtenerDispositivoAsync(FrontVR.GestionlentesvrWS.obtenerDispositivoRequest request) {
+            return base.Channel.obtenerDispositivoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerDispositivoResponse> obtenerDispositivoAsync(int id) {
+            FrontVR.GestionlentesvrWS.obtenerDispositivoRequest inValue = new FrontVR.GestionlentesvrWS.obtenerDispositivoRequest();
+            inValue.id = id;
+            return ((FrontVR.GestionlentesvrWS.DispositivoWS)(this)).obtenerDispositivoAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", ConfigurationName="GestionlentesvrWS.AplicacionWS")]
     public interface AplicacionWS {
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacion/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.GestionlentesvrWS.listarAplicacionResponse listarAplicacion(FrontVR.GestionlentesvrWS.listarAplicacionRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarAplicacionResponse> listarAplicacionAsync(FrontVR.GestionlentesvrWS.listarAplicacionRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionResponse")]
@@ -3432,6 +3422,16 @@ namespace FrontVR.GestionlentesvrWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.eliminarAplicacionResponse> eliminarAplicacionAsync(FrontVR.GestionlentesvrWS.eliminarAplicacionRequest request);
         
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacion/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.GestionlentesvrWS.listarAplicacionResponse listarAplicacion(FrontVR.GestionlentesvrWS.listarAplicacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarAplicacionResponse> listarAplicacionAsync(FrontVR.GestionlentesvrWS.listarAplicacionRequest request);
+        
         // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacion/Fault/Excepti" +
@@ -3451,6 +3451,19 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarAplicacionResponse> actualizarAplicacionAsync(FrontVR.GestionlentesvrWS.actualizarAplicacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositiv" +
+            "oRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositiv" +
+            "oResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositiv" +
+            "o/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        void eliminarAplicacionesPorDispositivo();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositiv" +
+            "oRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositiv" +
+            "oResponse")]
+        System.Threading.Tasks.Task eliminarAplicacionesPorDispositivoAsync();
     }
     
     /// <remarks/>
@@ -3628,34 +3641,6 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAplicacion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarAplicacionRequest {
-        
-        public listarAplicacionRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAplicacionResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarAplicacionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.aplicacion[] @return;
-        
-        public listarAplicacionResponse() {
-        }
-        
-        public listarAplicacionResponse(FrontVR.GestionlentesvrWS.aplicacion[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerAplicacion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class obtenerAplicacionRequest {
         
@@ -3714,6 +3699,34 @@ namespace FrontVR.GestionlentesvrWS {
     public partial class eliminarAplicacionResponse {
         
         public eliminarAplicacionResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAplicacion", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarAplicacionRequest {
+        
+        public listarAplicacionRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarAplicacionResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarAplicacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.aplicacion[] @return;
+        
+        public listarAplicacionResponse() {
+        }
+        
+        public listarAplicacionResponse(FrontVR.GestionlentesvrWS.aplicacion[] @return) {
+            this.@return = @return;
         }
     }
     
@@ -3801,27 +3814,6 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.listarAplicacionResponse FrontVR.GestionlentesvrWS.AplicacionWS.listarAplicacion(FrontVR.GestionlentesvrWS.listarAplicacionRequest request) {
-            return base.Channel.listarAplicacion(request);
-        }
-        
-        public FrontVR.GestionlentesvrWS.aplicacion[] listarAplicacion() {
-            FrontVR.GestionlentesvrWS.listarAplicacionRequest inValue = new FrontVR.GestionlentesvrWS.listarAplicacionRequest();
-            FrontVR.GestionlentesvrWS.listarAplicacionResponse retVal = ((FrontVR.GestionlentesvrWS.AplicacionWS)(this)).listarAplicacion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarAplicacionResponse> FrontVR.GestionlentesvrWS.AplicacionWS.listarAplicacionAsync(FrontVR.GestionlentesvrWS.listarAplicacionRequest request) {
-            return base.Channel.listarAplicacionAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarAplicacionResponse> listarAplicacionAsync() {
-            FrontVR.GestionlentesvrWS.listarAplicacionRequest inValue = new FrontVR.GestionlentesvrWS.listarAplicacionRequest();
-            return ((FrontVR.GestionlentesvrWS.AplicacionWS)(this)).listarAplicacionAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.obtenerAplicacionResponse FrontVR.GestionlentesvrWS.AplicacionWS.obtenerAplicacion(FrontVR.GestionlentesvrWS.obtenerAplicacionRequest request) {
             return base.Channel.obtenerAplicacion(request);
         }
@@ -3867,6 +3859,27 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.listarAplicacionResponse FrontVR.GestionlentesvrWS.AplicacionWS.listarAplicacion(FrontVR.GestionlentesvrWS.listarAplicacionRequest request) {
+            return base.Channel.listarAplicacion(request);
+        }
+        
+        public FrontVR.GestionlentesvrWS.aplicacion[] listarAplicacion() {
+            FrontVR.GestionlentesvrWS.listarAplicacionRequest inValue = new FrontVR.GestionlentesvrWS.listarAplicacionRequest();
+            FrontVR.GestionlentesvrWS.listarAplicacionResponse retVal = ((FrontVR.GestionlentesvrWS.AplicacionWS)(this)).listarAplicacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarAplicacionResponse> FrontVR.GestionlentesvrWS.AplicacionWS.listarAplicacionAsync(FrontVR.GestionlentesvrWS.listarAplicacionRequest request) {
+            return base.Channel.listarAplicacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarAplicacionResponse> listarAplicacionAsync() {
+            FrontVR.GestionlentesvrWS.listarAplicacionRequest inValue = new FrontVR.GestionlentesvrWS.listarAplicacionRequest();
+            return ((FrontVR.GestionlentesvrWS.AplicacionWS)(this)).listarAplicacionAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.registrarAplicacionResponse FrontVR.GestionlentesvrWS.AplicacionWS.registrarAplicacion(FrontVR.GestionlentesvrWS.registrarAplicacionRequest request) {
             return base.Channel.registrarAplicacion(request);
         }
@@ -3909,11 +3922,29 @@ namespace FrontVR.GestionlentesvrWS {
             inValue.elemento = elemento;
             return ((FrontVR.GestionlentesvrWS.AplicacionWS)(this)).actualizarAplicacionAsync(inValue);
         }
+        
+        public void eliminarAplicacionesPorDispositivo() {
+            base.Channel.eliminarAplicacionesPorDispositivo();
+        }
+        
+        public System.Threading.Tasks.Task eliminarAplicacionesPorDispositivoAsync() {
+            return base.Channel.eliminarAplicacionesPorDispositivoAsync();
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", ConfigurationName="GestionlentesvrWS.ActividadWS")]
     public interface ActividadWS {
+        
+        // CODEGEN: Parameter 'actividad' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividad/Fault/Exceptio" +
+            "n", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        FrontVR.GestionlentesvrWS.actualizarActividadResponse actualizarActividad(FrontVR.GestionlentesvrWS.actualizarActividadRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarActividadResponse> actualizarActividadAsync(FrontVR.GestionlentesvrWS.actualizarActividadRequest request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadResponse")]
@@ -3924,16 +3955,6 @@ namespace FrontVR.GestionlentesvrWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadResponse")]
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.obtenerActividadResponse> obtenerActividadAsync(FrontVR.GestionlentesvrWS.obtenerActividadRequest request);
-        
-        // CODEGEN: Parameter 'actividad' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividad/Fault/Exception" +
-            "", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.registrarActividadResponse registrarActividad(FrontVR.GestionlentesvrWS.registrarActividadRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarActividadResponse> registrarActividadAsync(FrontVR.GestionlentesvrWS.registrarActividadRequest request);
         
         // CODEGEN: Parameter 'id' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadResponse")]
@@ -3955,14 +3976,14 @@ namespace FrontVR.GestionlentesvrWS {
         System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.listarActividadResponse> listarActividadAsync(FrontVR.GestionlentesvrWS.listarActividadRequest request);
         
         // CODEGEN: Parameter 'actividad' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividad/Fault/Exceptio" +
-            "n", Name="Exception")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.GestionlentesvrWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividad/Fault/Exception" +
+            "", Name="Exception")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        FrontVR.GestionlentesvrWS.actualizarActividadResponse actualizarActividad(FrontVR.GestionlentesvrWS.actualizarActividadRequest request);
+        FrontVR.GestionlentesvrWS.registrarActividadResponse registrarActividad(FrontVR.GestionlentesvrWS.registrarActividadRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse")]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarActividadResponse> actualizarActividadAsync(FrontVR.GestionlentesvrWS.actualizarActividadRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse")]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarActividadResponse> registrarActividadAsync(FrontVR.GestionlentesvrWS.registrarActividadRequest request);
     }
     
     /// <remarks/>
@@ -4172,6 +4193,34 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarActividad", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarActividadRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.GestionlentesvrWS.actividad actividad;
+        
+        public actualizarActividadRequest() {
+        }
+        
+        public actualizarActividadRequest(FrontVR.GestionlentesvrWS.actividad actividad) {
+            this.actividad = actividad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarActividadResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class actualizarActividadResponse {
+        
+        public actualizarActividadResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerActividad", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class obtenerActividadRequest {
         
@@ -4202,34 +4251,6 @@ namespace FrontVR.GestionlentesvrWS {
         
         public obtenerActividadResponse(FrontVR.GestionlentesvrWS.actividad @return) {
             this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarActividad", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarActividadRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.GestionlentesvrWS.actividad actividad;
-        
-        public registrarActividadRequest() {
-        }
-        
-        public registrarActividadRequest(FrontVR.GestionlentesvrWS.actividad actividad) {
-            this.actividad = actividad;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarActividadResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class registrarActividadResponse {
-        
-        public registrarActividadResponse() {
         }
     }
     
@@ -4292,17 +4313,17 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarActividad", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarActividadRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarActividad", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarActividadRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public FrontVR.GestionlentesvrWS.actividad actividad;
         
-        public actualizarActividadRequest() {
+        public registrarActividadRequest() {
         }
         
-        public actualizarActividadRequest(FrontVR.GestionlentesvrWS.actividad actividad) {
+        public registrarActividadRequest(FrontVR.GestionlentesvrWS.actividad actividad) {
             this.actividad = actividad;
         }
     }
@@ -4310,10 +4331,10 @@ namespace FrontVR.GestionlentesvrWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarActividadResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class actualizarActividadResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarActividadResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class registrarActividadResponse {
         
-        public actualizarActividadResponse() {
+        public registrarActividadResponse() {
         }
     }
     
@@ -4345,6 +4366,28 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.GestionlentesvrWS.actualizarActividadResponse FrontVR.GestionlentesvrWS.ActividadWS.actualizarActividad(FrontVR.GestionlentesvrWS.actualizarActividadRequest request) {
+            return base.Channel.actualizarActividad(request);
+        }
+        
+        public void actualizarActividad(FrontVR.GestionlentesvrWS.actividad actividad) {
+            FrontVR.GestionlentesvrWS.actualizarActividadRequest inValue = new FrontVR.GestionlentesvrWS.actualizarActividadRequest();
+            inValue.actividad = actividad;
+            FrontVR.GestionlentesvrWS.actualizarActividadResponse retVal = ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).actualizarActividad(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarActividadResponse> FrontVR.GestionlentesvrWS.ActividadWS.actualizarActividadAsync(FrontVR.GestionlentesvrWS.actualizarActividadRequest request) {
+            return base.Channel.actualizarActividadAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarActividadResponse> actualizarActividadAsync(FrontVR.GestionlentesvrWS.actividad actividad) {
+            FrontVR.GestionlentesvrWS.actualizarActividadRequest inValue = new FrontVR.GestionlentesvrWS.actualizarActividadRequest();
+            inValue.actividad = actividad;
+            return ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).actualizarActividadAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.GestionlentesvrWS.obtenerActividadResponse FrontVR.GestionlentesvrWS.ActividadWS.obtenerActividad(FrontVR.GestionlentesvrWS.obtenerActividadRequest request) {
             return base.Channel.obtenerActividad(request);
         }
@@ -4365,28 +4408,6 @@ namespace FrontVR.GestionlentesvrWS {
             FrontVR.GestionlentesvrWS.obtenerActividadRequest inValue = new FrontVR.GestionlentesvrWS.obtenerActividadRequest();
             inValue.id = id;
             return ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).obtenerActividadAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.registrarActividadResponse FrontVR.GestionlentesvrWS.ActividadWS.registrarActividad(FrontVR.GestionlentesvrWS.registrarActividadRequest request) {
-            return base.Channel.registrarActividad(request);
-        }
-        
-        public void registrarActividad(FrontVR.GestionlentesvrWS.actividad actividad) {
-            FrontVR.GestionlentesvrWS.registrarActividadRequest inValue = new FrontVR.GestionlentesvrWS.registrarActividadRequest();
-            inValue.actividad = actividad;
-            FrontVR.GestionlentesvrWS.registrarActividadResponse retVal = ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).registrarActividad(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarActividadResponse> FrontVR.GestionlentesvrWS.ActividadWS.registrarActividadAsync(FrontVR.GestionlentesvrWS.registrarActividadRequest request) {
-            return base.Channel.registrarActividadAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarActividadResponse> registrarActividadAsync(FrontVR.GestionlentesvrWS.actividad actividad) {
-            FrontVR.GestionlentesvrWS.registrarActividadRequest inValue = new FrontVR.GestionlentesvrWS.registrarActividadRequest();
-            inValue.actividad = actividad;
-            return ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).registrarActividadAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4433,25 +4454,25 @@ namespace FrontVR.GestionlentesvrWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.GestionlentesvrWS.actualizarActividadResponse FrontVR.GestionlentesvrWS.ActividadWS.actualizarActividad(FrontVR.GestionlentesvrWS.actualizarActividadRequest request) {
-            return base.Channel.actualizarActividad(request);
+        FrontVR.GestionlentesvrWS.registrarActividadResponse FrontVR.GestionlentesvrWS.ActividadWS.registrarActividad(FrontVR.GestionlentesvrWS.registrarActividadRequest request) {
+            return base.Channel.registrarActividad(request);
         }
         
-        public void actualizarActividad(FrontVR.GestionlentesvrWS.actividad actividad) {
-            FrontVR.GestionlentesvrWS.actualizarActividadRequest inValue = new FrontVR.GestionlentesvrWS.actualizarActividadRequest();
+        public void registrarActividad(FrontVR.GestionlentesvrWS.actividad actividad) {
+            FrontVR.GestionlentesvrWS.registrarActividadRequest inValue = new FrontVR.GestionlentesvrWS.registrarActividadRequest();
             inValue.actividad = actividad;
-            FrontVR.GestionlentesvrWS.actualizarActividadResponse retVal = ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).actualizarActividad(inValue);
+            FrontVR.GestionlentesvrWS.registrarActividadResponse retVal = ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).registrarActividad(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarActividadResponse> FrontVR.GestionlentesvrWS.ActividadWS.actualizarActividadAsync(FrontVR.GestionlentesvrWS.actualizarActividadRequest request) {
-            return base.Channel.actualizarActividadAsync(request);
+        System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarActividadResponse> FrontVR.GestionlentesvrWS.ActividadWS.registrarActividadAsync(FrontVR.GestionlentesvrWS.registrarActividadRequest request) {
+            return base.Channel.registrarActividadAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.actualizarActividadResponse> actualizarActividadAsync(FrontVR.GestionlentesvrWS.actividad actividad) {
-            FrontVR.GestionlentesvrWS.actualizarActividadRequest inValue = new FrontVR.GestionlentesvrWS.actualizarActividadRequest();
+        public System.Threading.Tasks.Task<FrontVR.GestionlentesvrWS.registrarActividadResponse> registrarActividadAsync(FrontVR.GestionlentesvrWS.actividad actividad) {
+            FrontVR.GestionlentesvrWS.registrarActividadRequest inValue = new FrontVR.GestionlentesvrWS.registrarActividadRequest();
             inValue.actividad = actividad;
-            return ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).actualizarActividadAsync(inValue);
+            return ((FrontVR.GestionlentesvrWS.ActividadWS)(this)).registrarActividadAsync(inValue);
         }
     }
 }

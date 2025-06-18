@@ -10,7 +10,7 @@
 
     <asp:GridView ID="gvDispositivos" runat="server"
                   AutoGenerateColumns="False" CssClass="table table-striped"
-                  DataKeyNames="dispositivoId"
+                  DataKeyNames="Id"
                   OnRowCommand="gvDispositivos_RowCommand">
         <Columns>
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
@@ -22,12 +22,12 @@
                 <ItemTemplate>
                     <asp:LinkButton ID="lnkAccion" runat="server"
                                     CommandName="EditarDispositivo"
-                                    CommandArgument='<%# Eval("dispositivoId") %>'
+                                    CommandArgument='<%# Eval("Id") %>'
                                     Text="Editar"
                                     CssClass="btn btn-sm btn-warning me-1" />
                     <asp:LinkButton ID="lnkEliminar" runat="server"
                                     CommandName="Eliminar"
-                                    CommandArgument='<%# Eval("dispositivoId") %>'
+                                    CommandArgument='<%# Eval("Id") %>'
                                     Text="Eliminar"
                                     CssClass="btn btn-sm btn-danger" />
                 </ItemTemplate>

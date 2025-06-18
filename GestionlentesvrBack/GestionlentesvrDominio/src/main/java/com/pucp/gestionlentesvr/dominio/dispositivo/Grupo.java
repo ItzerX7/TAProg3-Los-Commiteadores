@@ -1,23 +1,23 @@
 package com.pucp.gestionlentesvr.dominio.dispositivo;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class Grupo {
 
     private int id;
     private String nombre;
     private String descripcion;
-    private Timestamp fechaCreacion;
+    private Date fechaCreacion;
     private String ubicacion;
     private char activo;
 
     public Grupo() {
     }
 
-    public Grupo(String nombre, String descripcion, Timestamp fechaCreacion, String ubicacion, char activo) {
+    public Grupo(String nombre, String descripcion, Date fechaCreacion, String ubicacion, char activo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.fechaCreacion = new Timestamp(System.currentTimeMillis());
+        this.fechaCreacion = new Date(System.currentTimeMillis());
         this.ubicacion = ubicacion;
         this.activo = 's';
     }
@@ -46,11 +46,11 @@ public class Grupo {
         this.descripcion = descripcion;
     }
 
-    public Timestamp getFechaCreacion() {
+    public Date getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(Timestamp fechaCreacion) {
+    public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 

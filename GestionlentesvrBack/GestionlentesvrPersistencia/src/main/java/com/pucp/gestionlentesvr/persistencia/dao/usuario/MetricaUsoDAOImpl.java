@@ -70,7 +70,7 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
         Dispositivo dispositivo = new Dispositivo();
         met.setDispositivo(dispositivo);
         met.setId(rs.getInt("metricaid"));
-        met.setFechaRegistro(rs.getTimestamp("fecharegistro"));
+        met.setFechaRegistro(rs.getDate("fecharegistro"));
         met.setTiempoUsoMinutos(rs.getInt("tiempousominutos"));
         met.setNivelBateriaInicial(rs.getInt("nivelbateriainicial"));
         met.setNivelBateriaFinal(rs.getInt("nivelbateriafinal"));

@@ -1,14 +1,14 @@
 package com.pucp.gestionlentesvr.dominio.configuracion;
 
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
-import java.sql.Timestamp;
+import java.util.Date;
 
 public class Configuracion {
 
     private int id;
     private String nombre;
     private String descripcion;
-    private Timestamp fechaCreacion;
+    private Date fechaCreacion;
     private String valor;
     private TipoConfiguracion tipo;
     private char activo;
@@ -16,11 +16,11 @@ public class Configuracion {
     public Configuracion() {
     }
 
-    public Configuracion(String nombre, String descripcion, Timestamp fechaCreacion,
+    public Configuracion(String nombre, String descripcion, Date fechaCreacion,
             String valor, TipoConfiguracion tipo, char activo) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.fechaCreacion = new Timestamp(System.currentTimeMillis());
+        this.fechaCreacion = new Date(System.currentTimeMillis());
         this.valor = valor;
         this.tipo = tipo;
         this.activo = 's';
@@ -50,11 +50,11 @@ public class Configuracion {
         this.descripcion = descripcion;
     }
 
-    public Timestamp getFechaCreacion() {
+    public Date getFechaCreacion() {
         return fechaCreacion;
     }
 
-    public void setFechaCreacion(Timestamp fechaCreacion) {
+    public void setFechaCreacion(Date fechaCreacion) {
         this.fechaCreacion = fechaCreacion;
     }
 

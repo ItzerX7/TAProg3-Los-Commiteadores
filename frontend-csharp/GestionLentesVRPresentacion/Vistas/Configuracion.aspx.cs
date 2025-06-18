@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-// using FrontVR.UsuarioWS; // Descomenta cuando agregues la referencia
+using FrontVR.ServiceReference1; 
 
 namespace FrontVR.Vistas
 {
     public partial class Configuracion : Page
     {
-        // UsuarioWSClient servicio = new UsuarioWSClient(); // Descomenta cuando esté disponible el WS
+         UsuarioWSClient servicio = new UsuarioWSClient(); // Descomenta cuando esté disponible el WS
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,20 +20,18 @@ namespace FrontVR.Vistas
 
         private void CargarUsuarios()
         {
-            // gvUsuarios.DataSource = servicio.listarUsuarios();
-            // gvUsuarios.DataBind();
-
-            // Temporal (para vista)
-            gvUsuarios.DataSource = null;
+            gvUsuarios.DataSource = servicio.listarUsuario();
             gvUsuarios.DataBind();
+
+           // Temporal (para vista)
         }
 
         private void CargarRoles()
         {
-            // ddlRol.DataSource = servicio.listarRoles();
-            // ddlRol.DataTextField = "nombre";
-            // ddlRol.DataValueField = "rolId";
-            // ddlRol.DataBind();
+            ddlRol.DataSource = servicio.listarUsuario();
+            ddlRol.DataTextField = "nombre";
+            ddlRol.DataValueField = "rolId";
+            ddlRol.DataBind();
 
             // Simulación temporal
             ddlRol.Items.Clear();
@@ -45,24 +43,24 @@ namespace FrontVR.Vistas
         {
             try
             {
-                // usuario u = new usuario
-                // {
-                //     usuarioId = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value),
-                //     nombres = txtNombres.Text,
-                //     correo = txtCorreo.Text,
-                //     rol = new rol { rolId = int.Parse(ddlRol.SelectedValue) },
-                //     activo = true
-                // };
+                usuario u = new usuario
+                {
+                   id = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value),
+                   nombre = txtNombres.Text,
+                   correo = txtCorreo.Text,
+                   rol = new rol { id = int.Parse(ddlRol.SelectedValue) },
+                   activo = 'S'
+                };
 
-                // if (u.usuarioId == 0)
-                //     servicio.registrarUsuario(u);
-                // else
-                //     servicio.actualizarUsuario(u);
+                if (u.id == 0)
+                    servicio.registrarUsuario(u);
+                 else
+                     servicio.actualizarUsuario(u);
 
                 LimpiarFormulario();
                 CargarUsuarios();
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 lblError.Text = "Error al guardar: " + ex.Message;
                 lblError.Visible = true;
@@ -76,11 +74,11 @@ namespace FrontVR.Vistas
 
             if (e.CommandName == "EditarUsuario")
             {
-                // var u = servicio.obtenerUsuario(id);
-                // hfUsuarioId.Value = u.usuarioId.ToString();
-                // txtNombres.Text = u.nombres;
-                // txtCorreo.Text = u.correo;
-                // ddlRol.SelectedValue = u.rol.rolId.ToString();
+                var u = servicio.obtenerUsuario(id);
+                hfUsuarioId.Value = u.id.ToString();
+                txtNombres.Text = u.nombre;
+                txtCorreo.Text = u.correo;
+                ddlRol.SelectedValue = u.rol.id.ToString();
 
                 ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalUsuario').modal('show');", true);
             }

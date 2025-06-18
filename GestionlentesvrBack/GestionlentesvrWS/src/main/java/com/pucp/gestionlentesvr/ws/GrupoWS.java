@@ -9,7 +9,7 @@ import jakarta.jws.WebParam;
 import jakarta.xml.ws.WebServiceException;
 import java.util.List;
 
-@WebService(serviceName = "GrupoWS", targetNamespace = "com.pucp.gestionlentesvr")
+@WebService(serviceName = "GrupoWS")
 public class GrupoWS {
 
 

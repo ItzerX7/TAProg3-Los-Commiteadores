@@ -1,5 +1,6 @@
 package com.pucp.gestionlentesvr.persistencia.dao.usuario;
 
+import com.pucp.gestionlentesvr.dominio.usuario.Rol;
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import java.sql.CallableStatement;
@@ -12,7 +13,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, Usuario entity) throws SQLException {
-        String query = "{CALL insertar_usuario(?, ?, ?, ?, ?, ?)}";
+        String query = "{CALL insertar_usuario(?, ?, ?, ?,?, ?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.registerOutParameter(1, Types.INTEGER);
         cs.setString(2, entity.getNombre());
@@ -62,18 +63,16 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
     @Override
     protected Usuario createFromResultSet(ResultSet rs) throws SQLException {
         Usuario usuario = new Usuario();
+        Rol rol = new Rol();
+        usuario.setRol(rol);
         usuario.setId(rs.getInt("usuarioid"));
         usuario.setNombre(rs.getString("nombre"));
         usuario.setApellido(rs.getString("apellido"));
         usuario.setCorreo(rs.getString("correo"));
         usuario.setContrasena(rs.getString("contrasena"));
-        usuario.setFechaCreacion(rs.getDate("fechacreacion"));
+        usuario.setFechaCreacion(rs.getTimestamp("fechacreacion"));
         usuario.getRol().setId(rs.getInt("rol_rolid"));
-        if (rs.getString("activo").compareTo("s") == 0) {
-            usuario.setActivo('s');
-        } else {
-            usuario.setActivo('n');
-        }
+        usuario.setActivo((rs.getString("activo")).toCharArray()[0]);
         return usuario;
     }
 

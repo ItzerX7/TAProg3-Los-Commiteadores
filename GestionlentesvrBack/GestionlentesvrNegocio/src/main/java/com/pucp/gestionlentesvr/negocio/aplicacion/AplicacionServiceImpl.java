@@ -1,6 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.persistencia.dao.aplicacion.AplicacionDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.aplicacion.AplicacionDAOImpl;
 import java.util.List;
@@ -100,6 +101,11 @@ public class AplicacionServiceImpl implements AplicacionService {
     @Override
     public List<Integer> contarAplicacionesPorTipoEnMetricas() {
         return aplicacionDAO.contarAplicacionesPorTipoEnMetricas();
+    }
+
+    @Override
+    public List<Dispositivo> listarDispositivosPorAplicaciones(Integer id) {
+        return aplicacionDAO.listarDispositivosPorAplicaciones(id);
     }
 
 }

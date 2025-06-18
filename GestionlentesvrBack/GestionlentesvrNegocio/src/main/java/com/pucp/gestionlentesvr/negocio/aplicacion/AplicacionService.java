@@ -1,6 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import java.util.List;
 
 public interface AplicacionService {
@@ -20,4 +21,7 @@ public interface AplicacionService {
     public List<Aplicacion> listarAplicacionesConDispositivos(int idAplicacion) throws Exception;
     
     public List<Integer> contarAplicacionesPorTipoEnMetricas();
+    
+    public List<Dispositivo> listarDispositivosPorAplicaciones(Integer id);
+    
 }

@@ -2,8 +2,10 @@ package com.pucp.gestionlentesvr.persistencia.dao.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
 import com.pucp.gestionlentesvr.dominio.aplicacion.CategoriaAplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.DBManager;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -110,6 +112,24 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
             throw new RuntimeException("Error al listar entidades", e);
         }
         return apps;
+    }
+
+    @Override
+    public List<Dispositivo> listarDispositivosPorAplicaciones(Integer id) {
+        List<Dispositivo> dis= new ArrayList<>();
+        DispositivoDAOImpl dao = new DispositivoDAOImpl();
+        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL listarDispositivosPorAplicaciones(?)}";
+            CallableStatement cs = conn.prepareCall(query); 
+            cs.setInt(1, id);
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                dis.add( dao.createFromResultSet(rs));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar entidades", e);
+        }
+        return dis;
     }
 
     @Override

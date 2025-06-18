@@ -1,6 +1,7 @@
 package com.pucp.gestionlentesvr.ws;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.negocio.aplicacion.AplicacionService;
 import com.pucp.gestionlentesvr.negocio.aplicacion.AplicacionServiceImpl;
 import jakarta.jws.WebService;
@@ -71,6 +72,15 @@ public class AplicacionWS {
 
         try {
             return service.listarAplicacion();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
+    @WebMethod(operationName = "listarDispositivosPorAplicaciones")
+    public List<Dispositivo> listarDispositivosPorAplicaciones(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            return service.listarDispositivosPorAplicaciones(id);
         } catch (Exception ex) {
             throw new WebServiceException("Error al listar" + ex.getMessage());
         }

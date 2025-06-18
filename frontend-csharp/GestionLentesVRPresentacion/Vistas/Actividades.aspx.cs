@@ -15,12 +15,6 @@ namespace FrontVR.Vistas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["usuario"] == null)
-            //{
-            //    Response.Redirect("~/Login.aspx");
-            //    return;
-            //}
-
             //int rol = Convert.ToInt32(Session["rol"]);
             //if (rol != 1 && rol != 2)
             //{

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.ServiceReference1; 
+using FrontVR.GestionlentesvrWS; 
 
 namespace FrontVR.Vistas
 {

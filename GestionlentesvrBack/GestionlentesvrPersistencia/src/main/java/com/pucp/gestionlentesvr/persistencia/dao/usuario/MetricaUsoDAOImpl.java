@@ -20,6 +20,7 @@ import java.util.List;
 
 public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements MetricaUsoDAO {
 
+    private DispositivoDAOImpl disDAO = new DispositivoDAOImpl();
     @Override
     protected CallableStatement getInsertPS(Connection conn, MetricaUso entity) throws SQLException {
         String query = "{CALL insertar_metricauso(?, ?, ?, ?, ?, ?)}";

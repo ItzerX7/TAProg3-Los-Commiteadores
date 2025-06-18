@@ -2,8 +2,8 @@
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.ServiceReference1;
-using Google.Protobuf.WellKnownTypes;
+using FrontVR.GestionlentesvrWS;
+//using Google.Protobuf.WellKnownTypes;
 
 namespace FrontVR.Vistas
 {

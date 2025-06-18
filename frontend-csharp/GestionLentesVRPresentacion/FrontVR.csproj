@@ -133,30 +133,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <None Include="Connected Services\DispositivosWS\configuration91.svcinfo" />
-    <None Include="Connected Services\DispositivosWS\configuration.svcinfo" />
-    <Content Include="Connected Services\DispositivosWS\FrontVR.DispositivosWS.actualizarDispositivoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\DispositivosWS\FrontVR.DispositivosWS.dispositivo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\DispositivosWS\FrontVR.DispositivosWS.eliminarDispositivoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\DispositivosWS\FrontVR.DispositivosWS.listarDispositivoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\DispositivosWS\FrontVR.DispositivosWS.obtenerDispositivoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\DispositivosWS\FrontVR.DispositivosWS.registrarDispositivoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\DispositivosWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <None Include="Connected Services\GestionlentesvrWS\ActividadWS.wsdl" />
     <None Include="Connected Services\GestionlentesvrWS\AplicacionWS.wsdl" />
     <None Include="Connected Services\GestionlentesvrWS\AplicacionWS.xsd">
@@ -202,7 +178,7 @@
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.configuracion.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.dispositivo1.datasource">
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.dispositivo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.eliminarActividadResponse.datasource">
@@ -322,7 +298,7 @@
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.registrarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.rol1.datasource">
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.rol.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.usuario.datasource">
@@ -336,9 +312,6 @@
     <None Include="Connected Services\GestionlentesvrWS\RolWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\GestionlentesvrWS\RolWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\GestionlentesvrWS\servicios.disco" />
     <None Include="Connected Services\GestionlentesvrWS\configuration91.svcinfo" />
     <None Include="Connected Services\GestionlentesvrWS\configuration.svcinfo" />
@@ -347,56 +320,6 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Login.aspx" />
-    <None Include="Connected Services\DispositivosWS\DispositivoWS.wsdl" />
-    <None Include="Connected Services\DispositivosWS\DispositivoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\ActividadWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\DispositivoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\FirmwareWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\GrupoWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\MetricaUsoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\MetricaUsoWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionLentesWS\configuration91.svcinfo" />
-    <None Include="Connected Services\GestionLentesWS\configuration.svcinfo" />
-    <Content Include="Connected Services\GestionLentesWS\FrontVR.GestionLentesWS.actualizarAplicacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\GestionLentesWS\FrontVR.GestionLentesWS.aplicacion.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\GestionLentesWS\FrontVR.GestionLentesWS.eliminarAplicacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\GestionLentesWS\FrontVR.GestionLentesWS.listarAplicacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\GestionLentesWS\FrontVR.GestionLentesWS.obtenerAplicacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\GestionLentesWS\FrontVR.GestionLentesWS.registrarAplicacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\GestionLentesWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -451,8 +374,23 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Connected Services\GestionLentesWS\AplicacionWS.wsdl" />
-    <None Include="Connected Services\GestionLentesWS\AplicacionWS.xsd">
+    <None Include="Connected Services\GestionlentesvrWS\ActividadWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\DispositivoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\FirmwareWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\GrupoWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\MetricaUsoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
@@ -499,17 +437,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\DispositivosWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\GestionlentesvrWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\GestionLentesWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -614,9 +542,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\DispositivosWS\" />
     <WCFMetadataStorage Include="Connected Services\GestionlentesvrWS\" />
-    <WCFMetadataStorage Include="Connected Services\GestionLentesWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

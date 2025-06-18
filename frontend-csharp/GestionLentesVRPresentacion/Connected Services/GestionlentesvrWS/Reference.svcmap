@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="1a48826c-11b8-4189-b3a0-4d383bc8deb7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="ec830f3c-417d-4068-9488-1eef9a62c723" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,27 +22,25 @@
     <MetadataSource Address="http://localhost:8080/GestionlentesvrWS/servicios.disco" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="ActividadWS.xsd" MetadataType="Schema" ID="f51a0d02-ef39-4496-98d1-e1d304ab526a" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ActividadWS?xsd=1" />
-    <MetadataFile FileName="MetricaUsoWS.xsd" MetadataType="Schema" ID="54fa5c0d-794f-4e68-80c4-348df4c8bc7a" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?xsd=1" />
-    <MetadataFile FileName="FirmwareWS.wsdl" MetadataType="Wsdl" ID="410717dd-b75c-4042-8a75-6354075a27a5" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/FirmwareWS?wsdl" />
-    <MetadataFile FileName="ConfiguracionWS.wsdl" MetadataType="Wsdl" ID="a60bc627-4e5a-4e19-ab68-0d615d054d48" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?wsdl" />
-    <MetadataFile FileName="DispositivoWS.xsd" MetadataType="Schema" ID="88c6ef7a-76df-465e-9028-57127eebf9f2" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/DispositivoWS?xsd=1" />
-    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="4d57d089-3d53-4489-9c0c-2134a5ef0b34" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/UsuarioWS?wsdl" />
-    <MetadataFile FileName="MetricaUsoWS1.xsd" MetadataType="Schema" ID="f3891e89-7546-414e-8623-a9efa666645b" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?xsd=2" />
-    <MetadataFile FileName="GrupoWS.wsdl" MetadataType="Wsdl" ID="55e299c8-abd3-4bf8-babc-e3994a403e68" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/GrupoWS?wsdl" />
-    <MetadataFile FileName="ConfiguracionWS.xsd" MetadataType="Schema" ID="abd55c40-b459-4052-9611-c44a53a32e30" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?xsd=1" />
-    <MetadataFile FileName="servicios.disco" MetadataType="Disco" ID="1d7b5bc6-1e17-44fc-889a-84f617448ee6" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/servicios.disco" />
-    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="26c1c802-e29e-48ff-96c3-3e3b6f5fccfc" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/UsuarioWS?xsd=1" />
-    <MetadataFile FileName="RolWS.wsdl" MetadataType="Wsdl" ID="65dba9bf-b26d-4385-adff-16016fc0aeee" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/RolWS?wsdl" />
-    <MetadataFile FileName="MetricaUsoWS.wsdl" MetadataType="Wsdl" ID="5dd38b76-7f81-48c0-8d02-81afbbadee12" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?wsdl" />
-    <MetadataFile FileName="RolWS.xsd" MetadataType="Schema" ID="1f5159ab-0336-4180-87ad-fa0d677e0ee7" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/RolWS?xsd=1" />
-    <MetadataFile FileName="DispositivoWS.wsdl" MetadataType="Wsdl" ID="88f0d4f3-8603-4e8e-ac53-67a7f4e65f1e" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/DispositivoWS?wsdl" />
-    <MetadataFile FileName="RolWS1.xsd" MetadataType="Schema" ID="0f1cf1ad-27ae-4246-8cda-fd2e0d823c31" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/RolWS?xsd=2" />
-    <MetadataFile FileName="AplicacionWS.wsdl" MetadataType="Wsdl" ID="c391c5fc-510b-4d3e-b801-84deb7978cf2" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/AplicacionWS?wsdl" />
-    <MetadataFile FileName="ActividadWS.wsdl" MetadataType="Wsdl" ID="62f4c053-a970-4f1d-a99b-ea53df566cc1" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ActividadWS?wsdl" />
-    <MetadataFile FileName="GrupoWS.xsd" MetadataType="Schema" ID="8597aba2-4a49-4269-9263-ef24b67ba5d3" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/GrupoWS?xsd=1" />
-    <MetadataFile FileName="AplicacionWS.xsd" MetadataType="Schema" ID="4f5c54eb-9db6-489a-a768-ee2f671c66e8" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/AplicacionWS?xsd=1" />
-    <MetadataFile FileName="FirmwareWS.xsd" MetadataType="Schema" ID="28336b62-36ca-4e00-ab79-685714dcc7d3" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/FirmwareWS?xsd=1" />
+    <MetadataFile FileName="ActividadWS.xsd" MetadataType="Schema" ID="61a41874-da60-487c-85af-84675d58a635" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ActividadWS?xsd=1" />
+    <MetadataFile FileName="MetricaUsoWS.xsd" MetadataType="Schema" ID="376fb4dc-340f-4c61-b65c-52a01566b422" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?xsd=1" />
+    <MetadataFile FileName="FirmwareWS.wsdl" MetadataType="Wsdl" ID="f38547e7-948b-452a-8bad-f916a046edc1" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/FirmwareWS?wsdl" />
+    <MetadataFile FileName="ConfiguracionWS.wsdl" MetadataType="Wsdl" ID="0602f571-b4de-411c-9228-cd4d2a358394" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?wsdl" />
+    <MetadataFile FileName="DispositivoWS.xsd" MetadataType="Schema" ID="a4b2a4c3-9140-4528-a607-3e4d7a0dfd68" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/DispositivoWS?xsd=1" />
+    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="16af466c-98d3-4695-b813-ecbfa40abc83" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/UsuarioWS?wsdl" />
+    <MetadataFile FileName="GrupoWS.wsdl" MetadataType="Wsdl" ID="c7c6af6b-75e6-478e-9b12-1ff19cc55ba7" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/GrupoWS?wsdl" />
+    <MetadataFile FileName="ConfiguracionWS.xsd" MetadataType="Schema" ID="3613028b-cec4-4370-9f45-28eb3e424fec" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?xsd=1" />
+    <MetadataFile FileName="servicios.disco" MetadataType="Disco" ID="3d3825f7-04b0-4925-978e-e8c06ac11509" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/servicios.disco" />
+    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="302b286b-438d-447a-a510-76a4ab3be9a4" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/UsuarioWS?xsd=1" />
+    <MetadataFile FileName="RolWS.wsdl" MetadataType="Wsdl" ID="ef2c1cd5-0930-4b9e-a2bf-80b3be1c6aae" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/RolWS?wsdl" />
+    <MetadataFile FileName="MetricaUsoWS.wsdl" MetadataType="Wsdl" ID="baf47cbb-0715-4e5c-a0d7-62c0ecd8dae9" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?wsdl" />
+    <MetadataFile FileName="RolWS.xsd" MetadataType="Schema" ID="3cebda41-95ed-4e1a-8f0f-0f7ba1da020e" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/RolWS?xsd=1" />
+    <MetadataFile FileName="DispositivoWS.wsdl" MetadataType="Wsdl" ID="68ec4ebc-8813-4b67-b332-b42bef326f83" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/DispositivoWS?wsdl" />
+    <MetadataFile FileName="AplicacionWS.wsdl" MetadataType="Wsdl" ID="3e512a77-10e9-440b-9a0e-38ae71f8f8c7" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/AplicacionWS?wsdl" />
+    <MetadataFile FileName="ActividadWS.wsdl" MetadataType="Wsdl" ID="f1d44e18-ead7-4632-a981-318fd18f54a1" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/ActividadWS?wsdl" />
+    <MetadataFile FileName="GrupoWS.xsd" MetadataType="Schema" ID="a438dcd1-4541-49f1-ad77-323f1e0cfd86" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/GrupoWS?xsd=1" />
+    <MetadataFile FileName="AplicacionWS.xsd" MetadataType="Schema" ID="a206ab6e-d002-4c73-b05c-eecfccb33267" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/AplicacionWS?xsd=1" />
+    <MetadataFile FileName="FirmwareWS.xsd" MetadataType="Schema" ID="0ab29039-876d-4dc7-888e-77fb317ede07" SourceId="1" SourceUrl="http://localhost:8080/GestionlentesvrWS/FirmwareWS?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

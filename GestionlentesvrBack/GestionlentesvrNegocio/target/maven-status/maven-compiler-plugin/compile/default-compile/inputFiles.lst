@@ -1,18 +1,18 @@
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\actividad\ActividadService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\actividad\ActividadServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\aplicacion\AplicacionService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\aplicacion\AplicacionServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\configuracion\ConfiguracionService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\configuracion\ConfiguracionServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\DispositivoService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\DispositivoServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\FirmwareService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\FirmwareServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\GrupoService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\GrupoServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\MetricaUsoService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\MetricaUsoServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\RolService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\RolServiceImpl.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\UsuarioService.java
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\UsuarioServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\actividad\ActividadService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\actividad\ActividadServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\aplicacion\AplicacionService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\aplicacion\AplicacionServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\configuracion\ConfiguracionService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\configuracion\ConfiguracionServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\DispositivoService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\DispositivoServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\FirmwareService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\FirmwareServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\GrupoService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\dispositivo\GrupoServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\MetricaUsoService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\MetricaUsoServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\RolService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\RolServiceImpl.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\UsuarioService.java
+C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrNegocio\src\main\java\com\pucp\gestionlentesvr\negocio\usuario\UsuarioServiceImpl.java

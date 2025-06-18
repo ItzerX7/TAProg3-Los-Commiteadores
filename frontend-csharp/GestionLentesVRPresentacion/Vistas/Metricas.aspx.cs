@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.UI;
 
-using FrontVR.ServiceReference1; // Descomentar cuando se agregue el servicio web
+using FrontVR.GestionlentesvrWS; // Descomentar cuando se agregue el servicio web
 
 namespace FrontVR.Vistas
 {

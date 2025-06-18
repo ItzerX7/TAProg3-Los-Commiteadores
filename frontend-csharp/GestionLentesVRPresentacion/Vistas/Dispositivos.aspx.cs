@@ -58,10 +58,14 @@ namespace FrontVR.Vistas
                     nombre = txtNombre.Text,
                     modelo = txtModelo.Text,
                     numeroSerie = txtSerie.Text,
-                    //fechaRegistro = DateTime.Parse(txtFecha.Text),
+                    // Si quieres usar una fecha manual, descomenta la línea de fechaRegistro
+                    // fechaRegistro = DateTime.Parse(txtFecha.Text),
                     ubicacion = txtUbicacion.Text,
                     ultimaConexion = DateTime.Now,
                     ultimaConexionSpecified = true,
+                    //nivelBateria = int.TryParse(txtNivelBateria.Text, out int nivel) ? nivel : 0,  // Nuevo campo
+                    // Nivel de bateria seteao a 100
+                    nivelBateria = 100, // Nuevo campo
                     estado = (estadoConexion)Enum.Parse(typeof(estadoConexion), ddlEstado.SelectedValue),
                     estadoSpecified = true,
                     grupo = grupo,
@@ -99,6 +103,7 @@ namespace FrontVR.Vistas
             txtSerie.Text = "";
             //txtFecha.Text = "";
             txtUbicacion.Text = "";
+            //txtNivelBateria.Text = ""; // Limpiar nuevo campo
             ddlEstado.SelectedIndex = 0;
             lblError.Visible = false;
         }
@@ -119,6 +124,7 @@ namespace FrontVR.Vistas
                     txtSerie.Text = d.numeroSerie;
                     //txtFecha.Text = d.fechaRegistro.ToString("yyyy-MM-dd");
                     txtUbicacion.Text = d.ubicacion;
+                    //txtNivelBateria.Text = d.nivelBateria.ToString(); // Cargar nuevo campo
                     ddlEstado.SelectedValue = d.estado.ToString();
 
                     ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal",

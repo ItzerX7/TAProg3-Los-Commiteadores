@@ -18,26 +18,26 @@ namespace FrontVR
 
             // Remueve clase activa de todos (si quieres más robusto)
             //lnkDispositivos.Attributes["class"] = "nav-link";
-            lnkAplicaciones.Attributes["class"] = "nav-link";
+            //lnkAplicaciones.Attributes["class"] = "nav-link";
             //lnkConfiguracion.Attributes["class"] = "nav-link";
-            lnkActividades.Attributes["class"] = "nav-link";
+            //lnkActividades.Attributes["class"] = "nav-link";
 
             // Asigna activa según la página
-            switch (page)
-            {
-                //case "dispositivos.aspx":
-                    //lnkDispositivos.Attributes["class"] = "nav-link active";
-                    //break;
-                case "aplicaciones.aspx":
-                    lnkAplicaciones.Attributes["class"] = "nav-link active";
-                    break;
-                //case "configuracion.aspx":
-                    //lnkConfiguracion.Attributes["class"] = "nav-link active";
-                    //break;
-                case "actividades.aspx":
-                    lnkActividades.Attributes["class"] = "nav-link active";
-                    break;
-            }
+            //switch (page)
+            //{
+            //    //case "dispositivos.aspx":
+            //        //lnkDispositivos.Attributes["class"] = "nav-link active";
+            //        //break;
+            //    case "aplicaciones.aspx":
+            //        lnkAplicaciones.Attributes["class"] = "nav-link active";
+            //        break;
+            //    //case "configuracion.aspx":
+            //        //lnkConfiguracion.Attributes["class"] = "nav-link active";
+            //        //break;
+            //    case "actividades.aspx":
+            //        lnkActividades.Attributes["class"] = "nav-link active";
+            //        break;
+            //}
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

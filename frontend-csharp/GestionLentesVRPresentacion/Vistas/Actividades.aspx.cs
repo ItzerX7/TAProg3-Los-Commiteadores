@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Globalization;
+using System.Web.UI.WebControls;
 using FrontVR.GestionlentesvrWS;
 
 namespace FrontVR.Vistas
@@ -15,15 +15,38 @@ namespace FrontVR.Vistas
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            //if (Session["usuario"] == null)
+            //{
+            //    Response.Redirect("~/Login.aspx");
+            //    return;
+            //}
+
+            //int rol = Convert.ToInt32(Session["rol"]);
+            //if (rol != 1 && rol != 2)
+            //{
+            //    Response.Redirect("~/PantallaInicio.aspx");
+            //    return;
+            //}
+
             if (!IsPostBack)
+            {
                 BindGrid();
+            }
         }
 
         private void BindGrid()
         {
-            var actividades = actividadWSClient.listarActividad();
-            gvActividades.DataSource = actividades;
-            gvActividades.DataBind();
+            try
+            {
+                var actividades = actividadWSClient.listarActividad();
+                gvActividades.DataSource = actividades;
+                gvActividades.DataBind();
+            }
+            catch (System.Exception ex)
+            {
+                // Log para desarrollador
+                System.Diagnostics.Debug.WriteLine("[Actividades] Error al listar: " + ex.Message);
+            }
         }
 
         protected string GetBadgeCss(object activoObj)
@@ -40,9 +63,9 @@ namespace FrontVR.Vistas
             return activo ? "Activa" : "Inactiva";
         }
 
-        protected void gvActividades_RowDataBound(object sender, System.Web.UI.WebControls.GridViewRowEventArgs e)
+        protected void gvActividades_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            // Si necesitas formatear celdas adicionales, ponlo aquí.
+            // Aquí puedes personalizar el contenido si lo deseas.
         }
     }
 }

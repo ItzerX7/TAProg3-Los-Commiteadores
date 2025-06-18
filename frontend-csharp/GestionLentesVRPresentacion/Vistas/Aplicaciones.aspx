@@ -13,28 +13,15 @@
 
     <asp:GridView ID="gvAplicaciones" runat="server"
                   AutoGenerateColumns="False" CssClass="table table-striped"
-                  DataKeyNames="aplicacionId"
+                  DataKeyNames="Id"
                   OnRowCommand="gvAplicaciones_RowCommand">
         <Columns>
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="version" HeaderText="Versión" />
             <asp:BoundField DataField="tamanoMb" HeaderText="Tamaño&nbsp;(MB)" DataFormatString="{0:N1}" />
             <asp:TemplateField HeaderText="Estado">
-                <ItemTemplate>
-                    <asp:Label ID="lblEstado" runat="server"
-                               Text='<%# GetEstadoTexto(Eval("activo")) %>'
-                               CssClass='<%# GetBadgeCss(Eval("activo")) %>' />
-                </ItemTemplate>
             </asp:TemplateField>
             <asp:TemplateField HeaderText="Acción" ItemStyle-HorizontalAlign="Center">
-                <ItemTemplate>
-                    <asp:LinkButton ID="lnkAccion" runat="server"
-                                    CommandName="EliminarApp"
-
-                                    CommandArgument='<%# Eval("aplicacionId") %>'
-                                    Text="Eliminar"
-                                    CssClass='<%# ((bool)Eval("activo")) ? "btn btn-danger btn-sm" : "btn btn-success btn-sm" %>' />
-                </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>

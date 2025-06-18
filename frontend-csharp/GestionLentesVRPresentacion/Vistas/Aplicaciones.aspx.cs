@@ -126,9 +126,9 @@ namespace FrontVR.Vistas
             return activo ? "badge bg-success" : "badge bg-secondary";
         }
 
-        protected string GetEstadoTexto(object activoObj)
+        protected string GetEstadoTexto(string activoObj)
         {
-            return ((bool)activoObj) ? "Instalada" : "Disponible";
+            return activoObj;
         }
     }
 }

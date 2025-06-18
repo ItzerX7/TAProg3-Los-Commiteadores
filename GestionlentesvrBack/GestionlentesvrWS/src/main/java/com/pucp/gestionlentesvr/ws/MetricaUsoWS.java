@@ -1,5 +1,7 @@
 package com.pucp.gestionlentesvr.ws;
 
+import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import com.pucp.gestionlentesvr.negocio.usuario.MetricaUsoService;
 import com.pucp.gestionlentesvr.negocio.usuario.MetricaUsoServiceImpl;
@@ -65,6 +67,36 @@ public class MetricaUsoWS {
             return service.listarMetricaUso();
         } catch (Exception ex) {
             throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
+
+    @WebMethod(operationName = "obtenerAppMasUsada")
+    public Aplicacion obtenerAppMasUsada() throws Exception {
+
+        try {
+            return service.obtenerAppMasUsada();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al obtenerAppMasUsada" + ex.getMessage());
+        }
+    }
+
+    @WebMethod(operationName = "obtenerDispositivoMasUsado")
+    public Dispositivo obtenerDispositivoMasUsado() throws Exception {
+
+        try {
+            return service.obtenerDispositivoMasUsado();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al obtenerDispositivoMasUsado" + ex.getMessage());
+        }
+    }
+
+    @WebMethod(operationName = "obtenerDispositivoMenosUsado")
+    public Dispositivo obtenerDispositivoMenosUsado() throws Exception {
+
+        try {
+            return service.obtenerDispositivoMenosUsado();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al obtenerDispositivoMenosUsado" + ex.getMessage());
         }
     }
 }

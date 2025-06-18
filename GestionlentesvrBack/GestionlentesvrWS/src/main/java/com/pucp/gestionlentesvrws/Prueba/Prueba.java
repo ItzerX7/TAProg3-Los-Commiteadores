@@ -36,8 +36,8 @@ public class Prueba {
     
     
     @WebMethod(operationName = "hello")
-    public Dispositivo hello() throws Exception {
-        Dispositivo elemento = pruebaDAO.obtenerDispositivoMasUsado();
+    public Aplicacion hello() throws Exception {
+        Aplicacion elemento = pruebaDAO.obtenerAppMasUsada();
         return elemento;
     }
 }

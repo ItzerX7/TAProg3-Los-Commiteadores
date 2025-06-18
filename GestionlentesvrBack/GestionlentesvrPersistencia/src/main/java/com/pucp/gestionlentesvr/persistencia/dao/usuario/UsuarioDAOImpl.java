@@ -13,7 +13,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, Usuario entity) throws SQLException {
-        String query = "{CALL insertar_usuario(?, ?, ?, ?,?, ?)}";
+        String query = "{CALL insertar_usuario(?, ?, ?, ?, ?, ?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.registerOutParameter(1, Types.INTEGER);
         cs.setString(2, entity.getNombre());
@@ -47,7 +47,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
-        String query = "{CALL obtener_usuario()}";
+        String query = "{CALL obtener_usuario(?)}";
         CallableStatement cs = conn.prepareCall(query);
         cs.setInt(1, id);
         return cs;
@@ -55,7 +55,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
-        String query = "{CALL listar_usuarios(?)}";
+        String query = "{CALL listar_usuarios()}";
         CallableStatement cs = conn.prepareCall(query);
         return cs;
     }
@@ -63,16 +63,15 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
     @Override
     protected Usuario createFromResultSet(ResultSet rs) throws SQLException {
         Usuario usuario = new Usuario();
-        Rol rol = new Rol();
-        usuario.setRol(rol);
+        usuario.setRol(new Rol());
         usuario.setId(rs.getInt("usuarioid"));
         usuario.setNombre(rs.getString("nombre"));
         usuario.setApellido(rs.getString("apellido"));
         usuario.setCorreo(rs.getString("correo"));
         usuario.setContrasena(rs.getString("contrasena"));
-        usuario.setFechaCreacion(rs.getTimestamp("fechacreacion"));
+        usuario.setFechaCreacion(rs.getDate("fechacreacion"));
         usuario.getRol().setId(rs.getInt("rol_rolid"));
-        usuario.setActivo((rs.getString("activo")).toCharArray()[0]);
+        usuario.setActivo(rs.getString("activo").toCharArray()[0]);
         return usuario;
     }
 

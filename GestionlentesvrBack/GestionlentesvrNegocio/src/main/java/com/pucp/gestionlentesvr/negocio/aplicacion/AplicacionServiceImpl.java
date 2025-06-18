@@ -87,4 +87,9 @@ public class AplicacionServiceImpl implements AplicacionService {
         return aplicacionDAO.listarTodos();
     }
 
+    @Override
+    public void eliminarAplicacionesPorDispositivo() {
+       aplicacionDAO.eliminarAplicacionesPorDispositivo();;
+    }
+
 }

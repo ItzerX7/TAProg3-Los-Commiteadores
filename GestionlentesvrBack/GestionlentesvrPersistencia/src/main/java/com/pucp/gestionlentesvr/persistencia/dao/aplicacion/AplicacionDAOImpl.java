@@ -3,11 +3,13 @@ package com.pucp.gestionlentesvr.persistencia.dao.aplicacion;
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
 import com.pucp.gestionlentesvr.dominio.aplicacion.CategoriaAplicacion;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.DBManager;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.List;
 
 public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements AplicacionDAO {
 
@@ -80,5 +82,31 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
     protected void setId(Aplicacion entity, Integer id) {
         entity.setId(id);
     }
+
+    @Override
+    public void eliminarAplicacionesPorDispositivo() {
+        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL eliminarAplicacionesPorDispositivo()}";
+            CallableStatement cs = conn.prepareCall(query);
+            cs.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al Eliminar Aplicacion", e);
+        }
+    }
+
+//    @Override
+//    public List<Aplicacion> listarAplicacionesConDispositivos() {
+//        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+//            String query = "{CALL listarAplicacionesConDispositivos()}";
+//            CallableStatement cs = (conn); 
+//            ResultSet rs = cs.executeQuery()
+//            while (rs.next()) {
+//                entities.add(createFromResultSet(rs));
+//            }
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error al listar entidades", e);
+//        }
+//        return entities;
+//    }
 
 }

@@ -14,4 +14,6 @@ public interface AplicacionService {
     Aplicacion obtenerAplicacion(int idAplicacion) throws Exception;
 
     List<Aplicacion> listarAplicacion() throws Exception;
+    
+    public void eliminarAplicacionesPorDispositivo();
 }

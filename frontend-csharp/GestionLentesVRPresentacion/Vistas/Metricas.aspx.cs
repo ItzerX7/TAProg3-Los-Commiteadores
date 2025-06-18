@@ -4,7 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Web.UI;
 
-using FrontVR.ServiceReference1;
+//using FrontVR.ServiceReference1;
+using FrontVR.GestionlentesvrWS;
 using Newtonsoft.Json; // Descomentar cuando se agregue el servicio web
 
 namespace FrontVR.Vistas

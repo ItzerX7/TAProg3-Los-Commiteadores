@@ -9,6 +9,7 @@ import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.DBManager;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -20,6 +20,24 @@
   <message name="registrarMetricaUsoResponse">
     <part name="parameters" element="tns:registrarMetricaUsoResponse" />
   </message>
+  <message name="obtenerDispositivoMasUsado">
+    <part name="parameters" element="tns:obtenerDispositivoMasUsado" />
+  </message>
+  <message name="obtenerDispositivoMasUsadoResponse">
+    <part name="parameters" element="tns:obtenerDispositivoMasUsadoResponse" />
+  </message>
+  <message name="obtenerAppMasUsada">
+    <part name="parameters" element="tns:obtenerAppMasUsada" />
+  </message>
+  <message name="obtenerAppMasUsadaResponse">
+    <part name="parameters" element="tns:obtenerAppMasUsadaResponse" />
+  </message>
+  <message name="obtenerDispositivoMenosUsado">
+    <part name="parameters" element="tns:obtenerDispositivoMenosUsado" />
+  </message>
+  <message name="obtenerDispositivoMenosUsadoResponse">
+    <part name="parameters" element="tns:obtenerDispositivoMenosUsadoResponse" />
+  </message>
   <message name="eliminarMetricaUso">
     <part name="parameters" element="tns:eliminarMetricaUso" />
   </message>
@@ -48,6 +66,21 @@
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/registrarMetricaUsoRequest" message="tns:registrarMetricaUso" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/registrarMetricaUsoResponse" message="tns:registrarMetricaUsoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/registrarMetricaUso/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerDispositivoMasUsado">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsadoRequest" message="tns:obtenerDispositivoMasUsado" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsadoResponse" message="tns:obtenerDispositivoMasUsadoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsado/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerAppMasUsada">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerAppMasUsadaRequest" message="tns:obtenerAppMasUsada" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerAppMasUsadaResponse" message="tns:obtenerAppMasUsadaResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerAppMasUsada/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerDispositivoMenosUsado">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsadoRequest" message="tns:obtenerDispositivoMenosUsado" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsadoResponse" message="tns:obtenerDispositivoMenosUsadoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsado/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="eliminarMetricaUso">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/eliminarMetricaUsoRequest" message="tns:eliminarMetricaUso" />
@@ -80,6 +113,42 @@
       </fault>
     </operation>
     <operation name="registrarMetricaUso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerDispositivoMasUsado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerAppMasUsada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerDispositivoMenosUsado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

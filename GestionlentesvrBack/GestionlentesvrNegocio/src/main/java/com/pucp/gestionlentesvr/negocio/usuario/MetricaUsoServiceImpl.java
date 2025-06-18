@@ -82,12 +82,15 @@ public class MetricaUsoServiceImpl implements MetricaUsoService {
     public List<MetricaUso> listarMetricaUso() throws Exception {
         return metricaUsoDAO.listarTodos();
     }
+    @Override
     public Aplicacion obtenerAppMasUsada(){
         return metricaUsoDAO.obtenerAppMasUsada();
     }
+    @Override
     public Dispositivo obtenerDispositivoMasUsado(){
         return metricaUsoDAO.obtenerDispositivoMasUsado();
     }
+    @Override
     public Dispositivo obtenerDispositivoMenosUsado(){
         return metricaUsoDAO.obtenerDispositivoMenosUsado();
     }

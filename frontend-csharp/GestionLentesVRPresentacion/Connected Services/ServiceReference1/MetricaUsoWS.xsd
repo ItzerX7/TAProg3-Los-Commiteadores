@@ -7,25 +7,22 @@
   <xs:element name="eliminarMetricaUsoResponse" type="tns:eliminarMetricaUsoResponse" />
   <xs:element name="listarMetricaUso" type="tns:listarMetricaUso" />
   <xs:element name="listarMetricaUsoResponse" type="tns:listarMetricaUsoResponse" />
+  <xs:element name="obtenerAppMasUsada" type="tns:obtenerAppMasUsada" />
+  <xs:element name="obtenerAppMasUsadaResponse" type="tns:obtenerAppMasUsadaResponse" />
+  <xs:element name="obtenerDispositivoMasUsado" type="tns:obtenerDispositivoMasUsado" />
+  <xs:element name="obtenerDispositivoMasUsadoResponse" type="tns:obtenerDispositivoMasUsadoResponse" />
+  <xs:element name="obtenerDispositivoMenosUsado" type="tns:obtenerDispositivoMenosUsado" />
+  <xs:element name="obtenerDispositivoMenosUsadoResponse" type="tns:obtenerDispositivoMenosUsadoResponse" />
   <xs:element name="obtenerMetricaUso" type="tns:obtenerMetricaUso" />
   <xs:element name="obtenerMetricaUsoResponse" type="tns:obtenerMetricaUsoResponse" />
   <xs:element name="registrarMetricaUso" type="tns:registrarMetricaUso" />
   <xs:element name="registrarMetricaUsoResponse" type="tns:registrarMetricaUsoResponse" />
-  <xs:complexType name="registrarMetricaUso">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="elemento" type="tns:metricaUso" />
-    </xs:sequence>
+  <xs:complexType name="obtenerDispositivoMenosUsado">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="metricaUso">
+  <xs:complexType name="obtenerDispositivoMenosUsadoResponse">
     <xs:sequence>
-      <xs:element name="activo" type="xs:unsignedShort" />
-      <xs:element minOccurs="0" name="dispositivo" type="tns:dispositivo" />
-      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
-      <xs:element name="id" type="xs:int" />
-      <xs:element name="nivelBateriaFinal" type="xs:int" />
-      <xs:element name="nivelBateriaInicial" type="xs:int" />
-      <xs:element name="tiempoUsoMinutos" type="xs:int" />
-      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+      <xs:element minOccurs="0" name="return" type="tns:dispositivo" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="dispositivo">
@@ -53,6 +50,28 @@
       <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarMetricaUso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="elemento" type="tns:metricaUso" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="metricaUso">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="dispositivo" type="tns:dispositivo" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element name="nivelBateriaFinal" type="xs:int" />
+      <xs:element name="nivelBateriaInicial" type="xs:int" />
+      <xs:element name="tiempoUsoMinutos" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuario" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="usuario">
     <xs:sequence>
       <xs:element name="activo" type="xs:unsignedShort" />
@@ -76,11 +95,6 @@
   <xs:complexType name="registrarMetricaUsoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="Exception">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="message" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarMetricaUso">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -88,6 +102,14 @@
   </xs:complexType>
   <xs:complexType name="eliminarMetricaUsoResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerDispositivoMasUsado">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerDispositivoMasUsadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:dispositivo" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarMetricaUso">
     <xs:sequence>
@@ -107,6 +129,26 @@
       <xs:element minOccurs="0" name="return" type="tns:metricaUso" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="obtenerAppMasUsada">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerAppMasUsadaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:aplicacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="aplicacion">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="categoria" type="tns:categoriaAplicacion" />
+      <xs:element minOccurs="0" name="desarrollador" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="tamanomb" type="xs:double" />
+      <xs:element minOccurs="0" name="version" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarMetricaUso">
     <xs:sequence />
   </xs:complexType>
@@ -121,6 +163,17 @@
       <xs:enumeration value="DESCONECTADO" />
       <xs:enumeration value="EN_USO" />
       <xs:enumeration value="EN_MANTENIMIENTO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="categoriaAplicacion">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EDUCATIVA" />
+      <xs:enumeration value="ENTRETENIMIENTO" />
+      <xs:enumeration value="TERAPEUTICA" />
+      <xs:enumeration value="ENTRENAMIENTO" />
+      <xs:enumeration value="PRODUCTIVIDAD" />
+      <xs:enumeration value="SIMULACION" />
+      <xs:enumeration value="MULTIMEDIA" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

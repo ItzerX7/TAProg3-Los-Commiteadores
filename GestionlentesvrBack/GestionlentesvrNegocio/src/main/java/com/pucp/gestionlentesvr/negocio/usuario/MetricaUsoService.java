@@ -1,5 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.usuario;
 
+import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import java.util.List;
 
@@ -14,4 +16,10 @@ public interface MetricaUsoService {
     MetricaUso obtenerMetricaUso(int idMetricaUso) throws Exception;
 
     List<MetricaUso> listarMetricaUso() throws Exception;
+    
+    public Aplicacion obtenerAppMasUsada();
+    
+    public Dispositivo obtenerDispositivoMasUsado();
+    
+     public Dispositivo obtenerDispositivoMenosUsado();
 }

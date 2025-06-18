@@ -333,6 +333,21 @@
     <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.contarAplicacionesPorTipoEnMetricasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.listarAplicacionesConDispositivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.obtenerAppMasUsadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.obtenerDispositivoMasUsadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.obtenerDispositivoMenosUsadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServiceReference1\GrupoWS.xsd">
       <SubType>Designer</SubType>
     </None>

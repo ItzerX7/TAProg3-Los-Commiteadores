@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Web.UI;
 
 using FrontVR.ServiceReference1;
@@ -11,6 +12,7 @@ namespace FrontVR.Vistas
     public partial class Metricas : Page
     {
         MetricaUsoWSClient servicio = new MetricaUsoWSClient(); // Descomentar cuando esté listo el WS
+        AplicacionWSClient appservicio = new AplicacionWSClient();
         public string LabelsJson { get; private set; }
         public string ValuesJson { get; private set; }
 
@@ -28,12 +30,12 @@ namespace FrontVR.Vistas
         {
             lblMasUsadoData.Text = servicio.obtenerDispositivoMasUsado().nombre;
             lblMenosUsadoData.Text = servicio.obtenerDispositivoMenosUsado().nombre;
-            lblAppPopularData.Text = servicio.obtenerAppMasEjecutada().nombre;
+            lblAppPopularData.Text = servicio.obtenerAppMasUsada().nombre;
         }
 
         private void CargarDatosGraficoUso()
         {
-            // var dispositivos = servicio.listarDispositivos();
+            //var dispositivos = servicio.();
             // var tiempos = servicio.obtenerTiempoUsoPorDispositivo();
             // Aquí devolverías los datos vía JSON para llenar el Chart.js desde code-behind o WebMethod
         }
@@ -43,20 +45,20 @@ namespace FrontVR.Vistas
 
             // llamas a tu servicio que te devuelve la lista con nombre y contador
             // Aquí asumo que listarAppsConContador() retorna List<AppContadorDTO>
-            var apps = servicio.listarAppsConContador();
+            var apps = appservicio.contarAplicacionesPorTipoEnMetricas();
 
             // extraes dos arrays: uno de nombres, otro de conteos
             var nombres = new BindingList<string>
-{
-    "EDUCATIVA",
-    "ENTRENAMIENTO",
-    "ENTRETENIMIENTO",
-    "MULTIMEDIA",
-    "PRODUCTIVIDAD",
-    "SIMULACION",
-    "TERAPEUTICA"
-};
-            var cantidades = apps.Select(a => a.Contador).ToList();
+            {
+                "EDUCATIVA",
+                "ENTRENAMIENTO",
+                "ENTRETENIMIENTO",
+                "MULTIMEDIA",
+                "PRODUCTIVIDAD",
+                "SIMULACION",
+                "TERAPEUTICA"
+            };
+            var cantidades = apps.ToList();
 
             // serializa a JSON para inyectar en JS
             LabelsJson = JsonConvert.SerializeObject(nombres);

@@ -11,8 +11,8 @@ namespace FrontVR
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["usuario"] == null)
-            //    Response.Redirect("~/Login.aspx");
+            if (Session["usuario"] == null)
+                Response.Redirect("~/Login.aspx");
 
             string page = System.IO.Path.GetFileName(Request.Path).ToLower();
 

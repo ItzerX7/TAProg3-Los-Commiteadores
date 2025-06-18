@@ -27,8 +27,8 @@ namespace FrontVR
                 // Busca coincidencia
                 var usuarioValido = usuarios.FirstOrDefault(u =>
                     u.correo.Equals(usuarioInput, StringComparison.OrdinalIgnoreCase) &&
-                    u.contrasena == claveInput &&
-                    u.activo.ToString().ToLower() == "s"
+                    u.contrasena == claveInput// &&
+                    //u.activo.ToString().ToLower() == "s"
                 );
 
                 if (usuarioValido != null)

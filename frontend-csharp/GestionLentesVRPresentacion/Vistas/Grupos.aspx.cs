@@ -52,8 +52,6 @@ namespace FrontVR.Vistas
                 {
                     nuevoGrupo.id = int.Parse(hfIdGrupo.Value);
                     proxy.actualizarGrupo(nuevoGrupo);
-                    Response.Redirect(Request.RawUrl);
-
                 }
 
                 // Redireccionar a la misma página para que se vea reflejado el cambio

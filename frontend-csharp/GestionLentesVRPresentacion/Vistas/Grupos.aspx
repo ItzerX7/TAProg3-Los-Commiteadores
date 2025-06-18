@@ -93,6 +93,10 @@
                                         OnClick="btnGuardarGrupo_Click" />
                         </div>
                     </ContentTemplate>
+
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="gvGrupos" EventName="RowCommand" />
+                    </Triggers>
                 </asp:UpdatePanel>
             </div>
         </div>

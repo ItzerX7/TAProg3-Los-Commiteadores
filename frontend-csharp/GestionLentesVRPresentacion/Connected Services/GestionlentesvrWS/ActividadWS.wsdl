@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.gestionlentesvr.pucp.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="ActividadWS" targetNamespace="http://ws.gestionlentesvr.pucp.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ActividadWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarActividad">
+    <part name="parameters" element="tns:actualizarActividad" />
+  </message>
+  <message name="actualizarActividadResponse">
+    <part name="parameters" element="tns:actualizarActividadResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="registrarActividad">
+    <part name="parameters" element="tns:registrarActividad" />
+  </message>
+  <message name="registrarActividadResponse">
+    <part name="parameters" element="tns:registrarActividadResponse" />
+  </message>
+  <message name="eliminarActividad">
+    <part name="parameters" element="tns:eliminarActividad" />
+  </message>
+  <message name="eliminarActividadResponse">
+    <part name="parameters" element="tns:eliminarActividadResponse" />
+  </message>
+  <message name="obtenerActividad">
+    <part name="parameters" element="tns:obtenerActividad" />
+  </message>
+  <message name="obtenerActividadResponse">
+    <part name="parameters" element="tns:obtenerActividadResponse" />
+  </message>
+  <message name="listarActividad">
+    <part name="parameters" element="tns:listarActividad" />
+  </message>
+  <message name="listarActividadResponse">
+    <part name="parameters" element="tns:listarActividadResponse" />
+  </message>
+  <portType name="ActividadWS">
+    <operation name="actualizarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest" message="tns:actualizarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse" message="tns:actualizarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="registrarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadRequest" message="tns:registrarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse" message="tns:registrarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadRequest" message="tns:eliminarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadResponse" message="tns:eliminarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadRequest" message="tns:obtenerActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadResponse" message="tns:obtenerActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="ActividadWSPortBinding" type="tns:ActividadWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="registrarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="ActividadWS">
+    <port name="ActividadWSPort" binding="tns:ActividadWSPortBinding">
+      <soap:address location="http://localhost:8080/GestionlentesvrWS/ActividadWS" />
+    </port>
+  </service>
+</definitions>

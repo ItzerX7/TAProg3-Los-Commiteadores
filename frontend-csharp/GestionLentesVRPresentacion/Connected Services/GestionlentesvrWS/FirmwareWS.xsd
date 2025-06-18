@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.gestionlentesvr.pucp.com/" targetNamespace="http://ws.gestionlentesvr.pucp.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="actualizarFirmware" type="tns:actualizarFirmware" />
+  <xs:element name="actualizarFirmwareResponse" type="tns:actualizarFirmwareResponse" />
+  <xs:element name="eliminarFirmware" type="tns:eliminarFirmware" />
+  <xs:element name="eliminarFirmwareResponse" type="tns:eliminarFirmwareResponse" />
+  <xs:element name="listarFirmware" type="tns:listarFirmware" />
+  <xs:element name="listarFirmwareResponse" type="tns:listarFirmwareResponse" />
+  <xs:element name="obtenerFirmware" type="tns:obtenerFirmware" />
+  <xs:element name="obtenerFirmwareResponse" type="tns:obtenerFirmwareResponse" />
+  <xs:element name="registrarFirmware" type="tns:registrarFirmware" />
+  <xs:element name="registrarFirmwareResponse" type="tns:registrarFirmwareResponse" />
+  <xs:complexType name="registrarFirmware">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="elemento" type="tns:firmware" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="firmware">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="version" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarFirmwareResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarFirmware">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="elemento" type="tns:firmware" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarFirmwareResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerFirmware">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerFirmwareResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:firmware" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarFirmware">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarFirmwareResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarFirmware">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarFirmwareResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:firmware" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.gestionlentesvr.pucp.com/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MetricaUsoWS" targetNamespace="http://ws.gestionlentesvr.pucp.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarMetricaUso">
+    <part name="parameters" element="tns:actualizarMetricaUso" />
+  </message>
+  <message name="actualizarMetricaUsoResponse">
+    <part name="parameters" element="tns:actualizarMetricaUsoResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="registrarMetricaUso">
+    <part name="parameters" element="tns:registrarMetricaUso" />
+  </message>
+  <message name="registrarMetricaUsoResponse">
+    <part name="parameters" element="tns:registrarMetricaUsoResponse" />
+  </message>
+  <message name="eliminarMetricaUso">
+    <part name="parameters" element="tns:eliminarMetricaUso" />
+  </message>
+  <message name="eliminarMetricaUsoResponse">
+    <part name="parameters" element="tns:eliminarMetricaUsoResponse" />
+  </message>
+  <message name="obtenerMetricaUso">
+    <part name="parameters" element="tns:obtenerMetricaUso" />
+  </message>
+  <message name="obtenerMetricaUsoResponse">
+    <part name="parameters" element="tns:obtenerMetricaUsoResponse" />
+  </message>
+  <message name="listarMetricaUso">
+    <part name="parameters" element="tns:listarMetricaUso" />
+  </message>
+  <message name="listarMetricaUsoResponse">
+    <part name="parameters" element="tns:listarMetricaUsoResponse" />
+  </message>
+  <portType name="MetricaUsoWS">
+    <operation name="actualizarMetricaUso">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/actualizarMetricaUsoRequest" message="tns:actualizarMetricaUso" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/actualizarMetricaUsoResponse" message="tns:actualizarMetricaUsoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/actualizarMetricaUso/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="registrarMetricaUso">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/registrarMetricaUsoRequest" message="tns:registrarMetricaUso" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/registrarMetricaUsoResponse" message="tns:registrarMetricaUsoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/registrarMetricaUso/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarMetricaUso">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/eliminarMetricaUsoRequest" message="tns:eliminarMetricaUso" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/eliminarMetricaUsoResponse" message="tns:eliminarMetricaUsoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/eliminarMetricaUso/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerMetricaUso">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUsoRequest" message="tns:obtenerMetricaUso" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUsoResponse" message="tns:obtenerMetricaUsoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerMetricaUso/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarMetricaUso">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoRequest" message="tns:listarMetricaUso" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUsoResponse" message="tns:listarMetricaUsoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/listarMetricaUso/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="MetricaUsoWSPortBinding" type="tns:MetricaUsoWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarMetricaUso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="registrarMetricaUso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarMetricaUso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerMetricaUso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarMetricaUso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="MetricaUsoWS">
+    <port name="MetricaUsoWSPort" binding="tns:MetricaUsoWSPortBinding">
+      <soap:address location="http://localhost:8080/GestionlentesvrWS/MetricaUsoWS" />
+    </port>
+  </service>
+</definitions>

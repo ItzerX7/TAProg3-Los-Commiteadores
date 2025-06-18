@@ -11,7 +11,10 @@ namespace FrontVR
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["usuario"] != null)
-                Response.Redirect("~/Vistas/Pantallainicio.aspx");
+            {
+                var usuarioSesion = (usuario)Session["usuario"];
+                RedirigirSegunRol(usuarioSesion.rol.id);
+            }
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
@@ -21,20 +24,21 @@ namespace FrontVR
 
             try
             {
-                // Obtiene todos los usuarios
                 var usuarios = usuarioWSClient.listarUsuario();
 
-                // Busca coincidencia
+                // Verifica con la estructura real
                 var usuarioValido = usuarios.FirstOrDefault(u =>
                     u.correo.Equals(usuarioInput, StringComparison.OrdinalIgnoreCase) &&
-                    u.contrasena == claveInput// &&
-                    //u.activo.ToString().ToLower() == "s"
+                    u.contrasena == claveInput //&&
+                    //u.activo == 1 // ushort: 1 = activo, 0 = inactivo
                 );
 
                 if (usuarioValido != null)
                 {
                     Session["usuario"] = usuarioValido;
-                    Response.Redirect("~/Vistas/Pantallainicio.aspx");
+                    Session["RolId"] = usuarioValido.rol.id; // la propiedad anidada del rol
+
+                    RedirigirSegunRol(usuarioValido.rol.id);
                 }
                 else
                 {
@@ -47,6 +51,16 @@ namespace FrontVR
                 lblError.Text = "Error de conexión: " + ex.Message;
                 lblError.Visible = true;
             }
+        }
+
+        private void RedirigirSegunRol(int rolId)
+        {
+            //if (rolId == 1)
+            //    Response.Redirect("~/Vistas/PantallaInicioAdmin.aspx");
+            //else if (rolId == 2)
+            //    Response.Redirect("~/Vistas/PantallaInicioTecnico.aspx");
+            //else
+                Response.Redirect("~/Vistas/Pantallainicio.aspx"); // fallback
         }
     }
 }

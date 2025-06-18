@@ -1,14 +1,14 @@
-﻿using System;
+﻿using FrontVR.GestionlentesvrWS;
+using System;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.GestionlentesvrWS; 
 
 namespace FrontVR.Vistas
 {
     public partial class Configuracion : Page
     {
-         UsuarioWSClient servicio = new UsuarioWSClient(); // Descomenta cuando esté disponible el WS
-
+        UsuarioWSClient servicio = new UsuarioWSClient();
+        RolWSClient rolServicio = new RolWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,23 +20,18 @@ namespace FrontVR.Vistas
 
         private void CargarUsuarios()
         {
-            gvUsuarios.DataSource = servicio.listarUsuario();
+            var lista = servicio.listarUsuario();
+            gvUsuarios.DataSource = lista;
+            gvUsuarios.DataKeyNames = new[] { "id" };
             gvUsuarios.DataBind();
-
-           // Temporal (para vista)
         }
 
         private void CargarRoles()
         {
-            ddlRol.DataSource = servicio.listarUsuario();
+            ddlRol.DataSource = rolServicio.listarRol();
             ddlRol.DataTextField = "nombre";
-            ddlRol.DataValueField = "rolId";
+            ddlRol.DataValueField = "id";
             ddlRol.DataBind();
-
-            // Simulación temporal
-            ddlRol.Items.Clear();
-            ddlRol.Items.Add(new ListItem("Administrador", "1"));
-            ddlRol.Items.Add(new ListItem("Usuario", "2"));
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -45,17 +40,17 @@ namespace FrontVR.Vistas
             {
                 usuario u = new usuario
                 {
-                   id = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value),
-                   nombre = txtNombres.Text,
-                   correo = txtCorreo.Text,
-                   rol = new rol { id = int.Parse(ddlRol.SelectedValue) },
-                   activo = 'S'
+                    id = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value),
+                    nombre = txtNombres.Text.Trim(),
+                    correo = txtCorreo.Text.Trim(),
+                    rol = new rol { id = int.Parse(ddlRol.SelectedValue) },
+                    activo = 's'
                 };
 
                 if (u.id == 0)
                     servicio.registrarUsuario(u);
-                 else
-                     servicio.actualizarUsuario(u);
+                else
+                    servicio.actualizarUsuario(u);
 
                 LimpiarFormulario();
                 CargarUsuarios();
@@ -84,7 +79,7 @@ namespace FrontVR.Vistas
             }
             else if (e.CommandName == "Eliminar")
             {
-                // servicio.eliminarUsuario(id);
+                servicio.eliminarUsuario(id);
                 CargarUsuarios();
             }
         }

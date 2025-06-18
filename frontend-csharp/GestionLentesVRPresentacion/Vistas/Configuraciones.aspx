@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
-         CodeBehind="Configuraciones.aspx.cs" Inherits="FrontVR.Vistas.Configuracion" %>
+         CodeBehind="Configuracion.aspx.cs" Inherits="FrontVR.Vistas.Configuracion" %>
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="page-title mb-3">Configuración de Usuarios</h2>
@@ -12,18 +12,19 @@
                   AutoGenerateColumns="False"
                   CssClass="table table-striped"
                   DataKeyNames="usuarioId"
-                  OnRowCommand="gvUsuarios_RowCommand">
+                  OnRowCommand="gvUsuarios_RowCommand"
+                  EmptyDataText="No hay usuarios registrados aún.">
         <Columns>
-            <asp:BoundField DataField="nombres" HeaderText="Nombres" />
+            <asp:BoundField DataField="nombre" HeaderText="Nombres" />
             <asp:BoundField DataField="correo" HeaderText="Correo" />
             <asp:BoundField DataField="rol.nombre" HeaderText="Rol" />
             <asp:TemplateField HeaderText="Acción" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>
                     <asp:LinkButton ID="lnkEditar" runat="server" CommandName="EditarUsuario"
-                                    CommandArgument='<%# Eval("usuarioId") %>'
+                                    CommandArgument='<%# Eval("id") %>'
                                     CssClass="btn btn-sm btn-warning me-1" Text="Editar" />
                     <asp:LinkButton ID="lnkEliminar" runat="server" CommandName="Eliminar"
-                                    CommandArgument='<%# Eval("usuarioId") %>'
+                                    CommandArgument='<%# Eval("id") %>'
                                     CssClass="btn btn-sm btn-danger" Text="Eliminar" />
                 </ItemTemplate>
             </asp:TemplateField>

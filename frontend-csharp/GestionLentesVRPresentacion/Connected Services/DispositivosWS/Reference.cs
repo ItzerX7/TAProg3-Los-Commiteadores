@@ -1458,17 +1458,6 @@ namespace FrontVR.DispositivosWS {
     public interface DispositivoWS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.DispositivosWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivo/Fault/Exceptio" +
-            "n", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FrontVR.DispositivosWS.listarDispositivoResponse listarDispositivo(FrontVR.DispositivosWS.listarDispositivoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse")]
-        System.Threading.Tasks.Task<FrontVR.DispositivosWS.listarDispositivoResponse> listarDispositivoAsync(FrontVR.DispositivosWS.listarDispositivoRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.DispositivosWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivo/Fault/Excepti" +
             "on", Name="Exception")]
@@ -1478,6 +1467,17 @@ namespace FrontVR.DispositivosWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoResponse")]
         System.Threading.Tasks.Task<FrontVR.DispositivosWS.obtenerDispositivoResponse> obtenerDispositivoAsync(FrontVR.DispositivosWS.obtenerDispositivoRequest request);
+        
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(FrontVR.DispositivosWS.Exception), Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivo/Fault/Exceptio" +
+            "n", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FrontVR.DispositivosWS.listarDispositivoResponse listarDispositivo(FrontVR.DispositivosWS.listarDispositivoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse")]
+        System.Threading.Tasks.Task<FrontVR.DispositivosWS.listarDispositivoResponse> listarDispositivoAsync(FrontVR.DispositivosWS.listarDispositivoRequest request);
         
         // CODEGEN: Parameter 'elemento' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoRequest", ReplyAction="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoResponse")]
@@ -1513,34 +1513,6 @@ namespace FrontVR.DispositivosWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarDispositivoRequest {
-        
-        public listarDispositivoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
-    public partial class listarDispositivoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FrontVR.DispositivosWS.dispositivo[] @return;
-        
-        public listarDispositivoResponse() {
-        }
-        
-        public listarDispositivoResponse(FrontVR.DispositivosWS.dispositivo[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
     public partial class obtenerDispositivoRequest {
         
@@ -1570,6 +1542,34 @@ namespace FrontVR.DispositivosWS {
         }
         
         public obtenerDispositivoResponse(FrontVR.DispositivosWS.dispositivo @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivo", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarDispositivoRequest {
+        
+        public listarDispositivoRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarDispositivoResponse", WrapperNamespace="http://ws.gestionlentesvr.pucp.com/", IsWrapped=true)]
+    public partial class listarDispositivoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.gestionlentesvr.pucp.com/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FrontVR.DispositivosWS.dispositivo[] @return;
+        
+        public listarDispositivoResponse() {
+        }
+        
+        public listarDispositivoResponse(FrontVR.DispositivosWS.dispositivo[] @return) {
             this.@return = @return;
         }
     }
@@ -1686,27 +1686,6 @@ namespace FrontVR.DispositivosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FrontVR.DispositivosWS.listarDispositivoResponse FrontVR.DispositivosWS.DispositivoWS.listarDispositivo(FrontVR.DispositivosWS.listarDispositivoRequest request) {
-            return base.Channel.listarDispositivo(request);
-        }
-        
-        public FrontVR.DispositivosWS.dispositivo[] listarDispositivo() {
-            FrontVR.DispositivosWS.listarDispositivoRequest inValue = new FrontVR.DispositivosWS.listarDispositivoRequest();
-            FrontVR.DispositivosWS.listarDispositivoResponse retVal = ((FrontVR.DispositivosWS.DispositivoWS)(this)).listarDispositivo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FrontVR.DispositivosWS.listarDispositivoResponse> FrontVR.DispositivosWS.DispositivoWS.listarDispositivoAsync(FrontVR.DispositivosWS.listarDispositivoRequest request) {
-            return base.Channel.listarDispositivoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FrontVR.DispositivosWS.listarDispositivoResponse> listarDispositivoAsync() {
-            FrontVR.DispositivosWS.listarDispositivoRequest inValue = new FrontVR.DispositivosWS.listarDispositivoRequest();
-            return ((FrontVR.DispositivosWS.DispositivoWS)(this)).listarDispositivoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FrontVR.DispositivosWS.obtenerDispositivoResponse FrontVR.DispositivosWS.DispositivoWS.obtenerDispositivo(FrontVR.DispositivosWS.obtenerDispositivoRequest request) {
             return base.Channel.obtenerDispositivo(request);
         }
@@ -1727,6 +1706,27 @@ namespace FrontVR.DispositivosWS {
             FrontVR.DispositivosWS.obtenerDispositivoRequest inValue = new FrontVR.DispositivosWS.obtenerDispositivoRequest();
             inValue.id = id;
             return ((FrontVR.DispositivosWS.DispositivoWS)(this)).obtenerDispositivoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FrontVR.DispositivosWS.listarDispositivoResponse FrontVR.DispositivosWS.DispositivoWS.listarDispositivo(FrontVR.DispositivosWS.listarDispositivoRequest request) {
+            return base.Channel.listarDispositivo(request);
+        }
+        
+        public FrontVR.DispositivosWS.dispositivo[] listarDispositivo() {
+            FrontVR.DispositivosWS.listarDispositivoRequest inValue = new FrontVR.DispositivosWS.listarDispositivoRequest();
+            FrontVR.DispositivosWS.listarDispositivoResponse retVal = ((FrontVR.DispositivosWS.DispositivoWS)(this)).listarDispositivo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FrontVR.DispositivosWS.listarDispositivoResponse> FrontVR.DispositivosWS.DispositivoWS.listarDispositivoAsync(FrontVR.DispositivosWS.listarDispositivoRequest request) {
+            return base.Channel.listarDispositivoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FrontVR.DispositivosWS.listarDispositivoResponse> listarDispositivoAsync() {
+            FrontVR.DispositivosWS.listarDispositivoRequest inValue = new FrontVR.DispositivosWS.listarDispositivoRequest();
+            return ((FrontVR.DispositivosWS.DispositivoWS)(this)).listarDispositivoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

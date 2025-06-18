@@ -33,6 +33,15 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.UpdatePanel upModal;
 
         /// <summary>
+        /// hfIdAplicacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfIdAplicacion;
+
+        /// <summary>
         /// txtNombre control.
         /// </summary>
         /// <remarks>
@@ -85,24 +94,6 @@ namespace FrontVR.Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDesarrollador;
-
-        /// <summary>
-        /// txtRutaInstalador control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRutaInstalador;
-
-        /// <summary>
-        /// txtFechaLanzamiento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaLanzamiento;
 
         /// <summary>
         /// ddlCategoria control.

@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.GestionLentesWS;
+using FrontVR.GestionlentesvrWS;
 
 namespace FrontVR.Vistas
 {
@@ -14,7 +14,7 @@ namespace FrontVR.Vistas
 
         protected void Page_Init(object sender, EventArgs e)
         {
-            aplicacionWSClient = new GestionLentesWS.AplicacionWSClient();
+            aplicacionWSClient = new GestionlentesvrWS.AplicacionWSClient();
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -48,35 +48,38 @@ namespace FrontVR.Vistas
                 lblError.Visible = true;
                 return;
             }
-
+            /*
             if (!DateTime.TryParse(txtFechaLanzamiento.Text, CultureInfo.CurrentCulture,
                        DateTimeStyles.None, out DateTime fechaLanzamiento))
             {
                 lblError.Text = "La fecha de lanzamiento es inválida.";
                 lblError.Visible = true;
                 return;
-            }
-
-            //System.DateTime fechaLanzamiento = DateTime.Now;
+            }*/
 
             var nuevaApp = new aplicacion
             {
+                id = string.IsNullOrWhiteSpace(hfIdAplicacion.Value) ? 0 : int.Parse(hfIdAplicacion.Value),
                 nombre = txtNombre.Text.Trim(),
                 version = txtVersion.Text.Trim(),
-                tamanoMB = tamMb,
+                tamanomb = tamMb,
                 descripcion = txtDescripcion.Text.Trim(),
                 desarrollador = txtDesarrollador.Text.Trim(),
-                rutaInstalador = txtRutaInstalador.Text.Trim(),
-                fechaLanzamiento = fechaLanzamiento.Date,
-                fechaLanzamientoSpecified = true,
+                //rutaInstalador = txtRutaInstalador.Text.Trim(),
+                //fechaLanzamiento = fechaLanzamiento.Date,
+                //fechaLanzamientoSpecified = true,
                 categoria = (categoriaAplicacion)Enum.Parse(typeof(categoriaAplicacion), ddlCategoria.SelectedValue),
                 categoriaSpecified = true,
-                activo = chkActivo.Checked
+                //activo = chkActivo.Checked
             };
 
             try
             {
-                aplicacionWSClient.registrarAplicacion(nuevaApp);
+                if (nuevaApp.id == 0)
+                    aplicacionWSClient.registrarAplicacion(nuevaApp);
+                else
+                    aplicacionWSClient.actualizarAplicacion(nuevaApp);
+
                 ClearModal();
 
                 ScriptManager.RegisterStartupScript(
@@ -93,13 +96,14 @@ namespace FrontVR.Vistas
         }
 
 
+
         private void ClearModal()
         {
             txtNombre.Text = txtVersion.Text = txtTamano.Text = string.Empty;
             lblError.Visible = false;
         }
 
-        // ========= ACCIÓN INSTALAR/DESINSTALAR =========
+        // ========= ACCIONES =========
         protected void gvAplicaciones_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int id = Convert.ToInt32(e.CommandArgument);
@@ -109,31 +113,44 @@ namespace FrontVR.Vistas
                 try
                 {
                     aplicacionWSClient.eliminarAplicacion(id);
-                    System.Diagnostics.Debug.WriteLine($"[Eliminado] ID: {id}");
                 }
                 catch (System.Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine($"[Error al eliminar] {ex.Message}");
                 }
-
                 BindGrid();
-                return;
             }
+            else if (e.CommandName == "EditarApp")
+            {
+                var app = aplicacionWSClient.obtenerAplicacion(id);
 
-            // Otras acciones (como ToggleInstall si decides mantenerlo)
+                // Precargar datos en los campos del modal
+                hfIdAplicacion.Value = app.id.ToString(); // Necesitas agregar un HiddenField en el modal para ID
+                txtNombre.Text = app.nombre;
+                txtVersion.Text = app.version;
+                txtTamano.Text = app.tamanomb.ToString(CultureInfo.InvariantCulture);
+                txtDescripcion.Text = app.descripcion;
+                txtDesarrollador.Text = app.desarrollador;
+                //txtRutaInstalador.Text = app.rutaInstalador;
+                //txtFechaLanzamiento.Text = app.fechaLanzamiento.ToString("yyyy-MM-dd");
+                ddlCategoria.SelectedValue = app.categoria.ToString();
+                //chkActivo.Checked = app.activo;
+
+                // Mostrar modal
+                ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal", "$('#modalNuevaApp').modal('show');", true);
+            }
         }
-
-
 
         protected string GetBadgeCss(object activoObj)
         {
-            bool activo = (bool)activoObj;
+            bool activo = true;// (bool)activoObj;
             return activo ? "badge bg-success" : "badge bg-secondary";
         }
 
         protected string GetEstadoTexto(object activoObj)
         {
-            return ((bool)activoObj) ? "Instalada" : "Disponible";
+            //return ((bool)activoObj) ? "Instalada" : "Disponible";
+            return true ? "Instalada" : "Disponible";
         }
     }
 }

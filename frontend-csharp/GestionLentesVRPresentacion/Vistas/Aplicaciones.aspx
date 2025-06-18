@@ -11,11 +11,11 @@
         <i class="fa fa-plus"></i> Nueva aplicación
     </button>
 
-    <asp:GridView ID="gvAplicaciones" runat="server"
-                  AutoGenerateColumns="False" CssClass="table table-striped"
-                  DataKeyNames="aplicacionId"
-                  OnRowCommand="gvAplicaciones_RowCommand">
-        <Columns>
+    <asp:GridView ID="gvAplicaciones" runat="server" 
+            AutoGenerateColumns="False" CssClass="table table-striped"
+            DataKeyNames="id"
+            OnRowCommand="gvAplicaciones_RowCommand">
+            <Columns>
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="version" HeaderText="Versión" />
             <asp:BoundField DataField="tamanoMb" HeaderText="Tamaño&nbsp;(MB)" DataFormatString="{0:N1}" />
@@ -26,14 +26,23 @@
                                CssClass='<%# GetBadgeCss(Eval("activo")) %>' />
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="Acción" ItemStyle-HorizontalAlign="Center">
+            <asp:TemplateField HeaderText="Acciones" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>
-                    <asp:LinkButton ID="lnkAccion" runat="server"
+                    <asp:LinkButton ID="btnVerDispositivos" runat="server"
+                                    CommandName="VerDispApp"
+                                    CommandArgument='<%# Eval("id") %>'
+                                    Text="Ver Disp."
+                                    CssClass="btn btn-sm btn-outline-primary me-1" />
+                    <asp:LinkButton ID="btnEditar" runat="server"
+                                    CommandName="EditarApp"
+                                    CommandArgument='<%# Eval("id") %>'
+                                    Text="Editar"
+                                    CssClass="btn btn-sm btn-warning me-1" />
+                    <asp:LinkButton ID="btnEliminar" runat="server"
                                     CommandName="EliminarApp"
-
-                                    CommandArgument='<%# Eval("aplicacionId") %>'
+                                    CommandArgument='<%# Eval("id") %>'
                                     Text="Eliminar"
-                                    CssClass='<%# ((bool)Eval("activo")) ? "btn btn-danger btn-sm" : "btn btn-success btn-sm" %>' />
+                                    CssClass="btn btn-sm btn-danger" />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -53,6 +62,7 @@
                 <asp:UpdatePanel ID="upModal" runat="server">
                     <ContentTemplate>
                         <div class="modal-body">
+                            <asp:HiddenField ID="hfIdAplicacion" runat="server" />
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre</label>
                                 <asp:TextBox ID="txtNombre" runat="server"
@@ -83,18 +93,8 @@
                                              CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
-                            <div class="mb-3">
-                                <label for="txtRutaInstalador" class="form-label">Ruta del Instalador</label>
-                                <asp:TextBox ID="txtRutaInstalador" runat="server"
-                                             CssClass="form-control bg-dark text-white border-secondary" />
-                            </div>
-                                           <div class="mb-3">
-                                               <label for="txtFechaLanzamiento" class="form-label">Fecha de Lanzamiento</label>
-                                               <asp:TextBox ID="txtFechaLanzamiento" runat="server"
-                                                    TextMode="Date"
-                                                    CssClass="form-control bg-dark text-white border-secondary" />
-
-                                           </div>
+                            
+                                           
                             
 
                             <div class="mb-3">

@@ -50,6 +50,9 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+    <!-- Aquí se renderizará la tabla de dispositivos vinculados -->
+    <asp:PlaceHolder ID="phDispositivos" runat="server"></asp:PlaceHolder>
+
 
     <!-- Modal -->
     <div class="modal fade" id="modalAplicacion" tabindex="-1"

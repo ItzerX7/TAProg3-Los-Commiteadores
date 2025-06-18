@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontVR.GestionlentesvrWS;
@@ -28,6 +29,9 @@ namespace FrontVR.Vistas
             var aplicaciones = aplicacionWSClient.listarAplicacion();
             gvAplicaciones.DataSource = aplicaciones;
             gvAplicaciones.DataBind();
+
+            // Limpiar tabla de dispositivos al recargar
+            phDispositivos.Controls.Clear();
         }
 
         // ========= NUEVA APP =========
@@ -84,7 +88,7 @@ namespace FrontVR.Vistas
         private void ClearModal()
         {
             txtNombre.Text = txtVersion.Text = txtTamano.Text = string.Empty;
-            txtDescripcion.Text =  txtDesarrollador.Text =  ddlCategoria.SelectedValue = string.Empty;
+            txtDescripcion.Text = txtDesarrollador.Text = ddlCategoria.SelectedValue = string.Empty;
             lblError.Visible = false;
         }
 
@@ -92,12 +96,9 @@ namespace FrontVR.Vistas
         protected void gvAplicaciones_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int id = Convert.ToInt32(e.CommandArgument);
-            //int id = int.Parse(gvAplicaciones.DataKeys[index].Value.ToString());
-            
+
             if (e.CommandName == "EditarApp")
             {
-                // Log para depuración
-                System.Diagnostics.Debug.WriteLine($"[EditarApp] ID: {id}");
                 var app = aplicacionWSClient.obtenerAplicacion(id);
 
                 hfIdAplicacion.Value = app.id.ToString();
@@ -108,7 +109,6 @@ namespace FrontVR.Vistas
                 txtDesarrollador.Text = app.desarrollador;
                 ddlCategoria.SelectedValue = app.categoria.ToString();
 
-                //ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalAplicacion').modal('show');", true);
                 ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", @"
                     document.getElementById('modalNuevaAppLabel').textContent = 'Editar aplicación';
                     var modal = new bootstrap.Modal(document.getElementById('modalAplicacion'));
@@ -119,10 +119,59 @@ namespace FrontVR.Vistas
                 aplicacionWSClient.eliminarAplicacion(id);
                 BindGrid();
             }
+            else if (e.CommandName == "VerDispApp")
+            {
+                MostrarDispositivosPorAplicacion(id);
+            }
         }
+
+        private void MostrarDispositivosPorAplicacion(int idAplicacion)
+        {
+            // Limpiar tabla anterior
+            phDispositivos.Controls.Clear();
+
+            // Usar el WS correcto
+            var dispositivos = aplicacionWSClient.listarDispositivosPorAplicaciones(idAplicacion);
+
+            if (dispositivos != null && dispositivos.Length > 0)
+            {
+                StringBuilder html = new StringBuilder();
+
+                html.Append("<h4 class='mt-4'>Dispositivos vinculados</h4>");
+                html.Append("<table class='table table-bordered table-dark mt-2'>");
+                html.Append("<thead><tr>");
+                html.Append("<th>Nombre</th>");
+                html.Append("<th>Modelo</th>");
+                html.Append("<th>Número de Serie</th>");
+                html.Append("<th>Estado</th>");
+                html.Append("</tr></thead>");
+                html.Append("<tbody>");
+
+                foreach (var dispositivo in dispositivos)
+                {
+                    html.Append("<tr>");
+                    html.AppendFormat("<td>{0}</td>", dispositivo.nombre);
+                    html.AppendFormat("<td>{0}</td>", dispositivo.modelo);
+                    html.AppendFormat("<td>{0}</td>", dispositivo.numeroSerie);
+                    html.AppendFormat("<td>{0}</td>", dispositivo.estado.ToString());
+                    html.Append("</tr>");
+                }
+
+                html.Append("</tbody></table>");
+
+                phDispositivos.Controls.Add(new Literal { Text = html.ToString() });
+            }
+            else
+            {
+                phDispositivos.Controls.Add(new Literal
+                {
+                    Text = "<div class='alert alert-info mt-3'>No se encontraron dispositivos para esta aplicación.</div>"
+                });
+            }
+        }
+
         protected string GetBadgeCss(object activoObj)
         {
-            // Si viene como string 's' o 'n'
             string estado = activoObj?.ToString().ToLower();
             bool activo = (estado == "s" || estado == "true");
             return activo ? "badge bg-success" : "badge bg-secondary";

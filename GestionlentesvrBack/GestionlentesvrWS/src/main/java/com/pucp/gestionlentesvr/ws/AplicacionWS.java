@@ -42,7 +42,7 @@ public class AplicacionWS {
     public void eliminarAplicacion(@WebParam(name = "id") int id) throws Exception {
 
         try {
-            service.eliminarAplicacionesPorDispositivo();
+            //service.eliminarAplicacionesPorDispositivo();
             service.eliminarAplicacion(id);
         } catch (Exception ex) {
             throw new WebServiceException("Error al eliminar" + ex.getMessage());

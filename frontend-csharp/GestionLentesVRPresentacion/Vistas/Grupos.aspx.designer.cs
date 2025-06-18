@@ -11,7 +11,7 @@ namespace FrontVR.Vistas
 {
 
 
-    public partial class Grupo
+    public partial class Grupos
     {
 
         /// <summary>
@@ -58,6 +58,15 @@ namespace FrontVR.Vistas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescripcionGrupo;
+
+        /// <summary>
+        /// Control txtUbicacionGrupo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUbicacionGrupo;
 
         /// <summary>
         /// Control lblErrorGrupo.

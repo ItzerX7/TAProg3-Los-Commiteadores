@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using FrontVR.GestionlentesvrWS;
 
 namespace FrontVR.Vistas
 {
-    public partial class Grupo : Page
+    public partial class Grupos : System.Web.UI.Page
     {
-        private GrupoWSClient servicio = new GrupoWSClient();
+        private GrupoWSClient proxy = new GrupoWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,39 +19,45 @@ namespace FrontVR.Vistas
 
         private void CargarGrupos()
         {
-            var lista = servicio.listarGrupo().ToList();
-            gvGrupos.DataSource = lista;
-            gvGrupos.DataBind();
+            try
+            {
+                grupo[] lista = proxy.listarGrupo();
+                gvGrupos.DataSource = lista;
+                gvGrupos.DataBind();
+            }
+            catch (System.Exception ex)
+            {
+                lblErrorGrupo.Text = "Error al cargar los grupos: " + ex.Message;
+                lblErrorGrupo.Visible = true;
+            }
         }
 
         protected void btnGuardarGrupo_Click(object sender, EventArgs e)
         {
             try
             {
-                var grupo = new grupo
+                grupo nuevoGrupo = new grupo
                 {
-                    id = string.IsNullOrWhiteSpace(hfIdGrupo.Value) ? 0 : int.Parse(hfIdGrupo.Value),
                     nombre = txtNombreGrupo.Text.Trim(),
                     descripcion = txtDescripcionGrupo.Text.Trim(),
-                    fechaCreacion = DateTime.Now,
-                    fechaCreacionSpecified = true
+                    ubicacion = txtUbicacionGrupo.Text.Trim(),
+                    fechaCreacion = DateTime.Now
                 };
 
-                if (grupo.id == 0)
+                if (string.IsNullOrEmpty(hfIdGrupo.Value))
                 {
-                    servicio.registrarGrupo(grupo);
+                    proxy.registrarGrupo(nuevoGrupo);
                 }
                 else
                 {
-                    servicio.actualizarGrupo(grupo);
+                    nuevoGrupo.id = int.Parse(hfIdGrupo.Value);
+                    proxy.actualizarGrupo(nuevoGrupo);
+                    Response.Redirect(Request.RawUrl);
+
                 }
 
-                LimpiarFormularioGrupo();
-
-                ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModalGrupo",
-                    "$('#modalGrupo').modal('hide');", true);
-
-                CargarGrupos();
+                // Redireccionar a la misma página para que se vea reflejado el cambio
+                Response.Redirect(Request.RawUrl);
             }
             catch (System.Exception ex)
             {
@@ -63,42 +68,36 @@ namespace FrontVR.Vistas
 
         protected void gvGrupos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int id = Convert.ToInt32(e.CommandArgument);
-
-            if (e.CommandName == "EliminarGrupo")
+            try
             {
-                try
+                int id = Convert.ToInt32(e.CommandArgument);
+
+                if (e.CommandName == "EditarGrupo")
                 {
-                    servicio.eliminarGrupo(id);
+                    grupo g = proxy.obtenerGrupo(id);
+
+                    hfIdGrupo.Value = g.id.ToString();
+                    txtNombreGrupo.Text = g.nombre;
+                    txtDescripcionGrupo.Text = g.descripcion;
+                    txtUbicacionGrupo.Text = g.ubicacion;
+
+                    // Cambiar el título del modal (opcional)
+                    ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal", @"
+                        document.getElementById('modalGrupoLabel').innerText = 'Editar grupo';
+                        var modal = new bootstrap.Modal(document.getElementById('modalGrupo'));
+                        modal.show();", true);
+                }
+                else if (e.CommandName == "EliminarGrupo")
+                {
+                    proxy.eliminarGrupo(id);
                     CargarGrupos();
                 }
-                catch (System.Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine($"[Error al eliminar grupo] {ex.Message}");
-                }
             }
-            else if (e.CommandName == "EditarGrupo")
+            catch (System.Exception ex)
             {
-                var grupo = servicio.obtenerGrupo(id);
-
-                hfIdGrupo.Value = grupo.id.ToString();
-                txtNombreGrupo.Text = grupo.nombre;
-                txtDescripcionGrupo.Text = grupo.descripcion;
-
-                ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModalGrupo", @"
-                    document.getElementById('modalGrupoLabel').textContent = 'Editar grupo';
-                    var modal = new bootstrap.Modal(document.getElementById('modalGrupo'));
-                    modal.show();", true);
+                lblErrorGrupo.Text = "Error al procesar la acción: " + ex.Message;
+                lblErrorGrupo.Visible = true;
             }
-        }
-
-        private void LimpiarFormularioGrupo()
-        {
-            hfIdGrupo.Value = "";
-            txtNombreGrupo.Text = "";
-            txtDescripcionGrupo.Text = "";
-            lblErrorGrupo.Text = "";
-            lblErrorGrupo.Visible = false;
         }
     }
 }

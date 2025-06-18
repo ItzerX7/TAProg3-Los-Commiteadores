@@ -344,6 +344,7 @@
     <Content Include="Images\VR_Welcome.png" />
     <Content Include="Vistas\Aplicaciones.aspx" />
     <Content Include="Vistas\Dispositivos.aspx" />
+    <Content Include="Vistas\Grupos.aspx" />
     <Content Include="Vistas\Metricas.aspx" />
     <Content Include="Vistas\PantallaInicio.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -423,7 +424,6 @@
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Vistas\Configuraciones.aspx" />
-    <Content Include="Vistas\Grupos.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -474,6 +474,13 @@
     <Compile Include="Vistas\Dispositivos.aspx.designer.cs">
       <DependentUpon>Dispositivos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Grupos.aspx.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Grupos.aspx.designer.cs">
+      <DependentUpon>Grupos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Metricas.aspx.cs">
       <DependentUpon>Metricas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -523,13 +530,6 @@
     </Compile>
     <Compile Include="Vistas\Configuraciones.aspx.designer.cs">
       <DependentUpon>Configuraciones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\Grupos.aspx.cs">
-      <DependentUpon>Grupos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\Grupos.aspx.designer.cs">
-      <DependentUpon>Grupos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

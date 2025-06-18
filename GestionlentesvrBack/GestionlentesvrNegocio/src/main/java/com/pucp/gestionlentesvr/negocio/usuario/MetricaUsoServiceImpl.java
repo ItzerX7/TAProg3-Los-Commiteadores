@@ -1,5 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.usuario;
 
+import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import com.pucp.gestionlentesvr.persistencia.dao.usuario.MetricaUsoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.usuario.MetricaUsoDAOImpl;
@@ -80,5 +82,13 @@ public class MetricaUsoServiceImpl implements MetricaUsoService {
     public List<MetricaUso> listarMetricaUso() throws Exception {
         return metricaUsoDAO.listarTodos();
     }
-
+    public Aplicacion obtenerAppMasUsada(){
+        return metricaUsoDAO.obtenerAppMasUsada();
+    }
+    public Dispositivo obtenerDispositivoMasUsado(){
+        return metricaUsoDAO.obtenerDispositivoMasUsado();
+    }
+    public Dispositivo obtenerDispositivoMenosUsado(){
+        return metricaUsoDAO.obtenerDispositivoMenosUsado();
+    }
 }

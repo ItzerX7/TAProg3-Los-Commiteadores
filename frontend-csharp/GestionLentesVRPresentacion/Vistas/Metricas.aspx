@@ -11,6 +11,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Dispositivo más usado</h5>
                     <p class="card-text" id="lblMasUsado">-</p>
+                    <asp:Label ID="lblMasUsadoData" runat="server" CssClass="card-text" Text="–" />
                 </div>
             </div>
         </div>
@@ -19,6 +20,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Dispositivo más inactivo</h5>
                     <p class="card-text" id="lblMenosUsado">-</p>
+                    <asp:Label ID="lblMenosUsadoData" runat="server" CssClass="card-text" Text="–" />
                 </div>
             </div>
         </div>
@@ -27,6 +29,7 @@
                 <div class="card-body">
                     <h5 class="card-title">App más ejecutada</h5>
                     <p class="card-text" id="lblAppPopular">-</p>
+                    <asp:Label ID="lblAppPopularData" runat="server" CssClass="card-text" Text="–" />
                 </div>
             </div>
         </div>
@@ -70,13 +73,17 @@
             const graficoApps = new Chart(document.getElementById('graficoApps'), {
                 type: 'doughnut',
                 data: {
-                    labels: ['Educativa', 'Terapéutica', 'Entretenimiento'],
+                    etiquetas = <%= LabelsJson  %>;
+                    valores = <%= ValuesJson  %>;
+                    labels: etiquetas,
                     datasets: [{
-                        data: [40, 35, 25],
+                        data: valores,
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.6)',
                             'rgba(75, 192, 192, 0.6)',
-                            'rgba(255, 206, 86, 0.6)'
+                            'rgba(225, 206, 86, 0.6)',
+                            'rgba(15, 206, 86, 0.6)',
+                            'rgba(170, 206, 86, 0.6)'
                         ]
                     }]
                 }

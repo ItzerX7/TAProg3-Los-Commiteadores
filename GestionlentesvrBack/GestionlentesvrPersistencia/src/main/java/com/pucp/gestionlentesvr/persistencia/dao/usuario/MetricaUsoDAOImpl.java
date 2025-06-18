@@ -99,14 +99,16 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
             String query = "{CALL obtener_app_mas_ejecutada()}";
             CallableStatement cs = conn.prepareCall(query);
             ResultSet rs = cs.executeQuery();
-            app.setId(rs.getInt("aplicacionid"));
-            app.setNombre(rs.getString("nombre"));
-            app.setVersion(rs.getString("version"));
-            app.setDesarrollador(rs.getString("desarrollador"));
-            app.setDescripcion(rs.getString("descripcion"));
-            app.setTamanomb(rs.getDouble("tamanio"));
-            app.setCategoria(CategoriaAplicacion.valueOf(rs.getString("categoria")));
-            app.setActivo(rs.getString("activo").toCharArray()[0]);
+            if (rs.next()) {
+                app.setId(rs.getInt("aplicacionid"));
+                app.setNombre(rs.getString("nombre"));
+                app.setVersion(rs.getString("version"));
+                app.setDesarrollador(rs.getString("desarrollador"));
+                app.setDescripcion(rs.getString("descripcion"));
+                app.setTamanomb(rs.getDouble("tamanio"));
+                app.setCategoria(CategoriaAplicacion.valueOf(rs.getString("categoria")));
+                app.setActivo(rs.getString("activo").toCharArray()[0]);
+            }
         } catch (SQLException e) {
             throw new RuntimeException("Error al listar entidades", e);
         }
@@ -120,19 +122,22 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
             String query = "{CALL obtener_dispositivo_mas_usado()}";
             CallableStatement cs = conn.prepareCall(query);
             ResultSet rs = cs.executeQuery();
-            Grupo grupo = new Grupo();
-            dev.setGrupo(grupo);
-            dev.setId(rs.getInt("d.dispositivoid"));
-            dev.setNombre(rs.getString("d.nombre"));
-            dev.setModelo(rs.getString("d.modelo"));
-            dev.setFechaRegistro(rs.getDate("d.fecharegistro"));
-            dev.setNumeroSerie(rs.getString("d.numeroserie"));
-            dev.setUbicacion(rs.getString("d.ubicacion"));
-            dev.setActivo(rs.getString("d.activo").toCharArray()[0]);
-            dev.setNivelBateria(rs.getInt("d.nivelbateria"));
-            dev.setEstado(EstadoConexion.valueOf(rs.getString("d.estado_conexion")));
-            dev.setUltimaConexion(rs.getDate("d.ultimaconexion"));
-            dev.getGrupo().setId(rs.getInt("d.grupo_grupoid"));
+            if (rs.next()) {
+                Grupo grupo = new Grupo();
+                dev.setGrupo(grupo);
+                dev.setId(rs.getInt("dispositivoid"));
+                dev.setNombre(rs.getString("nombre"));
+                dev.setModelo(rs.getString("modelo"));
+                dev.setFechaRegistro(rs.getDate("fecharegistro"));
+                dev.setNumeroSerie(rs.getString("numeroserie"));
+                dev.setUbicacion(rs.getString("ubicacion"));
+                dev.setActivo(rs.getString("activo").toCharArray()[0]);
+                dev.setNivelBateria(rs.getInt("nivelbateria"));
+                dev.setEstado(EstadoConexion.valueOf(rs.getString("estado_conexion")));
+                dev.setUltimaConexion(rs.getDate("ultimaconexion"));
+                dev.getGrupo().setId(rs.getInt("grupo_grupoid"));
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException("Error al listar entidades", e);
         }
@@ -141,15 +146,27 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
 
     @Override
     public Dispositivo obtenerDispositivoMenosUsado() {
- Dispositivo dev = new Dispositivo();
+        Dispositivo dev = new Dispositivo();
         try (Connection conn = DBManager.getInstance().obtenerConexion();) {
             String query = "{CALL obtener_dispositivo_menos_usado()}";
             CallableStatement cs = conn.prepareCall(query);
             ResultSet rs = cs.executeQuery();
-            Grupo grupo = new Grupo();
-            dev.setGrupo(grupo);
-            dev.setId(rs.getInt("dispositivoid"));
-            dev.setNombre(rs.getString("nombre"));
+            if (rs.next()) {
+                Grupo grupo = new Grupo();
+                dev.setGrupo(grupo);
+                dev.setId(rs.getInt("dispositivoid"));
+                dev.setNombre(rs.getString("nombre"));
+                dev.setModelo(rs.getString("modelo"));
+                dev.setFechaRegistro(rs.getDate("fecharegistro"));
+                dev.setNumeroSerie(rs.getString("numeroserie"));
+                dev.setUbicacion(rs.getString("ubicacion"));
+                dev.setActivo(rs.getString("activo").toCharArray()[0]);
+                dev.setNivelBateria(rs.getInt("nivelbateria"));
+                dev.setEstado(EstadoConexion.valueOf(rs.getString("estado_conexion")));
+                dev.setUltimaConexion(rs.getDate("ultimaconexion"));
+                dev.getGrupo().setId(rs.getInt("grupo_grupoid"));
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException("Error al listar entidades", e);
         }

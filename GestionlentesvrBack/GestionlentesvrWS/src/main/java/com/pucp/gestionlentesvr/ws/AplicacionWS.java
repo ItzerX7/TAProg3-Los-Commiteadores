@@ -66,4 +66,13 @@ public class AplicacionWS {
             throw new WebServiceException("Error al listar" + ex.getMessage());
         }
     }
+    
+    @WebMethod(operationName = "eliminarAplicacionesPorDispositivo")
+    public void eliminarAplicacionesPorDispositivo() throws Exception {
+        try {
+            service.eliminarAplicacionesPorDispositivo();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
 }

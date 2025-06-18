@@ -1,11 +1,8 @@
-﻿using FrontVR.GestionlentesvrWS;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Globalization;
-using System.Linq;
-using System.Web.Services.Description;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using FrontVR.GestionlentesvrWS;
 
 namespace FrontVR.Vistas
 {
@@ -22,21 +19,6 @@ namespace FrontVR.Vistas
         {
             if (!IsPostBack)
             {
-                if (!string.IsNullOrEmpty(Request.QueryString["deleteId"]))
-                {
-                    int id = int.Parse(Request.QueryString["deleteId"]);
-                    try
-                    {
-                        aplicacionWSClient.eliminarAplicacion(id);
-                    }
-                    catch (System.Exception ex)
-                    {
-                        // Logging o manejo de error
-                        System.Diagnostics.Debug.WriteLine($"[Eliminar Error] {ex.Message}");
-                    }
-                    Response.Redirect("Aplicaciones.aspx"); // Recarga limpia
-                }
-
                 BindGrid();
             }
         }
@@ -88,7 +70,7 @@ namespace FrontVR.Vistas
 
                 ScriptManager.RegisterStartupScript(
                     this, GetType(), "CerrarModal",
-                    "$('#modalNuevaApp').modal('hide');", true);
+                    "$('#modalAplicacion').modal('hide');", true);
 
                 BindGrid();
             }
@@ -102,17 +84,20 @@ namespace FrontVR.Vistas
         private void ClearModal()
         {
             txtNombre.Text = txtVersion.Text = txtTamano.Text = string.Empty;
+            txtDescripcion.Text =  txtDesarrollador.Text =  ddlCategoria.SelectedValue = string.Empty;
             lblError.Visible = false;
         }
 
         // ========= ACCIONES =========
         protected void gvAplicaciones_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            int id = int.Parse(gvAplicaciones.DataKeys[index].Value.ToString());
+            int id = Convert.ToInt32(e.CommandArgument);
+            //int id = int.Parse(gvAplicaciones.DataKeys[index].Value.ToString());
             
             if (e.CommandName == "EditarApp")
             {
+                // Log para depuración
+                System.Diagnostics.Debug.WriteLine($"[EditarApp] ID: {id}");
                 var app = aplicacionWSClient.obtenerAplicacion(id);
 
                 hfIdAplicacion.Value = app.id.ToString();
@@ -123,7 +108,11 @@ namespace FrontVR.Vistas
                 txtDesarrollador.Text = app.desarrollador;
                 ddlCategoria.SelectedValue = app.categoria.ToString();
 
-                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalAplicacion').modal('show');", true);
+                //ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalAplicacion').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", @"
+                    document.getElementById('modalNuevaAppLabel').textContent = 'Editar aplicación';
+                    var modal = new bootstrap.Modal(document.getElementById('modalAplicacion'));
+                    modal.show();", true);
             }
             else if (e.CommandName == "EliminarApp")
             {
@@ -145,29 +134,5 @@ namespace FrontVR.Vistas
             bool activo = (estado == "s" || estado == "true");
             return activo ? "Instalada" : "Disponible";
         }
-
-        private void LimpiarFormulario()
-        {
-            hfIdAplicacion.Value = "";
-            txtNombre.Text = "";
-            txtVersion.Text = "";
-            txtTamano.Text = "";
-            txtDescripcion.Text = "";
-            txtDesarrollador.Text = "";
-            ddlCategoria.SelectedValue = "";
-            lblError.Visible = false;
-        }
-
-        //protected string GetBadgeCss(object activoObj)
-        //{
-        //    bool activo = true;// (bool)activoObj;
-        //    return activo ? "badge bg-success" : "badge bg-secondary";
-        //}
-
-        //protected string GetEstadoTexto(object activoObj)
-        //{
-        //    //return ((bool)activoObj) ? "Instalada" : "Disponible";
-        //    return true ? "Instalada" : "Disponible";
-        //}
     }
 }

@@ -7,7 +7,7 @@
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="page-title mb-3">Aplicaciones disponibles</h2>
 
-    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalNuevaApp">
+    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalAplicacion">
         <i class="fa fa-plus"></i>Nueva aplicación
     </button>
 
@@ -26,7 +26,7 @@
                         CssClass='<%# GetBadgeCss(Eval("activo")) %>' />
                 </ItemTemplate>
             </asp:TemplateField>
-            
+
 
             <asp:TemplateField HeaderText="Acciones" ItemStyle-HorizontalAlign="Left">
                 <ItemTemplate>
@@ -46,7 +46,7 @@
                         Text="Eliminar"
                         CssClass="btn btn-sm btn-danger" />
                 </ItemTemplate>
-                
+
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
@@ -129,4 +129,10 @@
             </div>
         </div>
     </div>
+    <script>
+        const modalDispositivo = document.getElementById('modalAplicacion');
+        modalDispositivo.addEventListener('hidden.bs.modal', function () {
+            document.getElementById('modalNuevaAppLabel').textContent = 'Nueva aplicación';
+        });
+    </script>
 </asp:Content>

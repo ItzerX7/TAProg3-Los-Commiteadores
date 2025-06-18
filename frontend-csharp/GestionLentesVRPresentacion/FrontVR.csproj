@@ -342,6 +342,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\VR_Welcome.png" />
+    <Content Include="Vistas\Actividades.aspx" />
     <Content Include="Vistas\Aplicaciones.aspx" />
     <Content Include="Vistas\Dispositivos.aspx" />
     <Content Include="Vistas\Metricas.aspx" />
@@ -458,6 +459,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Actividades.aspx.cs">
+      <DependentUpon>Actividades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Actividades.aspx.designer.cs">
+      <DependentUpon>Actividades.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Aplicaciones.aspx.cs">
       <DependentUpon>Aplicaciones.aspx</DependentUpon>

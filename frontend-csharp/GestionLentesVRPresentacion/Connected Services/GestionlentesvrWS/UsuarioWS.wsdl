@@ -5,20 +5,20 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/UsuarioWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="actualizarUsuario">
-    <part name="parameters" element="tns:actualizarUsuario" />
-  </message>
-  <message name="actualizarUsuarioResponse">
-    <part name="parameters" element="tns:actualizarUsuarioResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
   <message name="registrarUsuario">
     <part name="parameters" element="tns:registrarUsuario" />
   </message>
   <message name="registrarUsuarioResponse">
     <part name="parameters" element="tns:registrarUsuarioResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="actualizarUsuario">
+    <part name="parameters" element="tns:actualizarUsuario" />
+  </message>
+  <message name="actualizarUsuarioResponse">
+    <part name="parameters" element="tns:actualizarUsuarioResponse" />
   </message>
   <message name="obtenerUsuario">
     <part name="parameters" element="tns:obtenerUsuario" />
@@ -39,15 +39,15 @@
     <part name="parameters" element="tns:eliminarUsuarioResponse" />
   </message>
   <portType name="UsuarioWS">
-    <operation name="actualizarUsuario">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="registrarUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="obtenerUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest" message="tns:obtenerUsuario" />
@@ -67,7 +67,7 @@
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarUsuario">
+    <operation name="registrarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -79,7 +79,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="registrarUsuario">
+    <operation name="actualizarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ActividadWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="actualizarActividad">
-    <part name="parameters" element="tns:actualizarActividad" />
+  <message name="obtenerActividad">
+    <part name="parameters" element="tns:obtenerActividad" />
   </message>
-  <message name="actualizarActividadResponse">
-    <part name="parameters" element="tns:actualizarActividadResponse" />
+  <message name="obtenerActividadResponse">
+    <part name="parameters" element="tns:obtenerActividadResponse" />
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
@@ -26,23 +26,23 @@
   <message name="eliminarActividadResponse">
     <part name="parameters" element="tns:eliminarActividadResponse" />
   </message>
-  <message name="obtenerActividad">
-    <part name="parameters" element="tns:obtenerActividad" />
-  </message>
-  <message name="obtenerActividadResponse">
-    <part name="parameters" element="tns:obtenerActividadResponse" />
-  </message>
   <message name="listarActividad">
     <part name="parameters" element="tns:listarActividad" />
   </message>
   <message name="listarActividadResponse">
     <part name="parameters" element="tns:listarActividadResponse" />
   </message>
+  <message name="actualizarActividad">
+    <part name="parameters" element="tns:actualizarActividad" />
+  </message>
+  <message name="actualizarActividadResponse">
+    <part name="parameters" element="tns:actualizarActividadResponse" />
+  </message>
   <portType name="ActividadWS">
-    <operation name="actualizarActividad">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest" message="tns:actualizarActividad" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse" message="tns:actualizarActividadResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="obtenerActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadRequest" message="tns:obtenerActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadResponse" message="tns:obtenerActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="registrarActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadRequest" message="tns:registrarActividad" />
@@ -54,20 +54,20 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadResponse" message="tns:eliminarActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="obtenerActividad">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadRequest" message="tns:obtenerActividad" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadResponse" message="tns:obtenerActividadResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividad/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="listarActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="actualizarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest" message="tns:actualizarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse" message="tns:actualizarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
   </portType>
   <binding name="ActividadWSPortBinding" type="tns:ActividadWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarActividad">
+    <operation name="obtenerActividad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -103,7 +103,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerActividad">
+    <operation name="listarActividad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,7 +115,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="listarActividad">
+    <operation name="actualizarActividad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

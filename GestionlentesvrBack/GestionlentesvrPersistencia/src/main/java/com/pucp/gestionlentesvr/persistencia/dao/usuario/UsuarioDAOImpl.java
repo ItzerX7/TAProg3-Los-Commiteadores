@@ -47,7 +47,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getSelectByIdPS(Connection conn, Integer id) throws SQLException {
-        String query = "{CALL obtener_usuario(?)}";
+        String query = "{CALL obtener_usuario()}";
         CallableStatement cs = conn.prepareCall(query);
         cs.setInt(1, id);
         return cs;
@@ -55,7 +55,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
-        String query = "{CALL listar_usuario(?)}";
+        String query = "{CALL listar_usuarios(?)}";
         CallableStatement cs = conn.prepareCall(query);
         return cs;
     }

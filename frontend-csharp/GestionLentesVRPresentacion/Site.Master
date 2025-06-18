@@ -68,9 +68,9 @@
                 <a class="active" href="PantallaInicio.aspx"><i class="fas fa-chart-line"></i> Dashboard</a>
                 <a href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</a>
                 <a href="Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos</a>
-                <a href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</a>
+                <a id="lnkAplicaciones"  runat="server" href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</a>
                 <a href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Métricas</a>
-                <a href="Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</a>
+                <a id="lnkActividades"  runat="server" href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</a>
                 <a href="Administracion.aspx"><i class="fas fa-user-shield"></i> Administración</a>
                 <a href="Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</a>
 

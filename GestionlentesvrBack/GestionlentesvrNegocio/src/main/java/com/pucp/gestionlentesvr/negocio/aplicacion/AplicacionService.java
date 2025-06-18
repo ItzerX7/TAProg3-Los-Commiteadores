@@ -18,4 +18,6 @@ public interface AplicacionService {
     public void eliminarAplicacionesPorDispositivo();
     
     public List<Aplicacion> listarAplicacionesConDispositivos(int idAplicacion) throws Exception;
+    
+    public List<Integer> contarAplicacionesPorTipoEnMetricas();
 }

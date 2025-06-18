@@ -97,7 +97,7 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
 
     @Override
     public List<Aplicacion> listarAplicacionesConDispositivos(Integer id) {
-            List<Aplicacion> apps= new ArrayList<>();
+        List<Aplicacion> apps= new ArrayList<>();
         try (Connection conn = DBManager.getInstance().obtenerConexion();) {
             String query = "{CALL listarAplicacionesPorDispositivos(?)}";
             CallableStatement cs = conn.prepareCall(query); 
@@ -110,6 +110,22 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
             throw new RuntimeException("Error al listar entidades", e);
         }
         return apps;
+    }
+
+    @Override
+    public List<Integer> contarAplicacionesPorTipoEnMetricas() {
+        List<Integer> cantidades= new ArrayList<>();
+         try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL contarAplicacionesPorTipoEnMetricas()}";
+            CallableStatement cs = conn.prepareCall(query); 
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                cantidades.add(rs.getInt("cantidad"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar entidades", e);
+        }
+        return cantidades;
     }
 
 }

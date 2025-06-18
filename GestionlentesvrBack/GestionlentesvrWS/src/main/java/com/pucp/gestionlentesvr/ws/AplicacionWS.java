@@ -84,4 +84,12 @@ public class AplicacionWS {
             throw new WebServiceException("Error al listar" + ex.getMessage());
         }
     }
+    @WebMethod(operationName = "contarAplicacionesPorTipoEnMetricas")
+    public List<Integer> contarAplicacionesPorTipoEnMetricas() throws Exception {
+        try {
+            return service.contarAplicacionesPorTipoEnMetricas();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
 }

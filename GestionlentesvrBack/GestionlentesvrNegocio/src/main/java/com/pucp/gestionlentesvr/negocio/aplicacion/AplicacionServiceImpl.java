@@ -97,4 +97,9 @@ public class AplicacionServiceImpl implements AplicacionService {
        aplicacionDAO.eliminarAplicacionesPorDispositivo();;
     }
 
+    @Override
+    public List<Integer> contarAplicacionesPorTipoEnMetricas() {
+        return aplicacionDAO.contarAplicacionesPorTipoEnMetricas();
+    }
+
 }

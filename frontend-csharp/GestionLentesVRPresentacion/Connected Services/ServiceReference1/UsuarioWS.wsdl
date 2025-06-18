@@ -20,6 +20,12 @@
   <message name="obtenerUsuarioResponse">
     <part name="parameters" element="tns:obtenerUsuarioResponse" />
   </message>
+  <message name="actualizarUsuario">
+    <part name="parameters" element="tns:actualizarUsuario" />
+  </message>
+  <message name="actualizarUsuarioResponse">
+    <part name="parameters" element="tns:actualizarUsuarioResponse" />
+  </message>
   <message name="listarUsuario">
     <part name="parameters" element="tns:listarUsuario" />
   </message>
@@ -32,12 +38,6 @@
   <message name="registrarUsuarioResponse">
     <part name="parameters" element="tns:registrarUsuarioResponse" />
   </message>
-  <message name="actualizarUsuario">
-    <part name="parameters" element="tns:actualizarUsuario" />
-  </message>
-  <message name="actualizarUsuarioResponse">
-    <part name="parameters" element="tns:actualizarUsuarioResponse" />
-  </message>
   <portType name="UsuarioWS">
     <operation name="eliminarUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
@@ -49,6 +49,11 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse" message="tns:obtenerUsuarioResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="actualizarUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="listarUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioRequest" message="tns:listarUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioResponse" message="tns:listarUsuarioResponse" />
@@ -58,11 +63,6 @@
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="actualizarUsuario">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
@@ -91,6 +91,18 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+    <operation name="actualizarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
     <operation name="listarUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -104,18 +116,6 @@
       </fault>
     </operation>
     <operation name="registrarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="actualizarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

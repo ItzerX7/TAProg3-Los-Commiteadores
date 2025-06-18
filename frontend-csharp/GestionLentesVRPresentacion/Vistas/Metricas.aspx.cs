@@ -63,8 +63,6 @@ namespace FrontVR.Vistas
             // serializa a JSON para inyectar en JS
             LabelsJson = JsonConvert.SerializeObject(nombres);
             ValuesJson = JsonConvert.SerializeObject(cantidades);
-
-            // var apps = servicio.listarAppsConContador();
             // Retornarías nombre y cantidad para el gráfico tipo doughnut
         }
     }

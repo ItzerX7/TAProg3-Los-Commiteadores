@@ -348,6 +348,9 @@
     <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.obtenerDispositivoMenosUsadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\FrontVR.ServiceReference1.listarDispositivosPorAplicacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServiceReference1\GrupoWS.xsd">
       <SubType>Designer</SubType>
     </None>

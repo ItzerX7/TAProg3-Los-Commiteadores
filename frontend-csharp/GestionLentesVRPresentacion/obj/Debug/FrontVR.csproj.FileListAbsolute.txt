@@ -94,8 +94,6 @@ C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesV
 C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.pdb
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.csproj.AssemblyReference.cache
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.csproj.CoreCompileInputs.cache
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.dll
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.pdb
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\FrontVR.dll.config
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\FrontVR.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\FrontVR.pdb
@@ -186,3 +184,5 @@ C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\es\System.Web.Optimization.resources.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\es\Microsoft.AspNet.FriendlyUrls.resources.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.csproj.Up2Date
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.dll
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.pdb

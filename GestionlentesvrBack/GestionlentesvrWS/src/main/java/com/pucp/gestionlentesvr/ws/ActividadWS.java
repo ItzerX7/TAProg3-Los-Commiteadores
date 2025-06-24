@@ -9,6 +9,7 @@ import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.xml.ws.WebServiceException;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
@@ -98,6 +99,8 @@ public class ActividadWS {
             // params.put("logo", ImageIO.read(new File(getFileResource("pucp_logo.png"))));
 
             String fileXML = getFileResource("Leaf_Green.jrxml");
+
+
             return generarBufferFromJP(fileXML, params);
 
         } catch (Exception ex) {

@@ -3,23 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\hp\\desktop\\universidad\\ciclo 6\\prog3\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\hp\\desktop\\universidad\\ciclo 6\\prog3\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\hp\\desktop\\universidad\\ciclo 6\\prog3\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\hp\\desktop\\universidad\\ciclo 6\\prog3\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\metricas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\metricas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\metricas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\hp\\desktop\\universidad\\ciclo 6\\prog3\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\metricas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\metricas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\metricas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +46,32 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Aplicaciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs*",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs*",
+              "ViewState": "AgIAAHkAAAAAAAAAAADwv4cAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T15:03:40.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Aplicaciones.aspx",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-24T15:03:23.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Dispositivos.aspx.designer.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.designer.cs",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.designer.cs",
@@ -46,12 +79,11 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T03:31:28.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T03:31:28.836Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Dispositivos.aspx",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
@@ -59,12 +91,11 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-24T03:31:22.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T03:31:22.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Metricas.aspx.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
@@ -72,12 +103,11 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAA9wBMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T01:42:39.4Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T01:42:39.4Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Metricas.aspx",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx",
@@ -85,21 +115,19 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-24T01:42:15.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T01:42:15.17Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Dispositivos.aspx.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
               "ToolTip": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAwDYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAcwDQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T22:42:06.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T22:42:06.714Z"
             }
           ]
         }

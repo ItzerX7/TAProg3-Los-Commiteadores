@@ -128,8 +128,9 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
             }
         } catch (SQLException e) {
             throw new RuntimeException("Error al listar entidades", e);
+        }   finally{
+            return dis;
         }
-        return dis;
     }
 
     @Override

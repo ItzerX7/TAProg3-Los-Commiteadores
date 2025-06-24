@@ -1,10 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
-<<<<<<< HEAD
-=======
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import java.util.List;
 
 public interface AplicacionService {
@@ -18,8 +15,6 @@ public interface AplicacionService {
     Aplicacion obtenerAplicacion(int idAplicacion) throws Exception;
 
     List<Aplicacion> listarAplicacion() throws Exception;
-<<<<<<< HEAD
-=======
     
     public void eliminarAplicacionesPorDispositivo();
     
@@ -29,5 +24,4 @@ public interface AplicacionService {
     
     public List<Dispositivo> listarDispositivosPorAplicaciones(Integer id);
     
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 }

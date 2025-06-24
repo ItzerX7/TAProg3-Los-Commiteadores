@@ -1,11 +1,5 @@
 package com.pucp.gestionlentesvr.persistencia.dao.usuario;
 
-<<<<<<< HEAD
-import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
-import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
-import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
-import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
-=======
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
 import com.pucp.gestionlentesvr.dominio.aplicacion.CategoriaAplicacion;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
@@ -16,25 +10,18 @@ import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.DBManager;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-<<<<<<< HEAD
-
-public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements MetricaUsoDAO {
-
-=======
 import java.util.ArrayList;
 import java.util.List;
 
 public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements MetricaUsoDAO {
 
     private DispositivoDAOImpl disDAO = new DispositivoDAOImpl();
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     @Override
     protected CallableStatement getInsertPS(Connection conn, MetricaUso entity) throws SQLException {
         String query = "{CALL insertar_metricauso(?, ?, ?, ?, ?, ?)}";
@@ -106,9 +93,6 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
     protected void setId(MetricaUso entity, Integer id) {
         entity.setId(id);
     }
-<<<<<<< HEAD
-}
-=======
 
     @Override
     public Aplicacion obtenerAppMasUsada() {
@@ -191,4 +175,3 @@ public class MetricaUsoDAOImpl extends BaseDAOImpl<MetricaUso> implements Metric
         return dev;
     }
 }
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)

@@ -1,9 +1,6 @@
 package com.pucp.gestionlentesvr.persistencia.dao.usuario;
 
-<<<<<<< HEAD
-=======
 import com.pucp.gestionlentesvr.dominio.usuario.Rol;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import java.sql.CallableStatement;
@@ -58,11 +55,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
-<<<<<<< HEAD
-        String query = "{CALL listar_usuario(?)}";
-=======
         String query = "{CALL listar_usuarios()}";
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         CallableStatement cs = conn.prepareCall(query);
         return cs;
     }
@@ -70,10 +63,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
     @Override
     protected Usuario createFromResultSet(ResultSet rs) throws SQLException {
         Usuario usuario = new Usuario();
-<<<<<<< HEAD
-=======
         usuario.setRol(new Rol());
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         usuario.setId(rs.getInt("usuarioid"));
         usuario.setNombre(rs.getString("nombre"));
         usuario.setApellido(rs.getString("apellido"));
@@ -81,15 +71,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
         usuario.setContrasena(rs.getString("contrasena"));
         usuario.setFechaCreacion(rs.getDate("fechacreacion"));
         usuario.getRol().setId(rs.getInt("rol_rolid"));
-<<<<<<< HEAD
-        if (rs.getString("activo").compareTo("s") == 0) {
-            usuario.setActivo('s');
-        } else {
-            usuario.setActivo('n');
-        }
-=======
         usuario.setActivo(rs.getString("activo").toCharArray()[0]);
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         return usuario;
     }
 

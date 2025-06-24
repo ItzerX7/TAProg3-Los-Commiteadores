@@ -2,24 +2,17 @@ package com.pucp.gestionlentesvr.persistencia.dao.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
 import com.pucp.gestionlentesvr.dominio.aplicacion.CategoriaAplicacion;
-<<<<<<< HEAD
-import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
-=======
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
 import com.pucp.gestionlentesvr.persistencia.DBManager;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
-<<<<<<< HEAD
-=======
 import java.util.ArrayList;
 import java.util.List;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 
 public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements AplicacionDAO {
 
@@ -93,8 +86,6 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
         entity.setId(id);
     }
 
-<<<<<<< HEAD
-=======
     @Override
     public void eliminarAplicacionesPorDispositivo() {
         try (Connection conn = DBManager.getInstance().obtenerConexion();) {
@@ -137,8 +128,9 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
             }
         } catch (SQLException e) {
             throw new RuntimeException("Error al listar entidades", e);
+        }   finally{
+            return dis;
         }
-        return dis;
     }
 
     @Override
@@ -157,5 +149,4 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
         return cantidades;
     }
 
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 }

@@ -1,10 +1,7 @@
 package com.pucp.gestionlentesvr.ws;
 
-<<<<<<< HEAD
-=======
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import com.pucp.gestionlentesvr.negocio.usuario.MetricaUsoService;
 import com.pucp.gestionlentesvr.negocio.usuario.MetricaUsoServiceImpl;
@@ -72,8 +69,6 @@ public class MetricaUsoWS {
             throw new WebServiceException("Error al listar" + ex.getMessage());
         }
     }
-<<<<<<< HEAD
-=======
 
     @WebMethod(operationName = "obtenerAppMasUsada")
     public Aplicacion obtenerAppMasUsada() throws Exception {
@@ -104,5 +99,4 @@ public class MetricaUsoWS {
             throw new WebServiceException("Error al obtenerDispositivoMenosUsado" + ex.getMessage());
         }
     }
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 }

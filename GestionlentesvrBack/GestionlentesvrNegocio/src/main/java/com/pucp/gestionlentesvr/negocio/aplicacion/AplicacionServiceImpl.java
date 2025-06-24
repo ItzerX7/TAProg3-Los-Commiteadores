@@ -1,10 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
-<<<<<<< HEAD
-=======
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import com.pucp.gestionlentesvr.persistencia.dao.aplicacion.AplicacionDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.aplicacion.AplicacionDAOImpl;
 import java.util.List;
@@ -85,22 +82,17 @@ public class AplicacionServiceImpl implements AplicacionService {
         }
         return aplicacion;
     }
-<<<<<<< HEAD
-=======
     
     @Override
     public List<Aplicacion> listarAplicacionesConDispositivos(int idAplicacion) throws Exception {
         return aplicacionDAO.listarAplicacionesConDispositivos(idAplicacion);
     }
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 
     @Override
     public List<Aplicacion> listarAplicacion() throws Exception {
         return aplicacionDAO.listarTodos();
     }
 
-<<<<<<< HEAD
-=======
     @Override
     public void eliminarAplicacionesPorDispositivo() {
        aplicacionDAO.eliminarAplicacionesPorDispositivo();;
@@ -116,5 +108,4 @@ public class AplicacionServiceImpl implements AplicacionService {
         return aplicacionDAO.listarDispositivosPorAplicaciones(id);
     }
 
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 }

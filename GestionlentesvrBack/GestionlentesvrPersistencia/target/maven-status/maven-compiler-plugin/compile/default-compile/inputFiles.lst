@@ -1,45 +1,21 @@
-<<<<<<< HEAD
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\BaseDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\DBManager.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\actividad\ActividadDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\aplicacion\AplicacionDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\MetricaUsoDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\UsuarioDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\configuracion\ConfiguracionDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\GrupoDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\FirmwareDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\UsuarioDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\configuracion\ConfiguracionDAO.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\FirmwareDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\MetricaUsoDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\actividad\ActividadDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\GrupoDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\RolDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\aplicacion\AplicacionDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\BaseDAOImpl.java
-C:\Users\Administrador\Documents\Progra3\TA PROGRA\entrega6\TAProg3-Los-Commiteadores-dev-marcelo\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\RolDAO.java
-=======
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\BaseDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\BaseDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\actividad\ActividadDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\actividad\ActividadDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\aplicacion\AplicacionDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\aplicacion\AplicacionDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\configuracion\ConfiguracionDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\configuracion\ConfiguracionDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\FirmwareDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\FirmwareDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\GrupoDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\GrupoDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\MetricaUsoDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\MetricaUsoDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\RolDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\RolDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\UsuarioDAO.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\UsuarioDAOImpl.java
-C:\Marcelo\JavaProjects\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\DBManager.java
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\BaseDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\BaseDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\actividad\ActividadDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\actividad\ActividadDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\aplicacion\AplicacionDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\aplicacion\AplicacionDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\configuracion\ConfiguracionDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\configuracion\ConfiguracionDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\DispositivoDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\FirmwareDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\FirmwareDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\GrupoDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\dispositivo\GrupoDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\MetricaUsoDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\MetricaUsoDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\RolDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\RolDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\UsuarioDAO.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\dao\usuario\UsuarioDAOImpl.java
+C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\GestionlentesvrBack\GestionlentesvrPersistencia\src\main\java\com\pucp\gestionlentesvr\persistencia\DBManager.java

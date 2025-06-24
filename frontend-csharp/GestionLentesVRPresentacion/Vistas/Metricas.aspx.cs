@@ -44,7 +44,7 @@ namespace FrontVR.Vistas
 
             // llamas a tu servicio que te devuelve la lista con nombre y contador
             // Aquí asumo que listarAppsConContador() retorna List<AppContadorDTO>
-            var apps = appservicio.contarAplicacionesPorTipoEnMetricas();
+            var apps = appservicio.contarAplicacionesPorTipoEnMetricas().ToList();
 
             // extraes dos arrays: uno de nombres, otro de conteos
             var nombres = new BindingList<string>
@@ -57,11 +57,10 @@ namespace FrontVR.Vistas
                 "SIMULACION",
                 "TERAPEUTICA"
             };
-            var cantidades = apps.ToList();
 
             // serializa a JSON para inyectar en JS
             LabelsJson = JsonConvert.SerializeObject(nombres);
-            ValuesJson = JsonConvert.SerializeObject(cantidades);
+            ValuesJson = JsonConvert.SerializeObject(apps);
             // Retornarías nombre y cantidad para el gráfico tipo doughnut
         }
     }

@@ -5,26 +5,14 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/RolWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="obtenerRol">
-    <part name="parameters" element="tns:obtenerRol" />
-  </message>
-  <message name="obtenerRolResponse">
-    <part name="parameters" element="tns:obtenerRolResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-  <message name="listarRol">
-    <part name="parameters" element="tns:listarRol" />
-  </message>
-  <message name="listarRolResponse">
-    <part name="parameters" element="tns:listarRolResponse" />
-  </message>
   <message name="registrarRol">
     <part name="parameters" element="tns:registrarRol" />
   </message>
   <message name="registrarRolResponse">
     <part name="parameters" element="tns:registrarRolResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
   </message>
   <message name="actualizarRol">
     <part name="parameters" element="tns:actualizarRol" />
@@ -38,17 +26,19 @@
   <message name="eliminarRolResponse">
     <part name="parameters" element="tns:eliminarRolResponse" />
   </message>
+  <message name="obtenerRol">
+    <part name="parameters" element="tns:obtenerRol" />
+  </message>
+  <message name="obtenerRolResponse">
+    <part name="parameters" element="tns:obtenerRolResponse" />
+  </message>
+  <message name="listarRol">
+    <part name="parameters" element="tns:listarRol" />
+  </message>
+  <message name="listarRolResponse">
+    <part name="parameters" element="tns:listarRolResponse" />
+  </message>
   <portType name="RolWS">
-    <operation name="obtenerRol">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolRequest" message="tns:obtenerRol" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolResponse" message="tns:obtenerRolResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRol/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="listarRol">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolRequest" message="tns:listarRol" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolResponse" message="tns:listarRolResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRol/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="registrarRol">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolRequest" message="tns:registrarRol" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolResponse" message="tns:registrarRolResponse" />
@@ -64,33 +54,19 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolResponse" message="tns:eliminarRolResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRol/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="obtenerRol">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolRequest" message="tns:obtenerRol" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRolResponse" message="tns:obtenerRolResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/obtenerRol/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarRol">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolRequest" message="tns:listarRol" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolResponse" message="tns:listarRolResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRol/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
   </portType>
   <binding name="RolWSPortBinding" type="tns:RolWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerRol">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarRol">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
     <operation name="registrarRol">
       <soap:operation soapAction="" />
       <input>
@@ -116,6 +92,30 @@
       </fault>
     </operation>
     <operation name="eliminarRol">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerRol">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarRol">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

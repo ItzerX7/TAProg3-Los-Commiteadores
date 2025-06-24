@@ -50,7 +50,7 @@ namespace FrontVR.Vistas
                     return;
                 }
 
-                grupo grupo = new grupo { id = 1 };
+                grupo grup = new grupo { id = 1 };
 
                 dispositivo d = new dispositivo
                 {
@@ -68,7 +68,7 @@ namespace FrontVR.Vistas
                     nivelBateria = 100, // Nuevo campo
                     estado = (estadoConexion)Enum.Parse(typeof(estadoConexion), ddlEstado.SelectedValue),
                     estadoSpecified = true,
-                    grupo = grupo,
+                    grupo = grup,
                     activo = 'S'
                 };
 

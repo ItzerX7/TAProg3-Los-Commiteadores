@@ -130,44 +130,44 @@ namespace FrontVR.Vistas
             // Limpiar tabla anterior
             phDispositivos.Controls.Clear();
 
-            // Usar el WS correcto
-            var dispositivos = aplicacionWSClient.listarDispositivosPorAplicaciones(idAplicacion);
+            //// Usar el WS correcto
+            //var dispositivos = aplicacionWSClient.listarDispositivosPorAplicaciones(idAplicacion);
 
-            if (dispositivos != null && dispositivos.Length > 0)
-            {
-                StringBuilder html = new StringBuilder();
+            //if (dispositivos != null && dispositivos.Length > 0)
+            //{
+            //    StringBuilder html = new StringBuilder();
 
-                html.Append("<h4 class='mt-4'>Dispositivos vinculados</h4>");
-                html.Append("<table class='table table-bordered table-dark mt-2'>");
-                html.Append("<thead><tr>");
-                html.Append("<th>Nombre</th>");
-                html.Append("<th>Modelo</th>");
-                html.Append("<th>Número de Serie</th>");
-                html.Append("<th>Estado</th>");
-                html.Append("</tr></thead>");
-                html.Append("<tbody>");
+            //    html.Append("<h4 class='mt-4'>Dispositivos vinculados</h4>");
+            //    html.Append("<table class='table table-bordered table-dark mt-2'>");
+            //    html.Append("<thead><tr>");
+            //    html.Append("<th>Nombre</th>");
+            //    html.Append("<th>Modelo</th>");
+            //    html.Append("<th>Número de Serie</th>");
+            //    html.Append("<th>Estado</th>");
+            //    html.Append("</tr></thead>");
+            //    html.Append("<tbody>");
 
-                foreach (var dispositivo in dispositivos)
-                {
-                    html.Append("<tr>");
-                    html.AppendFormat("<td>{0}</td>", dispositivo.nombre);
-                    html.AppendFormat("<td>{0}</td>", dispositivo.modelo);
-                    html.AppendFormat("<td>{0}</td>", dispositivo.numeroSerie);
-                    html.AppendFormat("<td>{0}</td>", dispositivo.estado.ToString());
-                    html.Append("</tr>");
-                }
+            //    foreach (var dispositivo in dispositivos)
+            //    {
+            //        html.Append("<tr>");
+            //        html.AppendFormat("<td>{0}</td>", dispositivo.nombre);
+            //        html.AppendFormat("<td>{0}</td>", dispositivo.modelo);
+            //        html.AppendFormat("<td>{0}</td>", dispositivo.numeroSerie);
+            //        html.AppendFormat("<td>{0}</td>", dispositivo.estado.ToString());
+            //        html.Append("</tr>");
+            //    }
 
-                html.Append("</tbody></table>");
+            //    html.Append("</tbody></table>");
 
-                phDispositivos.Controls.Add(new Literal { Text = html.ToString() });
-            }
-            else
-            {
-                phDispositivos.Controls.Add(new Literal
-                {
-                    Text = "<div class='alert alert-info mt-3'>No se encontraron dispositivos para esta aplicación.</div>"
-                });
-            }
+            //    phDispositivos.Controls.Add(new Literal { Text = html.ToString() });
+            //}
+            //else
+            //{
+            //    phDispositivos.Controls.Add(new Literal
+            //    {
+            //        Text = "<div class='alert alert-info mt-3'>No se encontraron dispositivos para esta aplicación.</div>"
+            //    });
+            //}
         }
 
         protected string GetBadgeCss(object activoObj)

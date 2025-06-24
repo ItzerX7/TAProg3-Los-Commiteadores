@@ -93,13 +93,10 @@
                                         OnClick="btnGuardarGrupo_Click" />
                         </div>
                     </ContentTemplate>
-<<<<<<< HEAD
-=======
 
                     <Triggers>
                         <asp:AsyncPostBackTrigger ControlID="gvGrupos" EventName="RowCommand" />
                     </Triggers>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
                 </asp:UpdatePanel>
             </div>
         </div>
@@ -132,8 +129,4 @@
             document.getElementById('modalGrupoLabel').textContent = 'Nuevo grupo';
         });
     </script>
-<<<<<<< HEAD
 </asp:Content>
-=======
-</asp:Content>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)

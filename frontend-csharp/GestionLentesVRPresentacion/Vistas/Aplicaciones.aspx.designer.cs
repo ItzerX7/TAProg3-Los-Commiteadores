@@ -24,8 +24,6 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.GridView gvAplicaciones;
 
         /// <summary>
-<<<<<<< HEAD
-=======
         /// phDispositivos control.
         /// </summary>
         /// <remarks>
@@ -35,7 +33,6 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.PlaceHolder phDispositivos;
 
         /// <summary>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         /// upModal control.
         /// </summary>
         /// <remarks>

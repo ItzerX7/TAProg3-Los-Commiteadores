@@ -11,10 +11,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Dispositivo más usado</h5>
                     <p class="card-text" id="lblMasUsado">-</p>
-<<<<<<< HEAD
-=======
                     <asp:Label ID="lblMasUsadoData" runat="server" CssClass="card-text" Text="–" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
                 </div>
             </div>
         </div>
@@ -23,10 +20,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Dispositivo más inactivo</h5>
                     <p class="card-text" id="lblMenosUsado">-</p>
-<<<<<<< HEAD
-=======
                     <asp:Label ID="lblMenosUsadoData" runat="server" CssClass="card-text" Text="–" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
                 </div>
             </div>
         </div>
@@ -35,10 +29,7 @@
                 <div class="card-body">
                     <h5 class="card-title">App más ejecutada</h5>
                     <p class="card-text" id="lblAppPopular">-</p>
-<<<<<<< HEAD
-=======
                     <asp:Label ID="lblAppPopularData" runat="server" CssClass="card-text" Text="–" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
                 </div>
             </div>
         </div>
@@ -82,15 +73,6 @@
             const graficoApps = new Chart(document.getElementById('graficoApps'), {
                 type: 'doughnut',
                 data: {
-<<<<<<< HEAD
-                    labels: ['Educativa', 'Terapéutica', 'Entretenimiento'],
-                    datasets: [{
-                        data: [40, 35, 25],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.6)',
-                            'rgba(75, 192, 192, 0.6)',
-                            'rgba(255, 206, 86, 0.6)'
-=======
                     etiquetas = <%= LabelsJson  %>;
                     valores = <%= ValuesJson  %>;
                     labels: etiquetas,
@@ -102,7 +84,6 @@
                             'rgba(225, 206, 86, 0.6)',
                             'rgba(15, 206, 86, 0.6)',
                             'rgba(170, 206, 86, 0.6)'
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
                         ]
                     }]
                 }

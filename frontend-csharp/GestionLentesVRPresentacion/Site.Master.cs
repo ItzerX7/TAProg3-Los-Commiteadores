@@ -11,9 +11,6 @@ namespace FrontVR
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            //LoginStatus1.Visible = Session["usuario"] != null;
-=======
             if (Session["usuario"] == null)
                 Response.Redirect("~/Login.aspx");
 
@@ -41,7 +38,6 @@ namespace FrontVR
             //        lnkActividades.Attributes["class"] = "nav-link active";
             //        break;
             //}
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

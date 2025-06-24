@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-﻿using System;
-=======
 ﻿using FrontVR.GestionlentesvrWS;
 using System;
 using System.Linq;
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 
 namespace FrontVR
 {
     public partial class Login : System.Web.UI.Page
     {
-<<<<<<< HEAD
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            if (Session["usuario"] != null)
-                Response.Redirect("~/Vistas/Pantallainicio.aspx");
-=======
         private UsuarioWSClient usuarioWSClient = new UsuarioWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,27 +15,10 @@ namespace FrontVR
                 var usuarioSesion = (usuario)Session["usuario"];
                 RedirigirSegunRol(usuarioSesion.rol.id);
             }
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            string usuario = txtUsuario.Text.Trim();
-            string clave = txtPassword.Text;
-
-            if (usuario == "admin" && clave == "123456")
-            {
-                Session["usuario"] = usuario;
-                Response.Redirect("~/Vistas/Pantallainicio.aspx");
-            }
-            else
-            {
-                lblError.Text = "Credenciales incorrectas.";
-                lblError.Visible = true;
-            }
-        }
-=======
             string usuarioInput = txtUsuario.Text.Trim();
             string claveInput = txtPassword.Text;
 
@@ -89,6 +62,5 @@ namespace FrontVR
             //else
                 Response.Redirect("~/Vistas/Pantallainicio.aspx"); // fallback
         }
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     }
 }

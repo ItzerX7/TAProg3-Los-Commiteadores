@@ -65,14 +65,14 @@
         <asp:ScriptManager runat="server" />
         <div class="wrapper">
             <div class="sidebar">
-                <a href="PantallaInicio.aspx"><i class="fas fa-chart-line"></i> Home</a>
-                <a href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</a>
-                <a href="/Vistas/Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos</a>
-                <a href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</a>
-                <a href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Métricas</a>
-                <a href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</a>
-                <a href="Administracion.aspx"><i class="fas fa-user-shield"></i> Usuarios</a>
-                <a href="/Vistas/Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</a>
+                <asp:HyperLink  runat="server" ID="lnkPantallaInicio" href="PantallaInicio.aspx"><i class="fas fa-chart-line"></i> Home</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkDispositivos" href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkGrupos" href="/Vistas/Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos </asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkAplicaciones" href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkMetrica" href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Mediciones</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkActividades" href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkAdministracion" href="Administracion.aspx"><i class="fas fa-user-shield"></i> Usuarios</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkConfiguracion" href="/Vistas/Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</asp:HyperLink>
 
                 <asp:LinkButton ID="btnLogout" runat="server" CssClass="sidebar-link"
                     OnClick="btnLogout_Click" CausesValidation="False">

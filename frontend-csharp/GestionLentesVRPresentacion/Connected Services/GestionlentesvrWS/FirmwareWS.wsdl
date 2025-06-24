@@ -5,19 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/FirmwareWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-<<<<<<< HEAD
   <message name="actualizarFirmware">
     <part name="parameters" element="tns:actualizarFirmware" />
   </message>
   <message name="actualizarFirmwareResponse">
     <part name="parameters" element="tns:actualizarFirmwareResponse" />
-=======
-  <message name="eliminarFirmware">
-    <part name="parameters" element="tns:eliminarFirmware" />
-  </message>
-  <message name="eliminarFirmwareResponse">
-    <part name="parameters" element="tns:eliminarFirmwareResponse" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
@@ -28,19 +20,11 @@
   <message name="registrarFirmwareResponse">
     <part name="parameters" element="tns:registrarFirmwareResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="eliminarFirmware">
-    <part name="parameters" element="tns:eliminarFirmware" />
-  </message>
-  <message name="eliminarFirmwareResponse">
-    <part name="parameters" element="tns:eliminarFirmwareResponse" />
-=======
   <message name="obtenerFirmware">
     <part name="parameters" element="tns:obtenerFirmware" />
   </message>
   <message name="obtenerFirmwareResponse">
     <part name="parameters" element="tns:obtenerFirmwareResponse" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   </message>
   <message name="listarFirmware">
     <part name="parameters" element="tns:listarFirmware" />
@@ -48,74 +32,42 @@
   <message name="listarFirmwareResponse">
     <part name="parameters" element="tns:listarFirmwareResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="obtenerFirmware">
-    <part name="parameters" element="tns:obtenerFirmware" />
+  <message name="eliminarFirmware">
+    <part name="parameters" element="tns:eliminarFirmware" />
   </message>
-  <message name="obtenerFirmwareResponse">
-    <part name="parameters" element="tns:obtenerFirmwareResponse" />
+  <message name="eliminarFirmwareResponse">
+    <part name="parameters" element="tns:eliminarFirmwareResponse" />
   </message>
   <portType name="FirmwareWS">
     <operation name="actualizarFirmware">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareRequest" message="tns:actualizarFirmware" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareResponse" message="tns:actualizarFirmwareResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
-  <message name="actualizarFirmware">
-    <part name="parameters" element="tns:actualizarFirmware" />
-  </message>
-  <message name="actualizarFirmwareResponse">
-    <part name="parameters" element="tns:actualizarFirmwareResponse" />
-  </message>
-  <portType name="FirmwareWS">
-    <operation name="eliminarFirmware">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareRequest" message="tns:eliminarFirmware" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareResponse" message="tns:eliminarFirmwareResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     </operation>
     <operation name="registrarFirmware">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmwareRequest" message="tns:registrarFirmware" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmwareResponse" message="tns:registrarFirmwareResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/registrarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-    <operation name="eliminarFirmware">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareRequest" message="tns:eliminarFirmware" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareResponse" message="tns:eliminarFirmwareResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
     <operation name="obtenerFirmware">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareRequest" message="tns:obtenerFirmware" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareResponse" message="tns:obtenerFirmwareResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     </operation>
     <operation name="listarFirmware">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareRequest" message="tns:listarFirmware" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmwareResponse" message="tns:listarFirmwareResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/listarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-    <operation name="obtenerFirmware">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareRequest" message="tns:obtenerFirmware" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmwareResponse" message="tns:obtenerFirmwareResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/obtenerFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
-    <operation name="actualizarFirmware">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareRequest" message="tns:actualizarFirmware" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmwareResponse" message="tns:actualizarFirmwareResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/actualizarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
+    <operation name="eliminarFirmware">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareRequest" message="tns:eliminarFirmware" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmwareResponse" message="tns:eliminarFirmwareResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/FirmwareWS/eliminarFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
   </portType>
   <binding name="FirmwareWSPortBinding" type="tns:FirmwareWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< HEAD
     <operation name="actualizarFirmware">
-=======
-    <operation name="eliminarFirmware">
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -139,11 +91,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-    <operation name="eliminarFirmware">
-=======
     <operation name="obtenerFirmware">
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -167,11 +115,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-    <operation name="obtenerFirmware">
-=======
-    <operation name="actualizarFirmware">
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
+    <operation name="eliminarFirmware">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

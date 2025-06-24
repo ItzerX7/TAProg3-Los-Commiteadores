@@ -130,7 +130,7 @@ namespace FrontVR.Vistas
             // Limpiar tabla anterior
             phDispositivos.Controls.Clear();
 
-            // Usar el WS correcto
+            //// Usar el WS correcto
             var dispositivos = aplicacionWSClient.listarDispositivosPorAplicaciones(idAplicacion);
 
             if (dispositivos != null && dispositivos.Length > 0)

@@ -5,70 +5,56 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/AplicacionWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-<<<<<<< HEAD
   <message name="registrarAplicacion">
     <part name="parameters" element="tns:registrarAplicacion" />
   </message>
   <message name="registrarAplicacionResponse">
     <part name="parameters" element="tns:registrarAplicacionResponse" />
-=======
-  <message name="obtenerAplicacion">
-    <part name="parameters" element="tns:obtenerAplicacion" />
-  </message>
-  <message name="obtenerAplicacionResponse">
-    <part name="parameters" element="tns:obtenerAplicacionResponse" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
-<<<<<<< HEAD
   <message name="actualizarAplicacion">
     <part name="parameters" element="tns:actualizarAplicacion" />
   </message>
   <message name="actualizarAplicacionResponse">
     <part name="parameters" element="tns:actualizarAplicacionResponse" />
   </message>
-  <message name="listarAplicacion">
-    <part name="parameters" element="tns:listarAplicacion" />
-  </message>
-  <message name="listarAplicacionResponse">
-    <part name="parameters" element="tns:listarAplicacionResponse" />
-  </message>
-=======
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="eliminarAplicacion">
     <part name="parameters" element="tns:eliminarAplicacion" />
   </message>
   <message name="eliminarAplicacionResponse">
     <part name="parameters" element="tns:eliminarAplicacionResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="obtenerAplicacion">
-    <part name="parameters" element="tns:obtenerAplicacion" />
-  </message>
-  <message name="obtenerAplicacionResponse">
-    <part name="parameters" element="tns:obtenerAplicacionResponse" />
-  </message>
-  <portType name="AplicacionWS">
-=======
   <message name="listarAplicacion">
     <part name="parameters" element="tns:listarAplicacion" />
   </message>
   <message name="listarAplicacionResponse">
     <part name="parameters" element="tns:listarAplicacionResponse" />
   </message>
-  <message name="registrarAplicacion">
-    <part name="parameters" element="tns:registrarAplicacion" />
+  <message name="obtenerAplicacion">
+    <part name="parameters" element="tns:obtenerAplicacion" />
   </message>
-  <message name="registrarAplicacionResponse">
-    <part name="parameters" element="tns:registrarAplicacionResponse" />
+  <message name="obtenerAplicacionResponse">
+    <part name="parameters" element="tns:obtenerAplicacionResponse" />
   </message>
-  <message name="actualizarAplicacion">
-    <part name="parameters" element="tns:actualizarAplicacion" />
+  <message name="contarAplicacionesPorTipoEnMetricas">
+    <part name="parameters" element="tns:contarAplicacionesPorTipoEnMetricas" />
   </message>
-  <message name="actualizarAplicacionResponse">
-    <part name="parameters" element="tns:actualizarAplicacionResponse" />
+  <message name="contarAplicacionesPorTipoEnMetricasResponse">
+    <part name="parameters" element="tns:contarAplicacionesPorTipoEnMetricasResponse" />
+  </message>
+  <message name="listarDispositivosPorAplicaciones">
+    <part name="parameters" element="tns:listarDispositivosPorAplicaciones" />
+  </message>
+  <message name="listarDispositivosPorAplicacionesResponse">
+    <part name="parameters" element="tns:listarDispositivosPorAplicacionesResponse" />
+  </message>
+  <message name="listarAplicacionesConDispositivos">
+    <part name="parameters" element="tns:listarAplicacionesConDispositivos" />
+  </message>
+  <message name="listarAplicacionesConDispositivosResponse">
+    <part name="parameters" element="tns:listarAplicacionesConDispositivosResponse" />
   </message>
   <message name="eliminarAplicacionesPorDispositivo">
     <part name="parameters" element="tns:eliminarAplicacionesPorDispositivo" />
@@ -77,22 +63,6 @@
     <part name="parameters" element="tns:eliminarAplicacionesPorDispositivoResponse" />
   </message>
   <portType name="AplicacionWS">
-    <operation name="obtenerAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionRequest" message="tns:obtenerAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionResponse" message="tns:obtenerAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="eliminarAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionRequest" message="tns:eliminarAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionResponse" message="tns:eliminarAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="listarAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest" message="tns:listarAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse" message="tns:listarAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="registrarAplicacion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionRequest" message="tns:registrarAplicacion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionResponse" message="tns:registrarAplicacionResponse" />
@@ -103,70 +73,44 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionResponse" message="tns:actualizarAplicacionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-    <operation name="listarAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest" message="tns:listarAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse" message="tns:listarAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="eliminarAplicacion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionRequest" message="tns:eliminarAplicacion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionResponse" message="tns:eliminarAplicacionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="listarAplicacion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest" message="tns:listarAplicacion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse" message="tns:listarAplicacionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="obtenerAplicacion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionRequest" message="tns:obtenerAplicacion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionResponse" message="tns:obtenerAplicacionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-=======
+    </operation>
+    <operation name="contarAplicacionesPorTipoEnMetricas">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricasRequest" message="tns:contarAplicacionesPorTipoEnMetricas" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricasResponse" message="tns:contarAplicacionesPorTipoEnMetricasResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricas/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarDispositivosPorAplicaciones">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarDispositivosPorAplicacionesRequest" message="tns:listarDispositivosPorAplicaciones" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarDispositivosPorAplicacionesResponse" message="tns:listarDispositivosPorAplicacionesResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarDispositivosPorAplicaciones/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarAplicacionesConDispositivos">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionesConDispositivosRequest" message="tns:listarAplicacionesConDispositivos" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionesConDispositivosResponse" message="tns:listarAplicacionesConDispositivosResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionesConDispositivos/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="eliminarAplicacionesPorDispositivo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositivoRequest" message="tns:eliminarAplicacionesPorDispositivo" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositivoResponse" message="tns:eliminarAplicacionesPorDispositivoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     </operation>
   </portType>
   <binding name="AplicacionWSPortBinding" type="tns:AplicacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< HEAD
-=======
-    <operation name="obtenerAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="eliminarAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="registrarAplicacion">
       <soap:operation soapAction="" />
       <input>
@@ -191,19 +135,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-    <operation name="listarAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
     <operation name="eliminarAplicacion">
       <soap:operation soapAction="" />
       <input>
@@ -216,10 +147,67 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+    <operation name="listarAplicacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
     <operation name="obtenerAplicacion">
-=======
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="contarAplicacionesPorTipoEnMetricas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarDispositivosPorAplicaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarAplicacionesConDispositivos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
     <operation name="eliminarAplicacionesPorDispositivo">
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

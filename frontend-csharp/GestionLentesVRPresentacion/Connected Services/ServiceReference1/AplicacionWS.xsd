@@ -3,12 +3,6 @@
   <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="actualizarAplicacion" type="tns:actualizarAplicacion" />
   <xs:element name="actualizarAplicacionResponse" type="tns:actualizarAplicacionResponse" />
-<<<<<<< HEAD
-  <xs:element name="eliminarAplicacion" type="tns:eliminarAplicacion" />
-  <xs:element name="eliminarAplicacionResponse" type="tns:eliminarAplicacionResponse" />
-  <xs:element name="listarAplicacion" type="tns:listarAplicacion" />
-  <xs:element name="listarAplicacionResponse" type="tns:listarAplicacionResponse" />
-=======
   <xs:element name="contarAplicacionesPorTipoEnMetricas" type="tns:contarAplicacionesPorTipoEnMetricas" />
   <xs:element name="contarAplicacionesPorTipoEnMetricasResponse" type="tns:contarAplicacionesPorTipoEnMetricasResponse" />
   <xs:element name="eliminarAplicacion" type="tns:eliminarAplicacion" />
@@ -21,7 +15,6 @@
   <xs:element name="listarAplicacionesConDispositivosResponse" type="tns:listarAplicacionesConDispositivosResponse" />
   <xs:element name="listarDispositivosPorAplicaciones" type="tns:listarDispositivosPorAplicaciones" />
   <xs:element name="listarDispositivosPorAplicacionesResponse" type="tns:listarDispositivosPorAplicacionesResponse" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <xs:element name="obtenerAplicacion" type="tns:obtenerAplicacion" />
   <xs:element name="obtenerAplicacionResponse" type="tns:obtenerAplicacionResponse" />
   <xs:element name="registrarAplicacion" type="tns:registrarAplicacion" />
@@ -53,8 +46,6 @@
       <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-<<<<<<< HEAD
-=======
   <xs:complexType name="contarAplicacionesPorTipoEnMetricas">
     <xs:sequence />
   </xs:complexType>
@@ -73,7 +64,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:aplicacion" />
     </xs:sequence>
   </xs:complexType>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <xs:complexType name="eliminarAplicacion">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -82,8 +72,6 @@
   <xs:complexType name="eliminarAplicacionResponse">
     <xs:sequence />
   </xs:complexType>
-<<<<<<< HEAD
-=======
   <xs:complexType name="eliminarAplicacionesPorDispositivo">
     <xs:sequence />
   </xs:complexType>
@@ -125,7 +113,6 @@
       <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <xs:complexType name="registrarAplicacion">
     <xs:sequence>
       <xs:element minOccurs="0" name="elemento" type="tns:aplicacion" />
@@ -161,8 +148,6 @@
       <xs:enumeration value="MULTIMEDIA" />
     </xs:restriction>
   </xs:simpleType>
-<<<<<<< HEAD
-=======
   <xs:simpleType name="estadoConexion">
     <xs:restriction base="xs:string">
       <xs:enumeration value="CONECTADO" />
@@ -171,5 +156,4 @@
       <xs:enumeration value="EN_MANTENIMIENTO" />
     </xs:restriction>
   </xs:simpleType>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 </xs:schema>

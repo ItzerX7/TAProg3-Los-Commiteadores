@@ -5,40 +5,14 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/AplicacionWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-<<<<<<< HEAD
-  <message name="registrarAplicacion">
-    <part name="parameters" element="tns:registrarAplicacion" />
-  </message>
-  <message name="registrarAplicacionResponse">
-    <part name="parameters" element="tns:registrarAplicacionResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-  <message name="actualizarAplicacion">
-    <part name="parameters" element="tns:actualizarAplicacion" />
-  </message>
-  <message name="actualizarAplicacionResponse">
-    <part name="parameters" element="tns:actualizarAplicacionResponse" />
-  </message>
-=======
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="eliminarAplicacion">
     <part name="parameters" element="tns:eliminarAplicacion" />
   </message>
   <message name="eliminarAplicacionResponse">
     <part name="parameters" element="tns:eliminarAplicacionResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="obtenerAplicacion">
-    <part name="parameters" element="tns:obtenerAplicacion" />
-  </message>
-  <message name="obtenerAplicacionResponse">
-    <part name="parameters" element="tns:obtenerAplicacionResponse" />
-=======
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   </message>
   <message name="listarAplicacion">
     <part name="parameters" element="tns:listarAplicacion" />
@@ -46,19 +20,6 @@
   <message name="listarAplicacionResponse">
     <part name="parameters" element="tns:listarAplicacionResponse" />
   </message>
-<<<<<<< HEAD
-  <portType name="AplicacionWS">
-    <operation name="registrarAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionRequest" message="tns:registrarAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionResponse" message="tns:registrarAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="actualizarAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionRequest" message="tns:actualizarAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionResponse" message="tns:actualizarAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-=======
   <message name="obtenerAplicacion">
     <part name="parameters" element="tns:obtenerAplicacion" />
   </message>
@@ -102,54 +63,16 @@
     <part name="parameters" element="tns:registrarAplicacionResponse" />
   </message>
   <portType name="AplicacionWS">
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="eliminarAplicacion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionRequest" message="tns:eliminarAplicacion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionResponse" message="tns:eliminarAplicacionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-    <operation name="obtenerAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionRequest" message="tns:obtenerAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionResponse" message="tns:obtenerAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-=======
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="listarAplicacion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest" message="tns:listarAplicacion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionResponse" message="tns:listarAplicacionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-  </portType>
-  <binding name="AplicacionWSPortBinding" type="tns:AplicacionWS">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="registrarAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="actualizarAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-=======
     <operation name="obtenerAplicacion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionRequest" message="tns:obtenerAplicacion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionResponse" message="tns:obtenerAplicacionResponse" />
@@ -188,7 +111,6 @@
   </portType>
   <binding name="AplicacionWSPortBinding" type="tns:AplicacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="eliminarAplicacion">
       <soap:operation soapAction="" />
       <input>
@@ -201,8 +123,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-=======
     <operation name="listarAplicacion">
       <soap:operation soapAction="" />
       <input>
@@ -215,7 +135,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="obtenerAplicacion">
       <soap:operation soapAction="" />
       <input>
@@ -228,9 +147,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-    <operation name="listarAplicacion">
-=======
     <operation name="eliminarAplicacionesPorDispositivo">
       <soap:operation soapAction="" />
       <input>
@@ -292,7 +208,6 @@
       </fault>
     </operation>
     <operation name="registrarAplicacion">
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -5,8 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/RolWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-<<<<<<< HEAD
-=======
   <message name="eliminarRol">
     <part name="parameters" element="tns:eliminarRol" />
   </message>
@@ -16,34 +14,18 @@
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="registrarRol">
     <part name="parameters" element="tns:registrarRol" />
   </message>
   <message name="registrarRolResponse">
     <part name="parameters" element="tns:registrarRolResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-=======
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="actualizarRol">
     <part name="parameters" element="tns:actualizarRol" />
   </message>
   <message name="actualizarRolResponse">
     <part name="parameters" element="tns:actualizarRolResponse" />
   </message>
-<<<<<<< HEAD
-  <message name="eliminarRol">
-    <part name="parameters" element="tns:eliminarRol" />
-  </message>
-  <message name="eliminarRolResponse">
-    <part name="parameters" element="tns:eliminarRolResponse" />
-  </message>
-=======
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="listarRol">
     <part name="parameters" element="tns:listarRol" />
   </message>
@@ -57,14 +39,11 @@
     <part name="parameters" element="tns:obtenerRolResponse" />
   </message>
   <portType name="RolWS">
-<<<<<<< HEAD
-=======
     <operation name="eliminarRol">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolRequest" message="tns:eliminarRol" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolResponse" message="tns:eliminarRolResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRol/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="registrarRol">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolRequest" message="tns:registrarRol" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/registrarRolResponse" message="tns:registrarRolResponse" />
@@ -75,14 +54,6 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRolResponse" message="tns:actualizarRolResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/actualizarRol/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< HEAD
-    <operation name="eliminarRol">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolRequest" message="tns:eliminarRol" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRolResponse" message="tns:eliminarRolResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/eliminarRol/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-=======
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="listarRol">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolRequest" message="tns:listarRol" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/RolWS/listarRolResponse" message="tns:listarRolResponse" />
@@ -96,8 +67,6 @@
   </portType>
   <binding name="RolWSPortBinding" type="tns:RolWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< HEAD
-=======
     <operation name="eliminarRol">
       <soap:operation soapAction="" />
       <input>
@@ -110,7 +79,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="registrarRol">
       <soap:operation soapAction="" />
       <input>
@@ -135,21 +103,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< HEAD
-    <operation name="eliminarRol">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-=======
->>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="listarRol">
       <soap:operation soapAction="" />
       <input>

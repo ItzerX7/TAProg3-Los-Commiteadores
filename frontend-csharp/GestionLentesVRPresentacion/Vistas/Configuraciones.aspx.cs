@@ -75,7 +75,6 @@ namespace FrontVR.Vistas
                 LimpiarFormulario();
                 CargarConfiguraciones();
 
-                // Cierra el modal después de guardar correctamente
                 ScriptManager.RegisterStartupScript(this, GetType(), "cerrarModal", "$('#modalConfiguracion').modal('hide');", true);
             }
             catch (System.Exception ex)

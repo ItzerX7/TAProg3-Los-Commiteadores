@@ -796,3 +796,9 @@ END;
 //
 
 DELIMITER ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)

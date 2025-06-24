@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /GestionlentesvrBack/GestionlentesvrWS/target/
 /GestionlentesvrBack/GestionlentesWS2/target/
 
@@ -32,3 +33,45 @@ hs_err_pid*
 replay_pid*
 
 # End of https://www.toptal.com/developers/gitignore/api/java
+=======
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.csproj.user
+
+# ASP.NET-specific
+App_Data/
+*.dbmdl
+*.bak
+*.ldf
+*.mdf
+
+# VS Web Server
+*.vspscc
+*.vssscc
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Rider IDE (si usas JetBrains)
+.idea/
+
+# Node modules (si usas frontend moderno)
+node_modules/
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)

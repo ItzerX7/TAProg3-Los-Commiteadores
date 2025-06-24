@@ -65,6 +65,7 @@
         <asp:ScriptManager runat="server" />
         <div class="wrapper">
             <div class="sidebar">
+<<<<<<< HEAD
                 <a class="active" href="PantallaInicio.aspx"><i class="fas fa-chart-line"></i> Dashboard</a>
                 <a href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</a>
                 <a href="Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos</a>
@@ -73,6 +74,16 @@
                 <a href="Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</a>
                 <a href="Administracion.aspx"><i class="fas fa-user-shield"></i> Administración</a>
                 <a href="Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</a>
+=======
+                <a href="PantallaInicio.aspx"><i class="fas fa-chart-line"></i> Home</a>
+                <a href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</a>
+                <a href="/Vistas/Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos</a>
+                <a href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</a>
+                <a href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Métricas</a>
+                <a href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</a>
+                <a href="Administracion.aspx"><i class="fas fa-user-shield"></i> Usuarios</a>
+                <a href="/Vistas/Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</a>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 
                 <asp:LinkButton ID="btnLogout" runat="server" CssClass="sidebar-link"
                     OnClick="btnLogout_Click" CausesValidation="False">

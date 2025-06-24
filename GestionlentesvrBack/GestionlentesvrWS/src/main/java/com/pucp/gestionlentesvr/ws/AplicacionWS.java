@@ -1,6 +1,10 @@
 package com.pucp.gestionlentesvr.ws;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+<<<<<<< HEAD
+=======
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import com.pucp.gestionlentesvr.negocio.aplicacion.AplicacionService;
 import com.pucp.gestionlentesvr.negocio.aplicacion.AplicacionServiceImpl;
 import jakarta.jws.WebService;
@@ -41,6 +45,10 @@ public class AplicacionWS {
     public void eliminarAplicacion(@WebParam(name = "id") int id) throws Exception {
 
         try {
+<<<<<<< HEAD
+=======
+            //service.eliminarAplicacionesPorDispositivo();
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
             service.eliminarAplicacion(id);
         } catch (Exception ex) {
             throw new WebServiceException("Error al eliminar" + ex.getMessage());
@@ -56,6 +64,18 @@ public class AplicacionWS {
             throw new WebServiceException("Error al obtener" + ex.getMessage());
         }
     }
+<<<<<<< HEAD
+=======
+    @WebMethod(operationName = "listarAplicacionesConDispositivos")
+    public List<Aplicacion> listarAplicacionesConDispositivos(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            return service.listarAplicacionesConDispositivos(id);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al obtener" + ex.getMessage());
+        }
+    }
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 
     @WebMethod(operationName = "listarAplicacion")
     public List<Aplicacion> listarAplicacion() throws Exception {
@@ -66,4 +86,33 @@ public class AplicacionWS {
             throw new WebServiceException("Error al listar" + ex.getMessage());
         }
     }
+<<<<<<< HEAD
+=======
+    @WebMethod(operationName = "listarDispositivosPorAplicaciones")
+    public List<Dispositivo> listarDispositivosPorAplicaciones(@WebParam(name = "id") int id) throws Exception {
+
+        try {
+            return service.listarDispositivosPorAplicaciones(id);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
+    
+    @WebMethod(operationName = "eliminarAplicacionesPorDispositivo")
+    public void eliminarAplicacionesPorDispositivo() throws Exception {
+        try {
+            service.eliminarAplicacionesPorDispositivo();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
+    @WebMethod(operationName = "contarAplicacionesPorTipoEnMetricas")
+    public List<Integer> contarAplicacionesPorTipoEnMetricas() throws Exception {
+        try {
+            return service.contarAplicacionesPorTipoEnMetricas();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 }

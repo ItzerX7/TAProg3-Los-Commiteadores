@@ -5,14 +5,61 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/UsuarioWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
   <message name="actualizarUsuario">
     <part name="parameters" element="tns:actualizarUsuario" />
   </message>
   <message name="actualizarUsuarioResponse">
     <part name="parameters" element="tns:actualizarUsuarioResponse" />
+=======
+  <message name="listarUsuario">
+    <part name="parameters" element="tns:listarUsuario" />
+  </message>
+  <message name="listarUsuarioResponse">
+    <part name="parameters" element="tns:listarUsuarioResponse" />
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
+  </message>
+<<<<<<< HEAD
+  <message name="registrarUsuario">
+    <part name="parameters" element="tns:registrarUsuario" />
+  </message>
+  <message name="registrarUsuarioResponse">
+    <part name="parameters" element="tns:registrarUsuarioResponse" />
+  </message>
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
+  <message name="obtenerUsuario">
+    <part name="parameters" element="tns:obtenerUsuario" />
+  </message>
+  <message name="obtenerUsuarioResponse">
+    <part name="parameters" element="tns:obtenerUsuarioResponse" />
+  </message>
+<<<<<<< HEAD
+  <message name="listarUsuario">
+    <part name="parameters" element="tns:listarUsuario" />
+  </message>
+  <message name="listarUsuarioResponse">
+    <part name="parameters" element="tns:listarUsuarioResponse" />
+  </message>
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
+  <message name="eliminarUsuario">
+    <part name="parameters" element="tns:eliminarUsuario" />
+  </message>
+  <message name="eliminarUsuarioResponse">
+    <part name="parameters" element="tns:eliminarUsuarioResponse" />
+  </message>
+<<<<<<< HEAD
+  <portType name="UsuarioWS">
+=======
+  <message name="actualizarUsuario">
+    <part name="parameters" element="tns:actualizarUsuario" />
+  </message>
+  <message name="actualizarUsuarioResponse">
+    <part name="parameters" element="tns:actualizarUsuarioResponse" />
   </message>
   <message name="registrarUsuario">
     <part name="parameters" element="tns:registrarUsuario" />
@@ -20,25 +67,23 @@
   <message name="registrarUsuarioResponse">
     <part name="parameters" element="tns:registrarUsuarioResponse" />
   </message>
-  <message name="obtenerUsuario">
-    <part name="parameters" element="tns:obtenerUsuario" />
-  </message>
-  <message name="obtenerUsuarioResponse">
-    <part name="parameters" element="tns:obtenerUsuarioResponse" />
-  </message>
-  <message name="listarUsuario">
-    <part name="parameters" element="tns:listarUsuario" />
-  </message>
-  <message name="listarUsuarioResponse">
-    <part name="parameters" element="tns:listarUsuarioResponse" />
-  </message>
-  <message name="eliminarUsuario">
-    <part name="parameters" element="tns:eliminarUsuario" />
-  </message>
-  <message name="eliminarUsuarioResponse">
-    <part name="parameters" element="tns:eliminarUsuarioResponse" />
-  </message>
   <portType name="UsuarioWS">
+    <operation name="listarUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioRequest" message="tns:listarUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioResponse" message="tns:listarUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest" message="tns:obtenerUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse" message="tns:obtenerUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="actualizarUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
@@ -49,6 +94,7 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
     <operation name="obtenerUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest" message="tns:obtenerUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse" message="tns:obtenerUsuarioResponse" />
@@ -67,6 +113,47 @@
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+=======
+  </portType>
+  <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="actualizarUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -91,6 +178,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="obtenerUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -127,6 +215,8 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   </binding>
   <service name="UsuarioWS">
     <port name="UsuarioWSPort" binding="tns:UsuarioWSPortBinding">

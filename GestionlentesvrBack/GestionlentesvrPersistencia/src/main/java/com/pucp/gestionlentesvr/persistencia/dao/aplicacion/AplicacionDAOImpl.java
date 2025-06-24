@@ -2,12 +2,24 @@ package com.pucp.gestionlentesvr.persistencia.dao.aplicacion;
 
 import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
 import com.pucp.gestionlentesvr.dominio.aplicacion.CategoriaAplicacion;
+<<<<<<< HEAD
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
+=======
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.DBManager;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+<<<<<<< HEAD
+=======
+import java.util.ArrayList;
+import java.util.List;
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 
 public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements AplicacionDAO {
 
@@ -81,4 +93,69 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
         entity.setId(id);
     }
 
+<<<<<<< HEAD
+=======
+    @Override
+    public void eliminarAplicacionesPorDispositivo() {
+        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL eliminarAplicacionesPorDispositivo()}";
+            CallableStatement cs = conn.prepareCall(query);
+            cs.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al Eliminar Aplicacion", e);
+        }
+    }
+
+    @Override
+    public List<Aplicacion> listarAplicacionesConDispositivos(Integer id) {
+        List<Aplicacion> apps= new ArrayList<>();
+        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL listarAplicacionesPorDispositivos(?)}";
+            CallableStatement cs = conn.prepareCall(query); 
+            cs.setInt(1, id);
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                apps.add(createFromResultSet(rs));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar entidades", e);
+        }
+        return apps;
+    }
+
+    @Override
+    public List<Dispositivo> listarDispositivosPorAplicaciones(Integer id) {
+        List<Dispositivo> dis= new ArrayList<>();
+        DispositivoDAOImpl dao = new DispositivoDAOImpl();
+        try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL listarDispositivosPorAplicaciones(?)}";
+            CallableStatement cs = conn.prepareCall(query); 
+            cs.setInt(1, id);
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                dis.add( dao.createFromResultSet(rs));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar entidades", e);
+        }
+        return dis;
+    }
+
+    @Override
+    public List<Integer> contarAplicacionesPorTipoEnMetricas() {
+        List<Integer> cantidades= new ArrayList<>();
+         try (Connection conn = DBManager.getInstance().obtenerConexion();) {
+            String query = "{CALL contarAplicacionesPorTipoEnMetricas()}";
+            CallableStatement cs = conn.prepareCall(query); 
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                cantidades.add(rs.getInt("cantidad"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar entidades", e);
+        }
+        return cantidades;
+    }
+
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 }

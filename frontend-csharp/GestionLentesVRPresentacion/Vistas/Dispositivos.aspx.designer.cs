@@ -69,6 +69,7 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtSerie;
 
         /// <summary>
+<<<<<<< HEAD
         /// Control txtFecha.
         /// </summary>
         /// <remarks>
@@ -78,6 +79,8 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtFecha;
 
         /// <summary>
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         /// Control txtUbicacion.
         /// </summary>
         /// <remarks>
@@ -87,6 +90,18 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtUbicacion;
 
         /// <summary>
+<<<<<<< HEAD
+=======
+        /// Control ddlGrupo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGrupo;
+
+        /// <summary>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         /// Control ddlEstado.
         /// </summary>
         /// <remarks>

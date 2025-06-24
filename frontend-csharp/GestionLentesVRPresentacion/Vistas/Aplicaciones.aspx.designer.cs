@@ -24,6 +24,18 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.GridView gvAplicaciones;
 
         /// <summary>
+<<<<<<< HEAD
+=======
+        /// phDispositivos control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phDispositivos;
+
+        /// <summary>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         /// upModal control.
         /// </summary>
         /// <remarks>

@@ -52,8 +52,11 @@ namespace FrontVR.Vistas
                 {
                     nuevoGrupo.id = int.Parse(hfIdGrupo.Value);
                     proxy.actualizarGrupo(nuevoGrupo);
+<<<<<<< HEAD
                     Response.Redirect(Request.RawUrl);
 
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
                 }
 
                 // Redireccionar a la misma página para que se vea reflejado el cambio
@@ -100,4 +103,8 @@ namespace FrontVR.Vistas
             }
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)

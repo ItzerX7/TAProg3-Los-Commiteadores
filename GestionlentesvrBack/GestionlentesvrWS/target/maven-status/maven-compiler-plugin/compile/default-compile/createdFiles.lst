@@ -1,0 +1,10 @@
+com\pucp\gestionlentesvr\ws\FirmwareWS.class
+com\pucp\gestionlentesvr\ws\AplicacionWS.class
+com\pucp\gestionlentesvr\ws\UsuarioWS.class
+com\pucp\gestionlentesvr\ws\ActividadWS.class
+com\pucp\gestionlentesvr\ws\DispositivoWS.class
+com\pucp\gestionlentesvr\ws\RolWS.class
+com\pucp\gestionlentesvr\ws\ConfiguracionWS.class
+com\pucp\gestionlentesvr\ws\MetricaUsoWS.class
+com\pucp\gestionlentesvrws\Prueba\Prueba.class
+com\pucp\gestionlentesvr\ws\GrupoWS.class

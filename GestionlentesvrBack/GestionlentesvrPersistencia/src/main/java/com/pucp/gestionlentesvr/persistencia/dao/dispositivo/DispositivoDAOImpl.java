@@ -67,7 +67,11 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     }
 
     @Override
+<<<<<<< HEAD
     protected Dispositivo createFromResultSet(ResultSet rs) throws SQLException {
+=======
+    public Dispositivo createFromResultSet(ResultSet rs) throws SQLException {
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         Dispositivo dev = new Dispositivo();
         Grupo grupo = new Grupo();
         dev.setGrupo(grupo);

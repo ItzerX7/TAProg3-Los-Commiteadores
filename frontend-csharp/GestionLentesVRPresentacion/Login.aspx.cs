@@ -1,17 +1,36 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+﻿using FrontVR.GestionlentesvrWS;
+using System;
+using System.Linq;
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 
 namespace FrontVR
 {
     public partial class Login : System.Web.UI.Page
     {
+<<<<<<< HEAD
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["usuario"] != null)
                 Response.Redirect("~/Vistas/Pantallainicio.aspx");
+=======
+        private UsuarioWSClient usuarioWSClient = new UsuarioWSClient();
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["usuario"] != null)
+            {
+                var usuarioSesion = (usuario)Session["usuario"];
+                RedirigirSegunRol(usuarioSesion.rol.id);
+            }
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             string usuario = txtUsuario.Text.Trim();
             string clave = txtPassword.Text;
 
@@ -26,5 +45,50 @@ namespace FrontVR
                 lblError.Visible = true;
             }
         }
+=======
+            string usuarioInput = txtUsuario.Text.Trim();
+            string claveInput = txtPassword.Text;
+
+            try
+            {
+                var usuarios = usuarioWSClient.listarUsuario();
+
+                // Verifica con la estructura real
+                var usuarioValido = usuarios.FirstOrDefault(u =>
+                    u.correo.Equals(usuarioInput, StringComparison.OrdinalIgnoreCase) &&
+                    u.contrasena == claveInput //&&
+                    //u.activo == 1 // ushort: 1 = activo, 0 = inactivo
+                );
+
+                if (usuarioValido != null)
+                {
+                    Session["usuario"] = usuarioValido;
+                    Session["RolId"] = usuarioValido.rol.id; // la propiedad anidada del rol
+
+                    RedirigirSegunRol(usuarioValido.rol.id);
+                }
+                else
+                {
+                    lblError.Text = "Credenciales incorrectas o usuario inactivo.";
+                    lblError.Visible = true;
+                }
+            }
+            catch (System.Exception ex)
+            {
+                lblError.Text = "Error de conexión: " + ex.Message;
+                lblError.Visible = true;
+            }
+        }
+
+        private void RedirigirSegunRol(int rolId)
+        {
+            //if (rolId == 1)
+            //    Response.Redirect("~/Vistas/PantallaInicioAdmin.aspx");
+            //else if (rolId == 2)
+            //    Response.Redirect("~/Vistas/PantallaInicioTecnico.aspx");
+            //else
+                Response.Redirect("~/Vistas/Pantallainicio.aspx"); // fallback
+        }
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     }
 }

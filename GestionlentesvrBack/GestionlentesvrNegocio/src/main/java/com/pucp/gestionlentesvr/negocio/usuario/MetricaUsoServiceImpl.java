@@ -1,5 +1,10 @@
 package com.pucp.gestionlentesvr.negocio.usuario;
 
+<<<<<<< HEAD
+=======
+import com.pucp.gestionlentesvr.dominio.aplicacion.Aplicacion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 import com.pucp.gestionlentesvr.dominio.usuario.MetricaUso;
 import com.pucp.gestionlentesvr.persistencia.dao.usuario.MetricaUsoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.usuario.MetricaUsoDAOImpl;
@@ -80,5 +85,20 @@ public class MetricaUsoServiceImpl implements MetricaUsoService {
     public List<MetricaUso> listarMetricaUso() throws Exception {
         return metricaUsoDAO.listarTodos();
     }
+<<<<<<< HEAD
 
+=======
+    @Override
+    public Aplicacion obtenerAppMasUsada(){
+        return metricaUsoDAO.obtenerAppMasUsada();
+    }
+    @Override
+    public Dispositivo obtenerDispositivoMasUsado(){
+        return metricaUsoDAO.obtenerDispositivoMasUsado();
+    }
+    @Override
+    public Dispositivo obtenerDispositivoMenosUsado(){
+        return metricaUsoDAO.obtenerDispositivoMenosUsado();
+    }
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
 }

@@ -5,6 +5,7 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ActividadWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
   <message name="actualizarActividad">
     <part name="parameters" element="tns:actualizarActividad" />
   </message>
@@ -14,36 +15,63 @@
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="obtenerActividad">
     <part name="parameters" element="tns:obtenerActividad" />
   </message>
   <message name="obtenerActividadResponse">
     <part name="parameters" element="tns:obtenerActividadResponse" />
   </message>
+<<<<<<< HEAD
+=======
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="registrarActividad">
     <part name="parameters" element="tns:registrarActividad" />
   </message>
   <message name="registrarActividadResponse">
     <part name="parameters" element="tns:registrarActividadResponse" />
   </message>
+<<<<<<< HEAD
   <message name="eliminarActividad">
     <part name="parameters" element="tns:eliminarActividad" />
   </message>
   <message name="eliminarActividadResponse">
     <part name="parameters" element="tns:eliminarActividadResponse" />
   </message>
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="listarActividad">
     <part name="parameters" element="tns:listarActividad" />
   </message>
   <message name="listarActividadResponse">
     <part name="parameters" element="tns:listarActividadResponse" />
   </message>
+<<<<<<< HEAD
   <portType name="ActividadWS">
     <operation name="actualizarActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest" message="tns:actualizarActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse" message="tns:actualizarActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+=======
+  <message name="eliminarActividad">
+    <part name="parameters" element="tns:eliminarActividad" />
+  </message>
+  <message name="eliminarActividadResponse">
+    <part name="parameters" element="tns:eliminarActividadResponse" />
+  </message>
+  <message name="actualizarActividad">
+    <part name="parameters" element="tns:actualizarActividad" />
+  </message>
+  <message name="actualizarActividadResponse">
+    <part name="parameters" element="tns:actualizarActividadResponse" />
+  </message>
+  <portType name="ActividadWS">
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="obtenerActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadRequest" message="tns:obtenerActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadResponse" message="tns:obtenerActividadResponse" />
@@ -54,16 +82,20 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse" message="tns:registrarActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
     <operation name="eliminarActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadRequest" message="tns:eliminarActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadResponse" message="tns:eliminarActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+=======
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="listarActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
   </portType>
   <binding name="ActividadWSPortBinding" type="tns:ActividadWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -79,6 +111,21 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+=======
+    <operation name="eliminarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadRequest" message="tns:eliminarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadResponse" message="tns:eliminarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadRequest" message="tns:actualizarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividadResponse" message="tns:actualizarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/actualizarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="ActividadWSPortBinding" type="tns:ActividadWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="obtenerActividad">
       <soap:operation soapAction="" />
       <input>
@@ -103,6 +150,21 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
+=======
+    <operation name="listarActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     <operation name="eliminarActividad">
       <soap:operation soapAction="" />
       <input>
@@ -115,7 +177,11 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="listarActividad">
+=======
+    <operation name="actualizarActividad">
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

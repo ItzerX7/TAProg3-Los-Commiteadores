@@ -5,15 +5,32 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/UsuarioWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
+<<<<<<< HEAD
   <message name="registrarUsuario">
     <part name="parameters" element="tns:registrarUsuario" />
   </message>
   <message name="registrarUsuarioResponse">
     <part name="parameters" element="tns:registrarUsuarioResponse" />
+=======
+  <message name="eliminarUsuario">
+    <part name="parameters" element="tns:eliminarUsuario" />
+  </message>
+  <message name="eliminarUsuarioResponse">
+    <part name="parameters" element="tns:eliminarUsuarioResponse" />
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
+<<<<<<< HEAD
+=======
+  <message name="obtenerUsuario">
+    <part name="parameters" element="tns:obtenerUsuario" />
+  </message>
+  <message name="obtenerUsuarioResponse">
+    <part name="parameters" element="tns:obtenerUsuarioResponse" />
+  </message>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <message name="actualizarUsuario">
     <part name="parameters" element="tns:actualizarUsuario" />
   </message>
@@ -26,6 +43,7 @@
   <message name="listarUsuarioResponse">
     <part name="parameters" element="tns:listarUsuarioResponse" />
   </message>
+<<<<<<< HEAD
   <message name="eliminarUsuario">
     <part name="parameters" element="tns:eliminarUsuario" />
   </message>
@@ -43,6 +61,24 @@
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+=======
+  <message name="registrarUsuario">
+    <part name="parameters" element="tns:registrarUsuario" />
+  </message>
+  <message name="registrarUsuarioResponse">
+    <part name="parameters" element="tns:registrarUsuarioResponse" />
+  </message>
+  <portType name="UsuarioWS">
+    <operation name="eliminarUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest" message="tns:obtenerUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse" message="tns:obtenerUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     </operation>
     <operation name="actualizarUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
@@ -54,6 +90,7 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuarioResponse" message="tns:listarUsuarioResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/listarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+<<<<<<< HEAD
     <operation name="eliminarUsuario">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
@@ -63,11 +100,33 @@
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioRequest" message="tns:obtenerUsuario" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuarioResponse" message="tns:obtenerUsuarioResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/obtenerUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+=======
+    <operation name="registrarUsuario">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioRequest" message="tns:registrarUsuario" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuarioResponse" message="tns:registrarUsuarioResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/UsuarioWS/registrarUsuario/Fault/Exception" name="Exception" message="tns:Exception" />
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
     </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<<<<<<< HEAD
     <operation name="registrarUsuario">
+=======
+    <operation name="eliminarUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerUsuario">
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -103,6 +162,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+<<<<<<< HEAD
     <operation name="eliminarUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -116,6 +176,9 @@
       </fault>
     </operation>
     <operation name="obtenerUsuario">
+=======
+    <operation name="registrarUsuario">
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

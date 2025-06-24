@@ -5,6 +5,11 @@
   <xs:element name="actualizarAplicacionResponse" type="tns:actualizarAplicacionResponse" />
   <xs:element name="eliminarAplicacion" type="tns:eliminarAplicacion" />
   <xs:element name="eliminarAplicacionResponse" type="tns:eliminarAplicacionResponse" />
+<<<<<<< HEAD
+=======
+  <xs:element name="eliminarAplicacionesPorDispositivo" type="tns:eliminarAplicacionesPorDispositivo" />
+  <xs:element name="eliminarAplicacionesPorDispositivoResponse" type="tns:eliminarAplicacionesPorDispositivoResponse" />
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <xs:element name="listarAplicacion" type="tns:listarAplicacion" />
   <xs:element name="listarAplicacionResponse" type="tns:listarAplicacionResponse" />
   <xs:element name="obtenerAplicacion" type="tns:obtenerAplicacion" />
@@ -46,6 +51,15 @@
   <xs:complexType name="eliminarAplicacionResponse">
     <xs:sequence />
   </xs:complexType>
+<<<<<<< HEAD
+=======
+  <xs:complexType name="eliminarAplicacionesPorDispositivo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="eliminarAplicacionesPorDispositivoResponse">
+    <xs:sequence />
+  </xs:complexType>
+>>>>>>> 72e72ce (Ignorar archivos temporales de Visual Studio y build)
   <xs:complexType name="registrarAplicacion">
     <xs:sequence>
       <xs:element minOccurs="0" name="elemento" type="tns:aplicacion" />

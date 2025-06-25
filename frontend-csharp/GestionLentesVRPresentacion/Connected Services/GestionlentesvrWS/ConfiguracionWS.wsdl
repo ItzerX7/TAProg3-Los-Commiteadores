@@ -5,14 +5,20 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
+  <message name="eliminarConfiguracion">
+    <part name="parameters" element="tns:eliminarConfiguracion" />
+  </message>
+  <message name="eliminarConfiguracionResponse">
+    <part name="parameters" element="tns:eliminarConfiguracionResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
   <message name="registrarConfiguracion">
     <part name="parameters" element="tns:registrarConfiguracion" />
   </message>
   <message name="registrarConfiguracionResponse">
     <part name="parameters" element="tns:registrarConfiguracionResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
   </message>
   <message name="actualizarConfiguracion">
     <part name="parameters" element="tns:actualizarConfiguracion" />
@@ -26,12 +32,6 @@
   <message name="obtenerConfiguracionResponse">
     <part name="parameters" element="tns:obtenerConfiguracionResponse" />
   </message>
-  <message name="eliminarConfiguracion">
-    <part name="parameters" element="tns:eliminarConfiguracion" />
-  </message>
-  <message name="eliminarConfiguracionResponse">
-    <part name="parameters" element="tns:eliminarConfiguracionResponse" />
-  </message>
   <message name="listarConfiguracion">
     <part name="parameters" element="tns:listarConfiguracion" />
   </message>
@@ -39,6 +39,11 @@
     <part name="parameters" element="tns:listarConfiguracionResponse" />
   </message>
   <portType name="ConfiguracionWS">
+    <operation name="eliminarConfiguracion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest" message="tns:eliminarConfiguracion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionResponse" message="tns:eliminarConfiguracionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="registrarConfiguracion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionRequest" message="tns:registrarConfiguracion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionResponse" message="tns:registrarConfiguracionResponse" />
@@ -54,11 +59,6 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionResponse" message="tns:obtenerConfiguracionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="eliminarConfiguracion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest" message="tns:eliminarConfiguracion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionResponse" message="tns:eliminarConfiguracionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="listarConfiguracion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionRequest" message="tns:listarConfiguracion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionResponse" message="tns:listarConfiguracionResponse" />
@@ -67,6 +67,18 @@
   </portType>
   <binding name="ConfiguracionWSPortBinding" type="tns:ConfiguracionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
     <operation name="registrarConfiguracion">
       <soap:operation soapAction="" />
       <input>
@@ -92,18 +104,6 @@
       </fault>
     </operation>
     <operation name="obtenerConfiguracion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="eliminarConfiguracion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

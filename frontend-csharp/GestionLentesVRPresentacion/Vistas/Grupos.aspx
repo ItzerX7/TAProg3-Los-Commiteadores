@@ -33,7 +33,7 @@
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
             <asp:BoundField DataField="ubicacion" HeaderText="Ubicación" />
-            <asp:BoundField DataField="fechaCreacion" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd}" />
+            <asp:BoundField DataField="fechaCreacion" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" />
             <asp:TemplateField HeaderText="Acción">
                 <ItemTemplate>
                     <div class="d-flex justify-content-center gap-2">

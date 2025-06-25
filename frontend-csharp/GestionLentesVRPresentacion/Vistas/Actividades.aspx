@@ -11,29 +11,17 @@
 
             <asp:BoundField DataField="id" HeaderText="ID" />
 
-            <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
-
-            <asp:BoundField DataField="detallesTecnicos" HeaderText="Detalles Técnicos" />
-
-            <asp:BoundField DataField="fechaHora" HeaderText="Fecha y Hora" DataFormatString="{0:yyyy-MM-dd HH:mm}" />
-
             <asp:TemplateField HeaderText="Tipo">
                 <ItemTemplate>
                     <%# Eval("tipo") %>
                 </ItemTemplate>
             </asp:TemplateField>
 
-            <asp:TemplateField HeaderText="Dispositivo">
-                <ItemTemplate>
-                    <%# Eval("dispositivo.nombre") %>
-                </ItemTemplate>
-            </asp:TemplateField>
+            <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
 
-            <asp:TemplateField HeaderText="Usuario">
-                <ItemTemplate>
-                    <%# Eval("usuario.nombre") %>
-                </ItemTemplate>
-            </asp:TemplateField>
+            <asp:BoundField DataField="detallesTecnicos" HeaderText="Detalles Técnicos" />
+
+            <asp:BoundField DataField="fechaHora" HeaderText="Fecha y Hora" DataFormatString="{0:yyyy-MM-dd HH:mm}" />
 
             <asp:TemplateField HeaderText="Estado" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>

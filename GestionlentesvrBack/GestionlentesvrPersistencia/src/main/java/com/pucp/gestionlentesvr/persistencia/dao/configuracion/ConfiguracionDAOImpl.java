@@ -65,7 +65,7 @@ public class ConfiguracionDAOImpl extends BaseDAOImpl<Configuracion> implements 
         con.setId(rs.getInt("configuracionid"));
         con.setNombre(rs.getString("nombre"));
         con.setDescripcion(rs.getString("descripcion"));
-        con.setFechaCreacion(rs.getDate("fechacreacion"));
+        con.setFechaCreacion(rs.getTimestamp("fechacreacion"));
         con.setValor(rs.getString("valor"));
         con.setTipo(TipoConfiguracion.valueOf(rs.getString("tipo")));
         con.setActivo(rs.getString("activo").toCharArray()[0]);

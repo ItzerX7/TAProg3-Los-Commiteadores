@@ -62,7 +62,7 @@ public class GrupoDAOImpl extends BaseDAOImpl<Grupo> implements GrupoDAO {
         grupo.setId(rs.getInt("grupoid"));
         grupo.setNombre(rs.getString("nombre"));
         grupo.setDescripcion(rs.getString("descripcion"));
-        grupo.setFechaCreacion(rs.getDate("fechacreacion"));
+        grupo.setFechaCreacion(rs.getTimestamp("fechacreacion"));
         grupo.setUbicacion(rs.getString("ubicacion"));
         grupo.setActivo((rs.getString("activo")).toCharArray()[0]);
         return grupo;

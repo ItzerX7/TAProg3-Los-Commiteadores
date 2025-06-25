@@ -70,7 +70,8 @@ public class ActividadDAOImpl extends BaseDAOImpl<Actividad> implements Activida
         Dispositivo dispositivo = new Dispositivo();
         actividad.setDispositivo(dispositivo);
         actividad.setId(rs.getInt("actividadid"));
-        actividad.setFechaHora(rs.getDate("fechahora"));
+        actividad.setFechaHora(rs.getTimestamp("fechahora"));
+        actividad.setDescripcion(rs.getString("descripcion"));
         actividad.setDetallesTecnicos(rs.getString("detallestecnicos"));
         actividad.setTipo(TipoActividad.valueOf(rs.getString("tipo")));
         actividad.getUsuario().setId(rs.getInt("usuario_usuarioid"));

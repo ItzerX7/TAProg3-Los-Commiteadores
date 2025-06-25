@@ -1,12 +1,12 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
-         CodeBehind="Dispositivos.aspx.cs" Inherits="FrontVR.Vistas.Dispositivos" %>
+    CodeBehind="Dispositivos.aspx.cs" Inherits="FrontVR.Vistas.Dispositivos" %>
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2 class="page-title mb-3">Gestión de Dispositivos</h2>
 
     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalDispositivo">
-        <i class="fa fa-plus"></i> Nuevo dispositivo
+        <i class="fa fa-plus"></i>Nuevo dispositivo
     </button>
 
     <!-- Campos de búsqueda -->
@@ -40,7 +40,7 @@
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="modelo" HeaderText="Modelo" />
             <asp:BoundField DataField="numeroSerie" HeaderText="Serie" />
-            <asp:BoundField DataField="fechaRegistro" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd}" />
+            <asp:BoundField DataField="fechaRegistro" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" />
             <asp:BoundField DataField="ubicacion" HeaderText="Ubicación" />
             <asp:BoundField DataField="estado" HeaderText="Estado" />
             <asp:BoundField DataField="ultimaConexion" HeaderText="Última Conexión" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" />
@@ -80,27 +80,27 @@
 
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
+                                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtModelo" class="form-label">Modelo <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtModelo" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
+                                <asp:TextBox ID="txtModelo" runat="server" CssClass="form-control" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtSerie" class="form-label">Número de Serie <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtSerie" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="txtFecha" class="form-label">Fecha de Registro</label>
-                                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date" CssClass="form-control bg-dark text-white border-secondary" />
+                                <asp:TextBox ID="txtSerie" runat="server" CssClass="form-control" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtUbicacion" class="form-label">Ubicación <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtUbicacion" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
+                                <asp:TextBox ID="txtUbicacion" runat="server" CssClass="form-control" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtFecha" class="form-label">Ultima Conexion</label>
+                                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date" CssClass="form-control" />
                             </div>
 
                             <div class="mb-3">

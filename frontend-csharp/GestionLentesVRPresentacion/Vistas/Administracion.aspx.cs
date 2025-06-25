@@ -42,8 +42,10 @@ namespace FrontVR.Vistas
                 {
                     id = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value),
                     nombre = txtNombres.Text.Trim(),
+                    apellido = txtApellido.Text.Trim(),
                     correo = txtCorreo.Text.Trim(),
                     rol = new rol { id = int.Parse(ddlRol.SelectedValue) },
+                    contrasena = txtContrasena.Text.Trim(),
                     activo = 's'
                 };
 

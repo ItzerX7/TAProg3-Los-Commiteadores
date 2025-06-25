@@ -19,6 +19,7 @@
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="version" HeaderText="Versión" />
             <asp:BoundField DataField="tamanoMb" HeaderText="Tamaño&nbsp;(MB)" DataFormatString="{0:N1}" />
+            <asp:BoundField DataField="desarrollador" HeaderText="Desarrollador" />
             <asp:TemplateField HeaderText="Estado">
                 <ItemTemplate>
                     <asp:Label ID="lblEstado" runat="server"
@@ -70,37 +71,37 @@
                         <div class="modal-body">
                             <asp:HiddenField ID="hfIdAplicacion" runat="server" />
                             <div class="mb-3">
-                                <label for="txtNombre" class="form-label">Nombre</label>
+                                <label for="txtNombre" class="form-label">Nombre <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtNombre" runat="server"
-                                    CssClass="form-control bg-dark text-white border-secondary" />
+                                    CssClass="form-control" />
                             </div>
                             <div class="mb-3">
-                                <label for="txtVersion" class="form-label">Versión</label>
+                                <label for="txtVersion" class="form-label">Versión <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtVersion" runat="server"
-                                    CssClass="form-control bg-dark text-white border-secondary" />
+                                    CssClass="form-control" />
                             </div>
                             <div class="mb-3">
-                                <label for="txtTamano" class="form-label">Tamaño&nbsp;(MB)</label>
+                                <label for="txtTamano" class="form-label">Tamaño&nbsp;(MB) <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtTamano" runat="server" TextMode="Number"
-                                    CssClass="form-control bg-dark text-white border-secondary" />
+                                    CssClass="form-control" />
                             </div>
                             <asp:Label ID="lblError" runat="server"
                                 CssClass="text-danger" Visible="false" />
                             <div class="mb-3">
-                                <label for="txtDescripcion" class="form-label">Descripción</label>
+                                <label for="txtDescripcion" class="form-label">Descripción <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtDescripcion" runat="server"
                                     TextMode="MultiLine" Rows="3"
                                     CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtDesarrollador" class="form-label">Desarrollador</label>
+                                <label for="txtDesarrollador" class="form-label">Desarrollador <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtDesarrollador" runat="server"
                                     CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
-                                <label for="ddlCategoria" class="form-label">Categoría</label>
+                                <label for="ddlCategoria" class="form-label">Categoría <span class="text-danger">*</span></label>
                                 <asp:DropDownList ID="ddlCategoria" runat="server"
                                     CssClass="form-select bg-dark text-white border-secondary">
                                     <asp:ListItem Text="EDUCATIVA" Value="EDUCATIVA" />

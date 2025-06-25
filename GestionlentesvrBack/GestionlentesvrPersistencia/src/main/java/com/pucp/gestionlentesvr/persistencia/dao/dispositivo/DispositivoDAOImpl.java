@@ -2,8 +2,10 @@ package com.pucp.gestionlentesvr.persistencia.dao.dispositivo;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.EstadoConexion;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Firmware;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.DBManager;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -88,6 +90,37 @@ public class DispositivoDAOImpl extends BaseDAOImpl<Dispositivo> implements Disp
     @Override
     protected void setId(Dispositivo entity, Integer id) {
         entity.setId(id);
+    }
+
+    @Override
+    public boolean insertarDisFirmware(Integer idDis, Integer idFirm) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion()) {
+            String query = "Call insertar_dispositivo_firmware(?,?)";
+            CallableStatement cs = conn.prepareCall(query);
+            cs.setInt(1, idDis);
+            cs.setInt(2, idFirm);
+            cs.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al agregar entidad", e);
+        }
+    }
+
+    @Override
+    public Firmware obtenerUltimoFirm(Integer idDis) {
+        FirmwareDAOImpl dao = new FirmwareDAOImpl();
+        try (Connection conn = DBManager.getInstance().obtenerConexion()) {
+            String query = "Call obtener_ultimo_firmware_dispositivo(?)";
+            CallableStatement cs = conn.prepareCall(query);
+            cs.setInt(1, idDis);
+            ResultSet rs= cs.executeQuery();
+            if (rs.next()) {
+                return dao.createFromResultSet(rs);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al agregar entidad", e);
+        }
+        return null;
     }
 
 }

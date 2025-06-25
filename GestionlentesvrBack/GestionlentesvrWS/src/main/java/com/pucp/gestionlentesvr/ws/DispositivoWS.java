@@ -1,6 +1,7 @@
 package com.pucp.gestionlentesvr.ws;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Firmware;
 import com.pucp.gestionlentesvr.negocio.dispositivo.DispositivoService;
 import com.pucp.gestionlentesvr.negocio.dispositivo.DispositivoServiceImpl;
 import jakarta.jws.WebService;
@@ -63,6 +64,24 @@ public class DispositivoWS {
 
         try {
             return service.listarDispositivo();
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
+    @WebMethod(operationName = "obtenerUltimoFirm")
+    public Firmware obtenerUltimoFirm(@WebParam(name = "idDis") int idDis) throws Exception {
+
+        try {
+            return service.obtenerUltimoFirm(idDis);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
+    @WebMethod(operationName = "insertarDisFirmware")
+    public boolean insertarDisFirmware(@WebParam(name = "idDis") int idDis,@WebParam(name = "idFirm") int idFirm) throws Exception {
+
+        try {
+            return service.insertarDisFirmware(idDis, idFirm);
         } catch (Exception ex) {
             throw new WebServiceException("Error al listar" + ex.getMessage());
         }

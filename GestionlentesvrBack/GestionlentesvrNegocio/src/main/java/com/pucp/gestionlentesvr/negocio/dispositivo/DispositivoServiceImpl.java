@@ -1,6 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.dispositivo;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Firmware;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
 import java.util.List;
@@ -90,6 +91,16 @@ public class DispositivoServiceImpl implements DispositivoService {
     @Override
     public List<Dispositivo> listarDispositivo() throws Exception {
         return dispositivoDAO.listarTodos();
+    }
+
+    @Override
+    public boolean insertarDisFirmware(Integer idDis, Integer idFirm) {
+        return dispositivoDAO.insertarDisFirmware(idDis, idFirm);
+    }
+
+    @Override
+    public Firmware obtenerUltimoFirm(Integer idDis) {
+        return dispositivoDAO.obtenerUltimoFirm(idDis);
     }
 
 }

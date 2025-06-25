@@ -5,10 +5,14 @@
   <xs:element name="actualizarDispositivoResponse" type="tns:actualizarDispositivoResponse" />
   <xs:element name="eliminarDispositivo" type="tns:eliminarDispositivo" />
   <xs:element name="eliminarDispositivoResponse" type="tns:eliminarDispositivoResponse" />
+  <xs:element name="insertarDisFirmware" type="tns:insertarDisFirmware" />
+  <xs:element name="insertarDisFirmwareResponse" type="tns:insertarDisFirmwareResponse" />
   <xs:element name="listarDispositivo" type="tns:listarDispositivo" />
   <xs:element name="listarDispositivoResponse" type="tns:listarDispositivoResponse" />
   <xs:element name="obtenerDispositivo" type="tns:obtenerDispositivo" />
   <xs:element name="obtenerDispositivoResponse" type="tns:obtenerDispositivoResponse" />
+  <xs:element name="obtenerUltimoFirm" type="tns:obtenerUltimoFirm" />
+  <xs:element name="obtenerUltimoFirmResponse" type="tns:obtenerUltimoFirmResponse" />
   <xs:element name="registrarDispositivo" type="tns:registrarDispositivo" />
   <xs:element name="registrarDispositivoResponse" type="tns:registrarDispositivoResponse" />
   <xs:complexType name="eliminarDispositivo">
@@ -67,6 +71,17 @@
       <xs:element minOccurs="0" name="return" type="tns:dispositivo" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarDisFirmware">
+    <xs:sequence>
+      <xs:element name="idDis" type="xs:int" />
+      <xs:element name="idFirm" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDisFirmwareResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarDispositivo">
     <xs:sequence />
   </xs:complexType>
@@ -82,6 +97,25 @@
   </xs:complexType>
   <xs:complexType name="registrarDispositivoResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerUltimoFirm">
+    <xs:sequence>
+      <xs:element name="idDis" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerUltimoFirmResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:firmware" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="firmware">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:unsignedShort" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="version" type="xs:string" />
+    </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="estadoConexion">
     <xs:restriction base="xs:string">

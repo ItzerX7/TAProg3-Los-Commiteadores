@@ -1,6 +1,7 @@
 package com.pucp.gestionlentesvr.negocio.dispositivo;
 
 import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
+import com.pucp.gestionlentesvr.dominio.dispositivo.Firmware;
 import java.util.List;
 
 public interface DispositivoService {
@@ -14,4 +15,8 @@ public interface DispositivoService {
     Dispositivo obtenerDispositivo(int idDispositivo) throws Exception;
 
     List<Dispositivo> listarDispositivo() throws Exception;
+
+    boolean insertarDisFirmware(Integer idDis, Integer idFirm);
+
+    Firmware obtenerUltimoFirm(Integer idDis);
 }

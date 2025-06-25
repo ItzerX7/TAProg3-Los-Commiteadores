@@ -10,14 +10,16 @@
 
     <asp:GridView ID="gvUsuarios" runat="server"
         AutoGenerateColumns="False"
-        CssClass="table table-striped"
+        CssClass="table table-bordered table-hover align-middle text-center"
         DataKeyNames="usuarioId"
         OnRowCommand="gvUsuarios_RowCommand"
         EmptyDataText="No hay usuarios registrados aún.">
         <Columns>
+            <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="nombre" HeaderText="Nombres" />
+            <asp:BoundField DataField="apellido" HeaderText="Apellido" />
             <asp:BoundField DataField="correo" HeaderText="Correo" />
-            <asp:BoundField DataField="rol.nombre" HeaderText="Rol" />
+            <asp:BoundField DataField="fechacreacion" HeaderText="Fecha Creación" />
             <asp:TemplateField HeaderText="Acción" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>
                     <asp:LinkButton ID="lnkEditar" runat="server" CommandName="EditarUsuario"

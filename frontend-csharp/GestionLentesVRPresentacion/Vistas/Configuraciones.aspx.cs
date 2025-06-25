@@ -1,5 +1,6 @@
 ﻿using FrontVR.GestionlentesvrWS;
 using System;
+using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -40,7 +41,7 @@ namespace FrontVR.Vistas
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             LimpiarFormulario();
-            ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalConfiguracion').modal('show');", true);
+            ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalConfiguracion')).show(); }, 300);", true);
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
@@ -86,8 +87,7 @@ namespace FrontVR.Vistas
 
         protected void gvConfiguraciones_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            int id = int.Parse(gvConfiguraciones.DataKeys[index].Value.ToString());
+            int id = Convert.ToInt32(e.CommandArgument);
 
             if (e.CommandName == "EditarConfiguracion")
             {
@@ -98,9 +98,10 @@ namespace FrontVR.Vistas
                 ddlTipo.SelectedValue = c.tipo.ToString();
                 txtValor.Text = c.valor;
 
-                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalConfiguracion').modal('show');", true);
+                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalConfiguracion')).show(); }, 300);", true);
+                 CargarConfiguraciones();
             }
-            else if (e.CommandName == "Eliminar")
+            else if (e.CommandName == "EliminarConfiguracion")
             {
                 servicio.eliminarConfiguracion(id);
                 CargarConfiguraciones();

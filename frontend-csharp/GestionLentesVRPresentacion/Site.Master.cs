@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using FrontVR.GestionlentesvrWS;
 
 namespace FrontVR
 {
@@ -14,9 +15,25 @@ namespace FrontVR
             if (Session["usuario"] == null)
                 Response.Redirect("~/Login.aspx");
 
+            if (!IsPostBack)
+            {
+                // Detecta el rol del usuario
+                var usuario = (usuario)Session["usuario"];
+                int rol = usuario.rol.id;
+
+                // Oculta elementos para técnicos (rol 2)
+                if (rol == 2)
+                {
+                    lnkAdministracion.Visible = false;
+                    lnkConfiguracion.Visible = false;
+                    lnkGrupos.Visible = false;
+                    lnkActividades.Visible = false;
+                }
+            }
+
+            // Marcar el enlace activo
             string page = System.IO.Path.GetFileName(Request.Path).ToLower();
 
-            // Remueve clase activa de todos (si quieres más robusto)
             lnkDispositivos.Attributes["class"] = "nav-link";
             lnkAplicaciones.Attributes["class"] = "nav-link";
             lnkPantallaInicio.Attributes["class"] = "nav-link";
@@ -25,7 +42,7 @@ namespace FrontVR
             lnkMetrica.Attributes["class"] = "nav-link";
             lnkAdministracion.Attributes["class"] = "nav-link";
             lnkGrupos.Attributes["class"] = "nav-link";
-            //Asigna activa según la página
+
             switch (page)
             {
                 case "dispositivos":
@@ -54,6 +71,7 @@ namespace FrontVR
                     break;
             }
         }
+
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {

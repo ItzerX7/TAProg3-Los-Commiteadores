@@ -55,12 +55,12 @@ namespace FrontVR
 
         private void RedirigirSegunRol(int rolId)
         {
-            //if (rolId == 1)
-            //    Response.Redirect("~/Vistas/PantallaInicioAdmin.aspx");
-            //else if (rolId == 2)
-            //    Response.Redirect("~/Vistas/PantallaInicioTecnico.aspx");
-            //else
-                Response.Redirect("~/Vistas/Pantallainicio.aspx"); // fallback
+            if (rolId == 1)
+                Response.Redirect("~/Vistas/PantallaInicio.aspx"); // Admin ve todo
+            else if (rolId == 2)
+                Response.Redirect("~/Vistas/PantallaInicio.aspx"); // O PantallaInicioTecnico si usas eso
+            else
+                Response.Redirect("~/Login.aspx"); // Rol inválido
         }
     }
 }

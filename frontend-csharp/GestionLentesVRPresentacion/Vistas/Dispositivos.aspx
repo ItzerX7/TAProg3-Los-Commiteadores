@@ -108,7 +108,7 @@
                                 <asp:DropDownList ID="ddlGrupo" runat="server" CssClass="form-select bg-dark text-white border-secondary" />
                             </div>
 
-                            <div class="mb-3">
+                            <div id="divEstado" runat="server" class="mb-3">
                                 <label for="ddlEstado" class="form-label">Estado de conexión <span class="text-danger">*</span></label>
                                 <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-select bg-dark text-white border-secondary">
                                     <asp:ListItem Text="Seleccione..." Value="" />
@@ -118,6 +118,7 @@
                                     <asp:ListItem Text="EN_MANTENIMIENTO" Value="EN_MANTENIMIENTO" />
                                 </asp:DropDownList>
                             </div>
+
 
                             <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false" />
                         </div>

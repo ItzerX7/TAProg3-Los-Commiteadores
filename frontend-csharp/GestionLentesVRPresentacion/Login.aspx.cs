@@ -30,7 +30,7 @@ namespace FrontVR
                 var usuarioValido = usuarios.FirstOrDefault(u =>
                     u.correo.Equals(usuarioInput, StringComparison.OrdinalIgnoreCase) &&
                     u.contrasena == claveInput //&&
-                    //u.activo == 1 // ushort: 1 = activo, 0 = inactivo
+                                               //u.activo == 1 // ushort: 1 = activo, 0 = inactivo
                 );
 
                 if (usuarioValido != null)
@@ -55,12 +55,12 @@ namespace FrontVR
 
         private void RedirigirSegunRol(int rolId)
         {
-            //if (rolId == 1)
-            //    Response.Redirect("~/Vistas/PantallaInicioAdmin.aspx");
-            //else if (rolId == 2)
-            //    Response.Redirect("~/Vistas/PantallaInicioTecnico.aspx");
-            //else
-                Response.Redirect("~/Vistas/Pantallainicio.aspx"); // fallback
+            if (rolId == 1)
+                Response.Redirect("~/Vistas/PantallaInicio.aspx"); // Admin ve todo
+            else if (rolId == 2)
+                Response.Redirect("~/Vistas/PantallaInicio.aspx"); // O PantallaInicioTecnico si usas eso
+            else
+                Response.Redirect("~/Login.aspx"); // Rol inválido
         }
     }
 }

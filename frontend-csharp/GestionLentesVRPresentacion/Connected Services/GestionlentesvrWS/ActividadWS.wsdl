@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ActividadWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
+  <message name="reporteClientes">
+    <part name="parameters" element="tns:reporteClientes" />
+  </message>
+  <message name="reporteClientesResponse">
+    <part name="parameters" element="tns:reporteClientesResponse" />
+  </message>
   <message name="registrarActividad">
     <part name="parameters" element="tns:registrarActividad" />
   </message>
@@ -39,6 +45,10 @@
     <part name="parameters" element="tns:actualizarActividadResponse" />
   </message>
   <portType name="ActividadWS">
+    <operation name="reporteClientes">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/reporteClientesRequest" message="tns:reporteClientes" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/reporteClientesResponse" message="tns:reporteClientesResponse" />
+    </operation>
     <operation name="registrarActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadRequest" message="tns:registrarActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse" message="tns:registrarActividadResponse" />
@@ -67,6 +77,15 @@
   </portType>
   <binding name="ActividadWSPortBinding" type="tns:ActividadWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="reporteClientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="registrarActividad">
       <soap:operation soapAction="" />
       <input>

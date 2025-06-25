@@ -61,5 +61,17 @@ namespace FrontVR.Vistas
         {
             // Aquí puedes personalizar el contenido si lo deseas.
         }
+
+        protected void ClickBotonDescarga(object sender, EventArgs e)
+        {
+            byte[] archivo = actividadWSClient.reporteClientes();
+            Response.Clear();
+            Response.ContentType = "application/pdf"; // Cambia esto si es Excel u otro tipo
+            Response.AddHeader("Content-Disposition", "attachment; filename=reporteClientes.pdf");
+            Response.BinaryWrite(archivo);
+            Response.End();
+        }
+
+        
     }
 }

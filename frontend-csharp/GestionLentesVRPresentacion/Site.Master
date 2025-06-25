@@ -65,7 +65,7 @@
         <asp:ScriptManager runat="server" />
         <div class="wrapper">
             <div class="sidebar">
-                <asp:HyperLink  runat="server" ID="lnkPantallaInicio" href="PantallaInicio.aspx"><i class="fas fa-chart-line"></i> Home</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkPantallaInicio" href="PantallaInicio.aspx"><i class="fas fa-house"></i> Home</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkDispositivos" href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkGrupos" href="/Vistas/Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos </asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkAplicaciones" href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</asp:HyperLink>

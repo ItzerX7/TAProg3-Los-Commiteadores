@@ -1,67 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
+using System.Web.Script.Serialization;
 using System.Web.UI;
 using FrontVR.GestionlentesvrWS;
-using Newtonsoft.Json; // Descomentar cuando se agregue el servicio web
 
 namespace FrontVR.Vistas
 {
     public partial class Metricas : Page
     {
-        MetricaUsoWSClient servicio = new MetricaUsoWSClient(); // Descomentar cuando esté listo el WS
-        AplicacionWSClient appservicio = new AplicacionWSClient();
-        public string LabelsJson { get; private set; }
-        public string ValuesJson { get; private set; }
+        private AplicacionWSClient aplicacionWS = new AplicacionWSClient();
+        private MetricaUsoWSClient metricaWS = new MetricaUsoWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                CargarKPI();
-                CargarDatosGraficoUso();
-                CargarDatosGraficoApps();
+                CargarMetricaPrincipal();
+                CargarDistribucionTipos();
             }
         }
 
-        private void CargarKPI()
+        protected void btnActualizar_Click(object sender, EventArgs e)
         {
-            lblMasUsadoData.Text = servicio.obtenerDispositivoMasUsado().nombre;
-            lblMenosUsadoData.Text = servicio.obtenerDispositivoMenosUsado().nombre;
-            lblAppPopularData.Text = servicio.obtenerAppMasUsada().nombre;
+            CargarMetricaPrincipal();
+            CargarDistribucionTipos();
         }
 
-        private void CargarDatosGraficoUso()
+        private void CargarMetricaPrincipal()
         {
-            //var dispositivos = servicio.();
-            // var tiempos = servicio.obtenerTiempoUsoPorDispositivo();
-            // Aquí devolverías los datos vía JSON para llenar el Chart.js desde code-behind o WebMethod
-        }
-
-        private void CargarDatosGraficoApps()
-        {
-
-            // llamas a tu servicio que te devuelve la lista con nombre y contador
-            // Aquí asumo que listarAppsConContador() retorna List<AppContadorDTO>
-            var apps = appservicio.contarAplicacionesPorTipoEnMetricas().ToList();
-
-            // extraes dos arrays: uno de nombres, otro de conteos
-            var nombres = new BindingList<string>
+            try
             {
-                "EDUCATIVA",
-                "ENTRENAMIENTO",
-                "ENTRETENIMIENTO",
-                "MULTIMEDIA",
-                "PRODUCTIVIDAD",
-                "SIMULACION",
-                "TERAPEUTICA"
-            };
+                var app = metricaWS.obtenerAppMasUsada();
+                lblAppMasUsada.Text = app != null ? app.nombre : "No disponible";
 
-            // serializa a JSON para inyectar en JS
-            LabelsJson = JsonConvert.SerializeObject(nombres);
-            ValuesJson = JsonConvert.SerializeObject(apps);
-            // Retornarías nombre y cantidad para el gráfico tipo doughnut
+                var dispositivoMas = metricaWS.obtenerDispositivoMasUsado();
+                lblDispositivoMasUsado.Text = dispositivoMas != null ? dispositivoMas.nombre : "No disponible";
+
+                var dispositivoMenos = metricaWS.obtenerDispositivoMenosUsado();
+                lblDispositivoMenosUsado.Text = dispositivoMenos != null ? dispositivoMenos.nombre : "No disponible";
+            }
+            catch
+            {
+                lblAppMasUsada.Text = "Error al cargar";
+                lblDispositivoMasUsado.Text = "Error al cargar";
+                lblDispositivoMenosUsado.Text = "Error al cargar";
+            }
+        }
+
+        private void CargarDistribucionTipos()
+        {
+            try
+            {
+                var lista = aplicacionWS.contarAplicacionesPorTipoEnMetricas(); // List<int> con 7 valores
+                var json = new JavaScriptSerializer().Serialize(lista);
+                hfDataTipoApps.Value = json;
+            }
+            catch
+            {
+                hfDataTipoApps.Value = "[]";
+            }
         }
     }
 }

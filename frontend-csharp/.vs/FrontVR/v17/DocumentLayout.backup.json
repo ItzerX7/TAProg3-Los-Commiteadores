@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\actividades.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\actividades.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\itzer\\documents\\pucp-2025-1\\programaci\u00F3n 3\\ta\\tagithub\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\actividades.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\actividades.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\itzer\\documents\\pucp-2025-1\\programaci\u00F3n 3\\ta\\tagithub\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\actividades.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\actividades.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\site.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\metricas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\metricas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\grupos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\grupos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\metricas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\metricas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
@@ -33,6 +41,30 @@
     {
       "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,56 +82,57 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Grupos.aspx",
-              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
-              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T06:48:42.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dispositivos.aspx",
-              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T06:27:43.642Z",
+              "DocumentIndex": 1,
+              "Title": "Actividades.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAYwBwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T08:56:01.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Administracion.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAWwDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:04:27.094Z"
+              "DocumentIndex": 4,
+              "Title": "Metricas.aspx",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-25T08:32:17.192Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Administracion.aspx",
-              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
-              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T05:59:00.664Z"
+              "Title": "Site.Master.cs",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Site.Master.cs",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Site.Master.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAQwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T08:27:02.019Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
+              "Title": "Configuraciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAADwv3gAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T08:22:09.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Actividades.aspx",
               "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx",
@@ -112,19 +145,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Dispositivos.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAowFEAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:32:22.227Z"
+              "DocumentIndex": 2,
+              "Title": "Site.Master",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Site.Master",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Site.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-25T08:38:17.311Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 14,
+              "Title": "Administracion.aspx",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-25T05:59:00.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Aplicaciones.aspx",
               "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
@@ -136,7 +182,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Grupos.aspx",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-25T06:48:42.78Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Metricas.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T08:33:44.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Configuraciones.aspx",
               "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
@@ -145,6 +215,66 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-06-25T05:39:57.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Administracion.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAWwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T06:04:27.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Dispositivos.aspx",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-25T06:27:43.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Login.aspx",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-25T08:25:22.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Login.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T08:25:37.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Dispositivos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "ToolTip": "C:\\Users\\Itzer\\Documents\\PUCP-2025-1\\Programaci\u00F3n 3\\TA\\TAGithub\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAADwv+AAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T06:32:22.227Z"
             }
           ]
         }

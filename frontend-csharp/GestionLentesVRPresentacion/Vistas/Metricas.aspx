@@ -1,120 +1,67 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
-         CodeBehind="Metricas.aspx.cs" Inherits="FrontVR.Vistas.Metricas" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Metricas.aspx.cs" Inherits="FrontVR.Vistas.Metricas" MasterPageFile="~/Site.Master" %>
 
-<asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
-    <h2 class="page-title mb-3">Dashboard de Métricas</h2>
-
-    <!-- Indicadores clave -->
-    <div class="row mb-4">
-        <div class="col-md-4">
-            <div class="card text-white bg-info mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Dispositivo más usado</h5>
-                    <p class="card-text" id="lblMasUsado">-</p>
-                    <asp:Label ID="lblMasUsadoData" runat="server" CssClass="card-text" Text="–" />
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-white bg-danger mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">Dispositivo más inactivo</h5>
-                    <p class="card-text" id="lblMenosUsado">-</p>
-                    <asp:Label ID="lblMenosUsadoData" runat="server" CssClass="card-text" Text="–" />
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card text-white bg-success mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">App más ejecutada</h5>
-                    <p class="card-text" id="lblAppPopular">-</p>
-                    <asp:Label ID="lblAppPopularData" runat="server" CssClass="card-text" Text="–" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Graficos -->
-    <div class="row">
-        <div class="col-md-6">
-            <canvas id="graficoTiempoUso"></canvas>
-        </div>
-        <div class="col-md-6">
-            <canvas id="graficoApps"></canvas>
-        </div>
-    </div>
-
-    <div class="row mt-5">
-        <div class="col-md-12">
-            <canvas id="graficoLineaTiempo"></canvas>
-        </div>
-    </div>
-
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <div class="container mt-5">
+        <h2 class="mb-4">Métricas de Uso</h2>
+
+        <asp:Button ID="btnActualizar" runat="server" Text="Actualizar métricas" OnClick="btnActualizar_Click" CssClass="btn btn-primary mb-4" />
+
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <h5>Aplicación más usada:</h5>
+                <asp:Label ID="lblAppMasUsada" runat="server" CssClass="form-label text-primary"></asp:Label>
+            </div>
+            <div class="col-md-4">
+                <h5>Dispositivo más usado:</h5>
+                <asp:Label ID="lblDispositivoMasUsado" runat="server" CssClass="form-label text-success"></asp:Label>
+            </div>
+            <div class="col-md-4">
+                <h5>Dispositivo menos usado:</h5>
+                <asp:Label ID="lblDispositivoMenosUsado" runat="server" CssClass="form-label text-danger"></asp:Label>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <h4>Distribución por tipo de aplicación</h4>
+                <canvas id="chartTipoApps" width="600" height="300"></canvas>
+            </div>
+        </div>
+
+        <asp:HiddenField ID="hfDataTipoApps" runat="server" />
+    </div>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // TODO: Los siguientes datos deben venir desde el backend via WS
-
-            // Tiempo de uso por dispositivo
-            const graficoTiempo = new Chart(document.getElementById('graficoTiempoUso'), {
-                type: 'bar',
-                data: {
-                    labels: ['VR-01', 'VR-02', 'VR-03'],
-                    datasets: [{
-                        label: 'Horas de uso',
-                        data: [5.5, 2.8, 6.7],
-                        backgroundColor: 'rgba(54, 162, 235, 0.6)'
-                    }]
-                }
-            });
-
-            // Distribucion de apps
-            const graficoApps = new Chart(document.getElementById('graficoApps'), {
-                type: 'doughnut',
-                data: {
-                    etiquetas = <%= LabelsJson  %>;
-                    valores = <%= ValuesJson  %>;
-                    labels: etiquetas,
-                    datasets: [{
-                        data: valores,
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.6)',
-                            'rgba(75, 192, 192, 0.6)',
-                            'rgba(225, 206, 86, 0.6)',
-                            'rgba(15, 206, 86, 0.6)',
-                            'rgba(170, 206, 86, 0.6)'
-                        ]
-                    }]
-                }
-            });
-
-            // Actividad en el tiempo
-            const graficoLinea = new Chart(document.getElementById('graficoLineaTiempo'), {
-                type: 'line',
-                data: {
-                    labels: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'],
-                    datasets: [
-                        {
-                            label: 'VR-01',
-                            data: [60, 45, 30, 50, 70],
+        window.onload = function () {
+            var rawTipo = document.getElementById('<%= hfDataTipoApps.ClientID %>').value;
+            if (rawTipo) {
+                var dataTipo = JSON.parse(rawTipo);
+                var ctx = document.getElementById('chartTipoApps').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Educativa', 'Entretenimiento', 'Terapéutica', 'Entrenamiento', 'Productividad', 'Simulación', 'Multimedia'],
+                        datasets: [{
+                            label: 'Cantidad de aplicaciones',
+                            data: dataTipo,
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
                             borderColor: 'rgba(54, 162, 235, 1)',
-                            fill: false
-                        },
-                        {
-                            label: 'VR-02',
-                            data: [20, 35, 25, 30, 40],
-                            borderColor: 'rgba(255, 99, 132, 1)',
-                            fill: false
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            y: { beginAtZero: true }
                         }
-                    ]
-                }
-            });
-
-            // TODO: Mostrar los KPIs desde WS
-            document.getElementById('lblMasUsado').innerText = 'VR-03';
-            document.getElementById('lblMenosUsado').innerText = 'VR-02';
-            document.getElementById('lblAppPopular').innerText = 'Terapéutica';
-        });
+                    }
+                });
+            }
+        };
     </script>
 </asp:Content>

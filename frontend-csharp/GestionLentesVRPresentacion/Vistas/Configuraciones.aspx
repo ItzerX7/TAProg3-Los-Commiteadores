@@ -16,7 +16,7 @@
             <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
             <asp:BoundField DataField="tipo" HeaderText="Tipo" />
             <asp:BoundField DataField="valor" HeaderText="Valor" />
-            <asp:BoundField DataField="fechaCreacion" HeaderText="Fecha Creación" DataFormatString="{0:yyyy-MM-dd}" />
+            <asp:BoundField DataField="fechaCreacion" HeaderText="Fecha Creación" DataFormatString="{0:yyyy-MM-dd HH:mm}" />
 
             <asp:TemplateField HeaderText="Acciones">
                 <ItemTemplate>

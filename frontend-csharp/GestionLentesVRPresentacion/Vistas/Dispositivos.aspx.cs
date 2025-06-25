@@ -13,8 +13,19 @@ namespace FrontVR.Vistas
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+                return;
+            }
+
             if (!IsPostBack)
             {
+                var usuario = (usuario)Session["usuario"];
+                bool esTecnico = usuario.rol.id == 2;
+
+                gvDispositivos.Columns[5].Visible = !esTecnico; // Oculta columna Estado para técnicos
+
                 CargarEstados();
                 CargarGrupos();
                 CargarDispositivos();
@@ -53,9 +64,18 @@ namespace FrontVR.Vistas
         {
             try
             {
-                if (ddlEstado.SelectedValue == "" || ddlGrupo.SelectedValue == "")
+                if (Session["usuario"] == null)
                 {
-                    lblError.Text = "Debe seleccionar el estado de conexión y el grupo.";
+                    Response.Redirect("~/Login.aspx");
+                    return;
+                }
+
+                var usuario = (usuario)Session["usuario"];
+                bool esTecnico = usuario.rol.id == 2;
+
+                if (ddlEstado.SelectedValue == "" || (ddlGrupo.SelectedValue == "" && !esTecnico))
+                {
+                    lblError.Text = "Debe seleccionar el grupo" + (!esTecnico ? " y el estado de conexión" : "") + ".";
                     lblError.Visible = true;
                     ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal",
                         "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalDispositivo')).show(); }, 300);", true);
@@ -66,7 +86,19 @@ namespace FrontVR.Vistas
                 int id = esNuevo ? 0 : int.Parse(hfIdDispositivo.Value);
                 int idGrupo = int.Parse(ddlGrupo.SelectedValue);
 
-                dispositivo d = new dispositivo
+                estadoConexion estadoFinal;
+
+                if (esTecnico && !esNuevo)
+                {
+                    var actual = servicio.obtenerDispositivo(id);
+                    estadoFinal = actual.estado; // evitar que el técnico lo cambie al editar
+                }
+                else
+                {
+                    estadoFinal = (estadoConexion)Enum.Parse(typeof(estadoConexion), ddlEstado.SelectedValue);
+                }
+
+                var dispositivo = new dispositivo
                 {
                     id = id,
                     nombre = txtNombre.Text,
@@ -77,16 +109,16 @@ namespace FrontVR.Vistas
                     ultimaConexion = DateTime.Parse(txtFecha.Text),
                     ultimaConexionSpecified = true,
                     nivelBateria = 100,
-                    estado = (estadoConexion)Enum.Parse(typeof(estadoConexion), ddlEstado.SelectedValue),
+                    estado = estadoFinal,
                     estadoSpecified = true,
                     grupo = new grupo { id = idGrupo },
                     activo = 'S'
                 };
 
                 if (esNuevo)
-                    servicio.registrarDispositivo(d);
+                    servicio.registrarDispositivo(dispositivo);
                 else
-                    servicio.actualizarDispositivo(d);
+                    servicio.actualizarDispositivo(dispositivo);
 
                 LimpiarFormulario();
 
@@ -119,6 +151,15 @@ namespace FrontVR.Vistas
 
         protected void gvDispositivos_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+                return;
+            }
+
+            var usuario = (usuario)Session["usuario"];
+            bool esTecnico = usuario.rol.id == 2;
+
             int id = Convert.ToInt32(e.CommandArgument);
 
             if (e.CommandName == "Eliminar")
@@ -138,7 +179,7 @@ namespace FrontVR.Vistas
             {
                 try
                 {
-                    dispositivo d = servicio.obtenerDispositivo(id);
+                    var d = servicio.obtenerDispositivo(id);
                     CargarGrupos();
 
                     hfIdDispositivo.Value = d.id.ToString();
@@ -148,6 +189,8 @@ namespace FrontVR.Vistas
                     txtFecha.Text = d.fechaRegistro.ToString("yyyy-MM-dd");
                     txtUbicacion.Text = d.ubicacion;
                     ddlEstado.SelectedValue = d.estado.ToString();
+
+                    divEstado.Visible = !esTecnico;
 
                     var grupoItem = ddlGrupo.Items.FindByValue(d.grupo.id.ToString());
                     if (grupoItem != null)
@@ -178,6 +221,9 @@ namespace FrontVR.Vistas
             ddlGrupo.SelectedIndex = 0;
             lblError.Text = "";
             lblError.Visible = false;
+
+            divEstado.Visible = true;
+
         }
     }
 }

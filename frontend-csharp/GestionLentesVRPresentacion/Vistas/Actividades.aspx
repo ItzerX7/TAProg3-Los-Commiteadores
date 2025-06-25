@@ -3,6 +3,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="page-title mb-3">Lista de actividades</h2>
 
+    <asp:Button ID="btnDescarga" runat="server" Text="Descargar Reporte" OnClick="ClickBotonDescarga"/>
+
     <asp:GridView ID="gvActividades" runat="server"
         AutoGenerateColumns="False"
         CssClass="table table-striped table-bordered"

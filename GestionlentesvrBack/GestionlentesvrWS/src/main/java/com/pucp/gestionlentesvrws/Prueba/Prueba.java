@@ -30,22 +30,8 @@ import java.sql.Timestamp;
 @WebService(serviceName = "Prueba")
 public class Prueba {
 
-    public static void main(String[] args) {
-        try {
-            ActividadWS servicio = new ActividadWS();
-            byte[] pdfBytes = servicio.reporteClientes();
-
-            if (pdfBytes == null || pdfBytes.length == 0) {
-                return;
-            }
-
-            String nombreArchivo = "reporte_actividades.pdf";
-            try (FileOutputStream fos = new FileOutputStream(nombreArchivo)) {
-                fos.write(pdfBytes);
-            }
-
-        } catch (Exception e) {
-        System.out.print(e);
-        }
+    @WebMethod(operationName = "hola")
+    public String hola() throws Exception {
+        return "hola";
     }
 }

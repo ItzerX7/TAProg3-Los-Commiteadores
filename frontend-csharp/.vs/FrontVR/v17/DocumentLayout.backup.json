@@ -1,58 +1,66 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\",
+  "WorkspaceRootPath": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\configuraciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\administracion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\connected services\\gestionlentesvrws\\reference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\oscar\\documents\\25-1\\programacion 3\\ta2\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\actividades.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\actividades.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\oscar\\documents\\25-1\\programacion 3\\ta2\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\actividades.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\actividades.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\oscar\\documents\\25-1\\programacion 3\\ta2\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\actividades.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\actividades.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\oscar\\documents\\25-1\\programacion 3\\ta2\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\metricas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\metricas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\users\\oscar\\documents\\25-1\\programacion 3\\ta2\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\configuraciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\configuraciones.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\connected services\\gestionlentesvrws\\reference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\connected services\\gestionlentesvrws\\reference.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\administracion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\site.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\dispositivos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:GestionLentesVRPresentacion\\Login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:GestionLentesVRPresentacion\\Login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|c:\\marcelo\\javaprojects\\taprog3-los-commiteadores\\frontend-csharp\\gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3D9AB0C5-F57B-483A-9908-FDDACC94E4EF}|GestionLentesVRPresentacion\\FrontVR.csproj|solutionrelative:gestionlentesvrpresentacion\\vistas\\aplicaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,67 +74,41 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Configuraciones.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwGsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T10:19:56.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Configuraciones.aspx",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
+              "Title": "Actividades.aspx",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T10:02:03.783Z",
+              "WhenOpened": "2025-06-24T23:47:53.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Configuraciones.aspx.cs",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwHkAAAAAAAAAAAAAAA==",
+              "Title": "Actividades.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowEgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T10:04:33.934Z",
+              "WhenOpened": "2025-06-24T23:56:43.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Administracion.aspx.cs",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T10:04:08.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Administracion.aspx",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -135,11 +117,86 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Metricas.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Metricas.aspx.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAArwC4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T23:56:34.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Actividades.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.designer.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.designer.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.designer.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T23:56:42.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Configuraciones.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:19:56.67Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Configuraciones.aspx",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-18T10:02:03.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Configuraciones.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAzwHkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:04:33.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Administracion.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:04:08.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Site.Master",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Site.Master",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Site.Master",
               "RelativeToolTip": "GestionLentesVRPresentacion\\Site.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -148,114 +205,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Login.aspx.cs",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Login.aspx.cs",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs",
               "RelativeToolTip": "GestionLentesVRPresentacion\\Login.aspx.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAowD0AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T05:34:35.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T05:34:35.677Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Login.aspx",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
               "RelativeToolTip": "GestionLentesVRPresentacion\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T05:34:35.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T05:34:35.68Z"
             },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Dispositivos.aspx",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T06:50:34.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Dispositivos.aspx.cs",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAqwEMAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T06:52:29.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Reference.cs",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
-              "ViewState": "AgIAAMICAAAAAAAAAAAwwNoCAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T07:56:29.044Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "22ea2add-f874-468e-82d1-343302ec4bd2",
-        "Display": 0,
-        "X": 301,
-        "Y": 187,
-        "Width": 1447,
-        "Height": 800,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "Aplicaciones.aspx",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
+              "Title": "Dispositivos.aspx",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-18T08:31:00.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T06:50:34.367Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "Aplicaciones.aspx.cs",
-              "DocumentMoniker": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs",
-              "ToolTip": "C:\\Marcelo\\JavaProjects\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Title": "Dispositivos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAqwEMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T08:33:21.74Z",
+              "WhenOpened": "2025-06-18T06:52:29.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Reference.cs",
+              "DocumentMoniker": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
+              "ToolTip": "C:\\Users\\oscar\\Documents\\25-1\\PROGRAMACION 3\\ta2\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Connected Services\\GestionlentesvrWS\\Reference.cs",
+              "ViewState": "AgIAAMICAAAAAAAAAAAwwNoCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T07:56:29.044Z",
               "EditorCaption": ""
             }
           ]

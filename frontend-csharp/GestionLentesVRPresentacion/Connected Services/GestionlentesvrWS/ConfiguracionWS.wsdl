@@ -20,6 +20,12 @@
   <message name="listarConfiguracionResponse">
     <part name="parameters" element="tns:listarConfiguracionResponse" />
   </message>
+  <message name="actualizarConfiguracion">
+    <part name="parameters" element="tns:actualizarConfiguracion" />
+  </message>
+  <message name="actualizarConfiguracionResponse">
+    <part name="parameters" element="tns:actualizarConfiguracionResponse" />
+  </message>
   <message name="obtenerConfiguracion">
     <part name="parameters" element="tns:obtenerConfiguracion" />
   </message>
@@ -32,12 +38,6 @@
   <message name="registrarConfiguracionResponse">
     <part name="parameters" element="tns:registrarConfiguracionResponse" />
   </message>
-  <message name="actualizarConfiguracion">
-    <part name="parameters" element="tns:actualizarConfiguracion" />
-  </message>
-  <message name="actualizarConfiguracionResponse">
-    <part name="parameters" element="tns:actualizarConfiguracionResponse" />
-  </message>
   <portType name="ConfiguracionWS">
     <operation name="eliminarConfiguracion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest" message="tns:eliminarConfiguracion" />
@@ -49,6 +49,11 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionResponse" message="tns:listarConfiguracionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="actualizarConfiguracion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionRequest" message="tns:actualizarConfiguracion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionResponse" message="tns:actualizarConfiguracionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="obtenerConfiguracion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionRequest" message="tns:obtenerConfiguracion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionResponse" message="tns:obtenerConfiguracionResponse" />
@@ -58,11 +63,6 @@
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionRequest" message="tns:registrarConfiguracion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionResponse" message="tns:registrarConfiguracionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="actualizarConfiguracion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionRequest" message="tns:actualizarConfiguracion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionResponse" message="tns:actualizarConfiguracionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
   </portType>
   <binding name="ConfiguracionWSPortBinding" type="tns:ConfiguracionWS">
@@ -91,6 +91,18 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
+    <operation name="actualizarConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
     <operation name="obtenerConfiguracion">
       <soap:operation soapAction="" />
       <input>
@@ -104,18 +116,6 @@
       </fault>
     </operation>
     <operation name="registrarConfiguracion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="actualizarConfiguracion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

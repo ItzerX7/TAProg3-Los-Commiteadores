@@ -8,9 +8,9 @@
     <h2 class="page-title mb-3">Aplicaciones disponibles</h2>
 
     <asp:LinkButton ID="btnNuevaAplicacion" runat="server" CssClass="btn btn-primary mb-3"
-        OnClientClick="return false;"
+        OnClientClick="limpiarModal(); return false;"
         data-bs-toggle="modal" data-bs-target="#modalAplicacion">
-    <i class="fa fa-plus"></i> Nueva aplicación
+        <i class="fa fa-plus"></i> Nueva aplicación
     </asp:LinkButton>
 
     <!-- Tabla -->
@@ -32,7 +32,6 @@
                 </ItemTemplate>
             </asp:TemplateField>
 
-
             <asp:TemplateField HeaderText="Acciones" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>
                     <asp:LinkButton ID="btnVerDispositivos" runat="server"
@@ -51,13 +50,11 @@
                         Text="Eliminar"
                         CssClass="btn btn-sm btn-danger" />
                 </ItemTemplate>
-
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
     <!-- Aquí se renderizará la tabla de dispositivos vinculados -->
     <asp:PlaceHolder ID="phDispositivos" runat="server"></asp:PlaceHolder>
-
 
     <!-- Modal -->
     <div class="modal fade" id="modalAplicacion" tabindex="-1"
@@ -137,9 +134,34 @@
             </div>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
-        const modalDispositivo = document.getElementById('modalAplicacion');
-        modalDispositivo.addEventListener('hidden.bs.modal', function () {
+        function limpiarModal() {
+            document.getElementById('modalNuevaAppLabel').textContent = 'Nueva aplicación';
+
+            document.getElementById('<%= txtNombre.ClientID %>').value = '';
+            document.getElementById('<%= txtVersion.ClientID %>').value = '';
+            document.getElementById('<%= txtTamano.ClientID %>').value = '';
+            document.getElementById('<%= txtDescripcion.ClientID %>').value = '';
+            document.getElementById('<%= txtDesarrollador.ClientID %>').value = '';
+            document.getElementById('<%= ddlCategoria.ClientID %>').selectedIndex = 0;
+            document.getElementById('<%= hfIdAplicacion.ClientID %>').value = '';
+        }
+
+        function mostrarExitoYRefrescar(mensaje) {
+            Swal.fire({
+                icon: 'success',
+                title: mensaje,
+                confirmButtonText: 'OK'
+            }).then(() => {
+                window.location.href = window.location.href;
+            });
+        }
+
+        const modalAplicacion = document.getElementById('modalAplicacion');
+        modalAplicacion.addEventListener('hidden.bs.modal', function () {
             document.getElementById('modalNuevaAppLabel').textContent = 'Nueva aplicación';
         });
     </script>

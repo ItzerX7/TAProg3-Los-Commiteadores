@@ -64,26 +64,18 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:aplicacion" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="eliminarAplicacion">
-    <xs:sequence>
-      <xs:element name="id" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarAplicacionResponse">
-    <xs:sequence />
-  </xs:complexType>
   <xs:complexType name="eliminarAplicacionesPorDispositivo">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="eliminarAplicacionesPorDispositivoResponse">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="registrarAplicacion">
+  <xs:complexType name="eliminarAplicacion">
     <xs:sequence>
-      <xs:element minOccurs="0" name="elemento" type="tns:aplicacion" />
+      <xs:element name="id" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="registrarAplicacionResponse">
+  <xs:complexType name="eliminarAplicacionResponse">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarDispositivosPorAplicaciones">
@@ -120,6 +112,14 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarAplicacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="elemento" type="tns:aplicacion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarAplicacionResponse">
+    <xs:sequence />
   </xs:complexType>
   <xs:complexType name="actualizarAplicacion">
     <xs:sequence>

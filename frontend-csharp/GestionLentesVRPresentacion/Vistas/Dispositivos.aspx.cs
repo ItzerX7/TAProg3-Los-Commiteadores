@@ -24,7 +24,7 @@ namespace FrontVR.Vistas
                 var usuario = (usuario)Session["usuario"];
                 bool esTecnico = usuario.rol.id == 2;
 
-                gvDispositivos.Columns[5].Visible = !esTecnico; // Oculta columna Estado para técnicos
+                gvDispositivos.Columns[6].Visible = !esTecnico; // Oculta columna Estado si es técnico
 
                 CargarEstados();
                 CargarGrupos();
@@ -93,7 +93,7 @@ namespace FrontVR.Vistas
                 if (esTecnico && !esNuevo)
                 {
                     var actual = dispositivoWS.obtenerDispositivo(id);
-                    estadoFinal = actual.estado; // evitar que el técnico lo cambie al editar
+                    estadoFinal = actual.estado;
                 }
                 else
                 {
@@ -135,8 +135,7 @@ namespace FrontVR.Vistas
                         confirmButtonText: 'OK'
                     }}).then(() => {{
                         window.location.href = window.location.href;
-                    }});
-                ";
+                    }});";
                 ScriptManager.RegisterStartupScript(this, GetType(), "SwalSuccess", script, true);
 
                 CargarDispositivos();
@@ -224,8 +223,8 @@ namespace FrontVR.Vistas
             lblError.Text = "";
             lblError.Visible = false;
 
+            // Asegura que el campo Estado esté visible para nuevos registros
             divEstado.Visible = true;
-
         }
     }
 }

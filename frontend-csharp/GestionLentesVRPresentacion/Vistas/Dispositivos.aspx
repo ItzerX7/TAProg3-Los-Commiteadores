@@ -7,11 +7,10 @@
 
     <!-- Botón nuevo dispositivo -->
     <asp:LinkButton ID="btnNuevoDispositivo" runat="server" CssClass="btn btn-primary mb-3"
-        OnClientClick="return false;"
+        OnClientClick="limpiarModal(); return false;" 
         data-bs-toggle="modal" data-bs-target="#modalDispositivo">
-    <i class="fa fa-plus"></i> Nuevo dispositivo
+        <i class="fa fa-plus"></i> Nuevo dispositivo
     </asp:LinkButton>
-
 
     <!-- Campos de búsqueda -->
     <div class="row mb-3">
@@ -48,6 +47,7 @@
             <asp:BoundField DataField="fechaRegistro" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" />
             <asp:BoundField DataField="ubicacion" HeaderText="Ubicación" />
             <asp:BoundField DataField="estado" HeaderText="Estado" />
+
             <asp:BoundField DataField="ultimaConexion" HeaderText="Última Conexión" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" />
             <asp:BoundField DataField="nivelBateria" HeaderText="Nivel de Batería (%)" />
             <asp:TemplateField HeaderText="Acción">
@@ -104,7 +104,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtFecha" class="form-label">Ultima Conexion</label>
+                                <label for="txtFecha" class="form-label">Ultima Conexión</label>
                                 <asp:TextBox ID="txtFecha" runat="server" TextMode="Date" CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
@@ -151,10 +151,10 @@
             for (var i = 1; i < filas.length; i++) {
                 var celdas = filas[i].getElementsByTagName("td");
                 if (celdas.length > 0) {
-                    var nombre = celdas[0].textContent.toLowerCase();
-                    var modelo = celdas[1].textContent.toLowerCase();
-                    var ubicacion = celdas[4].textContent.toLowerCase();
-                    var estado = celdas[5].textContent.toLowerCase();
+                    var nombre = celdas[1].textContent.toLowerCase();
+                    var modelo = celdas[2].textContent.toLowerCase();
+                    var ubicacion = celdas[5].textContent.toLowerCase();
+                    var estado = celdas[6].textContent.toLowerCase();
 
                     var coincideNombre = nombre.includes(inputNombre);
                     var coincideModelo = modelo.includes(inputModelo);
@@ -166,9 +166,22 @@
             }
         }
 
+        function limpiarModal() {
+            document.getElementById('modalDispositivoLabel').textContent = 'Nuevo dispositivo';
+
+            document.getElementById('<%= txtNombre.ClientID %>').value = '';
+            document.getElementById('<%= txtModelo.ClientID %>').value = '';
+            document.getElementById('<%= txtSerie.ClientID %>').value = '';
+            document.getElementById('<%= txtUbicacion.ClientID %>').value = '';
+            document.getElementById('<%= txtFecha.ClientID %>').value = '';
+            document.getElementById('<%= ddlGrupo.ClientID %>').selectedIndex = 0;
+            document.getElementById('<%= ddlEstado.ClientID %>').selectedIndex = 0;
+            document.getElementById('<%= hfIdDispositivo.ClientID %>').value = '';
+        }
+
         document.getElementById('modalDispositivo')?.addEventListener('hidden.bs.modal', function () {
             document.getElementById('modalDispositivoLabel').textContent = 'Nuevo dispositivo';
+            document.querySelectorAll("button, input, select").forEach(el => el.disabled = false);
         });
     </script>
-
 </asp:Content>

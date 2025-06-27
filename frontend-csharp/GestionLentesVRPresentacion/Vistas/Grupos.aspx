@@ -6,11 +6,10 @@
 
     <!-- Botón para abrir modal -->
     <asp:LinkButton ID="btnNuevoGrupo" runat="server" CssClass="btn btn-primary mb-3"
-        OnClientClick="return false;"
+        OnClientClick="limpiarModalGrupo(); return false;"
         data-bs-toggle="modal" data-bs-target="#modalGrupo">
-    <i class="fa fa-plus"></i> Nuevo grupo
+        <i class="fa fa-plus"></i> Nuevo grupo
     </asp:LinkButton>
-
 
     <!-- Buscadores -->
     <div class="row mb-3">
@@ -40,20 +39,30 @@
             <asp:BoundField DataField="fechaCreacion" HeaderText="Fecha" DataFormatString="{0:yyyy-MM-dd HH:mm:ss}" />
             <asp:TemplateField HeaderText="Acción">
                 <ItemTemplate>
-                    <div class="d-flex justify-content-center gap-2">
+                    <div class="d-flex justify-content-center gap-1">
+                        <asp:LinkButton ID="btnVerDispositivos" runat="server" Text="Ver Disp."
+                            CommandName="VerDispositivosGrupo"
+                            CommandArgument='<%# Eval("id") %>'
+                            CssClass="btn btn-sm btn-outline-info" />
+
                         <asp:LinkButton ID="btnEditar" runat="server" Text="Editar"
                             CommandName="EditarGrupo"
                             CommandArgument='<%# Eval("id") %>'
                             CssClass="btn btn-sm btn-warning" />
+
                         <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar"
                             CommandName="EliminarGrupo"
                             CommandArgument='<%# Eval("id") %>'
-                            CssClass="btn btn-sm btn-danger" />
+                            CssClass="btn btn-sm btn-danger"
+                            OnClientClick="return confirm('¿Seguro de eliminar este grupo?');" />
                     </div>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+
+    <!-- Aquí se renderiza la tabla de dispositivos asociados -->
+    <asp:PlaceHolder ID="phDispositivosGrupo" runat="server" />
 
     <!-- MODAL -->
     <div class="modal fade" id="modalGrupo" tabindex="-1" aria-labelledby="modalGrupoLabel" aria-hidden="true" data-bs-theme="dark">
@@ -97,16 +106,12 @@
                                 OnClick="btnGuardarGrupo_Click" />
                         </div>
                     </ContentTemplate>
-
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="gvGrupos" EventName="RowCommand" />
-                    </Triggers>
                 </asp:UpdatePanel>
             </div>
         </div>
     </div>
 
-    <!-- Script buscador -->
+    <!-- Scripts -->
     <script>
         function filtrarTabla() {
             const nombre = document.getElementById("searchNombre").value.toLowerCase();
@@ -128,8 +133,15 @@
             }
         }
 
-        const modalGrupo = document.getElementById('modalGrupo');
-        modalGrupo.addEventListener('hidden.bs.modal', function () {
+        function limpiarModalGrupo() {
+            document.getElementById('<%= hfIdGrupo.ClientID %>').value = "";
+            document.getElementById('<%= txtNombreGrupo.ClientID %>').value = "";
+            document.getElementById('<%= txtDescripcionGrupo.ClientID %>').value = "";
+            document.getElementById('<%= txtUbicacionGrupo.ClientID %>').value = "";
+            document.getElementById('modalGrupoLabel').textContent = 'Nuevo grupo';
+        }
+
+        document.getElementById('modalGrupo')?.addEventListener('hidden.bs.modal', function () {
             document.getElementById('modalGrupoLabel').textContent = 'Nuevo grupo';
         });
     </script>

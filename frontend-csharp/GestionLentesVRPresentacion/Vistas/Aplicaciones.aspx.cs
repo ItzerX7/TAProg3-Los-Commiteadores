@@ -29,8 +29,6 @@ namespace FrontVR.Vistas
             var aplicaciones = aplicacionWSClient.listarAplicacion();
             gvAplicaciones.DataSource = aplicaciones;
             gvAplicaciones.DataBind();
-
-            // Limpiar tabla de dispositivos al recargar
             phDispositivos.Controls.Clear();
         }
 
@@ -61,22 +59,33 @@ namespace FrontVR.Vistas
                 desarrollador = txtDesarrollador.Text.Trim(),
                 categoria = (categoriaAplicacion)Enum.Parse(typeof(categoriaAplicacion), ddlCategoria.SelectedValue),
                 categoriaSpecified = true,
+                activo = chkActivo.Checked ? 'S' : 'N'
             };
 
             try
             {
-                if (nuevaApp.id == 0)
+                bool esNuevo = nuevaApp.id == 0;
+
+                if (esNuevo)
                     aplicacionWSClient.registrarAplicacion(nuevaApp);
                 else
                     aplicacionWSClient.actualizarAplicacion(nuevaApp);
 
                 ClearModal();
 
-                ScriptManager.RegisterStartupScript(
-                    this, GetType(), "CerrarModal",
+                ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModal",
                     "$('#modalAplicacion').modal('hide');", true);
 
-                BindGrid();
+                string mensaje = esNuevo ? "Aplicación registrada exitosamente" : "Aplicación actualizada correctamente";
+                string script = $@"
+                    Swal.fire({{
+                        icon: 'success',
+                        title: '{mensaje}',
+                        confirmButtonText: 'OK'
+                    }}).then(() => {{
+                        window.location.href = window.location.href;
+                    }});";
+                ScriptManager.RegisterStartupScript(this, GetType(), "SwalSuccess", script, true);
             }
             catch (System.Exception ex)
             {
@@ -87,8 +96,14 @@ namespace FrontVR.Vistas
 
         private void ClearModal()
         {
-            txtNombre.Text = txtVersion.Text = txtTamano.Text = string.Empty;
-            txtDescripcion.Text = txtDesarrollador.Text = ddlCategoria.SelectedValue = string.Empty;
+            hfIdAplicacion.Value = "";
+            txtNombre.Text = "";
+            txtVersion.Text = "";
+            txtTamano.Text = "";
+            txtDescripcion.Text = "";
+            txtDesarrollador.Text = "";
+            ddlCategoria.SelectedIndex = 0;
+            chkActivo.Checked = false;
             lblError.Visible = false;
         }
 
@@ -108,6 +123,7 @@ namespace FrontVR.Vistas
                 txtDescripcion.Text = app.descripcion;
                 txtDesarrollador.Text = app.desarrollador;
                 ddlCategoria.SelectedValue = app.categoria.ToString();
+                chkActivo.Checked = app.activo == 'S';
 
                 ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", @"
                     document.getElementById('modalNuevaAppLabel').textContent = 'Editar aplicación';
@@ -127,10 +143,7 @@ namespace FrontVR.Vistas
 
         private void MostrarDispositivosPorAplicacion(int idAplicacion)
         {
-            // Limpiar tabla anterior
             phDispositivos.Controls.Clear();
-
-            //// Usar el WS correcto
             var dispositivos = aplicacionWSClient.listarDispositivosPorAplicaciones(idAplicacion);
 
             if (dispositivos != null && dispositivos.Length > 0)
@@ -144,8 +157,7 @@ namespace FrontVR.Vistas
                 html.Append("<th>Modelo</th>");
                 html.Append("<th>Número de Serie</th>");
                 html.Append("<th>Estado</th>");
-                html.Append("</tr></thead>");
-                html.Append("<tbody>");
+                html.Append("</tr></thead><tbody>");
 
                 foreach (var dispositivo in dispositivos)
                 {
@@ -158,7 +170,6 @@ namespace FrontVR.Vistas
                 }
 
                 html.Append("</tbody></table>");
-
                 phDispositivos.Controls.Add(new Literal { Text = html.ToString() });
             }
             else

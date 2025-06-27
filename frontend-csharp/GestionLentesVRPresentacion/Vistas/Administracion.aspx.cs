@@ -9,6 +9,7 @@ namespace FrontVR.Vistas
     {
         UsuarioWSClient servicio = new UsuarioWSClient();
         RolWSClient rolServicio = new RolWSClient();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -22,7 +23,6 @@ namespace FrontVR.Vistas
         {
             var lista = servicio.listarUsuario();
             gvUsuarios.DataSource = lista;
-            gvUsuarios.DataKeyNames = new[] { "id" };
             gvUsuarios.DataBind();
         }
 
@@ -38,9 +38,12 @@ namespace FrontVR.Vistas
         {
             try
             {
+                int idUsuario = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value);
+                bool esNuevo = idUsuario == 0;
+
                 usuario u = new usuario
                 {
-                    id = string.IsNullOrEmpty(hfUsuarioId.Value) ? 0 : int.Parse(hfUsuarioId.Value),
+                    id = idUsuario,
                     nombre = txtNombres.Text.Trim(),
                     apellido = txtApellido.Text.Trim(),
                     correo = txtCorreo.Text.Trim(),
@@ -49,13 +52,33 @@ namespace FrontVR.Vistas
                     activo = 's'
                 };
 
-                if (u.id == 0)
+                if (!esNuevo && string.IsNullOrWhiteSpace(u.contrasena))
+                {
+                    var usuarioActual = servicio.obtenerUsuario(u.id);
+                    u.contrasena = usuarioActual.contrasena;
+                }
+
+                if (esNuevo)
                     servicio.registrarUsuario(u);
                 else
                     servicio.actualizarUsuario(u);
 
                 LimpiarFormulario();
                 CargarUsuarios();
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "CerrarModal",
+                    "$('#modalUsuario').modal('hide');", true);
+
+                string mensaje = esNuevo ? "Usuario registrado correctamente" : "Usuario editado correctamente";
+                string script = $@"
+                    Swal.fire({{
+                        icon: 'success',
+                        title: '{mensaje}',
+                        confirmButtonText: 'OK'
+                    }}).then(() => {{
+                        window.location.href = window.location.href;
+                    }});";
+                ScriptManager.RegisterStartupScript(this, GetType(), "SwalSuccess", script, true);
             }
             catch (System.Exception ex)
             {
@@ -66,23 +89,39 @@ namespace FrontVR.Vistas
 
         protected void gvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int index = Convert.ToInt32(e.CommandArgument);
-            int id = int.Parse(gvUsuarios.DataKeys[index].Value.ToString());
+            int id = Convert.ToInt32(e.CommandArgument);
 
             if (e.CommandName == "EditarUsuario")
             {
                 var u = servicio.obtenerUsuario(id);
+
                 hfUsuarioId.Value = u.id.ToString();
                 txtNombres.Text = u.nombre;
+                txtApellido.Text = u.apellido;
                 txtCorreo.Text = u.correo;
+                txtContrasena.Text = ""; // se deja en blanco por seguridad
                 ddlRol.SelectedValue = u.rol.id.ToString();
 
-                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "$('#modalUsuario').modal('show');", true);
+                lblContrasenaInfo.Visible = true;
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModalEditar", @"
+                    mostrarMensajeContrasenaInfo(true);
+                    document.getElementById('modalUsuarioLabel').textContent = 'Editar usuario';
+                    var modal = new bootstrap.Modal(document.getElementById('modalUsuario'));
+                    modal.show();", true);
             }
             else if (e.CommandName == "Eliminar")
             {
                 servicio.eliminarUsuario(id);
                 CargarUsuarios();
+
+                string script = @"
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Usuario eliminado correctamente',
+                        confirmButtonText: 'OK'
+                    });";
+                ScriptManager.RegisterStartupScript(this, GetType(), "SwalDelete", script, true);
             }
         }
 
@@ -90,9 +129,13 @@ namespace FrontVR.Vistas
         {
             hfUsuarioId.Value = "";
             txtNombres.Text = "";
+            txtApellido.Text = "";
             txtCorreo.Text = "";
+            txtContrasena.Text = "";
             ddlRol.ClearSelection();
+            lblError.Text = "";
             lblError.Visible = false;
+            lblContrasenaInfo.Visible = false;
         }
     }
 }

@@ -33,6 +33,15 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.GridView gvGrupos;
 
         /// <summary>
+        /// Control phDispositivosGrupo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phDispositivosGrupo;
+
+        /// <summary>
         /// Control upModalGrupo.
         /// </summary>
         /// <remarks>

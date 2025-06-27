@@ -4,7 +4,7 @@
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="page-title mb-3">Configuración de Usuarios</h2>
 
-    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalUsuario">
+    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalUsuario" onclick="limpiarModal(); mostrarMensajeContrasenaInfo(false);">
         <i class="fa fa-user-plus"></i> Nuevo usuario
     </button>
 
@@ -12,7 +12,7 @@
     <asp:GridView ID="gvUsuarios" runat="server"
         AutoGenerateColumns="False"
         CssClass="table table-bordered table-hover align-middle text-center"
-        DataKeyNames="usuarioId"
+        DataKeyNames="id"
         OnRowCommand="gvUsuarios_RowCommand"
         EmptyDataText="No hay usuarios registrados aún.">
         <HeaderStyle CssClass="table-dark" />
@@ -29,7 +29,9 @@
                         CssClass="btn btn-sm btn-warning me-1" Text="Editar" />
                     <asp:LinkButton ID="lnkEliminar" runat="server" CommandName="Eliminar"
                         CommandArgument='<%# Eval("id") %>'
-                        CssClass="btn btn-sm btn-danger" Text="Eliminar" />
+                        CssClass="btn btn-sm btn-danger"
+                        OnClientClick="return confirm('¿Está seguro que desea eliminar este usuario?');"
+                        Text="Eliminar" />
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
@@ -67,8 +69,10 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtContraseña" class="pass-label">Contraseña <span class="text-danger">*</span></label>
+                                <label for="txtContrasena" class="form-label">Contraseña</label>
                                 <asp:TextBox ID="txtContrasena" runat="server" TextMode="Password" CssClass="form-control" />
+                                <asp:Label ID="lblContrasenaInfo" runat="server" CssClass="form-text text-muted" Visible="false"
+                                    Text="Si deja este campo vacío al editar, se mantendrá la contraseña actual." />
                             </div>
 
                             <div class="mb-3">
@@ -82,11 +86,34 @@
                         <div class="modal-footer border-secondary">
                             <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
                             <asp:Button ID="btnGuardar" runat="server" Text="Guardar"
-                                CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
+                                CssClass="btn btn-primary" OnClick="btnGuardar_Click" UseSubmitBehavior="false" />
                         </div>
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function limpiarModal() {
+            document.getElementById('modalUsuarioLabel').textContent = 'Nuevo usuario';
+            document.getElementById('<%= hfUsuarioId.ClientID %>').value = '';
+            document.getElementById('<%= txtNombres.ClientID %>').value = '';
+            document.getElementById('<%= txtApellido.ClientID %>').value = '';
+            document.getElementById('<%= txtCorreo.ClientID %>').value = '';
+            document.getElementById('<%= txtContrasena.ClientID %>').value = '';
+            document.getElementById('<%= ddlRol.ClientID %>').selectedIndex = 0;
+        }
+
+        function mostrarMensajeContrasenaInfo(mostrar) {
+            var lbl = document.getElementById('<%= lblContrasenaInfo.ClientID %>');
+            if (lbl) lbl.style.display = mostrar ? 'block' : 'none';
+        }
+
+        document.getElementById('modalUsuario')?.addEventListener('hidden.bs.modal', function () {
+            document.getElementById('modalUsuarioLabel').textContent = 'Nuevo usuario';
+        });
+    </script>
 </asp:Content>

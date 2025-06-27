@@ -4,6 +4,8 @@ import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Firmware;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.DispositivoDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAO;
+import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAOImpl;
 import java.util.List;
 
 public class DispositivoServiceImpl implements DispositivoService {
@@ -34,9 +36,11 @@ public class DispositivoServiceImpl implements DispositivoService {
         if (dispositivo.getEstado() == null) {
             throw new Exception("Debe colocar el estado del dispositivo a registrar");
         }
-        if (dispositivoDAO.obtener(dispositivo.getGrupo().getId()) == null) {
+        GrupoDAO grupoDAO = new GrupoDAOImpl();
+        if (grupoDAO.obtener(dispositivo.getGrupo().getId()) == null) {
             throw new Exception("El grupo no existe");
         }
+
         dispositivoDAO.agregar(dispositivo);
     }
 
@@ -63,7 +67,8 @@ public class DispositivoServiceImpl implements DispositivoService {
         if (dispositivo.getEstado() == null) {
             throw new Exception("Debe colocar el estado del dispositivo a registrar");
         }
-        if (dispositivoDAO.obtener(dispositivo.getGrupo().getId()) == null) {
+        GrupoDAO grupoDAO = new GrupoDAOImpl();
+        if (grupoDAO.obtener(dispositivo.getGrupo().getId()) == null) {
             throw new Exception("El grupo no existe");
         }
 

@@ -5,8 +5,9 @@
 
     <h2 class="page-title mb-3">Gestión de Dispositivos</h2>
 
+    <!-- Botón nuevo dispositivo -->
     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalDispositivo">
-        <i class="fa fa-plus"></i>Nuevo dispositivo
+        <i class="fa fa-plus"></i> Nuevo dispositivo
     </button>
 
     <!-- Campos de búsqueda -->
@@ -37,6 +38,7 @@
         DataKeyNames="id" OnRowCommand="gvDispositivos_RowCommand">
         <HeaderStyle CssClass="table-dark" />
         <Columns>
+            <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="modelo" HeaderText="Modelo" />
             <asp:BoundField DataField="numeroSerie" HeaderText="Serie" />

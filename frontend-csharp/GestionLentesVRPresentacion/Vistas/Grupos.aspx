@@ -30,6 +30,7 @@
                   OnRowCommand="gvGrupos_RowCommand">
         <HeaderStyle CssClass="table-dark" />
         <Columns>
+            <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
             <asp:BoundField DataField="ubicacion" HeaderText="Ubicación" />

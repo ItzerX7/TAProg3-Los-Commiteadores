@@ -8,8 +8,8 @@ namespace FrontVR.Vistas
 {
     public partial class Dispositivos : Page
     {
-        private DispositivoWSClient servicio = new DispositivoWSClient();
-        private GrupoWSClient grupoServicio = new GrupoWSClient();
+        private readonly DispositivoWSClient dispositivoWS = new DispositivoWSClient();
+        private readonly GrupoWSClient grupoWS = new GrupoWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -34,7 +34,9 @@ namespace FrontVR.Vistas
 
         private void CargarDispositivos()
         {
-            var lista = servicio.listarDispositivo().ToList();
+            var lista = dispositivoWS.listarDispositivo()
+                .OrderByDescending(d => d.id)
+                .ToList();
             gvDispositivos.DataSource = lista;
             gvDispositivos.DataBind();
         }
@@ -53,7 +55,7 @@ namespace FrontVR.Vistas
         {
             ddlGrupo.Items.Clear();
             ddlGrupo.Items.Add(new ListItem("Seleccione...", ""));
-            var grupos = grupoServicio.listarGrupo();
+            var grupos = grupoWS.listarGrupo();
             foreach (var g in grupos)
             {
                 ddlGrupo.Items.Add(new ListItem(g.nombre, g.id.ToString()));
@@ -90,7 +92,7 @@ namespace FrontVR.Vistas
 
                 if (esTecnico && !esNuevo)
                 {
-                    var actual = servicio.obtenerDispositivo(id);
+                    var actual = dispositivoWS.obtenerDispositivo(id);
                     estadoFinal = actual.estado; // evitar que el técnico lo cambie al editar
                 }
                 else
@@ -116,9 +118,9 @@ namespace FrontVR.Vistas
                 };
 
                 if (esNuevo)
-                    servicio.registrarDispositivo(dispositivo);
+                    dispositivoWS.registrarDispositivo(dispositivo);
                 else
-                    servicio.actualizarDispositivo(dispositivo);
+                    dispositivoWS.actualizarDispositivo(dispositivo);
 
                 LimpiarFormulario();
 
@@ -166,7 +168,7 @@ namespace FrontVR.Vistas
             {
                 try
                 {
-                    servicio.eliminarDispositivo(id);
+                    dispositivoWS.eliminarDispositivo(id);
                     CargarDispositivos();
                 }
                 catch (System.Exception ex)
@@ -179,7 +181,7 @@ namespace FrontVR.Vistas
             {
                 try
                 {
-                    var d = servicio.obtenerDispositivo(id);
+                    var d = dispositivoWS.obtenerDispositivo(id);
                     CargarGrupos();
 
                     hfIdDispositivo.Value = d.id.ToString();

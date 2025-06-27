@@ -8,10 +8,14 @@
     <asp:Button ID="btnAgregar" runat="server" Text="Agregar Configuración"
         CssClass="btn btn-success mb-3"
         OnClick="btnAgregar_Click" />
+
+    <!-- Tabla -->
     <asp:GridView ID="gvConfiguraciones" runat="server"
-        AutoGenerateColumns="False" CssClass="table table-striped"
+        AutoGenerateColumns="False" CssClass="table table-bordered table-hover align-middle text-center"
         DataKeyNames="id" OnRowCommand="gvConfiguraciones_RowCommand">
+        <HeaderStyle CssClass="table-dark" />
         <Columns>
+            <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
             <asp:BoundField DataField="tipo" HeaderText="Tipo" />

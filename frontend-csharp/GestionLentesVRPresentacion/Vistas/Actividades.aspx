@@ -1,36 +1,39 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Actividades.aspx.cs" Inherits="FrontVR.Vistas.Actividades" MasterPageFile="~/Site.Master" %>
 
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <h2 class="page-title mb-3">Lista de actividades</h2>
 
-    <asp:Button ID="btnDescarga" runat="server" Text="Descargar Reporte" OnClick="ClickBotonDescarga"/>
-
+    <!-- Botón descargar reporte -->
+    <asp:LinkButton ID="btnDescargar" runat="server" CssClass="btn btn-primary mb-3" OnClick="ClickBotonDescarga">
+    <i class="bi bi-file-earmark-pdf"></i> Descargar reporte (.pdf)
+    </asp:LinkButton>
+    <!-- Tabla -->
     <asp:GridView ID="gvActividades" runat="server" AutoGenerateColumns="False"
-        CssClass="table table-striped table-bordered" OnRowDataBound="gvActividades_RowDataBound">
+        CssClass="table table-bordered table-hover align-middle text-center" OnRowDataBound="gvActividades_RowDataBound">
+        <HeaderStyle CssClass="table-dark" />
         <Columns>
-
             <asp:BoundField DataField="id" HeaderText="ID" />
-
             <asp:TemplateField HeaderText="Tipo">
                 <ItemTemplate>
                     <%# Eval("tipo") %>
                 </ItemTemplate>
             </asp:TemplateField>
-
             <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
-
             <asp:BoundField DataField="detallesTecnicos" HeaderText="Detalles Técnicos" />
-
             <asp:BoundField DataField="fechaHora" HeaderText="Fecha y Hora" DataFormatString="{0:yyyy-MM-dd HH:mm}" />
-
-            <asp:TemplateField HeaderText="Estado" ItemStyle-HorizontalAlign="Center">
+            <asp:TemplateField HeaderText="Acción">
                 <ItemTemplate>
-                    <asp:Label ID="lblEstado" runat="server"
-                        Text='<%# GetEstadoTexto(Eval("activo")) %>'
-                        CssClass='<%# GetBadgeCss(Eval("activo")) %>' />
+                    <asp:LinkButton ID="lnkEliminar" runat="server"
+                        CommandName="Eliminar"
+                        CommandArgument='<%# Eval("id") %>'
+                        Text="Eliminar"
+                        CssClass="btn btn-sm btn-danger"
+                        OnClientClick="return confirm('¿Está seguro de eliminar esta actividad?');" />
+                    </div>
                 </ItemTemplate>
             </asp:TemplateField>
-
         </Columns>
     </asp:GridView>
 </asp:Content>

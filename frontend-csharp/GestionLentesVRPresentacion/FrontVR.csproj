@@ -346,8 +346,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Login.aspx" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -364,11 +362,19 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Login.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Images\VR_Welcome.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Vistas\Actividades.aspx" />
     <Content Include="Vistas\Administracion.aspx" />
     <Content Include="Vistas\Aplicaciones.aspx" />
@@ -377,12 +383,25 @@
     <Content Include="Vistas\Grupos.aspx" />
     <Content Include="Vistas\Metricas.aspx" />
     <Content Include="Vistas\PantallaInicio.aspx" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Connected Services\GestionlentesvrWS\ActividadWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\DispositivoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\FirmwareWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\GrupoWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\MetricaUsoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.wsdl" />
+    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.esm.min.js.map" />
@@ -405,25 +424,6 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Connected Services\GestionlentesvrWS\ActividadWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\ConfiguracionWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\DispositivoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\FirmwareWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\GrupoWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\MetricaUsoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.wsdl" />
-    <None Include="Connected Services\GestionlentesvrWS\UsuarioWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />

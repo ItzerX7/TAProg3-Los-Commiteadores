@@ -8,14 +8,16 @@
     <h2 class="page-title mb-3">Aplicaciones disponibles</h2>
 
     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalAplicacion">
-        <i class="fa fa-plus"></i>Nueva aplicación
+        <i class="fa fa-plus"></i> Nueva aplicación
     </button>
 
+    <!-- Tabla -->
     <asp:GridView ID="gvAplicaciones" runat="server"
-        AutoGenerateColumns="False" CssClass="table table-striped"
-        DataKeyNames="id"
-        OnRowCommand="gvAplicaciones_RowCommand">
+        AutoGenerateColumns="False" CssClass="table table-bordered table-hover align-middle text-center"
+        DataKeyNames="id" OnRowCommand="gvAplicaciones_RowCommand">
+        <HeaderStyle CssClass="table-dark" />
         <Columns>
+            <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />
             <asp:BoundField DataField="version" HeaderText="Versión" />
             <asp:BoundField DataField="tamanoMb" HeaderText="Tamaño&nbsp;(MB)" DataFormatString="{0:N1}" />
@@ -29,7 +31,7 @@
             </asp:TemplateField>
 
 
-            <asp:TemplateField HeaderText="Acciones" ItemStyle-HorizontalAlign="Left">
+            <asp:TemplateField HeaderText="Acciones" ItemStyle-HorizontalAlign="Center">
                 <ItemTemplate>
                     <asp:LinkButton ID="btnVerDispositivos" runat="server"
                         CommandName="VerDispApp"

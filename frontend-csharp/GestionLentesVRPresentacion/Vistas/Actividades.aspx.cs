@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.UI.WebControls;
 using FrontVR.GestionlentesvrWS;
 
@@ -6,21 +7,16 @@ namespace FrontVR.Vistas
 {
     public partial class Actividades : System.Web.UI.Page
     {
-        private ActividadWSClient actividadWSClient;
-
-        protected void Page_Init(object sender, EventArgs e)
-        {
-            actividadWSClient = new ActividadWSClient();
-        }
+        private readonly ActividadWSClient actividadWS = new ActividadWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //int rol = Convert.ToInt32(Session["rol"]);
-            //if (rol != 1 && rol != 2)
-            //{
-            //    Response.Redirect("~/PantallaInicio.aspx");
-            //    return;
-            //}
+
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("~/Login.aspx");
+                return;
+            }
 
             if (!IsPostBack)
             {
@@ -32,7 +28,9 @@ namespace FrontVR.Vistas
         {
             try
             {
-                var actividades = actividadWSClient.listarActividad();
+                var actividades = actividadWS.listarActividad()
+                    .OrderByDescending(d => d.id)
+                    .ToList();
                 gvActividades.DataSource = actividades;
                 gvActividades.DataBind();
             }
@@ -64,14 +62,12 @@ namespace FrontVR.Vistas
 
         protected void ClickBotonDescarga(object sender, EventArgs e)
         {
-            byte[] archivo = actividadWSClient.reporteClientes();
+            byte[] archivo = actividadWS.reporteClientes();
             Response.Clear();
             Response.ContentType = "application/pdf"; // Cambia esto si es Excel u otro tipo
             Response.AddHeader("Content-Disposition", "attachment; filename=reporteClientes.pdf");
             Response.BinaryWrite(archivo);
             Response.End();
         }
-
-        
     }
 }

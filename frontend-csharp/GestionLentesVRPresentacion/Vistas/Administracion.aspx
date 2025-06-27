@@ -5,15 +5,17 @@
     <h2 class="page-title mb-3">Configuración de Usuarios</h2>
 
     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalUsuario">
-        <i class="fa fa-user-plus"></i>Nuevo usuario
+        <i class="fa fa-user-plus"></i> Nuevo usuario
     </button>
 
+    <!-- Tabla -->
     <asp:GridView ID="gvUsuarios" runat="server"
         AutoGenerateColumns="False"
         CssClass="table table-bordered table-hover align-middle text-center"
         DataKeyNames="usuarioId"
         OnRowCommand="gvUsuarios_RowCommand"
         EmptyDataText="No hay usuarios registrados aún.">
+        <HeaderStyle CssClass="table-dark" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="nombre" HeaderText="Nombres" />

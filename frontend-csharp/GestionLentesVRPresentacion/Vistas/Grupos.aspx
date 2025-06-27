@@ -1,13 +1,16 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
-         CodeBehind="Grupos.aspx.cs" Inherits="FrontVR.Vistas.Grupos" %>
+    CodeBehind="Grupos.aspx.cs" Inherits="FrontVR.Vistas.Grupos" %>
 
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="page-title mb-3">Gestión de Grupos</h2>
 
     <!-- Botón para abrir modal -->
-    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalGrupo">
-        <i class="fa fa-plus"></i> Nuevo grupo
-    </button>
+    <asp:LinkButton ID="btnNuevoGrupo" runat="server" CssClass="btn btn-primary mb-3"
+        OnClientClick="return false;"
+        data-bs-toggle="modal" data-bs-target="#modalGrupo">
+    <i class="fa fa-plus"></i> Nuevo grupo
+    </asp:LinkButton>
+
 
     <!-- Buscadores -->
     <div class="row mb-3">
@@ -24,10 +27,10 @@
 
     <!-- Tabla de grupos -->
     <asp:GridView ID="gvGrupos" runat="server"
-                  AutoGenerateColumns="False"
-                  CssClass="table table-bordered table-hover align-middle text-center"
-                  DataKeyNames="id"
-                  OnRowCommand="gvGrupos_RowCommand">
+        AutoGenerateColumns="False"
+        CssClass="table table-bordered table-hover align-middle text-center"
+        DataKeyNames="id"
+        OnRowCommand="gvGrupos_RowCommand">
         <HeaderStyle CssClass="table-dark" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="ID" />
@@ -39,13 +42,13 @@
                 <ItemTemplate>
                     <div class="d-flex justify-content-center gap-2">
                         <asp:LinkButton ID="btnEditar" runat="server" Text="Editar"
-                                        CommandName="EditarGrupo"
-                                        CommandArgument='<%# Eval("id") %>'
-                                        CssClass="btn btn-sm btn-warning" />
+                            CommandName="EditarGrupo"
+                            CommandArgument='<%# Eval("id") %>'
+                            CssClass="btn btn-sm btn-warning" />
                         <asp:LinkButton ID="btnEliminar" runat="server" Text="Eliminar"
-                                        CommandName="EliminarGrupo"
-                                        CommandArgument='<%# Eval("id") %>'
-                                        CssClass="btn btn-sm btn-danger" />
+                            CommandName="EliminarGrupo"
+                            CommandArgument='<%# Eval("id") %>'
+                            CssClass="btn btn-sm btn-danger" />
                     </div>
                 </ItemTemplate>
             </asp:TemplateField>
@@ -67,21 +70,21 @@
                             <asp:HiddenField ID="hfIdGrupo" runat="server" />
 
                             <div class="mb-3">
-                                <label for="txtNombreGrupo" class="form-label">Nombre</label>
+                                <label for="txtNombreGrupo" class="form-label">Nombre <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtNombreGrupo" runat="server"
-                                             CssClass="form-control bg-dark text-white border-secondary" />
+                                    CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtDescripcionGrupo" class="form-label">Descripción</label>
+                                <label for="txtDescripcionGrupo" class="form-label">Descripción <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtDescripcionGrupo" runat="server"
-                                             CssClass="form-control bg-dark text-white border-secondary" />
+                                    CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtUbicacionGrupo" class="form-label">Ubicación</label>
+                                <label for="txtUbicacionGrupo" class="form-label">Ubicación <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtUbicacionGrupo" runat="server"
-                                             CssClass="form-control bg-dark text-white border-secondary" />
+                                    CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <asp:Label ID="lblErrorGrupo" runat="server" CssClass="text-danger" Visible="false" />
@@ -90,8 +93,8 @@
                         <div class="modal-footer border-secondary">
                             <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
                             <asp:Button ID="btnGuardarGrupo" runat="server" Text="Guardar"
-                                        CssClass="btn btn-primary"
-                                        OnClick="btnGuardarGrupo_Click" />
+                                CssClass="btn btn-primary"
+                                OnClick="btnGuardarGrupo_Click" />
                         </div>
                     </ContentTemplate>
 

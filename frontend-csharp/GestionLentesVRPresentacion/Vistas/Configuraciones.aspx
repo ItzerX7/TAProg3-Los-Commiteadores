@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
-         CodeBehind="Configuraciones.aspx.cs" Inherits="FrontVR.Vistas.Configuraciones" %>
+    CodeBehind="Configuraciones.aspx.cs" Inherits="FrontVR.Vistas.Configuraciones" %>
 
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -39,55 +39,55 @@
         </Columns>
     </asp:GridView>
 
-  <!-- Modal NUEVA / EDITAR CONFIGURACION -->
-<div class="modal fade" id="modalConfiguracion" tabindex="-1"
-     aria-labelledby="modalConfiguracionLabel" aria-hidden="true"
-     data-bs-theme="dark">
-    <div class="modal-dialog">
-        <div class="modal-content bg-dark text-white">
-            <asp:UpdatePanel ID="upModalConfiguracion" runat="server">
-                <ContentTemplate>
-                    <div class="modal-header border-secondary">
-                        <h5 class="modal-title" id="modalConfiguracionLabel">Nueva configuración</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    </div>
-
-                    <div class="modal-body">
-                        <asp:HiddenField ID="hfConfiguracionId" runat="server" />
-
-                        <div class="mb-3">
-                            <label class="form-label">Nombre <span class="text-danger">*</span></label>
-                            <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre" />
+    <!-- Modal NUEVA / EDITAR CONFIGURACION -->
+    <div class="modal fade" id="modalConfiguracion" tabindex="-1"
+        aria-labelledby="modalConfiguracionLabel" aria-hidden="true"
+        data-bs-theme="dark">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-white">
+                <asp:UpdatePanel ID="upModalConfiguracion" runat="server">
+                    <ContentTemplate>
+                        <div class="modal-header border-secondary">
+                            <h5 class="modal-title" id="modalConfiguracionLabel">Nueva configuración</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Descripción <span class="text-danger">*</span></label>
-                            <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" placeholder="Descripción" />
+                        <div class="modal-body">
+                            <asp:HiddenField ID="hfConfiguracionId" runat="server" />
+
+                            <div class="mb-3">
+                                <label class="form-label">Nombre <span class="text-danger">*</span></label>
+                                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" placeholder="Nombre" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Descripción <span class="text-danger">*</span></label>
+                                <asp:TextBox ID="txtDescripcion" runat="server" CssClass="form-control" placeholder="Descripción" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Tipo <span class="text-danger">*</span></label>
+                                <asp:DropDownList ID="ddlTipo" runat="server" CssClass="form-select" />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Valor <span class="text-danger">*</span></label>
+                                <asp:TextBox ID="txtValor" runat="server" CssClass="form-control" placeholder="Valor" />
+                            </div>
+
+                            <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false" />
                         </div>
 
-                        <div class="mb-3">
-                            <label class="form-label">Tipo <span class="text-danger">*</span></label>
-                            <asp:DropDownList ID="ddlTipo" runat="server" CssClass="form-select" />
+                        <div class="modal-footer border-secondary">
+                            <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
+                            <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary"
+                                Text="Guardar" OnClick="btnGuardar_Click" />
                         </div>
-
-                        <div class="mb-3">
-                            <label class="form-label">Valor <span class="text-danger">*</span></label>
-                            <asp:TextBox ID="txtValor" runat="server" CssClass="form-control" placeholder="Valor" />
-                        </div>
-
-                        <asp:Label ID="lblError" runat="server" CssClass="text-danger" Visible="false" />
-                    </div>
-
-                    <div class="modal-footer border-secondary">
-                        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancelar</button>
-                        <asp:Button ID="Button1" runat="server" CssClass="btn btn-primary"
-                            Text="Guardar" OnClick="btnGuardar_Click" />
-                    </div>
-                </ContentTemplate>
-            </asp:UpdatePanel>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
         </div>
     </div>
-</div>
 
 
     <!-- Bootstrap 5 y SweetAlert -->

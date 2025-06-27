@@ -9,6 +9,7 @@
     <asp:LinkButton ID="btnDescargar" runat="server" CssClass="btn btn-primary mb-3" OnClick="ClickBotonDescarga">
     <i class="bi bi-file-earmark-pdf"></i> Descargar reporte (.pdf)
     </asp:LinkButton>
+
     <!-- Tabla -->
     <asp:GridView ID="gvActividades" runat="server" AutoGenerateColumns="False"
         CssClass="table table-bordered table-hover align-middle text-center" OnRowDataBound="gvActividades_RowDataBound">

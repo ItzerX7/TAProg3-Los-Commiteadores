@@ -6,9 +6,12 @@
     <h2 class="page-title mb-3">Gestión de Dispositivos</h2>
 
     <!-- Botón nuevo dispositivo -->
-    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalDispositivo">
-        <i class="fa fa-plus"></i> Nuevo dispositivo
-    </button>
+    <asp:LinkButton ID="btnNuevoDispositivo" runat="server" CssClass="btn btn-primary mb-3"
+        OnClientClick="return false;"
+        data-bs-toggle="modal" data-bs-target="#modalDispositivo">
+    <i class="fa fa-plus"></i> Nuevo dispositivo
+    </asp:LinkButton>
+
 
     <!-- Campos de búsqueda -->
     <div class="row mb-3">
@@ -82,27 +85,27 @@
 
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" />
+                                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtModelo" class="form-label">Modelo <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtModelo" runat="server" CssClass="form-control" />
+                                <asp:TextBox ID="txtModelo" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtSerie" class="form-label">Número de Serie <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtSerie" runat="server" CssClass="form-control" />
+                                <asp:TextBox ID="txtSerie" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtUbicacion" class="form-label">Ubicación <span class="text-danger">*</span></label>
-                                <asp:TextBox ID="txtUbicacion" runat="server" CssClass="form-control" />
+                                <asp:TextBox ID="txtUbicacion" runat="server" CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtFecha" class="form-label">Ultima Conexion</label>
-                                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date" CssClass="form-control" />
+                                <asp:TextBox ID="txtFecha" runat="server" TextMode="Date" CssClass="form-control bg-dark text-white border-secondary" />
                             </div>
 
                             <div class="mb-3">

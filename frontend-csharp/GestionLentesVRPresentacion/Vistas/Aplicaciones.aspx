@@ -7,9 +7,11 @@
 <asp:Content ID="Main" ContentPlaceHolderID="MainContent" runat="server">
     <h2 class="page-title mb-3">Aplicaciones disponibles</h2>
 
-    <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#modalAplicacion">
-        <i class="fa fa-plus"></i> Nueva aplicación
-    </button>
+    <asp:LinkButton ID="btnNuevaAplicacion" runat="server" CssClass="btn btn-primary mb-3"
+        OnClientClick="return false;"
+        data-bs-toggle="modal" data-bs-target="#modalAplicacion">
+    <i class="fa fa-plus"></i> Nueva aplicación
+    </asp:LinkButton>
 
     <!-- Tabla -->
     <asp:GridView ID="gvAplicaciones" runat="server"

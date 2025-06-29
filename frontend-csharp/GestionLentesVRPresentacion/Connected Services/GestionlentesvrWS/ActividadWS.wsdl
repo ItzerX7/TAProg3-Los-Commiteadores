@@ -20,12 +20,6 @@
   <message name="registrarActividadResponse">
     <part name="parameters" element="tns:registrarActividadResponse" />
   </message>
-  <message name="listarActividad">
-    <part name="parameters" element="tns:listarActividad" />
-  </message>
-  <message name="listarActividadResponse">
-    <part name="parameters" element="tns:listarActividadResponse" />
-  </message>
   <message name="eliminarActividad">
     <part name="parameters" element="tns:eliminarActividad" />
   </message>
@@ -37,6 +31,12 @@
   </message>
   <message name="obtenerActividadResponse">
     <part name="parameters" element="tns:obtenerActividadResponse" />
+  </message>
+  <message name="listarActividad">
+    <part name="parameters" element="tns:listarActividad" />
+  </message>
+  <message name="listarActividadResponse">
+    <part name="parameters" element="tns:listarActividadResponse" />
   </message>
   <message name="reporteClientes">
     <part name="parameters" element="tns:reporteClientes" />
@@ -55,11 +55,6 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividadResponse" message="tns:registrarActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/registrarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="listarActividad">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="eliminarActividad">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadRequest" message="tns:eliminarActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/eliminarActividadResponse" message="tns:eliminarActividadResponse" />
@@ -69,6 +64,11 @@
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadRequest" message="tns:obtenerActividad" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividadResponse" message="tns:obtenerActividadResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/obtenerActividad/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarActividad">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadRequest" message="tns:listarActividad" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividadResponse" message="tns:listarActividadResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/listarActividad/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="reporteClientes">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ActividadWS/reporteClientesRequest" message="tns:reporteClientes" />
@@ -101,18 +101,6 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="listarActividad">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
     <operation name="eliminarActividad">
       <soap:operation soapAction="" />
       <input>
@@ -126,6 +114,18 @@
       </fault>
     </operation>
     <operation name="obtenerActividad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarActividad">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

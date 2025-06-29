@@ -8,8 +8,15 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
+    
+    private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+    
+    public static String hashPassword (String contrasena) {
+        return encoder.encode(contrasena);
+    }
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, Usuario entity) throws SQLException {
@@ -19,7 +26,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
         cs.setString(2, entity.getNombre());
         cs.setString(3, entity.getApellido());
         cs.setString(4, entity.getCorreo());
-        cs.setString(5, entity.getContrasena());
+        cs.setString(5, UsuarioDAOImpl.hashPassword(entity.getContrasena()));
         cs.setInt(6, entity.getRol().getId());
         return cs;
     }
@@ -32,7 +39,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
         cs.setString(2, entity.getNombre());
         cs.setString(3, entity.getApellido());
         cs.setString(4, entity.getCorreo());
-        cs.setString(5, entity.getContrasena());
+        cs.setString(5, UsuarioDAOImpl.hashPassword(entity.getContrasena()));
         cs.setInt(6, entity.getRol().getId());
         return cs;
     }

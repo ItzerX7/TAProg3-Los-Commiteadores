@@ -5,20 +5,14 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/GrupoWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="actualizarGrupo">
-    <part name="parameters" element="tns:actualizarGrupo" />
-  </message>
-  <message name="actualizarGrupoResponse">
-    <part name="parameters" element="tns:actualizarGrupoResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
   <message name="obtenerGrupo">
     <part name="parameters" element="tns:obtenerGrupo" />
   </message>
   <message name="obtenerGrupoResponse">
     <part name="parameters" element="tns:obtenerGrupoResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
   </message>
   <message name="listarGrupo">
     <part name="parameters" element="tns:listarGrupo" />
@@ -38,12 +32,13 @@
   <message name="registrarGrupoResponse">
     <part name="parameters" element="tns:registrarGrupoResponse" />
   </message>
+  <message name="actualizarGrupo">
+    <part name="parameters" element="tns:actualizarGrupo" />
+  </message>
+  <message name="actualizarGrupoResponse">
+    <part name="parameters" element="tns:actualizarGrupoResponse" />
+  </message>
   <portType name="GrupoWS">
-    <operation name="actualizarGrupo">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoRequest" message="tns:actualizarGrupo" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoResponse" message="tns:actualizarGrupoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupo/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="obtenerGrupo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/obtenerGrupoRequest" message="tns:obtenerGrupo" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/obtenerGrupoResponse" message="tns:obtenerGrupoResponse" />
@@ -64,21 +59,14 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupoResponse" message="tns:registrarGrupoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/registrarGrupo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
+    <operation name="actualizarGrupo">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoRequest" message="tns:actualizarGrupo" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupoResponse" message="tns:actualizarGrupoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/actualizarGrupo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
   </portType>
   <binding name="GrupoWSPortBinding" type="tns:GrupoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarGrupo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
     <operation name="obtenerGrupo">
       <soap:operation soapAction="" />
       <input>
@@ -116,6 +104,18 @@
       </fault>
     </operation>
     <operation name="registrarGrupo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="actualizarGrupo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

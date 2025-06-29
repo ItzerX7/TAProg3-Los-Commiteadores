@@ -12,7 +12,10 @@
         data-bs-toggle="modal" data-bs-target="#modalAplicacion">
         <i class="fa fa-plus"></i> Nueva aplicación
     </asp:LinkButton>
-
+        <!-- Botón descargar reporte de aplicaciones -->
+    <asp:LinkButton ID="btnDescargarRepApp" runat="server" CssClass="btn btn-primary mb-3" OnClick="ClickBotonDescargaRepApp">
+    <i class="bi bi-file-earmark-pdf"></i> Descargar reporte de aplicaciones (.pdf)
+    </asp:LinkButton>
     <!-- Tabla -->
     <asp:GridView ID="gvAplicaciones" runat="server"
         AutoGenerateColumns="False" CssClass="table table-bordered table-hover align-middle text-center"

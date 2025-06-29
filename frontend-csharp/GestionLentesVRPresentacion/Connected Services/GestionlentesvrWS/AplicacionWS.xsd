@@ -19,6 +19,8 @@
   <xs:element name="obtenerAplicacionResponse" type="tns:obtenerAplicacionResponse" />
   <xs:element name="registrarAplicacion" type="tns:registrarAplicacion" />
   <xs:element name="registrarAplicacionResponse" type="tns:registrarAplicacionResponse" />
+  <xs:element name="reporteCategoriaApp" type="tns:reporteCategoriaApp" />
+  <xs:element name="reporteCategoriaAppResponse" type="tns:reporteCategoriaAppResponse" />
   <xs:complexType name="obtenerAplicacion">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -128,6 +130,14 @@
   </xs:complexType>
   <xs:complexType name="actualizarAplicacionResponse">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteCategoriaApp">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteCategoriaAppResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarAplicacion">
     <xs:sequence />

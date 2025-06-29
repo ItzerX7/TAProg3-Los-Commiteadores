@@ -32,11 +32,11 @@
   <message name="obtenerAppMasUsadaResponse">
     <part name="parameters" element="tns:obtenerAppMasUsadaResponse" />
   </message>
-  <message name="obtenerDispositivoMasUsado">
-    <part name="parameters" element="tns:obtenerDispositivoMasUsado" />
+  <message name="obtenerDispositivoMenosUsado">
+    <part name="parameters" element="tns:obtenerDispositivoMenosUsado" />
   </message>
-  <message name="obtenerDispositivoMasUsadoResponse">
-    <part name="parameters" element="tns:obtenerDispositivoMasUsadoResponse" />
+  <message name="obtenerDispositivoMenosUsadoResponse">
+    <part name="parameters" element="tns:obtenerDispositivoMenosUsadoResponse" />
   </message>
   <message name="actualizarMetricaUso">
     <part name="parameters" element="tns:actualizarMetricaUso" />
@@ -44,11 +44,11 @@
   <message name="actualizarMetricaUsoResponse">
     <part name="parameters" element="tns:actualizarMetricaUsoResponse" />
   </message>
-  <message name="obtenerDispositivoMenosUsado">
-    <part name="parameters" element="tns:obtenerDispositivoMenosUsado" />
+  <message name="obtenerDispositivoMasUsado">
+    <part name="parameters" element="tns:obtenerDispositivoMasUsado" />
   </message>
-  <message name="obtenerDispositivoMenosUsadoResponse">
-    <part name="parameters" element="tns:obtenerDispositivoMenosUsadoResponse" />
+  <message name="obtenerDispositivoMasUsadoResponse">
+    <part name="parameters" element="tns:obtenerDispositivoMasUsadoResponse" />
   </message>
   <message name="registrarMetricaUso">
     <part name="parameters" element="tns:registrarMetricaUso" />
@@ -77,20 +77,20 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerAppMasUsadaResponse" message="tns:obtenerAppMasUsadaResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerAppMasUsada/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="obtenerDispositivoMasUsado">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsadoRequest" message="tns:obtenerDispositivoMasUsado" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsadoResponse" message="tns:obtenerDispositivoMasUsadoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsado/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="obtenerDispositivoMenosUsado">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsadoRequest" message="tns:obtenerDispositivoMenosUsado" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsadoResponse" message="tns:obtenerDispositivoMenosUsadoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsado/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="actualizarMetricaUso">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/actualizarMetricaUsoRequest" message="tns:actualizarMetricaUso" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/actualizarMetricaUsoResponse" message="tns:actualizarMetricaUsoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/actualizarMetricaUso/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="obtenerDispositivoMenosUsado">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsadoRequest" message="tns:obtenerDispositivoMenosUsado" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsadoResponse" message="tns:obtenerDispositivoMenosUsadoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMenosUsado/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="obtenerDispositivoMasUsado">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsadoRequest" message="tns:obtenerDispositivoMasUsado" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsadoResponse" message="tns:obtenerDispositivoMasUsadoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/obtenerDispositivoMasUsado/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="registrarMetricaUso">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/MetricaUsoWS/registrarMetricaUsoRequest" message="tns:registrarMetricaUso" />
@@ -148,7 +148,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerDispositivoMasUsado">
+    <operation name="obtenerDispositivoMenosUsado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -172,7 +172,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerDispositivoMenosUsado">
+    <operation name="obtenerDispositivoMasUsado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

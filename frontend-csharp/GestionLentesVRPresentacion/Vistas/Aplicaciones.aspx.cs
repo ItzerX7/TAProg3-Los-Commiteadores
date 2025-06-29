@@ -194,5 +194,15 @@ namespace FrontVR.Vistas
             bool activo = (estado == "s" || estado == "true");
             return activo ? "Instalada" : "Disponible";
         }
+
+        protected void ClickBotonDescargaRepApp(object sender, EventArgs e)
+        {
+            byte[] archivo = aplicacionWSClient.reporteCategoriaApp();
+            Response.Clear();
+            Response.ContentType = "application/pdf";
+            Response.AddHeader("Content-Disposition", "attachment; filename=reporteTiposActividades.pdf");
+            Response.BinaryWrite(archivo);
+            Response.End();
+        }
     }
 }

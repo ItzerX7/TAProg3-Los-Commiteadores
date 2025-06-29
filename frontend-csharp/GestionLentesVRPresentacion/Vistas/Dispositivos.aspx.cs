@@ -41,6 +41,13 @@ namespace FrontVR.Vistas
             gvDispositivos.DataBind();
         }
 
+        protected void gvDispositivos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvDispositivos.PageIndex = e.NewPageIndex;
+            CargarDispositivos();
+            gvDispositivos.DataBind();
+        }
+
         private void CargarEstados()
         {
             ddlEstado.Items.Clear();

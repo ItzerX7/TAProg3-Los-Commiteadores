@@ -7,7 +7,7 @@
 
     <!-- Botón nuevo dispositivo -->
     <asp:LinkButton ID="btnNuevoDispositivo" runat="server" CssClass="btn btn-primary mb-3"
-        OnClientClick="limpiarModal(); return false;" 
+        OnClientClick="limpiarModal(); return false;"
         data-bs-toggle="modal" data-bs-target="#modalDispositivo">
         <i class="fa fa-plus"></i> Nuevo dispositivo
     </asp:LinkButton>
@@ -36,7 +36,11 @@
 
     <!-- Tabla -->
     <asp:GridView ID="gvDispositivos" runat="server"
-        AutoGenerateColumns="False" CssClass="table table-bordered table-hover align-middle text-center"
+        AutoGenerateColumns="False"
+        AllowPaging="true"
+        PageSize="10"
+        OnPageIndexChanging="gvDispositivos_PageIndexChanging"
+        CssClass="table table-bordered table-hover align-middle text-center"
         DataKeyNames="id" OnRowCommand="gvDispositivos_RowCommand">
         <HeaderStyle CssClass="table-dark" />
         <Columns>

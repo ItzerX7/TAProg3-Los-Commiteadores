@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head runat="server">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Dashboard</title>
@@ -72,7 +73,7 @@
                 <asp:HyperLink  runat="server" ID="lnkMetrica" href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Mediciones</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkActividades" href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkAdministracion" href="Administracion.aspx"><i class="fas fa-user-shield"></i> Usuarios</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkFirmware" href="Firmware.aspx"><i class="fas fa-house "></i> Firmware</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkFirmware" href="Firmware.aspx"><i class="bi bi-code-slash"></i> Firmware</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkConfiguracion" href="/Vistas/Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</asp:HyperLink>
 
                 <asp:LinkButton ID="btnLogout" runat="server" CssClass="sidebar-link"

@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Login.aspx.cs",
               "ToolTip": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx.cs",
               "RelativeToolTip": "GestionLentesVRPresentacion\\Login.aspx.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCUAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-29T02:38:09.161Z",
               "EditorCaption": ""
@@ -103,7 +103,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\PantallaInicio.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-29T02:37:08.583Z"
+              "WhenOpened": "2025-06-29T02:37:08.583Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -115,7 +116,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Grupos.aspx.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAYwFgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T21:41:19.632Z"
+              "WhenOpened": "2025-06-27T21:41:19.632Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -127,7 +129,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-27T15:15:01.96Z"
+              "WhenOpened": "2025-06-27T15:15:01.96Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -139,7 +142,21 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Grupos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T06:48:42.78Z"
+              "WhenOpened": "2025-06-25T06:48:42.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
+              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Login.aspx",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
+              "RelativeToolTip": "GestionLentesVRPresentacion\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-25T08:25:22.235Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -151,7 +168,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T06:12:35.484Z"
+              "WhenOpened": "2025-06-25T06:12:35.484Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -163,7 +181,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-27T19:55:50.285Z"
+              "WhenOpened": "2025-06-27T19:55:50.285Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -175,7 +194,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Administracion.aspx.cs",
               "ViewState": "AgIAAEQAAAAAAAAAAAArwFIAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T19:57:09.152Z"
+              "WhenOpened": "2025-06-27T19:57:09.152Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -187,7 +207,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T17:07:24.127Z"
+              "WhenOpened": "2025-06-27T17:07:24.127Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -199,7 +220,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Aplicaciones.aspx.cs",
               "ViewState": "AgIAAK4AAAAAAAAAAAAYwLcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-27T19:16:56.014Z"
+              "WhenOpened": "2025-06-27T19:16:56.014Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -224,7 +246,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Dispositivos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T06:27:43.642Z"
+              "WhenOpened": "2025-06-25T06:27:43.642Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -236,19 +259,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Configuraciones.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T05:39:57.154Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
-              "RelativeDocumentMoniker": "GestionLentesVRPresentacion\\Login.aspx",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\universidad\\Ciclo 6\\Prog3\\TAProg3-Los-Commiteadores\\frontend-csharp\\GestionLentesVRPresentacion\\Login.aspx",
-              "RelativeToolTip": "GestionLentesVRPresentacion\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T08:25:22.235Z"
+              "WhenOpened": "2025-06-25T05:39:57.154Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -260,7 +272,8 @@
               "RelativeToolTip": "GestionLentesVRPresentacion\\Vistas\\Actividades.aspx.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAgwEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T08:56:01.134Z"
+              "WhenOpened": "2025-06-25T08:56:01.134Z",
+              "EditorCaption": ""
             }
           ]
         }

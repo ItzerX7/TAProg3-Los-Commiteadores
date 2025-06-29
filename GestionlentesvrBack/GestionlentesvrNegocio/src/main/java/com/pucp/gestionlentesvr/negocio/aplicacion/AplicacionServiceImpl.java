@@ -67,12 +67,34 @@ public class AplicacionServiceImpl implements AplicacionService {
 
     @Override
     public void eliminarAplicacion(Integer idAplicacion) throws Exception {
-        if (idAplicacion < 1 || idAplicacion == null) {
-            throw new Exception("La aplicacion no existe");
+        if (idAplicacion == null || idAplicacion < 1) {
+            throw new Exception("La aplicación no existe o el ID no es válido.");
         }
-        
-        aplicacionDAO.eliminar(idAplicacion);
+
+        try {
+            // Paso 1: Eliminar relaciones con dispositivos
+            try {
+                aplicacionDAO.eliminarRelacionesConDispositivos(idAplicacion);
+            } catch (Exception exRel) {
+                System.err.println("Error al eliminar relaciones con dispositivos: " + exRel.getMessage());
+                throw new Exception("No se pudieron eliminar las relaciones con dispositivos antes de eliminar la aplicación.", exRel);
+            }
+
+            // Paso 2: Eliminar la aplicación
+            try {
+                aplicacionDAO.eliminar(idAplicacion);
+            } catch (Exception exApp) {
+                System.err.println("Error al eliminar la aplicación: " + exApp.getMessage());
+                throw new Exception("No se pudo eliminar la aplicación después de eliminar sus relaciones.", exApp);
+            }
+
+        } catch (Exception exFinal) {
+            // Re-lanzar con mensaje global para el service o WS
+            throw new Exception("Error en el proceso de eliminación de la aplicación: " + exFinal.getMessage(), exFinal);
+        }
     }
+
+    
 
     @Override
     public Aplicacion obtenerAplicacion(int idAplicacion) throws Exception {
@@ -95,7 +117,7 @@ public class AplicacionServiceImpl implements AplicacionService {
 
     @Override
     public void eliminarAplicacionesPorDispositivo() {
-       aplicacionDAO.eliminarAplicacionesPorDispositivo();;
+       aplicacionDAO.eliminarAplicacionesPorDispositivo();
     }
 
     @Override

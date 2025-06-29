@@ -14,6 +14,7 @@
     </asp:LinkButton>
 
     <!-- Tabla -->
+<div style="max-height: 50vh; overflow-y: auto;">
     <asp:GridView ID="gvAplicaciones" runat="server"
         AutoGenerateColumns="False" CssClass="table table-bordered table-hover align-middle text-center"
         DataKeyNames="id" OnRowCommand="gvAplicaciones_RowCommand">
@@ -53,8 +54,12 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
+</div>
     <!-- Aquí se renderizará la tabla de dispositivos vinculados -->
     <asp:PlaceHolder ID="phDispositivos" runat="server"></asp:PlaceHolder>
+    <!-- Campos ocultos y botón invisible para confirmación de eliminación -->
+    <asp:HiddenField ID="hfEliminarIdApp" runat="server" />
+    <asp:Button ID="btnConfirmarEliminar" runat="server" Style="display:none;" OnClick="btnConfirmarEliminar_Click" />
 
     <!-- Modal -->
     <div class="modal fade" id="modalAplicacion" tabindex="-1"
@@ -71,6 +76,7 @@
                     <ContentTemplate>
                         <div class="modal-body">
                             <asp:HiddenField ID="hfIdAplicacion" runat="server" />
+                            
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre <span class="text-danger">*</span></label>
                                 <asp:TextBox ID="txtNombre" runat="server"
@@ -115,11 +121,6 @@
                                 </asp:DropDownList>
                             </div>
 
-                            <div class="form-check mb-3">
-                                <asp:CheckBox ID="chkActivo" runat="server" CssClass="form-check-input" />
-                                <label class="form-check-label" for="chkActivo">Activo</label>
-                            </div>
-
                         </div>
 
                         <div class="modal-footer border-secondary">
@@ -133,10 +134,22 @@
                 </asp:UpdatePanel>
             </div>
         </div>
+        
+
+    </div>
+    
+    <!-- Spinner visible en la esquina superior derecha -->
+    <div id="spinnerOperacion" style="position: fixed; top: 10px; right: 10px; z-index: 9999; display: none;">
+        <div class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Eliminando...</span>
+        </div>
     </div>
 
+
+     
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function limpiarModal() {
             document.getElementById('modalNuevaAppLabel').textContent = 'Nueva aplicación';
@@ -164,5 +177,9 @@
         modalAplicacion.addEventListener('hidden.bs.modal', function () {
             document.getElementById('modalNuevaAppLabel').textContent = 'Nueva aplicación';
         });
+        
     </script>
+
+   
+
 </asp:Content>

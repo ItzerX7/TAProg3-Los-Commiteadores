@@ -1,12 +1,21 @@
-﻿using System;
+﻿using FrontVR.GestionlentesvrWS;
+using System;
 using System.Globalization;
+using System.ServiceModel;
 using System.Text;
+using System.Threading;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.GestionlentesvrWS;
 
 namespace FrontVR.Vistas
 {
+    public static class EstadoEliminacion
+    {
+        public static volatile bool EliminacionCompletada = false;
+        public static volatile string MensajeError = null;
+    }
+
     public partial class Aplicaciones : Page
     {
         private AplicacionWSClient aplicacionWSClient;
@@ -18,11 +27,34 @@ namespace FrontVR.Vistas
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request.QueryString["checkEliminacion"] == "true")
+            {
+                if (EstadoEliminacion.EliminacionCompletada)
+                {
+                    EstadoEliminacion.EliminacionCompletada = false; // Reset
+                    Response.Write("OK");
+                }
+                else if (!string.IsNullOrEmpty(EstadoEliminacion.MensajeError))
+                {
+                    string mensaje = EstadoEliminacion.MensajeError;
+                    EstadoEliminacion.MensajeError = null;
+                    Response.Write("ERROR: " + mensaje);
+                }
+                else
+                {
+                    Response.Write("PENDING");
+                }
+
+                Response.End();
+                return;
+            }
+
             if (!IsPostBack)
             {
                 BindGrid();
             }
         }
+
 
         private void BindGrid()
         {
@@ -59,7 +91,6 @@ namespace FrontVR.Vistas
                 desarrollador = txtDesarrollador.Text.Trim(),
                 categoria = (categoriaAplicacion)Enum.Parse(typeof(categoriaAplicacion), ddlCategoria.SelectedValue),
                 categoriaSpecified = true,
-                activo = chkActivo.Checked ? 'S' : 'N'
             };
 
             try
@@ -103,7 +134,6 @@ namespace FrontVR.Vistas
             txtDescripcion.Text = "";
             txtDesarrollador.Text = "";
             ddlCategoria.SelectedIndex = 0;
-            chkActivo.Checked = false;
             lblError.Visible = false;
         }
 
@@ -123,7 +153,6 @@ namespace FrontVR.Vistas
                 txtDescripcion.Text = app.descripcion;
                 txtDesarrollador.Text = app.desarrollador;
                 ddlCategoria.SelectedValue = app.categoria.ToString();
-                chkActivo.Checked = app.activo == 'S';
 
                 ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", @"
                     document.getElementById('modalNuevaAppLabel').textContent = 'Editar aplicación';
@@ -132,8 +161,35 @@ namespace FrontVR.Vistas
             }
             else if (e.CommandName == "EliminarApp")
             {
-                aplicacionWSClient.eliminarAplicacion(id);
-                BindGrid();
+                int idApp = id;
+                var app = aplicacionWSClient.obtenerAplicacion(idApp);
+                var dispositivos = aplicacionWSClient.listarDispositivosPorAplicaciones(idApp);
+
+                if (dispositivos != null && dispositivos.Length > 0)
+                {
+                    hfEliminarIdApp.Value = idApp.ToString(); // Setea el campo oculto
+                    string mensaje = $"La aplicación <strong>{app.nombre}</strong> está instalada en <strong>{dispositivos.Length}</strong> dispositivo(s). ¿Desea eliminarla de todos ellos?";
+
+                    string script = $@"
+                        Swal.fire({{
+                            title: 'Confirmar eliminación',
+                            html: '{mensaje}',
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonText: 'Sí, eliminar',
+                            cancelButtonText: 'Cancelar'
+                        }}).then((result) => {{
+                            if (result.isConfirmed) {{
+                                document.getElementById('{btnConfirmarEliminar.ClientID}').click();
+                            }}
+                        }});";
+                    ScriptManager.RegisterStartupScript(this, GetType(), "SwalConfirmarEliminacion", script, true);
+                }
+                else
+                {
+                    aplicacionWSClient.eliminarAplicacion(idApp);
+                    BindGrid();
+                }
             }
             else if (e.CommandName == "VerDispApp")
             {
@@ -197,5 +253,69 @@ namespace FrontVR.Vistas
             bool activo = (estado == "s" || estado == "true");
             return activo ? "Instalada" : "Disponible";
         }
+
+        protected void btnConfirmarEliminar_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(hfEliminarIdApp.Value, out int idApp))
+            {
+                // Mostrar el spinner
+                ScriptManager.RegisterStartupScript(this, GetType(), "MostrarSpinner", "$('#spinnerOperacion').show();", true);
+
+                // Reinicia el estado antes de iniciar
+                EstadoEliminacion.EliminacionCompletada = false;
+                EstadoEliminacion.MensajeError = null;
+
+                Thread eliminarThread = new Thread(() =>
+                {
+                    try
+                    {
+                        aplicacionWSClient.eliminarAplicacion(idApp);
+                        EstadoEliminacion.EliminacionCompletada = true;
+                    }
+                    catch (System.Exception ex)
+                    {
+                        EstadoEliminacion.MensajeError = ex.Message;
+                    }
+                });
+
+                eliminarThread.IsBackground = true;
+                eliminarThread.Start();
+
+                // JavaScript para verificar estado
+                string script = @"
+            const checkEstadoEliminacion = () => {
+                fetch('Aplicaciones.aspx?checkEliminacion=true')
+                    .then(response => response.text())
+                    .then(result => {
+                        if (result === 'OK') {
+                            $('#spinnerOperacion').hide();
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Aplicación eliminada',
+                                showConfirmButton: false,
+                                timer: 1500
+                            }).then(() => {
+                                window.location.href = window.location.href;
+                            });
+                        } else if (result.startsWith('ERROR')) {
+                            $('#spinnerOperacion').hide();
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Error al eliminar',
+                                text: result.replace('ERROR:', '').trim()
+                            });
+                        } else {
+                            setTimeout(checkEstadoEliminacion, 1000);
+                        }
+                    })
+                    .catch(() => setTimeout(checkEstadoEliminacion, 1000));
+            };
+            checkEstadoEliminacion();";
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "CheckEliminacion", script, true);
+            }
+        }
+
+
     }
 }

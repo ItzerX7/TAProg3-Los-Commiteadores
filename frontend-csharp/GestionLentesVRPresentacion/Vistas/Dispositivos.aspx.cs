@@ -126,7 +126,7 @@ namespace FrontVR.Vistas
                     txtUbicacion.Text = d.ubicacion;
                     //txtNivelBateria.Text = d.nivelBateria.ToString(); // Cargar nuevo campo
                     ddlEstado.SelectedValue = d.estado.ToString();
-
+                    
                     ScriptManager.RegisterStartupScript(this, GetType(), "AbrirModal",
                         "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalDispositivo')).show(); }, 300);", true);
                 }

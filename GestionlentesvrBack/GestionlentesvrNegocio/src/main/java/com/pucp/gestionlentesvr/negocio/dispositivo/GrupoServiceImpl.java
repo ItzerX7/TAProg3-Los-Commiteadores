@@ -1,5 +1,6 @@
 package com.pucp.gestionlentesvr.negocio.dispositivo;
 
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAO;
 import com.pucp.gestionlentesvr.persistencia.dao.dispositivo.GrupoDAOImpl;
@@ -67,6 +68,11 @@ public class GrupoServiceImpl implements GrupoService {
     @Override
     public List<Grupo> listarGrupo() throws Exception {
         return grupoDAO.listarTodos();
+    }
+
+    @Override
+    public List<Dispositivo> listarDispositivosGrupo(int id) throws Exception {
+        return grupoDAO.listarDispositivoPorGrupo(id);
     }
     
 }

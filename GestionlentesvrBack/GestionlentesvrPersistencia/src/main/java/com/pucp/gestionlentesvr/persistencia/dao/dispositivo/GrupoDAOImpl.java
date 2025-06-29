@@ -1,15 +1,21 @@
 package com.pucp.gestionlentesvr.persistencia.dao.dispositivo;
 
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.DBManager;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GrupoDAOImpl extends BaseDAOImpl<Grupo> implements GrupoDAO {
+    
+    private DispositivoDAOImpl dao= new DispositivoDAOImpl();
 
     @Override
     protected CallableStatement getInsertPS(Connection conn, Grupo entity) throws SQLException {
@@ -71,6 +77,23 @@ public class GrupoDAOImpl extends BaseDAOImpl<Grupo> implements GrupoDAO {
     @Override
     protected void setId(Grupo entity, Integer id) {
         entity.setId(id);
+    }
+
+    @Override
+    public List<Dispositivo> listarDispositivoPorGrupo(int id) {
+        List<Dispositivo> entities = new ArrayList<>();
+        try (Connection conn = DBManager.getInstance().obtenerConexion()) {
+            String query="CALL listar_Dispositivo_Grupo(?)";
+            CallableStatement cs = conn.prepareCall(query);
+            cs.setInt(1, id);
+            ResultSet rs = cs.executeQuery();
+            while (rs.next()) {
+                entities.add(dao.createFromResultSet(rs));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al listar dispositivos del grupo", e);
+        }
+        return entities;
     }
     
 }

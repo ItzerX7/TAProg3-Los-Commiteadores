@@ -24,14 +24,13 @@ namespace FrontVR
 
             try
             {
-                var usuarios = usuarioWSClient.listarUsuario();
 
                 // Verifica con la estructura real
-                var usuarioValido = usuarios.FirstOrDefault(u =>
-                    u.correo.Equals(usuarioInput, StringComparison.OrdinalIgnoreCase) &&
-                    u.contrasena == claveInput //&&
-                                               //u.activo == 1 // ushort: 1 = activo, 0 = inactivo
-                );
+                var usuarioValido = usuarioWSClient.obtenerUsuarioCorreo(usuarioInput);
+                if (usuarioValido.contrasena.CompareTo(claveInput) != 0)
+                {
+                    usuarioValido = null;
+                }
 
                 if (usuarioValido != null)
                 {

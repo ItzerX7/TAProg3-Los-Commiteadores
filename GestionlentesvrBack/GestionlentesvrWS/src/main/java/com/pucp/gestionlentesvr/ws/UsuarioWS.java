@@ -66,4 +66,12 @@ public class UsuarioWS {
             throw new WebServiceException("Error al listar" + ex.getMessage());
         }
     }
+    @WebMethod(operationName = "obtenerUsuarioCorreo")
+    public Usuario obtenerUsuarioCorreo(@WebParam(name = "correo") String correo) throws Exception {
+        try {
+            return service.obtenerUsuarioCorreo(correo);
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al listar" + ex.getMessage());
+        }
+    }
 }

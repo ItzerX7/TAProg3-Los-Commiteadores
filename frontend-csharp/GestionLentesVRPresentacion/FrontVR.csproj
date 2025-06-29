@@ -331,6 +331,12 @@
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerUltimoFirmResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.listarDispositivosGrupoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerUsuarioCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\GestionlentesvrWS\GrupoWS.xsd">
       <SubType>Designer</SubType>
     </None>

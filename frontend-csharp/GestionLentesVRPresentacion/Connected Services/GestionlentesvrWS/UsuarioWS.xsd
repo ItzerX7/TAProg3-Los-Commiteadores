@@ -8,6 +8,8 @@
   <xs:element name="listarUsuario" type="tns:listarUsuario" />
   <xs:element name="listarUsuarioResponse" type="tns:listarUsuarioResponse" />
   <xs:element name="obtenerUsuario" type="tns:obtenerUsuario" />
+  <xs:element name="obtenerUsuarioCorreo" type="tns:obtenerUsuarioCorreo" />
+  <xs:element name="obtenerUsuarioCorreoResponse" type="tns:obtenerUsuarioCorreoResponse" />
   <xs:element name="obtenerUsuarioResponse" type="tns:obtenerUsuarioResponse" />
   <xs:element name="registrarUsuario" type="tns:registrarUsuario" />
   <xs:element name="registrarUsuarioResponse" type="tns:registrarUsuarioResponse" />
@@ -42,6 +44,16 @@
   <xs:complexType name="Exception">
     <xs:sequence>
       <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerUsuarioCorreo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerUsuarioCorreoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="registrarUsuario">

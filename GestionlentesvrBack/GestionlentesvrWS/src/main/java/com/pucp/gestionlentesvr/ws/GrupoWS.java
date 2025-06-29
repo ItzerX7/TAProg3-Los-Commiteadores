@@ -1,5 +1,6 @@
 package com.pucp.gestionlentesvr.ws;
 
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
 import com.pucp.gestionlentesvr.negocio.dispositivo.GrupoService;
 import com.pucp.gestionlentesvr.negocio.dispositivo.GrupoServiceImpl;
@@ -42,5 +43,10 @@ public class GrupoWS {
     @WebMethod(operationName = "listarGrupo")
     public List<Grupo> listarGrupo() throws Exception {
         return service.listarGrupo();
+    }
+    
+    @WebMethod(operationName = "listarDispositivosGrupo")
+    public List<Dispositivo> listarDispositivosGrupo(@WebParam(name = "id") int id) throws Exception {
+        return service.listarDispositivosGrupo(id);
     }
 }

@@ -3,6 +3,7 @@ package com.pucp.gestionlentesvr.persistencia.dao.usuario;
 import com.pucp.gestionlentesvr.dominio.usuario.Rol;
 import com.pucp.gestionlentesvr.dominio.usuario.Usuario;
 import com.pucp.gestionlentesvr.persistencia.BaseDAOImpl;
+import com.pucp.gestionlentesvr.persistencia.DBManager;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -52,6 +53,7 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
         cs.setInt(1, id);
         return cs;
     }
+    
 
     @Override
     protected CallableStatement getSelectAllPS(Connection conn) throws SQLException {
@@ -78,5 +80,21 @@ public class UsuarioDAOImpl extends BaseDAOImpl<Usuario> implements UsuarioDAO {
     @Override
     protected void setId(Usuario entity, Integer id) {
         entity.setId(id);
+    }
+
+    @Override
+    public Usuario obtener_usuario_por_correo(String correo) {
+        try (Connection conn = DBManager.getInstance().obtenerConexion()) {
+            String query= "CALL obtener_usuario_por_correo(?)";
+            CallableStatement cs = conn.prepareCall(query);
+            cs.setString(1,correo);
+            ResultSet rs = cs.executeQuery();
+            if (rs.next()) {
+                return createFromResultSet(rs);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error al obtener entidad", e);
+        }
+        return null;
     }
 }

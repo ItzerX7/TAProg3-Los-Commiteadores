@@ -1,5 +1,6 @@
 package com.pucp.gestionlentesvr.negocio.dispositivo;
 
+import com.pucp.gestionlentesvr.dominio.dispositivo.Dispositivo;
 import com.pucp.gestionlentesvr.dominio.dispositivo.Grupo;
 import java.util.List;
 
@@ -14,4 +15,6 @@ public interface GrupoService {
     Grupo obtenerGrupo(int idGrupo) throws Exception;
 
     List<Grupo> listarGrupo() throws Exception;
+    
+    List<Dispositivo> listarDispositivosGrupo(int id) throws Exception;
 }

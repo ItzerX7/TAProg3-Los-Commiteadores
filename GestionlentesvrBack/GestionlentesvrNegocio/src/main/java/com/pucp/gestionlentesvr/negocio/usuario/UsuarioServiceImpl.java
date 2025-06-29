@@ -72,7 +72,7 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Usuario obtenerUsuario(int idUsuario) throws Exception {
         Usuario usuario = usuarioDAO.obtener(idUsuario);
         if (usuario == null) {
-            throw new Exception("La actividad no existe");
+            throw new Exception("La usuario no existe");
         }
         return usuario;
     }
@@ -80,6 +80,15 @@ public class UsuarioServiceImpl implements UsuarioService {
     @Override
     public List<Usuario> listarUsuario() throws Exception {
         return usuarioDAO.listarTodos();
+    }
+
+    @Override
+    public Usuario obtenerUsuarioCorreo(String correo) throws Exception {
+        Usuario usuario = usuarioDAO.obtener_usuario_por_correo(correo);
+        if (usuario == null) {
+            throw new Exception("La usuario no existe");
+        }
+        return usuario;
     }
     
 }

@@ -12,6 +12,8 @@ public interface UsuarioService {
     void eliminarUsuario(Integer idUsuario) throws Exception;
 
     Usuario obtenerUsuario(int idUsuario) throws Exception;
+    
+    public Usuario obtenerUsuarioCorreo(String correo) throws Exception ;
 
     List<Usuario> listarUsuario() throws Exception;
 }

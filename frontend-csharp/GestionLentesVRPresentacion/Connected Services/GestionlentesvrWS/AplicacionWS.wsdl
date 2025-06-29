@@ -5,11 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/AplicacionWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="contarAplicacionesPorTipoEnMetricas">
-    <part name="parameters" element="tns:contarAplicacionesPorTipoEnMetricas" />
+  <message name="reporteCategoriaApp">
+    <part name="parameters" element="tns:reporteCategoriaApp" />
   </message>
-  <message name="contarAplicacionesPorTipoEnMetricasResponse">
-    <part name="parameters" element="tns:contarAplicacionesPorTipoEnMetricasResponse" />
+  <message name="reporteCategoriaAppResponse">
+    <part name="parameters" element="tns:reporteCategoriaAppResponse" />
+  </message>
+  <message name="obtenerAplicacion">
+    <part name="parameters" element="tns:obtenerAplicacion" />
+  </message>
+  <message name="obtenerAplicacionResponse">
+    <part name="parameters" element="tns:obtenerAplicacionResponse" />
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
@@ -26,11 +32,23 @@
   <message name="eliminarAplicacionResponse">
     <part name="parameters" element="tns:eliminarAplicacionResponse" />
   </message>
-  <message name="obtenerAplicacion">
-    <part name="parameters" element="tns:obtenerAplicacion" />
+  <message name="registrarAplicacion">
+    <part name="parameters" element="tns:registrarAplicacion" />
   </message>
-  <message name="obtenerAplicacionResponse">
-    <part name="parameters" element="tns:obtenerAplicacionResponse" />
+  <message name="registrarAplicacionResponse">
+    <part name="parameters" element="tns:registrarAplicacionResponse" />
+  </message>
+  <message name="actualizarAplicacion">
+    <part name="parameters" element="tns:actualizarAplicacion" />
+  </message>
+  <message name="actualizarAplicacionResponse">
+    <part name="parameters" element="tns:actualizarAplicacionResponse" />
+  </message>
+  <message name="contarAplicacionesPorTipoEnMetricas">
+    <part name="parameters" element="tns:contarAplicacionesPorTipoEnMetricas" />
+  </message>
+  <message name="contarAplicacionesPorTipoEnMetricasResponse">
+    <part name="parameters" element="tns:contarAplicacionesPorTipoEnMetricasResponse" />
   </message>
   <message name="eliminarAplicacionesPorDispositivo">
     <part name="parameters" element="tns:eliminarAplicacionesPorDispositivo" />
@@ -50,29 +68,15 @@
   <message name="listarAplicacionesConDispositivosResponse">
     <part name="parameters" element="tns:listarAplicacionesConDispositivosResponse" />
   </message>
-  <message name="actualizarAplicacion">
-    <part name="parameters" element="tns:actualizarAplicacion" />
-  </message>
-  <message name="actualizarAplicacionResponse">
-    <part name="parameters" element="tns:actualizarAplicacionResponse" />
-  </message>
-  <message name="registrarAplicacion">
-    <part name="parameters" element="tns:registrarAplicacion" />
-  </message>
-  <message name="registrarAplicacionResponse">
-    <part name="parameters" element="tns:registrarAplicacionResponse" />
-  </message>
-  <message name="reporteCategoriaApp">
-    <part name="parameters" element="tns:reporteCategoriaApp" />
-  </message>
-  <message name="reporteCategoriaAppResponse">
-    <part name="parameters" element="tns:reporteCategoriaAppResponse" />
-  </message>
   <portType name="AplicacionWS">
-    <operation name="contarAplicacionesPorTipoEnMetricas">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricasRequest" message="tns:contarAplicacionesPorTipoEnMetricas" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricasResponse" message="tns:contarAplicacionesPorTipoEnMetricasResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricas/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="reporteCategoriaApp">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/reporteCategoriaAppRequest" message="tns:reporteCategoriaApp" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/reporteCategoriaAppResponse" message="tns:reporteCategoriaAppResponse" />
+    </operation>
+    <operation name="obtenerAplicacion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionRequest" message="tns:obtenerAplicacion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionResponse" message="tns:obtenerAplicacionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="listarAplicacion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionRequest" message="tns:listarAplicacion" />
@@ -84,10 +88,20 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionResponse" message="tns:eliminarAplicacionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="obtenerAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionRequest" message="tns:obtenerAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacionResponse" message="tns:obtenerAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/obtenerAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="registrarAplicacion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionRequest" message="tns:registrarAplicacion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionResponse" message="tns:registrarAplicacionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarAplicacion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionRequest" message="tns:actualizarAplicacion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionResponse" message="tns:actualizarAplicacionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="contarAplicacionesPorTipoEnMetricas">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricasRequest" message="tns:contarAplicacionesPorTipoEnMetricas" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricasResponse" message="tns:contarAplicacionesPorTipoEnMetricasResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/contarAplicacionesPorTipoEnMetricas/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="eliminarAplicacionesPorDispositivo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/eliminarAplicacionesPorDispositivoRequest" message="tns:eliminarAplicacionesPorDispositivo" />
@@ -104,24 +118,19 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionesConDispositivosResponse" message="tns:listarAplicacionesConDispositivosResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/listarAplicacionesConDispositivos/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="actualizarAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionRequest" message="tns:actualizarAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacionResponse" message="tns:actualizarAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/actualizarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="registrarAplicacion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionRequest" message="tns:registrarAplicacion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacionResponse" message="tns:registrarAplicacionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/registrarAplicacion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="reporteCategoriaApp">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/reporteCategoriaAppRequest" message="tns:reporteCategoriaApp" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/AplicacionWS/reporteCategoriaAppResponse" message="tns:reporteCategoriaAppResponse" />
-    </operation>
   </portType>
   <binding name="AplicacionWSPortBinding" type="tns:AplicacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="contarAplicacionesPorTipoEnMetricas">
+    <operation name="reporteCategoriaApp">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerAplicacion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -157,7 +166,31 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerAplicacion">
+    <operation name="registrarAplicacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="actualizarAplicacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="contarAplicacionesPorTipoEnMetricas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -204,39 +237,6 @@
       <fault name="Exception">
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
-    </operation>
-    <operation name="actualizarAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="registrarAplicacion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="reporteCategoriaApp">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
     </operation>
   </binding>
   <service name="AplicacionWS">

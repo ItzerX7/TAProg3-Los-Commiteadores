@@ -200,7 +200,7 @@ namespace FrontVR.Vistas
             byte[] archivo = aplicacionWSClient.reporteCategoriaApp();
             Response.Clear();
             Response.ContentType = "application/pdf";
-            Response.AddHeader("Content-Disposition", "attachment; filename=reporteTiposActividades.pdf");
+            Response.AddHeader("Content-Disposition", "attachment; filename=ReporteTipoAplicaciones.pdf");
             Response.BinaryWrite(archivo);
             Response.End();
         }

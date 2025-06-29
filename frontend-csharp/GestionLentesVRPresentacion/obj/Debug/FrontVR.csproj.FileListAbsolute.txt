@@ -338,7 +338,6 @@ C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\Antlr3.Runtime.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BCrypt.Net-Next.dll
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BouncyCastle.Cryptography.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\Microsoft.Bcl.AsyncInterfaces.dll
@@ -359,7 +358,6 @@ C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\System.Web.Optimization.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\WebGrease.dll
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BCrypt.Net-Next.xml
-C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BouncyCastle.Cryptography.xml
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\Microsoft.Bcl.AsyncInterfaces.xml
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\System.Buffers.xml
 C:\Users\HP\Desktop\universidad\Ciclo 6\Prog3\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\System.IO.Pipelines.xml

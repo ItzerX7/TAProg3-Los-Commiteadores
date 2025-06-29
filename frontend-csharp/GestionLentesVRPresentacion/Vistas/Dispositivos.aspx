@@ -42,7 +42,7 @@
         OnPageIndexChanging="gvDispositivos_PageIndexChanging"
         CssClass="table table-bordered table-hover align-middle text-center"
         DataKeyNames="id" OnRowCommand="gvDispositivos_RowCommand">
-        <HeaderStyle CssClass="table-dark" />
+        <HeaderStyle CssClass="table-dark" /><PagerStyle CssClass="pagination-container" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="nombre" HeaderText="Nombre" />

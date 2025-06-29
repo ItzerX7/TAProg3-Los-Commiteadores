@@ -146,11 +146,14 @@ namespace FrontVR.Vistas
             phDispositivos.Controls.Clear();
             var dispositivos = aplicacionWSClient.listarDispositivosPorAplicaciones(idAplicacion);
 
+            var aplicacion = aplicacionWSClient.obtenerAplicacion(idAplicacion);
+            string nombreAplicacion = aplicacion?.nombre ?? "Aplicación desconocida";
+
             if (dispositivos != null && dispositivos.Length > 0)
             {
                 StringBuilder html = new StringBuilder();
 
-                html.Append("<h4 class='mt-4'>Dispositivos vinculados</h4>");
+                html.AppendFormat("<h4 class='mt-4'>Dispositivos vinculados a <strong>{0}</strong></h4>", nombreAplicacion);
                 html.Append("<table class='table table-bordered table-dark mt-2'>");
                 html.Append("<thead><tr>");
                 html.Append("<th>Nombre</th>");

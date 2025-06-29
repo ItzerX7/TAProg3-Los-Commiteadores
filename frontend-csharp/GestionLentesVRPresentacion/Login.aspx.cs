@@ -1,6 +1,6 @@
-﻿using FrontVR.GestionlentesvrWS;
+﻿using BCrypt.Net;
+using FrontVR.GestionlentesvrWS;
 using System;
-using System.Linq;
 
 namespace FrontVR
 {
@@ -24,18 +24,14 @@ namespace FrontVR
 
             try
             {
-
-                // Verifica con la estructura real
                 var usuarioValido = usuarioWSClient.obtenerUsuarioCorreo(usuarioInput);
-                if (usuarioValido.contrasena.CompareTo(claveInput) != 0)
-                {
-                    usuarioValido = null;
-                }
 
-                if (usuarioValido != null)
+                // 🔐 Verifica con BCrypt si la contraseña ingresada es válida
+                if (usuarioValido != null &&
+                    BCrypt.Net.BCrypt.Verify(claveInput, usuarioValido.contrasena)) // contrasena es el hash
                 {
                     Session["usuario"] = usuarioValido;
-                    Session["RolId"] = usuarioValido.rol.id; // la propiedad anidada del rol
+                    Session["RolId"] = usuarioValido.rol.id;
 
                     RedirigirSegunRol(usuarioValido.rol.id);
                 }
@@ -55,11 +51,11 @@ namespace FrontVR
         private void RedirigirSegunRol(int rolId)
         {
             if (rolId == 1)
-                Response.Redirect("~/Vistas/PantallaInicio.aspx"); // Admin ve todo
+                Response.Redirect("~/Vistas/PantallaInicio.aspx");
             else if (rolId == 2)
-                Response.Redirect("~/Vistas/PantallaInicio.aspx"); // O PantallaInicioTecnico si usas eso
+                Response.Redirect("~/Vistas/PantallaInicio.aspx");
             else
-                Response.Redirect("~/Login.aspx"); // Rol inválido
+                Response.Redirect("~/Login.aspx");
         }
     }
 }

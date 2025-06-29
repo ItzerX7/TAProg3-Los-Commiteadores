@@ -11,8 +11,13 @@
     </asp:LinkButton>
 
     <!-- Tabla -->
-    <asp:GridView ID="gvActividades" runat="server" AutoGenerateColumns="False"
-        CssClass="table table-bordered table-hover align-middle text-center" OnRowDataBound="gvActividades_RowDataBound">
+    <asp:GridView ID="gvActividades" runat="server"
+        AutoGenerateColumns="False"
+        AllowPaging="true"
+        PageSize="10"
+        OnPageIndexChanging="gvActividades_PageIndexChanging"
+        CssClass="table table-bordered table-hover align-middle text-center"
+        OnRowDataBound="gvActividades_RowDataBound">
         <HeaderStyle CssClass="table-dark" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="ID" />

@@ -41,6 +41,13 @@ namespace FrontVR.Vistas
             }
         }
 
+        protected void gvActividades_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvActividades.PageIndex = e.NewPageIndex;
+            BindGrid();
+            gvActividades.DataBind();
+        }
+
         protected string GetBadgeCss(object activoObj)
         {
             string estado = activoObj?.ToString().ToLower();

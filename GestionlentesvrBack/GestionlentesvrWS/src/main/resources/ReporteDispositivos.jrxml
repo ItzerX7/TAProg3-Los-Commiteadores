@@ -1,0 +1,122 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="ReporteDispositivos" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="71ce6958-9011-4b01-a39f-a47fd39c8bc6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dbTA"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="InputGroupID" class="java.lang.String"/>
+	<query language="sql"><![CDATA[SELECT g.nombre AS NOMBREGRUPO,
+	d.nombre AS NOMBREDISPOS,
+	d.dispositivoid AS IDDISPOS,
+	d.fecharegistro AS FECHADISPOS,
+	d.estado_conexion AS ESTADODISPOS,
+	count(*) as cantidad
+FROM taprog3.dispositivo d,
+	taprog3.grupo g
+WHERE 
+	 d.grupo_grupoid =  $P{InputGroupID} 
+	 AND d.grupo_grupoid = g.grupoid
+GROUP BY
+	d.estado_conexion]]></query>
+	<field name="NOMBREGRUPO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOMBREGRUPO"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="grupo"/>
+	</field>
+	<field name="NOMBREDISPOS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOMBREDISPOS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dispositivo"/>
+	</field>
+	<field name="IDDISPOS" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="dispositivoid"/>
+		<property name="com.jaspersoft.studio.field.label" value="IDDISPOS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dispositivo"/>
+	</field>
+	<field name="FECHADISPOS" class="java.time.LocalDateTime">
+		<property name="com.jaspersoft.studio.field.name" value="fecharegistro"/>
+		<property name="com.jaspersoft.studio.field.label" value="FECHADISPOS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dispositivo"/>
+	</field>
+	<field name="ESTADODISPOS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado_conexion"/>
+		<property name="com.jaspersoft.studio.field.label" value="ESTADODISPOS"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dispositivo"/>
+	</field>
+	<field name="cantidad" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="110" splitType="Stretch">
+		<element kind="image" uuid="e51d72f3-a397-4318-94f5-d4f70593eab8" x="0" y="0" width="90" height="90">
+			<expression><![CDATA["LogoVR.png"]]></expression>
+		</element>
+		<element kind="staticText" uuid="03e5f211-2b8d-468f-b895-2f4af93ad14e" x="110" y="0" width="440" height="40" markup="html" fontSize="30.0">
+			<text><![CDATA[Reporte de dispositivos]]></text>
+		</element>
+		<element kind="staticText" uuid="4daa8f51-b852-4beb-931f-b234c0ea9411" x="110" y="40" width="380" height="30" fontSize="20.0">
+			<text><![CDATA[Gestion De Lentes VR]]></text>
+		</element>
+		<element kind="staticText" uuid="b59028a8-b7a3-4dc2-84fe-dc181697fcdf" x="110" y="70" width="210" height="30" fontSize="20.0">
+			<text><![CDATA[Dispositivos del grupo]]></text>
+		</element>
+		<element kind="textField" uuid="c60a9dab-66e0-46f9-be99-2cceffc82c34" x="320" y="70" width="230" height="30" fontSize="20.0">
+			<expression><![CDATA[$F{NOMBREGRUPO}]]></expression>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="30" splitType="Stretch">
+		<element kind="staticText" uuid="75ab3f67-e445-4107-b4cd-5348790c77f3" x="50" y="0" width="230" height="30">
+			<text><![CDATA[NOMBREDISPOS]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="436d2ea4-13a8-45df-bb4c-663d8c7b8842"/>
+		</element>
+		<element kind="staticText" uuid="bc3c2826-ef37-4a39-9f46-d350a6849547" x="0" y="0" width="50" height="30">
+			<text><![CDATA[IDDISPOS]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e771f63-7474-490d-93bc-cff8bea0919e"/>
+		</element>
+		<element kind="staticText" uuid="f40237be-7139-4c77-bf50-cb0732583376" x="280" y="0" width="130" height="30">
+			<text><![CDATA[FECHADISPOS]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4c6e6ef5-33f2-43d1-b053-ce8b7f4b6395"/>
+		</element>
+		<element kind="staticText" uuid="f28d1819-d559-4b65-96cc-f9dcf3173ca7" x="410" y="0" width="150" height="30">
+			<text><![CDATA[ESTADODISPOS]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc5418e3-88ae-43b7-b5c0-590b0001442a"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="023cb4be-a267-407e-a8c7-5a5b1cfa7ad2" x="50" y="0" width="230" height="30">
+				<expression><![CDATA[$F{NOMBREDISPOS}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="436d2ea4-13a8-45df-bb4c-663d8c7b8842"/>
+			</element>
+			<element kind="textField" uuid="878a93ac-3db6-4806-a2cd-e334ec444ecc" x="0" y="0" width="50" height="30">
+				<expression><![CDATA[$F{IDDISPOS}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8e771f63-7474-490d-93bc-cff8bea0919e"/>
+			</element>
+			<element kind="textField" uuid="54575f3c-565f-45d9-9f0e-c204b89b0700" x="280" y="0" width="130" height="30">
+				<expression><![CDATA[$F{FECHADISPOS}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4c6e6ef5-33f2-43d1-b053-ce8b7f4b6395"/>
+			</element>
+			<element kind="textField" uuid="389166f7-1457-48d6-a507-d9acb3724556" x="410" y="0" width="150" height="30">
+				<expression><![CDATA[$F{ESTADODISPOS}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fc5418e3-88ae-43b7-b5c0-590b0001442a"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="221" splitType="Stretch">
+		<element kind="chart" chartType="bar" uuid="a6ec06bf-7a0e-4185-8018-c8af1e7a6da0" x="0" y="0" width="560" height="221" evaluationTime="Report">
+			<dataset kind="category">
+				<series>
+					<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
+					<categoryExpression><![CDATA[$F{ESTADODISPOS}]]></categoryExpression>
+					<valueExpression><![CDATA[$F{cantidad}]]></valueExpression>
+					<labelExpression><![CDATA[$F{ESTADODISPOS}]]></labelExpression>
+				</series>
+			</dataset>
+			<plot categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000">
+				<itemLabel/>
+			</plot>
+		</element>
+	</summary>
+</jasperReport>

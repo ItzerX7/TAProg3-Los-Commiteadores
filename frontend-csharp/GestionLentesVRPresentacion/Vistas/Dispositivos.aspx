@@ -34,6 +34,16 @@
         </div>
     </div>
 
+    <!-- Botón descargar reporte de dispositivos -->
+    <asp:LinkButton ID="btnDescargarRepAct" runat="server" CssClass="btn btn-primary mb-3" OnClick="ClickBotonDescargaRepDisp">
+    <i class="bi bi-file-earmark-pdf"></i> Descargar reporte de dispositivos (.pdf)
+    </asp:LinkButton>
+
+<asp:DropDownList ID="ddlGrupos" runat="server" CssClass="form-select mb-3" />
+<asp:Label ID="Label1" runat="server" CssClass="text-danger mt-2" Visible="false" />
+
+    <asp:Label ID="lblMensaje" runat="server" CssClass="text-danger" Visible="false" />
+
     <!-- Tabla -->
     <asp:GridView ID="gvDispositivos" runat="server"
         AutoGenerateColumns="False" CssClass="table table-bordered table-hover align-middle text-center"

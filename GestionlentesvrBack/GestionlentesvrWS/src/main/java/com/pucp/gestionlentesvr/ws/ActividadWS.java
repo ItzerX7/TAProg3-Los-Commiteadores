@@ -97,7 +97,7 @@ public class ActividadWS {
             throw new WebServiceException("Error al generar el reporte: " + ex.getMessage(), ex);
         }
     }
-        @WebMethod(operationName = "reporteTipos")
+    @WebMethod(operationName = "reporteTipos")
     public byte[] reporteTipos() {
         try {
             Map<String, Object> params = new HashMap<>();

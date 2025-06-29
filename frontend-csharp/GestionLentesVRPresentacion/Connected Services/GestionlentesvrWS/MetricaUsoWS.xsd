@@ -129,6 +129,14 @@
       <xs:element minOccurs="0" name="return" type="tns:metricaUso" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarMetricaUso">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarMetricaUsoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:metricaUso" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="obtenerAppMasUsada">
     <xs:sequence />
   </xs:complexType>
@@ -147,14 +155,6 @@
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element name="tamanomb" type="xs:double" />
       <xs:element minOccurs="0" name="version" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarMetricaUso">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarMetricaUsoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:metricaUso" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="estadoConexion">

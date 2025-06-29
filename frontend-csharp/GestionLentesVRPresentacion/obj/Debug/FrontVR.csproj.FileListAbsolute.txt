@@ -472,3 +472,5 @@ C:\Users\oscar\Documents\25-1\PROGRAMACION 3\ta2\TAProg3-Los-Commiteadores\front
 C:\Users\oscar\Documents\25-1\PROGRAMACION 3\ta2\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.csproj.Up2Date
 C:\Users\oscar\Documents\25-1\PROGRAMACION 3\ta2\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.dll
 C:\Users\oscar\Documents\25-1\PROGRAMACION 3\ta2\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.pdb
+C:\Users\oscar\Documents\25-1\PROGRAMACION 3\ta2\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BCrypt.Net-Next.dll
+C:\Users\oscar\Documents\25-1\PROGRAMACION 3\ta2\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BCrypt.Net-Next.xml

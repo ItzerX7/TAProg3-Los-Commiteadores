@@ -5,20 +5,20 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="actualizarConfiguracion">
-    <part name="parameters" element="tns:actualizarConfiguracion" />
-  </message>
-  <message name="actualizarConfiguracionResponse">
-    <part name="parameters" element="tns:actualizarConfiguracionResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
   <message name="obtenerConfiguracion">
     <part name="parameters" element="tns:obtenerConfiguracion" />
   </message>
   <message name="obtenerConfiguracionResponse">
     <part name="parameters" element="tns:obtenerConfiguracionResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="actualizarConfiguracion">
+    <part name="parameters" element="tns:actualizarConfiguracion" />
+  </message>
+  <message name="actualizarConfiguracionResponse">
+    <part name="parameters" element="tns:actualizarConfiguracionResponse" />
   </message>
   <message name="eliminarConfiguracion">
     <part name="parameters" element="tns:eliminarConfiguracion" />
@@ -39,15 +39,15 @@
     <part name="parameters" element="tns:registrarConfiguracionResponse" />
   </message>
   <portType name="ConfiguracionWS">
-    <operation name="actualizarConfiguracion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionRequest" message="tns:actualizarConfiguracion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionResponse" message="tns:actualizarConfiguracionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="obtenerConfiguracion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionRequest" message="tns:obtenerConfiguracion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracionResponse" message="tns:obtenerConfiguracionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/obtenerConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="actualizarConfiguracion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionRequest" message="tns:actualizarConfiguracion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionResponse" message="tns:actualizarConfiguracionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="eliminarConfiguracion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/eliminarConfiguracionRequest" message="tns:eliminarConfiguracion" />
@@ -67,7 +67,7 @@
   </portType>
   <binding name="ConfiguracionWSPortBinding" type="tns:ConfiguracionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarConfiguracion">
+    <operation name="obtenerConfiguracion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -79,7 +79,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerConfiguracion">
+    <operation name="actualizarConfiguracion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

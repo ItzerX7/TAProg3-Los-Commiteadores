@@ -322,13 +322,19 @@
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerDispositivoMenosUsadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteClientesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.insertarDisFirmwareResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerUltimoFirmResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteCategoriaAppResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteTiposResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteActividadesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\GestionlentesvrWS\GrupoWS.xsd">

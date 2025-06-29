@@ -5,14 +5,20 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/ConfiguracionWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
+  <message name="registrarConfiguracion">
+    <part name="parameters" element="tns:registrarConfiguracion" />
+  </message>
+  <message name="registrarConfiguracionResponse">
+    <part name="parameters" element="tns:registrarConfiguracionResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
   <message name="actualizarConfiguracion">
     <part name="parameters" element="tns:actualizarConfiguracion" />
   </message>
   <message name="actualizarConfiguracionResponse">
     <part name="parameters" element="tns:actualizarConfiguracionResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
   </message>
   <message name="eliminarConfiguracion">
     <part name="parameters" element="tns:eliminarConfiguracion" />
@@ -32,13 +38,12 @@
   <message name="listarConfiguracionResponse">
     <part name="parameters" element="tns:listarConfiguracionResponse" />
   </message>
-  <message name="registrarConfiguracion">
-    <part name="parameters" element="tns:registrarConfiguracion" />
-  </message>
-  <message name="registrarConfiguracionResponse">
-    <part name="parameters" element="tns:registrarConfiguracionResponse" />
-  </message>
   <portType name="ConfiguracionWS">
+    <operation name="registrarConfiguracion">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionRequest" message="tns:registrarConfiguracion" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionResponse" message="tns:registrarConfiguracionResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="actualizarConfiguracion">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionRequest" message="tns:actualizarConfiguracion" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/actualizarConfiguracionResponse" message="tns:actualizarConfiguracionResponse" />
@@ -59,14 +64,21 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracionResponse" message="tns:listarConfiguracionResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/listarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="registrarConfiguracion">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionRequest" message="tns:registrarConfiguracion" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracionResponse" message="tns:registrarConfiguracionResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/ConfiguracionWS/registrarConfiguracion/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
   </portType>
   <binding name="ConfiguracionWSPortBinding" type="tns:ConfiguracionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="registrarConfiguracion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
     <operation name="actualizarConfiguracion">
       <soap:operation soapAction="" />
       <input>
@@ -104,18 +116,6 @@
       </fault>
     </operation>
     <operation name="listarConfiguracion">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="registrarConfiguracion">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

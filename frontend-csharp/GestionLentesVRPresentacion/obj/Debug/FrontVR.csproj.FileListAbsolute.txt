@@ -374,3 +374,5 @@ C:\Users\Administrador\Documents\Progra3\TA\TAProg3-Los-Commiteadores\frontend-c
 C:\Users\Administrador\Documents\Progra3\TA\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.csproj.Up2Date
 C:\Users\Administrador\Documents\Progra3\TA\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.dll
 C:\Users\Administrador\Documents\Progra3\TA\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\obj\Debug\FrontVR.pdb
+C:\Users\Itzer\Documents\PUCP-2025-1\Programación 3\TA\TAGithub\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BCrypt.Net-Next.dll
+C:\Users\Itzer\Documents\PUCP-2025-1\Programación 3\TA\TAGithub\TAProg3-Los-Commiteadores\frontend-csharp\GestionLentesVRPresentacion\bin\BCrypt.Net-Next.xml

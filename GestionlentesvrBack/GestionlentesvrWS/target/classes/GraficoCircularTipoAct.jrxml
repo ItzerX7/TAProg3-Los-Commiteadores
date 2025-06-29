@@ -1,0 +1,79 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="GraficoCircularTipo" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="004c3610-c8a0-420c-b5e1-0f6be03630dc">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="dbTA"/>
+	<query language="SQL"><![CDATA[SELECT 
+    tipo, 
+    COUNT(*) AS cantidad
+FROM 
+    taprog3.actividad
+GROUP BY 
+    tipo;
+]]></query>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="actividad"/>
+	</field>
+	<field name="cantidad" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="cantidad"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="100" splitType="Stretch">
+		<element kind="staticText" uuid="3e439eea-5ec4-4f74-911a-2533c7fbd889" x="110" y="0" width="440" height="50" markup="html" fontSize="30.0">
+			<text><![CDATA[Reporte de tipos de actividades]]></text>
+		</element>
+		<element kind="staticText" uuid="7b04419b-14c6-4884-a193-afeb3485a215" x="120" y="60" width="380" height="30" fontSize="20.0">
+			<text><![CDATA[Gestion De Lentes VR]]></text>
+		</element>
+		<element kind="image" uuid="c11c07e6-59ab-43db-96d1-8fbecb0794d0" x="0" y="0" width="90" height="90">
+			<expression><![CDATA["LogoVR.png"]]></expression>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="b49419ff-8a0a-4acc-a080-c888bae058da" x="5" y="5" width="405" height="30" fontSize="20.0">
+			<text><![CDATA[Tipo de actividad]]></text>
+		</element>
+		<element kind="staticText" uuid="7997b5ea-8a0a-40b4-b4e2-2de01737498b" x="410" y="5" width="134" height="30" fontSize="20.0">
+			<text><![CDATA[Cantidad]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<element kind="textField" uuid="ea9a52eb-2c42-4b35-95fe-ccd811fed824" x="5" y="0" width="405" height="20" fontSize="10.0">
+				<paragraph lineSpacingSize="0.5"/>
+				<expression><![CDATA[$F{tipo}]]></expression>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+			</element>
+			<element kind="textField" uuid="67e0c159-35d7-4740-a091-e2e744bcd494" x="410" y="0" width="134" height="20" fontSize="10.0">
+				<expression><![CDATA[$F{cantidad}]]></expression>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="385" splitType="Stretch">
+		<element kind="chart" chartType="pie" uuid="23e08801-e75b-4bb9-a722-653ddab8dab7" x="7" y="60" width="540" height="325" evaluationTime="Report">
+			<dataset kind="pie">
+				<series>
+					<keyExpression><![CDATA[$F{tipo}]]></keyExpression>
+					<valueExpression><![CDATA[$F{cantidad}]]></valueExpression>
+					<labelExpression><![CDATA[$F{tipo}]]></labelExpression>
+				</series>
+			</dataset>
+			<plot>
+				<itemLabel/>
+			</plot>
+		</element>
+		<element kind="staticText" uuid="5b78caeb-f533-4107-869d-2c3a4fda562d" x="140" y="10" width="280" height="30" fontSize="20.0">
+			<text><![CDATA[Distribución de las actividades]]></text>
+		</element>
+	</summary>
+</jasperReport>

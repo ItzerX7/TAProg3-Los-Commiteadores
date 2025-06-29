@@ -42,6 +42,7 @@ namespace FrontVR
             lnkMetrica.Attributes["class"] = "nav-link";
             lnkAdministracion.Attributes["class"] = "nav-link";
             lnkGrupos.Attributes["class"] = "nav-link";
+            lnkFirmware.Attributes["class"] = "nav-link";
 
             switch (page)
             {
@@ -65,6 +66,9 @@ namespace FrontVR
                     break;
                 case "configuracion":
                     lnkConfiguracion.Attributes["class"] = "nav-link active";
+                    break;
+                case "firmware":
+                    lnkFirmware.Attributes["class"] = "nav-link active";
                     break;
                 case "actividades":
                     lnkActividades.Attributes["class"] = "nav-link active";

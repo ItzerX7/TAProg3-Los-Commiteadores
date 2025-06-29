@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/GestionlentesvrWS/DispositivoWS?xsd=1" namespace="http://ws.gestionlentesvr.pucp.com/" />
     </xsd:schema>
   </types>
-  <message name="obtenerUltimoFirm">
-    <part name="parameters" element="tns:obtenerUltimoFirm" />
+  <message name="insertarDisFirmware">
+    <part name="parameters" element="tns:insertarDisFirmware" />
   </message>
-  <message name="obtenerUltimoFirmResponse">
-    <part name="parameters" element="tns:obtenerUltimoFirmResponse" />
+  <message name="insertarDisFirmwareResponse">
+    <part name="parameters" element="tns:insertarDisFirmwareResponse" />
   </message>
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
@@ -26,11 +26,11 @@
   <message name="listarDispositivoResponse">
     <part name="parameters" element="tns:listarDispositivoResponse" />
   </message>
-  <message name="insertarDisFirmware">
-    <part name="parameters" element="tns:insertarDisFirmware" />
+  <message name="obtenerUltimoFirm">
+    <part name="parameters" element="tns:obtenerUltimoFirm" />
   </message>
-  <message name="insertarDisFirmwareResponse">
-    <part name="parameters" element="tns:insertarDisFirmwareResponse" />
+  <message name="obtenerUltimoFirmResponse">
+    <part name="parameters" element="tns:obtenerUltimoFirmResponse" />
   </message>
   <message name="actualizarDispositivo">
     <part name="parameters" element="tns:actualizarDispositivo" />
@@ -51,10 +51,10 @@
     <part name="parameters" element="tns:eliminarDispositivoResponse" />
   </message>
   <portType name="DispositivoWS">
-    <operation name="obtenerUltimoFirm">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerUltimoFirmRequest" message="tns:obtenerUltimoFirm" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerUltimoFirmResponse" message="tns:obtenerUltimoFirmResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerUltimoFirm/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="insertarDisFirmware">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/insertarDisFirmwareRequest" message="tns:insertarDisFirmware" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/insertarDisFirmwareResponse" message="tns:insertarDisFirmwareResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/insertarDisFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="obtenerDispositivo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerDispositivoRequest" message="tns:obtenerDispositivo" />
@@ -66,10 +66,10 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivoResponse" message="tns:listarDispositivoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/listarDispositivo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="insertarDisFirmware">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/insertarDisFirmwareRequest" message="tns:insertarDisFirmware" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/insertarDisFirmwareResponse" message="tns:insertarDisFirmwareResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/insertarDisFirmware/Fault/Exception" name="Exception" message="tns:Exception" />
+    <operation name="obtenerUltimoFirm">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerUltimoFirmRequest" message="tns:obtenerUltimoFirm" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerUltimoFirmResponse" message="tns:obtenerUltimoFirmResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/obtenerUltimoFirm/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="actualizarDispositivo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/DispositivoWS/actualizarDispositivoRequest" message="tns:actualizarDispositivo" />
@@ -89,7 +89,7 @@
   </portType>
   <binding name="DispositivoWSPortBinding" type="tns:DispositivoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerUltimoFirm">
+    <operation name="insertarDisFirmware">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -125,7 +125,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="insertarDisFirmware">
+    <operation name="obtenerUltimoFirm">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

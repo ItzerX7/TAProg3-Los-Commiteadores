@@ -26,17 +26,17 @@
   <message name="obtenerGrupoResponse">
     <part name="parameters" element="tns:obtenerGrupoResponse" />
   </message>
-  <message name="eliminarGrupo">
-    <part name="parameters" element="tns:eliminarGrupo" />
-  </message>
-  <message name="eliminarGrupoResponse">
-    <part name="parameters" element="tns:eliminarGrupoResponse" />
-  </message>
   <message name="listarGrupo">
     <part name="parameters" element="tns:listarGrupo" />
   </message>
   <message name="listarGrupoResponse">
     <part name="parameters" element="tns:listarGrupoResponse" />
+  </message>
+  <message name="eliminarGrupo">
+    <part name="parameters" element="tns:eliminarGrupo" />
+  </message>
+  <message name="eliminarGrupoResponse">
+    <part name="parameters" element="tns:eliminarGrupoResponse" />
   </message>
   <message name="listarDispositivosGrupo">
     <part name="parameters" element="tns:listarDispositivosGrupo" />
@@ -60,15 +60,15 @@
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/obtenerGrupoResponse" message="tns:obtenerGrupoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/obtenerGrupo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-    <operation name="eliminarGrupo">
-      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupoRequest" message="tns:eliminarGrupo" />
-      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupoResponse" message="tns:eliminarGrupoResponse" />
-      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupo/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
     <operation name="listarGrupo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/listarGrupoRequest" message="tns:listarGrupo" />
       <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/listarGrupoResponse" message="tns:listarGrupoResponse" />
       <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/listarGrupo/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="eliminarGrupo">
+      <input wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupoRequest" message="tns:eliminarGrupo" />
+      <output wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupoResponse" message="tns:eliminarGrupoResponse" />
+      <fault wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/eliminarGrupo/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="listarDispositivosGrupo">
       <input wsam:Action="http://ws.gestionlentesvr.pucp.com/GrupoWS/listarDispositivosGrupoRequest" message="tns:listarDispositivosGrupo" />
@@ -114,7 +114,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="eliminarGrupo">
+    <operation name="listarGrupo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -126,7 +126,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-    <operation name="listarGrupo">
+    <operation name="eliminarGrupo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -11,16 +11,10 @@
   <xs:element name="obtenerActividadResponse" type="tns:obtenerActividadResponse" />
   <xs:element name="registrarActividad" type="tns:registrarActividad" />
   <xs:element name="registrarActividadResponse" type="tns:registrarActividadResponse" />
-  <xs:element name="reporteClientes" type="tns:reporteClientes" />
-  <xs:element name="reporteClientesResponse" type="tns:reporteClientesResponse" />
-  <xs:complexType name="reporteClientes">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="reporteClientesResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
+  <xs:element name="reporteActividades" type="tns:reporteActividades" />
+  <xs:element name="reporteActividadesResponse" type="tns:reporteActividadesResponse" />
+  <xs:element name="reporteTipos" type="tns:reporteTipos" />
+  <xs:element name="reporteTiposResponse" type="tns:reporteTiposResponse" />
   <xs:complexType name="registrarActividad">
     <xs:sequence>
       <xs:element minOccurs="0" name="actividad" type="tns:actividad" />
@@ -101,6 +95,14 @@
       <xs:element minOccurs="0" name="return" type="tns:actividad" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="reporteActividades">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteActividadesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarActividad">
     <xs:sequence>
       <xs:element name="id" type="xs:int" />
@@ -115,6 +117,14 @@
   <xs:complexType name="listarActividadResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:actividad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteTipos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteTiposResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="actualizarActividad">

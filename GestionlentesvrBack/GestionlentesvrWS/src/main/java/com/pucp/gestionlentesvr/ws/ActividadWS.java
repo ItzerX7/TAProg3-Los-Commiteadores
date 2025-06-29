@@ -85,14 +85,23 @@ public class ActividadWS {
         }
     }
 
-    @WebMethod(operationName = "reporteClientes")
-    public byte[] reporteClientes() {
+    @WebMethod(operationName = "reporteActividades")
+    public byte[] reporteActividades() {
         try {
             Map<String, Object> params = new HashMap<>();
-            // params.put("ciudad", "Arequipa");
-            // params.put("logo", ImageIO.read(new File(getFileResource("pucp_logo.png"))));
-
             String fileXML = getFileResource("Leaf_Green.jrxml");
+
+            return generarBufferFromJP(fileXML, params);
+
+        } catch (Exception ex) {
+            throw new WebServiceException("Error al generar el reporte: " + ex.getMessage(), ex);
+        }
+    }
+        @WebMethod(operationName = "reporteTipos")
+    public byte[] reporteTipos() {
+        try {
+            Map<String, Object> params = new HashMap<>();
+            String fileXML = getFileResource("GraficoCircularTipoAct.jrxml");
 
             return generarBufferFromJP(fileXML, params);
 

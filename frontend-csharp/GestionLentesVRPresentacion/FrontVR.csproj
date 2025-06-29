@@ -325,19 +325,25 @@
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerDispositivoMenosUsadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteClientesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.insertarDisFirmwareResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerUltimoFirmResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.listarDispositivosGrupoResponse.datasource">
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteCategoriaAppResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerUsuarioCorreoResponse.datasource">
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteTiposResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.reporteActividadesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.listarDispositivosGrupoResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\GestionlentesvrWS\FrontVR.GestionlentesvrWS.obtenerUsuarioCorreoResponse1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\GestionlentesvrWS\GrupoWS.xsd">
@@ -462,6 +468,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Vistas\Firmware.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
@@ -582,6 +589,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Firmware.aspx.cs">
+      <DependentUpon>Firmware.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\Firmware.aspx.designer.cs">
+      <DependentUpon>Firmware.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

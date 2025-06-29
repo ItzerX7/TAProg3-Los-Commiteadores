@@ -5,11 +5,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <h2 class="page-title mb-3">Lista de actividades</h2>
 
-    <!-- Botón descargar reporte -->
-    <asp:LinkButton ID="btnDescargar" runat="server" CssClass="btn btn-primary mb-3" OnClick="ClickBotonDescarga">
-    <i class="bi bi-file-earmark-pdf"></i> Descargar reporte (.pdf)
+    <!-- Botón descargar reporte de actividades -->
+    <asp:LinkButton ID="btnDescargarRepAct" runat="server" CssClass="btn btn-primary mb-3" OnClick="ClickBotonDescargaRepAct">
+    <i class="bi bi-file-earmark-pdf"></i> Descargar reporte de actividades (.pdf)
     </asp:LinkButton>
-
+    <!-- Botón descargar reporte de tipo de actividades-->
+    <asp:LinkButton ID="btnDescargarRepTipoAct" runat="server" CssClass="btn btn-primary mb-3" OnClick="ClickBotonDescargaRepTipoAct">
+    <i class="bi bi-file-earmark-pdf"></i> Descargar reporte de distribución de tipos de actividades (.pdf)
+    </asp:LinkButton>
     <!-- Tabla -->
     <asp:GridView ID="gvActividades" runat="server" AutoGenerateColumns="False"
         CssClass="table table-bordered table-hover align-middle text-center" OnRowDataBound="gvActividades_RowDataBound">

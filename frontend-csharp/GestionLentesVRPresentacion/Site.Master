@@ -72,6 +72,7 @@
                 <asp:HyperLink  runat="server" ID="lnkMetrica" href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Mediciones</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkActividades" href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkAdministracion" href="Administracion.aspx"><i class="fas fa-user-shield"></i> Usuarios</asp:HyperLink>
+                <asp:HyperLink  runat="server" ID="lnkFirmware" href="Firmware.aspx"><i class="fas fa-house "></i> Firmware</asp:HyperLink>
                 <asp:HyperLink  runat="server" ID="lnkConfiguracion" href="/Vistas/Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</asp:HyperLink>
 
                 <asp:LinkButton ID="btnLogout" runat="server" CssClass="sidebar-link"

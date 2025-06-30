@@ -18,7 +18,8 @@
         AllowPaging="true"
         PageSize="10"
         OnPageIndexChanging="gvActividades_PageIndexChanging"
-        CssClass="table table-bordered table-hover align-middle text-center" OnRowDataBound="gvActividades_RowDataBound">
+        CssClass="table table-bordered table-hover align-middle text-center"
+        OnRowDataBound="gvActividades_RowDataBound"><PagerStyle CssClass="pagination-container" />
         <HeaderStyle CssClass="table-dark" />
         <Columns>
             <asp:BoundField DataField="id" HeaderText="ID" />

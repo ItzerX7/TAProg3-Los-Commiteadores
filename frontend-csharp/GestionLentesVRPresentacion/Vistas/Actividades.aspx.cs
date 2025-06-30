@@ -64,7 +64,7 @@ namespace FrontVR.Vistas
 
         protected void gvActividades_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            // Aquí puedes personalizar el contenido si lo deseas.
+            // Aquí puedes personalizar el contenido si lo deseas. set s 0
         }
 
         protected void ClickBotonDescargaRepTipoAct(object sender, EventArgs e)

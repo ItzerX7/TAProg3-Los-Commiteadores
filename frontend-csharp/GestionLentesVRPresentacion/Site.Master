@@ -58,6 +58,32 @@
             margin-top: 40px;
             color: #888;
         }
+
+        .pagination-container table tr td {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .pagination-container a, .pagination-container span {
+            margin: 0 4px;
+            padding: 0.45rem 0.65rem;
+            border: 1px solid #dee2e6;
+            color: #0d6efd;
+            text-decoration: none;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+        }
+
+        .pagination-container a:hover {
+            background-color: #e9ecef;
+            text-decoration: none;
+        }
+
+        .pagination-container span {
+            background-color: #0d6efd;
+            color: white;
+            border-color: #0d6efd;
+        }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server" />
 </head>
@@ -66,15 +92,15 @@
         <asp:ScriptManager runat="server" />
         <div class="wrapper">
             <div class="sidebar">
-                <asp:HyperLink  runat="server" ID="lnkPantallaInicio" href="PantallaInicio.aspx"><i class="fas fa-house"></i> Home</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkDispositivos" href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkGrupos" href="/Vistas/Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos </asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkAplicaciones" href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkMetrica" href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Mediciones</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkActividades" href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkAdministracion" href="Administracion.aspx"><i class="fas fa-user-shield"></i> Usuarios</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkFirmware" href="Firmware.aspx"><i class="bi bi-code-slash"></i> Firmware</asp:HyperLink>
-                <asp:HyperLink  runat="server" ID="lnkConfiguracion" href="/Vistas/Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkPantallaInicio" href="PantallaInicio.aspx"><i class="fas fa-house"></i> Home</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkDispositivos" href="/Vistas/Dispositivos.aspx"><i class="fas fa-headset"></i> Dispositivos</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkGrupos" href="/Vistas/Grupos.aspx"><i class="fas fa-layer-group"></i> Grupos </asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkAplicaciones" href="/Vistas/Aplicaciones.aspx"><i class="fas fa-th"></i> Aplicaciones</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkMetrica" href="Metricas.aspx"><i class="fas fa-chart-bar"></i> Mediciones</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkActividades" href="/Vistas/Actividades.aspx"><i class="fas fa-tasks"></i> Actividades</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkAdministracion" href="Administracion.aspx"><i class="fas fa-user-shield"></i> Usuarios</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkFirmware" href="Firmware.aspx"><i class="bi bi-code-slash"></i> Firmware</asp:HyperLink>
+                <asp:HyperLink runat="server" ID="lnkConfiguracion" href="/Vistas/Configuraciones.aspx"><i class="fas fa-cog"></i> Configuraciones</asp:HyperLink>
 
                 <asp:LinkButton ID="btnLogout" runat="server" CssClass="sidebar-link"
                     OnClick="btnLogout_Click" CausesValidation="False">

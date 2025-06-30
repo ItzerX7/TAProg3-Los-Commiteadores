@@ -1,7 +1,8 @@
-﻿using System;
+﻿using FrontVR.GestionlentesvrWS;
+using System;
+using System.Text;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using FrontVR.GestionlentesvrWS;
 
 namespace FrontVR.Vistas
 {
@@ -90,11 +91,58 @@ namespace FrontVR.Vistas
                     proxy.eliminarGrupo(id);
                     CargarGrupos();
                 }
+                else if (e.CommandName == "VerDispositivosGrupo")
+                {
+                    MostrarDispositivosPorGrupo(id);
+                }
             }
             catch (System.Exception ex)
             {
                 lblErrorGrupo.Text = "Error al procesar la acción: " + ex.Message;
                 lblErrorGrupo.Visible = true;
+            }
+        }
+
+        private void MostrarDispositivosPorGrupo(int idGrupo)
+        {
+            phDispositivosGrupo.Controls.Clear();
+            var dispositivos = proxy.listarDispositivosGrupo(idGrupo);
+
+            var aplicacion = proxy.obtenerGrupo(idGrupo);
+            string nombreAplicacion = aplicacion?.nombre ?? "Aplicación desconocida";
+
+            if (dispositivos != null && dispositivos.Length > 0)
+            {
+                StringBuilder html = new StringBuilder();
+
+                html.AppendFormat("<h4 class='mt-4'>Dispositivos vinculados a <strong>{0}</strong></h4>", nombreAplicacion);
+                html.Append("<table class='table table-bordered table-dark mt-2'>");
+                html.Append("<thead><tr>");
+                html.Append("<th>Nombre</th>");
+                html.Append("<th>Modelo</th>");
+                html.Append("<th>Número de Serie</th>");
+                html.Append("<th>Estado</th>");
+                html.Append("</tr></thead><tbody>");
+
+                foreach (var dispositivo in dispositivos)
+                {
+                    html.Append("<tr>");
+                    html.AppendFormat("<td>{0}</td>", dispositivo.nombre);
+                    html.AppendFormat("<td>{0}</td>", dispositivo.modelo);
+                    html.AppendFormat("<td>{0}</td>", dispositivo.numeroSerie);
+                    html.AppendFormat("<td>{0}</td>", dispositivo.estado.ToString());
+                    html.Append("</tr>");
+                }
+
+                html.Append("</tbody></table>");
+                phDispositivosGrupo.Controls.Add(new Literal { Text = html.ToString() });
+            }
+            else
+            {
+                phDispositivosGrupo.Controls.Add(new Literal
+                {
+                    Text = "<div class='alert alert-info mt-3'>No se encontraron dispositivos para esta aplicación.</div>"
+                });
             }
         }
     }

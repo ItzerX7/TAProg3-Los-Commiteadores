@@ -30,25 +30,70 @@ namespace FrontVR.Vistas
 
         protected void gvFirmware_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            //int id = Convert.ToInt32(e.CommandArgument);
+            int id = Convert.ToInt32(e.CommandArgument);
 
-            //if (e.CommandName == "EditarConfiguracion")
-            //{
-            //    var c = servicio.obtenerConfiguracion(id);
-            //    hfConfiguracionId.Value = c.id.ToString();
-            //    txtNombre.Text = c.nombre;
-            //    txtDescripcion.Text = c.descripcion;
-            //    ddlTipo.SelectedValue = c.tipo.ToString();
-            //    txtValor.Text = c.valor;
+            if (e.CommandName == "EditarFirmware")
+            {
+                var c = servicio.obtenerFirmware(id);
+                hfFirmwareId.Value = c.id.ToString();
+                txtNombre.Text = c.nombre;
+                txtDescripcion.Text = c.descripcion;
+                txtVersion.Text = c.version.ToString();
 
-            //    ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalConfiguracion')).show(); }, 300);", true);
-            //    CargarConfiguraciones();
-            //}
-            //else if (e.CommandName == "EliminarConfiguracion")
-            //{
-            //    servicio.eliminarConfiguracion(id);
-            //    CargarConfiguraciones();
-            //}
+                ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalFirmware')).show(); }, 300);", true);
+                CargarFirmwares();
+            }
+            else if (e.CommandName == "EliminarFirmware")
+            {
+                servicio.eliminarFirmware(id);
+                CargarFirmwares();
+            }
         }
+        protected void btnGuardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                firmware c = new firmware
+                {
+                    id = string.IsNullOrEmpty(hfFirmwareId.Value) ? 0 : int.Parse(hfFirmwareId.Value),
+                    nombre = txtNombre.Text.Trim(),
+                    descripcion = txtDescripcion.Text.Trim(),
+                    version = txtVersion.Text.Trim(),
+                    activo = 1
+                };
+
+                if (c.id == 0)
+                    servicio.registrarFirmware(c);
+                else
+                    servicio.actualizarFirmware(c);
+
+                LimpiarFormulario();
+                CargarFirmwares();
+
+                ScriptManager.RegisterStartupScript(this, GetType(), "cerrarModal", "$('#modalFirmware').modal('hide');", true);
+            }
+            catch (System.Exception ex)
+            {
+                lblError.Text = "Error al guardar: " + ex.Message;
+                lblError.Visible = true;
+            }
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+            ScriptManager.RegisterStartupScript(this, GetType(), "abrirModal", "setTimeout(function() { new bootstrap.Modal(document.getElementById('modalFirmware')).show(); }, 300);", true);
+        }
+        private void LimpiarFormulario()
+        {
+
+            lblError.Visible = false;
+            txtNombre.Text = "";
+            txtDescripcion.Text = "";
+            txtVersion.Text = "";
+        }
+    
+    
     }
 }

@@ -278,7 +278,7 @@ namespace FrontVR.Vistas
             byte[] archivo = dispositivoWS.reporteDispositivos(idGrupo);
             Response.Clear();
             Response.ContentType = "application/pdf";
-            Response.AddHeader("Content-Disposition", "attachment; filename=reporteActividades.pdf");
+            Response.AddHeader("Content-Disposition", "attachment; filename=reporteDispositivosPorGrupo.pdf");
             Response.BinaryWrite(archivo);
             Response.End();
         }

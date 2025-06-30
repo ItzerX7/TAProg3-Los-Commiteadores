@@ -24,15 +24,6 @@ namespace FrontVR.Vistas
         protected global::System.Web.UI.WebControls.LinkButton btnNuevaAplicacion;
 
         /// <summary>
-        /// btnDescargarRepApp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnDescargarRepApp;
-
-        /// <summary>
         /// gvAplicaciones control.
         /// </summary>
         /// <remarks>
@@ -49,6 +40,24 @@ namespace FrontVR.Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phDispositivos;
+
+        /// <summary>
+        /// hfEliminarIdApp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfEliminarIdApp;
+
+        /// <summary>
+        /// btnConfirmarEliminar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnConfirmarEliminar;
 
         /// <summary>
         /// upModal control.
@@ -130,15 +139,6 @@ namespace FrontVR.Vistas
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
-
-        /// <summary>
-        /// chkActivo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkActivo;
 
         /// <summary>
         /// btnGuardar control.

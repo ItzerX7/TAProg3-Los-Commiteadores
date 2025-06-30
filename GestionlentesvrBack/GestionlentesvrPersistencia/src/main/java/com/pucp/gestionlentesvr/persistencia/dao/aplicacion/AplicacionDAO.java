@@ -10,4 +10,5 @@ public interface AplicacionDAO extends BaseDAO<Aplicacion> {
     public List<Aplicacion> listarAplicacionesConDispositivos(Integer id);
     public List<Integer> contarAplicacionesPorTipoEnMetricas();
     public List<Dispositivo> listarDispositivosPorAplicaciones(Integer id);
+    void eliminarRelacionesConDispositivos(int idAplicacion) throws Exception;
 }

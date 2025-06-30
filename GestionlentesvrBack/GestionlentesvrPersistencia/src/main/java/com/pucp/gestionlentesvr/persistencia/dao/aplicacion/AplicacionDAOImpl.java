@@ -148,5 +148,22 @@ public class AplicacionDAOImpl extends BaseDAOImpl<Aplicacion> implements Aplica
         }
         return cantidades;
     }
+    
+    @Override
+    public void eliminarRelacionesConDispositivos(int idAplicacion) throws Exception {
+        try (Connection conn = DBManager.getInstance().obtenerConexion()) {
+            String query = "{CALL eliminarRelacionesAplicacionDispositivo(?)}";
+            try (CallableStatement cs = conn.prepareCall(query)) {
+                cs.setInt(1, idAplicacion);
+                cs.executeUpdate();
+            } catch (SQLException e) {
+                System.err.println("Error interno en CallableStatement al eliminar relaciones: " + e.getMessage());
+                throw new Exception("No se pudo eliminar las relaciones entre la aplicación y los dispositivos", e);
+            }
+        } catch (SQLException e) {
+            System.err.println("Error al obtener conexión para eliminar relaciones: " + e.getMessage());
+            throw new Exception("Error al conectar con la base de datos para eliminar relaciones", e);
+        }
+    }
 
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,7 +18,32 @@ namespace FrontVR.Vistas
             if (Session["usuario"] == null)
             {
                 Response.Redirect("~/Login.aspx");
+                
+             
+
+
                 return;
+            }
+
+            if (!IsPostBack)
+            {
+                try
+                {
+                    var listaGrupos = grupoWS.listarGrupo();
+
+                    ddlGrupos.Items.Clear();
+                    ddlGrupos.Items.Add(new ListItem("-- Selecciona un grupo --", "0"));
+
+                    foreach (var g in listaGrupos)
+                    {
+                        ddlGrupos.Items.Add(new ListItem(g.nombre, g.id.ToString()));
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    lblMensaje.Text = "Error al cargar grupos: " + ex.Message;
+                    lblMensaje.Visible = true;
+                }
             }
 
             if (!IsPostBack)
@@ -230,8 +257,30 @@ namespace FrontVR.Vistas
             lblError.Text = "";
             lblError.Visible = false;
 
-            // Asegura que el campo Estado esté visible para nuevos registros
             divEstado.Visible = true;
+        }
+
+        protected void ClickBotonDescargaRepDisp(object sender, EventArgs e)
+        {
+            int idGrupo = int.Parse(ddlGrupos.SelectedValue);
+            if (idGrupo == 0)
+            {
+                lblMensaje.Text = "Por favor, selecciona un grupo antes de generar el reporte.";
+                lblMensaje.Visible = true;
+                return;
+            }
+            else
+            {
+                lblMensaje.Visible = false;
+            }
+
+
+            byte[] archivo = dispositivoWS.reporteDispositivos(idGrupo);
+            Response.Clear();
+            Response.ContentType = "application/pdf";
+            Response.AddHeader("Content-Disposition", "attachment; filename=reporteActividades.pdf");
+            Response.BinaryWrite(archivo);
+            Response.End();
         }
     }
 }
